@@ -1,0 +1,8 @@
+{
+  "name": "digdir-ds-admin-templates",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "node compileHtml.js"
+  }
+}

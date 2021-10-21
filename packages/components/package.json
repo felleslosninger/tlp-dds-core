@@ -1,0 +1,32 @@
+{
+  "name": "digdir-ds-admin",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Components for DigDir admin systems",
+  "author": "DigDir design system team",
+  "license": "MIT",
+  "type": "module",
+  "main": "./build/index.cjs",
+  "module": "./build/index.js",
+  "files": [
+    "/build"
+  ],
+  "scripts": {
+    "build": "yarn clean && rollup -c",
+    "clean": "rm -rf ./build/"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^21.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.5",
+    "classnames": "^2.3.1",
+    "node": "^16.10.0",
+    "rollup": "^2.58.0",
+    "rollup-plugin-terser": "^7.0.2"
+  }
+}
