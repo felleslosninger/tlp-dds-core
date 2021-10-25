@@ -1,0 +1,19 @@
+{
+  "name": "digdir-ds-tokens",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Design tokens for DigDir admin systems",
+  "author": "DigDir design system team",
+  "license": "MIT",
+  "main": "./build/tokens.css",
+  "files": [
+    "/build"
+  ],
+  "scripts": {
+    "build": "yarn clean && style-dictionary build --config ./style-dictionary.config.js",
+    "clean": "rm -rf ./build/"
+  },
+  "devDependencies": {
+    "style-dictionary": "^3.0.2"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "digdir-ds-admin-css",
+  "private": true,
+  "scripts": {
+    "build": "yarn clean && sass --no-source-map --style=compressed src/index.scss ../components/build/index.css",
+    "clean": "rm -rf ./build/"
+  },
+  "devDependencies": {
+    "sass": "^1.42.1"
+  }
+}
