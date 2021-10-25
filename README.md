@@ -1,6 +1,6 @@
 # DigDir Designsystem
 
-Dette monorepoet inneholder pakker til for generell bruk i DigDir, og mer rettet mot bruk i DigDir admin.
+Dette monorepoet inneholder pakker relatert til implementasjon av et designsystem for generell bruk i DigDir, og mer spesifikt rettet mot bruk i DigDir admin applikasjoner.
 
 ### Kom i gang med utvikling
 
