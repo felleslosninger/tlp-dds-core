@@ -1,0 +1,32 @@
+{
+  "spacing": {
+    "0.5-x": {
+      "value": "0.5rem",
+      "type": "dimension"
+    },
+    "1-x": {
+      "value": "1rem",
+      "type": "dimension"
+    },
+    "1.5-x": {
+      "value": "1.5rem",
+      "type": "dimension"
+    },
+    "2-x": {
+      "value": "2rem",
+      "type": "dimension"
+    },
+    "2.5-x": {
+      "value": "2.5rem",
+      "type": "dimension"
+    },
+    "4-x": {
+      "value": "4rem",
+      "type": "dimension"
+    },
+    "5-x": {
+      "value": "5rem",
+      "type": "dimension"
+    }
+  }
+}
