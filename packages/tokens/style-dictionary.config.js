@@ -1,44 +1,39 @@
+const StyleDictionary = require('style-dictionary')
+const { minifyDictionary } = StyleDictionary.formatHelpers
+
 module.exports = {
   format: {
-    customFormat: function ({ dictionary, options }) {
-      return dictionary.allTokens
-        .map((token) => {
-          let value = JSON.stringify(token.value)
-          if (options.outputReferences) {
-            if (dictionary.usesReference(token.original.value)) {
-              const refs = dictionary.getReferences(token.original.value)
-              refs.forEach((ref) => {
-                value = value.replace(ref.value, function () {
-                  return `${ref.name}`
-                })
-              })
-            }
-          }
-
-          return `export const ${token.name} = ${value};`
-        })
-        .join(`\n`)
+    customCjsMinified({ dictionary }) {
+      return (
+        'module.exports=' +
+        JSON.stringify(minifyDictionary(dictionary.tokens), null) +
+        ';'
+      )
+    },
+    customEs6Minified({ dictionary }) {
+      return (
+        'export default ' +
+        JSON.stringify(minifyDictionary(dictionary.tokens)) +
+        ';'
+      )
     },
   },
-
-  source: ['src/tokens.json'],
+  source: ['src/**.tokens.json'],
   platforms: {
-    json: {
-      buildPath: 'build/',
-      files: [
-        {
-          destination: 'tokens.json',
-          format: 'json/nested',
-        },
-      ],
-    },
     js: {
       buildPath: 'build/',
       transformGroup: 'js',
       files: [
         {
+          destination: 'tokens.cjs',
+          format: 'customCjsMinified',
+          options: {
+            outputReferences: true,
+          },
+        },
+        {
           destination: 'tokens.js',
-          format: 'customFormat',
+          format: 'customEs6Minified',
           options: {
             outputReferences: true,
           },
