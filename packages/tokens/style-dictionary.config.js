@@ -27,16 +27,10 @@ module.exports = {
         {
           destination: 'tokens.cjs',
           format: 'customCjsMinified',
-          options: {
-            outputReferences: true,
-          },
         },
         {
           destination: 'tokens.js',
           format: 'customEs6Minified',
-          options: {
-            outputReferences: true,
-          },
         },
       ],
     },
@@ -47,9 +41,6 @@ module.exports = {
         {
           destination: 'tokens.css',
           format: 'css/variables',
-          options: {
-            outputReferences: true,
-          },
         },
       ],
     },
@@ -60,7 +51,6 @@ module.exports = {
         {
           destination: 'tokens.scss',
           format: 'scss/variables',
-          options: { outputReferences: true },
         },
       ],
     },
