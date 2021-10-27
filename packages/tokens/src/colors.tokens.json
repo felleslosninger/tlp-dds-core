@@ -9,7 +9,7 @@
       "error-light": {
         "value": "#fdbfbf",
         "type": "color",
-        "description": "AAA 9.1 on grey 800\nAA 4.5 as bkdg for interaction blue"
+        "description": "AAA 9.1 on grey 800\nAA 4.5 as background for interaction blue"
       },
       "interaction": {
         "value": "#0051be",
@@ -19,7 +19,7 @@
       "interaction-light": {
         "value": "#bacfed",
         "type": "color",
-        "description": "AAA 9on grey 800\nAA 4.5 as bkdg for interaction blue"
+        "description": "AAA 9on grey 800\nAA 4.5 as background for interaction blue"
       },
       "success": {
         "value": "#116e31",
@@ -29,7 +29,7 @@
       "success-light": {
         "value": "#a4e3b9",
         "type": "color",
-        "description": "AAA 9.7 on grey 800\nAA 4.8 as bkdg for interaction blue"
+        "description": "AAA 9.7 on grey 800\nAA 4.8 as background for interaction blue"
       },
       "warning": {
         "value": "#b38d18",
@@ -39,40 +39,40 @@
       "warning-light": {
         "value": "#ffe491",
         "type": "color",
-        "description": "AAA 11.4 on grey 800\nAA 5.7 as bkdg for interaction blue"
+        "description": "AAA 11.4 on grey 800\nAA 5.7 as background for interaction blue"
       }
     },
     "neutral": {
       "white": {
         "value": "#ffffff",
         "type": "color",
-        "description": "Standard bckd color.\nAAA 13.1 on grey 800\nAAA 7.2 as bkdg for interaction blue"
+        "description": "Standard bckd color.\nAAA 13.1 on grey 800\nAAA 7.2 as background for interaction blue"
       },
       "grey": {
         "100": {
           "value": "#f4f5f6",
           "type": "color",
-          "description": "AAA 13.1 on grey 800\nAA 6.5 as bkdg for interaction blue"
+          "description": "AAA 13.1 on grey 800\nAA 6.5 as background for interaction blue"
         },
         "200": {
           "value": "#e9eaec",
           "type": "color",
-          "description": "AAA 11.9 on grey 800\nAA 5.9 as bkdg for interaction blue"
+          "description": "AAA 11.9 on grey 800\nAA 5.9 as background for interaction blue"
         },
         "300": {
           "value": "#d2d5d8",
           "type": "color",
-          "description": "AAA 11.9 on grey 800\nAA 5.9 as bkdg for interaction blue"
+          "description": "AAA 11.9 on grey 800\nAA 5.9 as background for interaction blue"
         },
         "400": {
           "value": "#bcbfc5",
           "type": "color",
-          "description": "AAA 8.7 on grey 800\nAA18 4.4 as bkdg for interaction blue"
+          "description": "AAA 8.7 on grey 800\nAA18 4.4 as background for interaction blue"
         },
         "500": {
           "value": "#a5aab1",
           "type": "color",
-          "description": "AA 6.1 on grey 800\nAA18 3 as bkdg for interaction blue"
+          "description": "AA 6.1 on grey 800\nAA18 3 as background for interaction blue"
         },
         "600": {
           "value": "#68707c",
@@ -96,22 +96,22 @@
         "100": {
           "value": "#feefef",
           "type": "color",
-          "description": "AAA 12.8 on grey 800\nAA 6.4 as bkdg for interaction blue"
+          "description": "AAA 12.8 on grey 800\nAA 6.4 as background for interaction blue"
         },
         "200": {
           "value": "#fddfe0",
           "type": "color",
-          "description": "Light error color\nAAA 11.4 on grey 800\nAA 5.7 as bkdg for interaction blue"
+          "description": "Light error color\nAAA 11.4 on grey 800\nAA 5.7 as background for interaction blue"
         },
         "300": {
           "value": "#fbbfc1",
           "type": "color",
-          "description": "AAA 9 on grey 800\nAA 4.5 as bkdg for interaction blue"
+          "description": "AAA 9 on grey 800\nAA 4.5 as background for interaction blue"
         },
         "400": {
           "value": "#f89fa1",
           "type": "color",
-          "description": "AAA 7.1 on grey 800\nAA18 3.5 as bkdg for interaction blue"
+          "description": "AAA 7.1 on grey 800\nAA18 3.5 as background for interaction blue"
         },
         "500": {
           "value": "#f67f82",
@@ -138,32 +138,32 @@
         "100": {
           "value": "#fcf7e9",
           "type": "color",
-          "description": "AAA 13.3 on grey 800\nAA 6.7 as bkdg for interaction blue"
+          "description": "AAA 13.3 on grey 800\nAA 6.7 as background for interaction blue"
         },
         "200": {
           "value": "#faeec2",
           "type": "color",
-          "description": "Light warning color\nAAA 12.3 on grey 800\nAA 1.1 as bkdg for interaction blue"
+          "description": "Light warning color\nAAA 12.3 on grey 800\nAA 1.1 as background for interaction blue"
         },
         "300": {
           "value": "#f5dda6",
           "type": "color",
-          "description": "AAA 10 on grey 800\nAA 5.4 as bkdg for interaction blue"
+          "description": "AAA 10 on grey 800\nAA 5.4 as background for interaction blue"
         },
         "400": {
           "value": "#efcc79",
           "type": "color",
-          "description": "AAA 9.2 on grey 800\nAA 4.6 as bkdg for interaction blue"
+          "description": "AAA 9.2 on grey 800\nAA 4.6 as background for interaction blue"
         },
         "500": {
           "value": "#eabb4d",
           "type": "color",
-          "description": "AAA 7.9 on grey 800\nAA18 4 as bkdg for interaction blue"
+          "description": "AAA 7.9 on grey 800\nAA18 4 as background for interaction blue"
         },
         "600": {
           "value": "#e5aa20",
           "type": "color",
-          "description": "AA 6.8 on grey 800\nAA18 3.4 as bkdg for interaction blue"
+          "description": "AA 6.8 on grey 800\nAA18 3.4 as background for interaction blue"
         },
         "700": {
           "value": "#ce991d",
@@ -180,22 +180,22 @@
         "100": {
           "value": "#e9f5ff",
           "type": "color",
-          "description": "AAA 12.9 on grey 800\nAA 6.5 as bkdg for interaction blue"
+          "description": "AAA 12.9 on grey 800\nAA 6.5 as background for interaction blue"
         },
         "200": {
           "value": "#d2eafd",
           "type": "color",
-          "description": "Light information color \nAAA 11.5 on grey 800\nAA 5.8 as bkdg for interaction blue"
+          "description": "Light information color \nAAA 11.5 on grey 800\nAA 5.8 as background for interaction blue"
         },
         "300": {
           "value": "#a5d6fb",
           "type": "color",
-          "description": "AAA 9.2 on grey 800\nAA 4.6 as bkdg for interaction blue"
+          "description": "AAA 9.2 on grey 800\nAA 4.6 as background for interaction blue"
         },
         "400": {
           "value": "#78c1f9",
           "type": "color",
-          "description": "AAA 7.3 on grey 800\nAA18 3.7 as bkdg for interaction blue"
+          "description": "AAA 7.3 on grey 800\nAA18 3.7 as background for interaction blue"
         },
         "500": {
           "value": "#4badf7",
@@ -216,6 +216,20 @@
           "value": "#156aac",
           "type": "color",
           "description": "AA 5.6 on white"
+        }
+      }
+    },
+    "text": {
+      "background": {
+        "light": {
+          "value": "{color.neutral.grey.800.value}",
+          "type": "color",
+          "description": "{color.neutral.grey.800.description}"
+        },
+        "dark": {
+          "value": "{color.neutral.white.value}",
+          "type": "color",
+          "description": "{color.neutral.white.description}"
         }
       }
     }
