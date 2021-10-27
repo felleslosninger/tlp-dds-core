@@ -41,6 +41,9 @@ module.exports = {
         {
           destination: 'tokens.css',
           format: 'css/variables',
+          options: {
+            outputReferences: true,
+          },
         },
       ],
     },
@@ -51,6 +54,9 @@ module.exports = {
         {
           destination: 'tokens.scss',
           format: 'scss/variables',
+          options: {
+            outputReferences: true,
+          },
         },
       ],
     },

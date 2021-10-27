@@ -1,0 +1,60 @@
+{
+  "font": {
+    "family": {
+      "value": "\"Inter\", sans-serif"
+    },
+    "line": {
+      "height": {
+        "10": {
+          "value": "1.3"
+        },
+        "20": {
+          "value": "1.4"
+        },
+        "30": {
+          "value": "1.5"
+        },
+        "40": {
+          "value": "1.7"
+        }
+      }
+    },
+    "size": {
+      "100": {
+        "value": "0.75rem"
+      },
+      "200": {
+        "value": "0.875rem"
+      },
+      "300": {
+        "value": "1rem"
+      },
+      "400": {
+        "value": "1.125rem"
+      },
+      "500": {
+        "value": "1.25rem"
+      },
+      "600": {
+        "value": "1.5rem"
+      },
+      "700": {
+        "value": "1.75rem"
+      },
+      "800": {
+        "value": "2.25rem"
+      },
+      "900": {
+        "value": "2.75rem"
+      }
+    },
+    "weight": {
+      "regular": {
+        "value": "400"
+      },
+      "medium": {
+        "value": "500"
+      }
+    }
+  }
+}
