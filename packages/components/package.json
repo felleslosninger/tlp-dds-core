@@ -4,7 +4,7 @@
   "private": true,
   "description": "Components for DigDir admin systems",
   "author": "DigDir design system team",
-  "license": "MIT",
+  "license": "BSD3",
   "type": "module",
   "main": "./build/index.cjs",
   "module": "./build/index.js",

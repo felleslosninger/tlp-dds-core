@@ -4,7 +4,7 @@
   "private": true,
   "description": "Design tokens for DigDir admin systems",
   "author": "DigDir design system team",
-  "license": "MIT",
+  "license": "BSD3",
   "main": "./build/tokens.css",
   "files": [
     "/build"
