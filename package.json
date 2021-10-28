@@ -5,7 +5,7 @@
     "packages/*"
   ],
   "author": "Bendik Kvernevik",
-  "license": "MIT",
+  "license": "BSD3",
   "devDependencies": {
     "@babel/core": "^7.15.8",
     "@storybook/addon-actions": "^6.3.10",
