@@ -1,6 +1,5 @@
 {
-  "name": "digdir-ds-admin",
-  "version": "0.0.0",
+  "name": "@digdir/ds-admin",
   "private": true,
   "description": "Components for DigDir admin systems",
   "author": "DigDir design system team",
