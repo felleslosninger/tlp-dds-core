@@ -1,15 +1,118 @@
 import { Meta } from '@storybook/addon-docs'
+import { DesignTokenDocBlock } from 'storybook-design-token/dist/doc-blocks'
+import * as colors from '../colors.tokens.json'
 
 <Meta title="Designsystem/Tokens" />
 
 # Design Tokens
 
-**_🛠Under arbeid🛠_**
+På denne siden finner du alle design tokens og instrukser til hvordan man kan bruke de.
 
-Denne siden vil dokumentere alle design tokens.
+## Innhold
 
-### Eksempel
+- [Kom i gang](#kom-i-gang)
+  - [CDN](#cdn)
+  - [NPM](#npm)
+- [Tokens](#tokens)
+  - [Color](#color)
+  - [Spacing](#spacing)
+  - [Typography](#typography)
+
+## Kom i gang
+
+#### CDN
+
+[![](https://data.jsdelivr.com/v1/package/npm/@digdir/ds-tokens/badge)](https://www.jsdelivr.com/package/npm/@digdir/ds-tokens)
+
+1. Link stilarked i `<head>` i HTML-dokumentet.
+
+2. Bruk variablene etter behov i inkluderte CSS-stilark.
+
+```html
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <!-- [Meta-tags] -->
+    <!-- Endre @1.0.0 i href-lenken til ønsket versjon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@digdir/ds-tokens@1.0.0/build/tokens.css"
+    />
+  </head>
+  <!-- Bruk variablene i css stilark -->
+  <body>
+    <!-- [Innhold] -->
+  </body>
+</html>
+```
+
+#### NPM
+
+[![](https://img.shields.io/npm/dm/@digdir/ds-tokens.svg)](https://www.npmjs.com/package/@digdir/ds-tokens)
+
+1. Installer pakken i kommandolinjen ved hjelp av NPM eller Yarn:
+
+`npm install @digdir/ds-tokens`
+
+eller
+
+`yarn add @digdir/ds-tokens`
+
+2. Importer og bruk deretter variablene i ønsket format:
+
+##### CSS
 
 ```css
-$color-neutral-grey-800: #1e2b3c;
+/* Importer */
+@import '@digdir/ds-tokens/build/tokens.css';
+/* Bruk variablene på følgende format: */
+:root {
+  --my-text-color: var(--color-text-background-light);
+}
 ```
+
+##### SCSS
+
+```scss
+// Importer
+@use '@digdir/ds-tokens/build/tokens.scss' as *;
+// Bruk variablene på følgende format:
+$my-text-color: $color-text-background-light;
+```
+
+##### Javascript
+
+```javascript
+// Importer
+import tokens from '@digdir/ds-tokens/build/tokens.js'
+// Bruk variablene på følgende format:
+const myTextColor = tokens.color.text.background.light
+```
+
+## Tokens
+
+### Color
+
+<DesignTokenDocBlock categoryName="Colors" />
+
+### Spacing
+
+<DesignTokenDocBlock categoryName="Spacing" />
+
+### Typography
+
+##### Font Size
+
+<DesignTokenDocBlock categoryName="FontSize" />
+
+##### Font Weight
+
+<DesignTokenDocBlock categoryName="FontWeight" />
+
+##### Line Height
+
+<DesignTokenDocBlock categoryName="LineHeight" />
+
+##### Font Family
+
+<DesignTokenDocBlock categoryName="FontFamily" />
