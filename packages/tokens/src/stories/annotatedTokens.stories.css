@@ -104,4 +104,12 @@
     */
   --font-weight-regular: 400;
   --font-weight-medium: 500;
+  /**
+    * @tokens Others
+    */
+  --breakpoint-small: 576px;
+  --breakpoint-medium: 768px;
+  --breakpoint-large: 992px;
+  --breakpoint-x-large: 1200px;
+  --breakpoint-2x-large: 1400px;
 }

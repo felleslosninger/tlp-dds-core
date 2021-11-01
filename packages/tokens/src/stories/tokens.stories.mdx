@@ -14,9 +14,10 @@ På denne siden finner du alle design tokens og instrukser til hvordan man kan b
   - [CDN](#cdn)
   - [NPM](#npm)
 - [Tokens](#tokens)
-  - [Color](#color)
-  - [Spacing](#spacing)
-  - [Typography](#typography)
+  - [Farger](#farger)
+  - [Avstander](#avstander)
+  - [Typografi](#typografi)
+  - [Bruddpunkter](#bruddpunkter)
 
 ## Kom i gang
 
@@ -76,7 +77,7 @@ eller
 }
 ```
 
-##### SCSS
+##### SASS
 
 ```scss
 // Importer
@@ -85,7 +86,7 @@ eller
 $my-text-color: $color-text-background-light;
 ```
 
-##### Javascript
+##### JavaScript
 
 ```javascript
 // Importer
@@ -96,35 +97,43 @@ const myTextColor = tokens.color.text.background.light
 
 ## Tokens
 
-### Color
+### Farger
 
 <DesignTokenDocBlock categoryName="Colors" />
 
-### Spacing
+### Avstander
 
-Spacing-variablene er angitt i **rem**. Denne verdien er relativ til `html`-elementet sin `font-size`, 
+Avstand-variablene er angitt i **rem**. Denne verdien er relativ til `html`-elementet sin `font-size`, 
 og tar utgangspunkt i den vanligste standarden der `1rem = 16px`.
 Variablene tar utgangspunkt i inkrement på 0.25rem (4px) fra `--spacing-base-1` som er 0.25rem, slik at `--spacing-base-4` er det samme som `4 * --spacing-base-1`, nemlig 1rem (16px).
 
 <DesignTokenDocBlock categoryName="Spacing" />
 
-### Typography
+### Typografi
 
-##### Font Size
+##### Tekststørrelser
 
-Font size-variablene er angitt i **rem**. Denne verdien er relativ til `html`-elementet sin `font-size`, 
+Tekststørrelse-variablene er angitt i **rem**. Denne verdien er relativ til `html`-elementet sin `font-size`, 
 og tar utgangspunkt i den vanligste standarden der `1rem = 16px`.
 
 <DesignTokenDocBlock categoryName="FontSize" />
 
-##### Font Weight
+##### Tekstvekting
 
 <DesignTokenDocBlock categoryName="FontWeight" />
 
-##### Line Height
+##### Linjehøyder
 
 <DesignTokenDocBlock categoryName="LineHeight" />
 
-##### Font Family
+##### Tekstfamilie
 
 <DesignTokenDocBlock categoryName="FontFamily" />
+
+#### Bruddpunkter
+
+Bruddpunktene tar utgangspunkt i verdiene benyttet i [Bootstrap grid v5.0](https://getbootstrap.com/docs/5.0/layout/grid/), og følger de samme t-skjortestørrelsene. De er ment for å brukes som `min-width` i responsivt design av nettsider ved hjelp av [media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries).
+
+For eksempel vil `@media (min-width: var(--breakpoint-medium)) { ... } ` kunne brukes for å treffe de fleste tablets.
+
+<DesignTokenDocBlock categoryName="Others"/>
