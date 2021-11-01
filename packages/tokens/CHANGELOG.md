@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/felleslosninger/tlp-design-admin/compare/@digdir/ds-tokens@1.0.0...@digdir/ds-tokens@1.1.0) (2021-11-01)
+
+
+### Features
+
+* Added design tokens: breakpoints ([c77219e](https://github.com/felleslosninger/tlp-design-admin/commit/c77219ef63355aa26f6c8c40039c18efc76e127a))
+
+
+
+
+
 # 1.0.0 (2021-10-29)
 
 
