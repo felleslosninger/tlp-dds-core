@@ -102,11 +102,18 @@ const myTextColor = tokens.color.text.background.light
 
 ### Spacing
 
+Spacing-variablene er angitt i **rem**. Denne verdien er relativ til `html`-elementet sin `font-size`, 
+og tar utgangspunkt i den vanligste standarden der `1rem = 16px`.
+Variablene tar utgangspunkt i inkrement på 0.25rem (4px) fra `--spacing-base-1` som er 0.25rem, slik at `--spacing-base-4` er det samme som `4 * --spacing-base-1`, nemlig 1rem (16px).
+
 <DesignTokenDocBlock categoryName="Spacing" />
 
 ### Typography
 
 ##### Font Size
+
+Font size-variablene er angitt i **rem**. Denne verdien er relativ til `html`-elementet sin `font-size`, 
+og tar utgangspunkt i den vanligste standarden der `1rem = 16px`.
 
 <DesignTokenDocBlock categoryName="FontSize" />
 
