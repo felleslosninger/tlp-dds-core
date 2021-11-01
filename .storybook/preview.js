@@ -1,3 +1,13 @@
+const tokenContext = require.context(
+  '!!raw-loader!../packages/tokens/src/stories',
+  true,
+  /.\.(css|less|scss|svg)$/,
+)
+
+const tokenFiles = tokenContext.keys().map(function (filename) {
+  return { filename: filename, content: tokenContext(filename).default }
+})
+
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
@@ -19,5 +29,8 @@ export const parameters = {
     'storybook/docs/panel': {
       hidden: true,
     },
+  },
+  designToken: {
+    files: tokenFiles,
   },
 }

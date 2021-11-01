@@ -1,15 +1,123 @@
 import { Meta } from '@storybook/addon-docs'
+import { DesignTokenDocBlock } from 'storybook-design-token/dist/doc-blocks'
+import * as colors from '../colors.tokens.json'
 
 <Meta title="Designsystem/Tokens" />
 
 # Design Tokens
 
-**_🛠Under arbeid🛠_**
+På denne siden finner du alle design tokens og instrukser til hvordan man kan bruke de.
 
-Denne siden vil dokumentere alle design tokens.
+## Innhold
 
-### Eksempel
+- [Kom i gang](#kom-i-gang)
+  - [CDN](#cdn)
+  - [NPM](#npm)
+- [Tokens](#tokens)
+  - [Color](#color)
+  - [Spacing](#spacing)
+  - [Typography](#typography)
+
+## Kom i gang
+
+#### CDN
+
+[![](https://data.jsdelivr.com/v1/package/npm/@digdir/ds-tokens/badge)](https://www.jsdelivr.com/package/npm/@digdir/ds-tokens)
+
+
+```html
+<!-- kun CSS v1.0.0-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@digdir/ds-tokens@1.0.0/build/tokens.css" integrity="sha512-5htQRUU45g6+gkzVWlzM8UZDjE29G3UpJOdftogFtxIoYR6Ml0BhNusY0DisFpS8g9YwBgClemi0PJq7nGwc+A==" crossorigin="anonymous"/>
+```
+**1. Link stilarked i `<head>` i HTML-dokumentet.**
+([https://www.srihash.org/](https://www.srihash.org/) kan brukes til å generere Subresource Integrity hash `integrity="..."` til riktig versjon av ønsket fil fra tokens-pakken. Dette brukes for å sikre at filen som hentes ikke er endret.)
+
+**2. Bruk variablene etter behov i inkluderte CSS-stilark.**
+
+```html
+<!-- Eksempel på bruk i HTML-dokument -->
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <!-- [Meta-elementer] -->
+    <!-- Endre versjon @1.0.0 i href-lenken, og oppdater integrity hashen til ønsket versjon. -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@digdir/ds-tokens@1.0.0/build/tokens.css" integrity="sha512-5htQRUU45g6+gkzVWlzM8UZDjE29G3UpJOdftogFtxIoYR6Ml0BhNusY0DisFpS8g9YwBgClemi0PJq7nGwc+A==" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="min-css-som-bruker-tokens-variabler.css"/>
+    <!-- [Andre script] -->
+  </head>
+  <body>
+    <!-- [Innhold] -->
+  </body>
+</html>
+```
+
+#### NPM
+
+[![](https://img.shields.io/npm/dm/@digdir/ds-tokens.svg)](https://www.npmjs.com/package/@digdir/ds-tokens)
+
+**1. Installer pakken i kommandolinjen ved hjelp av NPM eller Yarn.**
+
+`npm install @digdir/ds-tokens`
+
+eller
+
+`yarn add @digdir/ds-tokens`
+
+**2. Importer og bruk deretter variablene i ønsket format.**
+
+##### CSS
 
 ```css
-$color-neutral-grey-800: #1e2b3c;
+/* Importer */
+@import '@digdir/ds-tokens/build/tokens.css';
+/* Bruk variablene på følgende format: */
+:root {
+  --my-text-color: var(--color-text-background-light);
+}
 ```
+
+##### SCSS
+
+```scss
+// Importer
+@use '@digdir/ds-tokens/build/tokens.scss' as *;
+// Bruk variablene på følgende format:
+$my-text-color: $color-text-background-light;
+```
+
+##### Javascript
+
+```javascript
+// Importer
+import tokens from '@digdir/ds-tokens/build/tokens.js'
+// Bruk variablene på følgende format:
+const myTextColor = tokens.color.text.background.light
+```
+
+## Tokens
+
+### Color
+
+<DesignTokenDocBlock categoryName="Colors" />
+
+### Spacing
+
+<DesignTokenDocBlock categoryName="Spacing" />
+
+### Typography
+
+##### Font Size
+
+<DesignTokenDocBlock categoryName="FontSize" />
+
+##### Font Weight
+
+<DesignTokenDocBlock categoryName="FontWeight" />
+
+##### Line Height
+
+<DesignTokenDocBlock categoryName="LineHeight" />
+
+##### Font Family
+
+<DesignTokenDocBlock categoryName="FontFamily" />
