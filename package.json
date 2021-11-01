@@ -4,7 +4,7 @@
   "workspaces": [
     "packages/*"
   ],
-  "author": "Bendik Kvernevik",
+  "author": "DigDir design system team",
   "license": "BSD3",
   "devDependencies": {
     "@babel/core": "^7.15.8",
@@ -27,7 +27,9 @@
     "start": "start-storybook -p 6006",
     "build:docs": "build-storybook -o ./docs",
     "build": "lerna run build",
-    "version:all": "lerna version --no-push --conventional-commits"
+    "version:changed": "lerna version --no-push --conventional-commits",
+    "publish:changed": "lerna publish from-git",
+    "version-publish-push": "lerna publish --conventional-commits"
   },
   "prettier": {
     "trailingComma": "all",
