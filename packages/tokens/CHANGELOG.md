@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/felleslosninger/tlp-design-admin/compare/@digdir/ds-tokens@1.1.0...@digdir/ds-tokens@1.2.0) (2021-11-03)
+
+
+### Features
+
+* Added color token: color-neutral-grey-900 ([09cf1a3](https://github.com/felleslosninger/tlp-design-admin/commit/09cf1a3a6e1c8f84a9899ab045fb8c711980aa91))
+
+
+
+
+
 # [1.1.0](https://github.com/felleslosninger/tlp-design-admin/compare/@digdir/ds-tokens@1.0.0...@digdir/ds-tokens@1.1.0) (2021-11-01)
 
 
