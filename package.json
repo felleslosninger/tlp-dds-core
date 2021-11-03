@@ -27,7 +27,7 @@
     "start": "start-storybook -p 6006",
     "build:docs": "build-storybook -o ./docs",
     "build": "lerna run build",
-    "version:changed": "lerna version --no-push --conventional-commits",
+    "version:changed": "lerna version --no-push --conventional-commits --no-private",
     "publish:changed": "lerna publish from-git",
     "version-publish-push": "lerna publish --conventional-commits"
   },
