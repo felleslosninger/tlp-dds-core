@@ -88,6 +88,11 @@
           "value": "#1e2b3c",
           "type": "color",
           "description": "Main Text Color\nAAA 14.3 on white"
+        },
+        "900": {
+          "value": "#141e29",
+          "type": "color",
+          "description": "AAA 16.8 on white"
         }
       }
     },
