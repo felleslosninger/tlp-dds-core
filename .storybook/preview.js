@@ -1,3 +1,5 @@
+import customTheme from './customTheme.js'
+
 const tokenContext = require.context(
   '!!raw-loader!../packages/tokens/src/stories',
   true,
@@ -9,6 +11,9 @@ const tokenFiles = tokenContext.keys().map(function (filename) {
 })
 
 export const parameters = {
+  docs: {
+    theme: customTheme,
+  },
   actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
     disabled: true,
