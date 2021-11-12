@@ -25,8 +25,9 @@
   },
   "scripts": {
     "start": "start-storybook -p 6006",
-    "build:docs": "build-storybook -o ./docs",
+    "start:clean": "start-storybook -p 6006 --no-manager-cache",
     "build": "lerna run build",
+    "build:docs": "build-storybook -o ./docs",
     "version:changed": "lerna version --no-push --conventional-commits --no-private",
     "publish:changed": "lerna publish from-git",
     "version-publish-push": "lerna publish --conventional-commits"
