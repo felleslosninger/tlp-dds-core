@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/felleslosninger/tlp-design-admin/compare/@digdir/ds-tokens@1.2.0...@digdir/ds-tokens@1.3.0) (2021-11-15)
+
+
+### Features
+
+* Added design tokens: border-width, border-radius ([35c2a30](https://github.com/felleslosninger/tlp-design-admin/commit/35c2a30ba5aa7bf73e2136d36d98730ff728422a))
+* Added design tokens: duration ([0c1e40c](https://github.com/felleslosninger/tlp-design-admin/commit/0c1e40c95a6cbc3c129a05281f3bde90ae4dcff0))
+
+
+
+
+
 # [1.2.0](https://github.com/felleslosninger/tlp-design-admin/compare/@digdir/ds-tokens@1.1.0...@digdir/ds-tokens@1.2.0) (2021-11-03)
 
 
