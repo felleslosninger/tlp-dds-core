@@ -1,0 +1,7 @@
+@use '../../../tokens/build/tokens.scss' as *;
+@use './Inter.scss' as *;
+
+body {
+  font-family: $font-family;
+  color: $color-text-background-light;
+}
