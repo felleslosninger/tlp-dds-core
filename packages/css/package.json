@@ -6,6 +6,9 @@
     "build": "yarn clean && sass --no-source-map --style=compressed src/index.scss ../components/build/index.css",
     "clean": "rm -rf ./build/"
   },
+  "dependencies": {
+    "@digdir/ds-tokens": "^1.3.0"
+  },
   "devDependencies": {
     "sass": "^1.42.1"
   }
