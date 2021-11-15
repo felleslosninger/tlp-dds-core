@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 03 Nov 2021 10:03:18 GMT
+ * Generated on Mon, 15 Nov 2021 11:33:41 GMT
  */
 
 :root {
@@ -40,6 +40,8 @@
   --spacing-base-3: 0.75rem;
   --spacing-base-2: 0.5rem;
   --spacing-base-1: 0.25rem;
+  --duration-normal: 0.2s;
+  --duration-fast: 0.1s;
   --color-brand-third-800: #156aac;
   --color-brand-third-700: #1b88dd;
   --color-brand-third-600: #1e98f5;
@@ -87,6 +89,14 @@
   --breakpoint-large: 992px;
   --breakpoint-medium: 768px;
   --breakpoint-small: 576px;
+  --border-radius-x-large: 32px;
+  --border-radius-large: 24px;
+  --border-radius-medium: 16px;
+  --border-radius-small: 8px;
+  --border-radius-x-small: 4px;
+  --border-width-regular: 2px;
+  --border-width-thin: 1px;
   --color-text-background-dark: var(--color-neutral-white);
   --color-text-background-light: var(--color-neutral-grey-800);
+  --border-width-default: var(--border-width-regular);
 }
