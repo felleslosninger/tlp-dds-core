@@ -27,9 +27,10 @@ export const parameters = {
   options: {
     storySort: {
       order: [
-        'Introduksjon',
-        'Designsystem',
-        ['Tokens', 'Typografi', 'Komponenter', 'Maler', ['Introduksjon']],
+        'Generelt',
+        ['Introduksjon', 'Tokens', 'Typografi'],
+        'Komponenter',
+        'Maler',
       ],
     },
   },
