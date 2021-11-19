@@ -17,13 +17,7 @@ export const parameters = {
   docs: {
     theme: customTheme,
   },
-  actions: { argTypesRegex: '^on[A-Z].*' },
-  controls: {
-    disabled: true,
-  },
-  actions: {
-    disabled: true,
-  },
+  layout: 'centered',
   options: {
     storySort: {
       order: [
@@ -34,10 +28,8 @@ export const parameters = {
       ],
     },
   },
-  previewTabs: {
-    'storybook/docs/panel': {
-      hidden: true,
-    },
+  actions: {
+    disabled: true,
   },
   designToken: {
     files: tokenFiles,
