@@ -1,11 +1,17 @@
 import storyDocs from './checkboxDocs.mdx'
 import { createCheckbox } from '../checkbox'
+import { withDesign } from 'storybook-addon-designs'
 
 export default {
   title: 'Komponenter/Checkbox',
+  decorators: [withDesign],
   parameters: {
     docs: {
       page: storyDocs,
+    },
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/vpM9dqqQPHqU6ogfKp5tlr/Digdir-admin?node-id=1553%3A13038',
     },
   },
   argTypes: {

@@ -1,11 +1,17 @@
 import storyDocs from './buttonDocs.mdx'
 import { createButton } from '../button'
+import { withDesign } from 'storybook-addon-designs'
 
 export default {
   title: 'Komponenter/Button',
+  decorators: [withDesign],
   parameters: {
     docs: {
       page: storyDocs,
+    },
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/vpM9dqqQPHqU6ogfKp5tlr/Digdir-admin?node-id=1329%3A12287',
     },
   },
   argTypes: {

@@ -12,5 +12,6 @@ module.exports = {
     '@storybook/theming',
     '@whitespace/storybook-addon-html',
     '@storybook/addon-a11y',
+    'storybook-addon-designs',
   ],
 }
