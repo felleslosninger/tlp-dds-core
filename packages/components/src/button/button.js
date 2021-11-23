@@ -1,5 +1,5 @@
 import classnames from 'classnames'
-import { sanitizeStrict } from '../utils'
+import { sanitizeStrict, formatHtml } from '../utils'
 
 const createButton = ({
   label = 'Click me',
@@ -39,7 +39,7 @@ const createButton = ({
     <path d='${iconSvgPathRight}'></path>
     </svg>`
 
-  return String.raw`
+  return formatHtml(String.raw`
   <button
     type='button'
     class='${buttonClasses}'
@@ -48,7 +48,7 @@ const createButton = ({
     ${iconLeft ? iconSvgLeft : ''}
     ${label}
     ${iconRight ? iconSvgRight : ''}
-  </button>`
+  </button>`)
 }
 
 export { createButton }
