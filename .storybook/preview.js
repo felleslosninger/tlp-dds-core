@@ -24,6 +24,7 @@ export const parameters = {
         'Generelt',
         ['Introduksjon', 'Tokens', 'Typografi'],
         'Komponenter',
+        ['Introduksjon', 'Button', 'Checkbox'],
         'Maler',
       ],
     },
