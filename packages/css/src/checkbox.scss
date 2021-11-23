@@ -9,7 +9,11 @@ $color-checkbox-disabled: $color-neutral-grey-500;
   align-items: center;
   box-sizing: border-box;
   cursor: pointer;
-  @include dads-text-interface($font-size-300);
+  @include dads-text(
+    $font-size-300,
+    $font-weight-regular,
+    $font-line-height-30
+  );
 
   &:focus-within {
     outline: 2px solid $color-brand-third-700;
@@ -60,7 +64,12 @@ $color-checkbox-disabled: $color-neutral-grey-500;
 
   // Size modifiers
   &--large {
-    @include dads-text-interface($font-size-400);
+    @include dads-text(
+      $font-size-400,
+      $font-weight-regular,
+      $font-line-height-30,
+      $color-inherit: false
+    );
 
     & > .dads-checkbox__checkmark {
       width: $spacing-base-8;
