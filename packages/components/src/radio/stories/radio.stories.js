@@ -9,6 +9,10 @@ export default {
     docs: {
       page: storyDocs,
     },
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/vpM9dqqQPHqU6ogfKp5tlr/?node-id=1513%3A12889',
+    },
   },
   argTypes: {
     label: {},
