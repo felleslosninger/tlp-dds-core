@@ -1,0 +1,100 @@
+@use '../../../node_modules/@digdir/ds-tokens/build/tokens.scss' as *;
+@use './typography.scss' as *;
+
+// Color variables
+$radio-color-default: $color-interface-interaction;
+$radio-color-disabled: $color-neutral-grey-500;
+// Size variables
+$radio-size-inner-medium: calc($spacing-base-6 - $border-width-default);
+$radio-size-inner-large: calc($spacing-base-8 - $border-width-default);
+$radio-size-checkmark-medium: $spacing-base-3;
+$radio-size-checkmark-large: calc($radio-size-checkmark-medium * 1.5);
+$radio-margin-label-medium: calc($spacing-base-2 + $border-width-default);
+$radio-margin-label-large: calc($spacing-base-4 + $border-width-default);
+$radio-border-width-inner-medium: calc(
+  ($radio-size-inner-medium - $radio-size-checkmark-medium) / 2
+);
+$radio-border-width-inner-large: calc(
+  ($radio-size-inner-large - $radio-size-checkmark-large) / 2
+);
+
+.dads-radio {
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  @include dads-text(
+    $font-size-300,
+    $font-weight-regular,
+    $font-line-height-30
+  );
+
+  &:focus-within {
+    outline: $border-width-default solid $color-brand-third-700;
+  }
+
+  & input {
+    cursor: pointer;
+    // Hide browser-default radio appearance
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: $border-width-default;
+
+    // Medium size
+    width: $radio-size-inner-medium;
+    height: $radio-size-inner-medium;
+    margin-right: $radio-margin-label-medium;
+
+    // Custom radio appearance
+    border-radius: 50%;
+    background-color: $color-neutral-white;
+    // Inner border
+    border: $radio-border-width-inner-medium solid $color-neutral-white;
+    // Outer border
+    box-shadow: 0 0 0 $border-width-default $radio-color-default;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:checked {
+      background-color: $radio-color-default;
+    }
+    &:disabled {
+      cursor: not-allowed;
+      box-shadow: 0 0 0 $border-width-default $radio-color-disabled;
+    }
+    &:disabled:checked {
+      background-color: $radio-color-disabled;
+    }
+    &:hover:not(:checked):not(:disabled) {
+      background-color: $color-interface-interaction-light;
+    }
+  }
+
+  &--disabled {
+    cursor: not-allowed;
+    color: $radio-color-disabled;
+  }
+
+  // Size modifiers
+  &--large {
+    @include dads-text(
+      $font-size-400,
+      $font-weight-regular,
+      $font-line-height-30,
+      $color-inherit: false
+    );
+
+    & > input {
+      width: $radio-size-inner-large;
+      height: $radio-size-inner-large;
+      margin-right: $radio-margin-label-large;
+
+      // Custom radio appearance
+      border: $radio-border-width-inner-large solid $color-neutral-white;
+    }
+  }
+}
