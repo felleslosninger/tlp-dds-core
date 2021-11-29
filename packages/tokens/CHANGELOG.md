@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/felleslosninger/tlp-design-admin/compare/@digdir/ds-tokens@1.3.0...@digdir/ds-tokens@1.4.0) (2021-11-29)
+
+
+### Features
+
+* Added color tokens: accessibility and accessibility-light ([9864a66](https://github.com/felleslosninger/tlp-design-admin/commit/9864a6634695e3dc51ef68f80b82dcccc045b75a))
+
+
+
+
+
 # [1.3.0](https://github.com/felleslosninger/tlp-design-admin/compare/@digdir/ds-tokens@1.2.0...@digdir/ds-tokens@1.3.0) (2021-11-15)
 
 

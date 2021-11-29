@@ -1,6 +1,6 @@
 {
   "name": "@digdir/ds-tokens",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "private": false,
   "description": "Design tokens for DigDir design system",
   "author": "DigDir design system team",
