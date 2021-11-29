@@ -1,8 +1,16 @@
 @use '../../../node_modules/@digdir/ds-tokens/build/tokens.scss' as *;
 @use './typography.scss' as *;
 
-$color-checkbox-default: $color-interface-interaction;
-$color-checkbox-disabled: $color-neutral-grey-500;
+// Color variables
+$checkbox-color-default: $color-interface-interaction;
+$checkbox-color-disabled: $color-neutral-grey-500;
+// Size variables
+$checkbox-size-medium: $spacing-base-6;
+$checkbox-size-large: $spacing-base-8;
+$checkbox-checkmark-size-medium: $spacing-base-3;
+$checkbox-checkmark-size-large: $spacing-base-5;
+$checkbox-margin-label-medium: $spacing-base-2;
+$checkbox-margin-label-large: $spacing-base-4;
 
 .dads-checkbox {
   display: inline-flex;
@@ -16,50 +24,48 @@ $color-checkbox-disabled: $color-neutral-grey-500;
   );
 
   &:focus-within {
-    outline: 2px solid $color-brand-third-700;
+    outline: $border-width-default solid $color-brand-third-700;
   }
 
   &--disabled {
     cursor: not-allowed;
-    color: $color-checkbox-disabled;
+    color: $checkbox-color-disabled;
   }
 
   & input {
-    // Hide browser-default checkbox
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-  }
-
-  &__checkmark {
     box-sizing: border-box;
-    content: '';
-    border: $border-width-default solid $color-checkbox-default;
+    cursor: pointer;
+    // Hide browser-default checkmark appearance
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 
-    // Medium size properties
-    width: $spacing-base-6;
-    height: $spacing-base-6;
-    margin-right: $spacing-base-2;
+    // Medium size
+    width: $checkbox-size-medium;
+    height: $checkbox-size-medium;
+    margin: 0 $checkbox-margin-label-medium 0 0;
+
+    border: $border-width-default solid $checkbox-color-default;
 
     // Checkmark format
-    background-size: $spacing-base-3 $spacing-base-3;
+    background-size: $checkbox-checkmark-size-medium
+      $checkbox-checkmark-size-medium;
     background-repeat: no-repeat;
     background-position: 50%;
-  }
 
-  & input:disabled + &__checkmark {
-    border-color: $color-checkbox-disabled;
-  }
-  & input:checked:not(:disabled) + &__checkmark {
-    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNyIgaGVpZ2h0PSIxMyIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDE3IDEzIj4KICA8cGF0aCBzdHJva2U9IiMwMDUxQkUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIiBkPSJNMTUuMjczIDEuNjY3bC05LjMzNCA5LjY5Ny00LjI0Mi00LjQwOCIvPgo8L3N2Zz4K');
-  }
-  & input:checked:disabled + &__checkmark {
-    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNyIgaGVpZ2h0PSIxMyIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDE3IDEzIj4KICA8cGF0aCBzdHJva2U9IiNBNUFBQjEiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIiBkPSJNMTUuMjczIDEuNjY3bC05LjMzNCA5LjY5Ny00LjI0Mi00LjQwOCIvPgo8L3N2Zz4K');
-  }
-  & input:hover:not(:disabled):not(:checked) + &__checkmark {
-    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNyIgaGVpZ2h0PSIxMyIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDE3IDEzIj4KICA8cGF0aCBzdHJva2U9IiNCQUNGRUQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIiBkPSJNMTUuMjczIDEuNjY3bC05LjMzNCA5LjY5Ny00LjI0Mi00LjQwOCIvPgo8L3N2Zz4K');
+    &:disabled {
+      cursor: not-allowed;
+      border-color: $checkbox-color-disabled;
+    }
+    &:checked:not(:disabled) {
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNyIgaGVpZ2h0PSIxMyIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDE3IDEzIj4KICA8cGF0aCBzdHJva2U9IiMwMDUxQkUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIiBkPSJNMTUuMjczIDEuNjY3bC05LjMzNCA5LjY5Ny00LjI0Mi00LjQwOCIvPgo8L3N2Zz4K');
+    }
+    &:checked:disabled {
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNyIgaGVpZ2h0PSIxMyIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDE3IDEzIj4KICA8cGF0aCBzdHJva2U9IiNBNUFBQjEiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIiBkPSJNMTUuMjczIDEuNjY3bC05LjMzNCA5LjY5Ny00LjI0Mi00LjQwOCIvPgo8L3N2Zz4K');
+    }
+    &:hover:not(:disabled):not(:checked) {
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNyIgaGVpZ2h0PSIxMyIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDE3IDEzIj4KICA8cGF0aCBzdHJva2U9IiNCQUNGRUQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIiBkPSJNMTUuMjczIDEuNjY3bC05LjMzNCA5LjY5Ny00LjI0Mi00LjQwOCIvPgo8L3N2Zz4K');
+    }
   }
 
   // Size modifiers
@@ -71,11 +77,12 @@ $color-checkbox-disabled: $color-neutral-grey-500;
       $color-inherit: false
     );
 
-    & > .dads-checkbox__checkmark {
-      width: $spacing-base-8;
-      height: $spacing-base-8;
-      margin-right: $spacing-base-4;
-      background-size: $spacing-base-5 $spacing-base-5;
+    & > input {
+      width: $checkbox-size-large;
+      height: $checkbox-size-large;
+      margin-right: $checkbox-margin-label-large;
+      background-size: $checkbox-checkmark-size-large
+        $checkbox-checkmark-size-large;
     }
   }
 }

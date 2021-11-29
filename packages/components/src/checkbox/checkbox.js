@@ -3,9 +3,10 @@ import { sanitizeStrict, formatHtml } from '../utils'
 
 const createCheckbox = ({
   label = 'Click me',
+  size = 'medium',
   disabled = false,
   checked = false,
-  size = 'medium',
+  required = false,
 }) => {
   label = sanitizeStrict(label)
   const classPrefix = 'dads-checkbox'
@@ -19,8 +20,8 @@ const createCheckbox = ({
       <input type='checkbox'
         ${disabled ? 'disabled' : ''} 
         ${checked ? 'checked' : ''}
+        ${required ? 'required' : ''}
       />
-      <span class='${classPrefix}__checkmark'></span>
       ${label}
     </label>`)
 }
