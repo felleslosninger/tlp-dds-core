@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 15 Nov 2021 11:33:41 GMT
+ * Generated on Mon, 29 Nov 2021 13:45:00 GMT
  */
 
 :root {
@@ -76,6 +76,8 @@
   --color-neutral-grey-200: #e9eaec;
   --color-neutral-grey-100: #f4f5f6;
   --color-neutral-white: #ffffff;
+  --color-interface-accessibility-light: #deb5d6;
+  --color-interface-accessibility: #98177e;
   --color-interface-warning-light: #ffe491;
   --color-interface-warning: #b38d18;
   --color-interface-success-light: #a4e3b9;

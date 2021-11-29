@@ -40,6 +40,16 @@
         "value": "#ffe491",
         "type": "color",
         "description": "AAA 11.4 on grey 800\nAA 5.7 as background for interaction blue"
+      },
+      "accessibility": {
+        "value": "#98177E",
+        "type": "color",
+        "description": ""
+      },
+      "accessibility-light": {
+        "value": "#DEB5D6",
+        "type": "color",
+        "description": ""
       }
     },
     "neutral": {
