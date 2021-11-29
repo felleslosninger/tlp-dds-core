@@ -3,7 +3,7 @@ import { createButton } from '../button'
 import { withDesign } from 'storybook-addon-designs'
 
 export default {
-  title: 'Komponenter/Button',
+  title: 'Admin/Komponenter/Button',
   decorators: [withDesign],
   parameters: {
     docs: {

@@ -22,11 +22,16 @@ export const parameters = {
   options: {
     storySort: {
       order: [
-        'Generelt',
-        ['Introduksjon', 'Tokens', 'Typografi'],
-        'Komponenter',
-        ['Introduksjon', 'Button', 'Checkbox'],
-        'Maler',
+        'Introduksjon',
+        'Tokens',
+        'Admin',
+        [
+          'Introduksjon',
+          'Typografi',
+          'Komponenter',
+          ['Button', 'Checkbox', 'Radio'],
+          'Maler',
+        ],
       ],
     },
   },
