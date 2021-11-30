@@ -23,10 +23,6 @@ $checkbox-margin-label-large: $spacing-base-4;
     $font-line-height-30
   );
 
-  &:focus-within {
-    outline: $border-width-default solid $color-brand-third-700;
-  }
-
   &--disabled {
     cursor: not-allowed;
     color: $checkbox-color-disabled;

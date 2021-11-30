@@ -1,5 +1,6 @@
 @use '../../../node_modules/@digdir/ds-tokens/build/tokens.scss' as *;
 @use './typography.scss' as *;
+@use './baseline/baseline.scss' as *;
 
 // Color variables
 $radio-color-default: $color-interface-interaction;
@@ -30,17 +31,12 @@ $radio-border-width-inner-large: calc(
     $font-line-height-30
   );
 
-  &:focus-within {
-    outline: $border-width-default solid $color-brand-third-700;
-  }
-
   & input {
     cursor: pointer;
     // Hide browser-default radio appearance
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    margin: $border-width-default;
 
     // Medium size
     width: $radio-size-inner-medium;
@@ -54,10 +50,11 @@ $radio-border-width-inner-large: calc(
     border: $radio-border-width-inner-medium solid $color-neutral-white;
     // Outer border
     box-shadow: 0 0 0 $border-width-default $radio-color-default;
-
-    &:focus {
-      outline: none;
-    }
+    // Correct offsets for box-shadow outer border
+    margin-top: $border-width-default;
+    margin-bottom: $border-width-default;
+    margin-left: $border-width-default;
+    outline-offset: calc($border-width-default + $base-outline-offset);
 
     &:checked {
       background-color: $radio-color-default;

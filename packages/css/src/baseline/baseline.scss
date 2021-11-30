@@ -1,6 +1,13 @@
 @use '../../../tokens/build/tokens.scss' as *;
 @use './Inter.scss' as *;
 
+$base-outline-offset: 2px;
+
+@mixin focus-outline {
+  outline: $border-width-default solid $color-interface-accessibility;
+  outline-offset: $base-outline-offset;
+}
+
 body {
   font-family: $font-family;
   color: $color-text-background-light;
@@ -17,4 +24,16 @@ a {
   &:visited {
     color: $color-interface-visited;
   }
+}
+
+// Keyboard navigation focus styling
+*:focus-visible {
+  @include focus-outline();
+}
+// Compatibility for browsers not supporting :focus-visible (Safari, IE)
+*:focus {
+  @include focus-outline();
+}
+*:focus:not(:focus-visible) {
+  outline: none;
 }

@@ -33,7 +33,8 @@
   box-sizing: border-box;
   display: inline-flex;
   align-items: center;
-  transition: $duration-normal all;
+  transition: all $duration-normal;
+  transition-property: background-color, border-color, color;
   overflow: hidden;
 
   // Size medium
