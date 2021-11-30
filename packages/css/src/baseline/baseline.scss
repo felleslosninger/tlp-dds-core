@@ -5,3 +5,15 @@ body {
   font-family: $font-family;
   color: $color-text-background-light;
 }
+
+a {
+  color: $color-interface-interaction;
+  text-decoration: none;
+  &:hover {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+  }
+  &:visited {
+    color: $color-interface-visited;
+  }
+}
