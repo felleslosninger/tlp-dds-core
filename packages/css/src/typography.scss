@@ -1,21 +1,7 @@
 @use '../../../node_modules/@digdir/ds-tokens/build/tokens.scss' as *;
 
 // General font mixin
-@mixin dads-text(
-  $font-size,
-  $font-weight,
-  $line-height,
-  $font-family-inherit: true,
-  $color-inherit: true
-) {
-  // Common properties
-  @if $font-family-inherit {
-    font-family: inherit;
-  }
-  @if $color-inherit {
-    color: inherit;
-  }
-  // Custom properties
+@mixin dads-text($font-size, $font-weight, $line-height) {
   font-size: $font-size;
   font-weight: $font-weight;
   line-height: $line-height;
@@ -23,12 +9,7 @@
 
 // Font properties used in UI elements
 @mixin dads-text-interface($font-size) {
-  @include dads-text(
-    $font-size,
-    $font-weight-medium,
-    $font-line-height-10,
-    $color-inherit: false
-  );
+  @include dads-text($font-size, $font-weight-medium, $font-line-height-10);
 }
 
 // Font classes

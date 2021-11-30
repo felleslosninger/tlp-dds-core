@@ -84,8 +84,7 @@ $radio-border-width-inner-large: calc(
     @include dads-text(
       $font-size-400,
       $font-weight-regular,
-      $font-line-height-30,
-      $color-inherit: false
+      $font-line-height-30
     );
 
     & > input {
