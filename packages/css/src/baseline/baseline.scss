@@ -10,8 +10,9 @@ a {
   color: $color-interface-interaction;
   text-decoration: none;
   &:hover {
-    border-bottom-width: 1px;
+    border-bottom-width: $border-width-thin;
     border-bottom-style: solid;
+    padding-bottom: 1px;
   }
   &:visited {
     color: $color-interface-visited;
