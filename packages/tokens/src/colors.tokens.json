@@ -50,6 +50,11 @@
         "value": "#DEB5D6",
         "type": "color",
         "description": ""
+      },
+      "visited": {
+        "value": "#7E0C67",
+        "type": "color",
+        "description": ""
       }
     },
     "neutral": {
