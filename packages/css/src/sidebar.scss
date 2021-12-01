@@ -1,0 +1,40 @@
+@use '../../../node_modules/@digdir/ds-tokens/build/tokens.scss' as *;
+
+.dads-sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  display: grid;
+  background-color: $color-neutral-grey-800;
+  z-index: $z-index-height-10;
+
+  &__header {
+    position: fixed;
+    top: 24px;
+    left: 24px;
+
+    &__logo {
+      &__icon {
+        width: 25px;
+        height: 25px;
+        fill: $color-neutral-white;
+      }
+
+      &__label {
+        color: $color-neutral-white;
+      }
+    }
+
+    &__handle {
+      width: 32px;
+      height: 32px;
+      fill: $color-neutral-white;
+    }
+  }
+
+  &--collapsed {
+    width: 56px;
+  }
+}

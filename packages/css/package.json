@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "yarn clean && sass --no-source-map --style=compressed src/index.scss ../components/build/index.css",
+    "build": "yarn clean && sass --no-source-map --style=compressed src/index.scss build/index.css",
     "clean": "rm -rf ./build/"
   },
   "dependencies": {

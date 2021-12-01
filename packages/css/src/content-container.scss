@@ -1,0 +1,14 @@
+@use '../../../node_modules/@digdir/ds-tokens/build/tokens.scss' as *;
+
+.dads-content-container {
+  position: absolute;
+  top: 60px;
+  left: 300px;
+  right: 0;
+  bottom: 0;
+
+  // overflow: auto;
+  background-color: $color-neutral-grey-100;
+  padding: 24px;
+  z-index: $z-index-default;
+}

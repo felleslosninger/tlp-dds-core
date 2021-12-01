@@ -1,0 +1,15 @@
+@use '../../../node_modules/@digdir/ds-tokens/build/tokens.scss' as *;
+
+.dads-icon-button {
+  border: none;
+  background: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &__icon {
+    height: 32px;
+    width: 32px;
+  }
+}
