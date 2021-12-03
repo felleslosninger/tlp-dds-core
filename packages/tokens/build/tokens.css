@@ -1,9 +1,16 @@
 /**
  * Do not edit directly
- * Generated on Tue, 30 Nov 2021 09:19:51 GMT
+ * Generated on Fri, 03 Dec 2021 08:49:09 GMT
  */
 
 :root {
+  --z-index-behind: -1;
+  --z-index-height-50: 50;
+  --z-index-height-40: 40;
+  --z-index-height-30: 30;
+  --z-index-height-20: 20;
+  --z-index-height-10: 10;
+  --z-index-height-0: 0;
   --font-weight-medium: 500;
   --font-weight-regular: 400;
   --font-size-900: 2.75rem;
@@ -99,6 +106,7 @@
   --border-radius-x-small: 4px;
   --border-width-regular: 2px;
   --border-width-thin: 1px;
+  --z-index-default: var(--z-index-height-0);
   --color-text-background-dark: var(--color-neutral-white);
   --color-text-background-light: var(--color-neutral-grey-800);
   --border-width-default: var(--border-width-regular);
