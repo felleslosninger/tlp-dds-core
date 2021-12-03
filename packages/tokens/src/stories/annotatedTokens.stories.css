@@ -120,7 +120,7 @@
   * @tokens Duration
   */
   --duration-fast: 0.1s;
-  --duration-normal: 0.3s;
+  --duration-normal: 0.2s;
   /**
   * @tokens BorderRadius
   * @presenter BorderRadius
@@ -135,4 +135,15 @@
   */
   --border-width-thin: 1px;
   --border-width-regular: 2px;
+  /**
+  * @tokens Z-index
+  */
+  --z-index-behind: -1;
+  --z-index-height-0: 0;
+  --z-index-height-10: 10;
+  --z-index-height-20: 20;
+  --z-index-height-30: 30;
+  --z-index-height-40: 40;
+  --z-index-height-50: 50;
+  --z-index-default: var(--z-index-height-0);
 }
