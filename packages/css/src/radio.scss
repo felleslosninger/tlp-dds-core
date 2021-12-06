@@ -3,7 +3,8 @@
 @use './baseline/baseline.scss' as *;
 
 // Color variables
-$radio-color-default: $color-interface-interaction;
+$radio-color-unchecked: $color-neutral-grey-600;
+$radio-color-checked: $color-interface-interaction;
 $radio-color-disabled: $color-neutral-grey-500;
 // Size variables
 $radio-size-inner-medium: calc($spacing-base-6 - $border-width-default);
@@ -49,7 +50,7 @@ $radio-border-width-inner-large: calc(
     // Inner border
     border: $radio-border-width-inner-medium solid $color-neutral-white;
     // Outer border
-    box-shadow: 0 0 0 $border-width-default $radio-color-default;
+    box-shadow: 0 0 0 $border-width-default $radio-color-unchecked;
     // Correct offsets for box-shadow outer border
     margin-top: $border-width-default;
     margin-bottom: $border-width-default;
@@ -57,7 +58,8 @@ $radio-border-width-inner-large: calc(
     outline-offset: calc($border-width-default + $base-outline-offset);
 
     &:checked {
-      background-color: $radio-color-default;
+      background-color: $radio-color-checked;
+      box-shadow: 0 0 0 $border-width-default $radio-color-checked;
     }
     &:disabled {
       cursor: not-allowed;
@@ -68,6 +70,7 @@ $radio-border-width-inner-large: calc(
     }
     &:hover:not(:checked):not(:disabled) {
       background-color: $color-interface-interaction-light;
+      box-shadow: 0 0 0 $border-width-default $radio-color-checked;
     }
   }
 
@@ -89,7 +92,6 @@ $radio-border-width-inner-large: calc(
       height: $radio-size-inner-large;
       margin-right: $radio-margin-label-large;
 
-      // Custom radio appearance
       border: $radio-border-width-inner-large solid $color-neutral-white;
     }
   }
