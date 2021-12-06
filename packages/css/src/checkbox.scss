@@ -2,7 +2,8 @@
 @use './typography.scss' as *;
 
 // Color variables
-$checkbox-color-default: $color-interface-interaction;
+$checkbox-color-unchecked: $color-neutral-grey-600;
+$checkbox-color-checked: $color-interface-interaction;
 $checkbox-color-disabled: $color-neutral-grey-500;
 // Size variables
 $checkbox-size-medium: $spacing-base-6;
@@ -41,7 +42,7 @@ $checkbox-margin-label-large: $spacing-base-4;
     height: $checkbox-size-medium;
     margin: 0 $checkbox-margin-label-medium 0 0;
 
-    border: $border-width-default solid $checkbox-color-default;
+    border: $border-width-default solid $checkbox-color-unchecked;
 
     // Checkmark format
     background-size: $checkbox-checkmark-size-medium
@@ -55,12 +56,14 @@ $checkbox-margin-label-large: $spacing-base-4;
     }
     &:checked:not(:disabled) {
       background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNyIgaGVpZ2h0PSIxMyIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDE3IDEzIj4KICA8cGF0aCBzdHJva2U9IiMwMDUxQkUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIiBkPSJNMTUuMjczIDEuNjY3bC05LjMzNCA5LjY5Ny00LjI0Mi00LjQwOCIvPgo8L3N2Zz4K');
+      border-color: $checkbox-color-checked;
     }
     &:checked:disabled {
       background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNyIgaGVpZ2h0PSIxMyIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDE3IDEzIj4KICA8cGF0aCBzdHJva2U9IiNBNUFBQjEiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIiBkPSJNMTUuMjczIDEuNjY3bC05LjMzNCA5LjY5Ny00LjI0Mi00LjQwOCIvPgo8L3N2Zz4K');
     }
     &:hover:not(:disabled):not(:checked) {
       background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNyIgaGVpZ2h0PSIxMyIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDE3IDEzIj4KICA8cGF0aCBzdHJva2U9IiNCQUNGRUQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIiBkPSJNMTUuMjczIDEuNjY3bC05LjMzNCA5LjY5Ny00LjI0Mi00LjQwOCIvPgo8L3N2Zz4K');
+      border-color: $checkbox-color-checked;
     }
   }
 
