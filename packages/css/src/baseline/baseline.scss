@@ -21,6 +21,8 @@ a.#{utils.$prefix}-link {
   border-bottom: $border-width-thin solid $color-neutral-grey-400;
   padding-bottom: 1px;
 
+  transition: border-color $duration-normal;
+
   &:hover {
     border-color: $color-interface-interaction;
     border-width: $border-width-default;
