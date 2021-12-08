@@ -9,7 +9,7 @@ const createCheckbox = ({
   required = false,
 }) => {
   label = sanitizeStrict(label)
-  const classPrefix = 'dads-checkbox'
+  const classPrefix = 'dds-checkbox'
   const customCheckboxClasses = classnames([`${classPrefix}`], {
     [`${classPrefix}--large`]: size === 'large',
     [`${classPrefix}--disabled`]: disabled,

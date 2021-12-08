@@ -9,7 +9,7 @@ const createRadio = ({
   required = false,
 }) => {
   label = sanitizeStrict(label)
-  const classPrefix = 'dads-radio'
+  const classPrefix = 'dds-radio'
   const customRadioClasses = classnames([`${classPrefix}`], {
     [`${classPrefix}--large`]: size === 'large',
     [`${classPrefix}--disabled`]: disabled,

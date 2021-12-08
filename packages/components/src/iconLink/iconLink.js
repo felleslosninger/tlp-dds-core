@@ -8,7 +8,7 @@ const createIconLink = ({
   href = 'https://www.digdir.no/',
 }) => {
   label = sanitizeStrict(label)
-  const classPrefix = 'dads-icon-link'
+  const classPrefix = 'dds-icon-link'
   const linkClasses = classnames(classPrefix, {
     [`${classPrefix}--large`]: size === 'large',
     [`${classPrefix}--external`]: variant === 'external',
