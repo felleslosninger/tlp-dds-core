@@ -31,8 +31,6 @@ const createIconLink = ({
       <path d="${iconSvgPath}"></path>
     </svg>`
 
-  const labelElement = String.raw`<span class='${classPrefix}__label'>${label}</span>`
-
   return formatHtml(String.raw`
   <a class='${linkClasses}' href='${href}' target='_blank' rel='noreferrer noopener'>
     ${label}
