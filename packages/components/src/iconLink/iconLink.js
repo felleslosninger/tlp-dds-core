@@ -1,7 +1,7 @@
 import classnames from 'classnames'
 import { sanitizeStrict, formatHtml } from '../utils'
 
-const createLink = ({
+const createIconLink = ({
   label = 'Click me',
   size = 'medium',
   variant = 'internal',
@@ -40,4 +40,4 @@ const createLink = ({
   </a>`)
 }
 
-export { createLink }
+export { createIconLink }

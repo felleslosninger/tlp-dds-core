@@ -1,4 +1,4 @@
-import { createLink } from '../link'
+import { createIconLink } from '../iconLink'
 import { withDesign } from 'storybook-addon-designs'
 
 export default {
@@ -24,7 +24,7 @@ export default {
 }
 
 const Template = (args) => {
-  return createLink(args)
+  return createIconLink(args)
 }
 
 export const InternalLink = Template.bind({})
