@@ -3,7 +3,7 @@ import { createRadio } from '../radio'
 import { withDesign } from 'storybook-addon-designs'
 
 export default {
-  title: 'Admin/Komponenter/Radio',
+  title: 'Komponenter/Radio',
   decorators: [withDesign],
   parameters: {
     docs: {

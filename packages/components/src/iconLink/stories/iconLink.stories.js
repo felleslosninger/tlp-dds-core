@@ -2,7 +2,7 @@ import { createIconLink } from '../iconLink'
 import { withDesign } from 'storybook-addon-designs'
 
 export default {
-  title: 'Admin/Komponenter/Icon-link',
+  title: 'Komponenter/Icon-link',
   decorators: [withDesign],
   parameters: {
     design: {

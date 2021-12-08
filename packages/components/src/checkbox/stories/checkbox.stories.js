@@ -3,7 +3,7 @@ import { createCheckbox } from '../checkbox'
 import { withDesign } from 'storybook-addon-designs'
 
 export default {
-  title: 'Admin/Komponenter/Checkbox',
+  title: 'Komponenter/Checkbox',
   decorators: [withDesign],
   parameters: {
     docs: {

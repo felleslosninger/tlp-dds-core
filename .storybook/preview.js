@@ -24,14 +24,9 @@ export const parameters = {
       order: [
         'Introduksjon',
         'Tokens',
-        'Admin',
-        [
-          'Introduksjon',
-          'Typografi',
-          'Komponenter',
-          ['Button', 'Checkbox', 'Radio'],
-          'Maler',
-        ],
+        'Typografi',
+        'Komponenter',
+        ['Introduksjon', 'Button', 'Checkbox', 'Radio', 'Icon-link'],
       ],
     },
   },
