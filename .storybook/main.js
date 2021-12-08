@@ -14,4 +14,12 @@ module.exports = {
     '@storybook/addon-a11y',
     'storybook-addon-designs',
   ],
+  refs: {
+    // ID-porten storybook integration
+    idporten: {
+      title: 'ID-porten',
+      url: 'https://felleslosninger.github.io/idporten-design-system/',
+      expanded: false,
+    },
+  },
 }
