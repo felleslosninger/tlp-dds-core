@@ -1,11 +1,10 @@
 @use '../../../tokens/build/tokens.scss' as *;
 @use './Inter.scss' as *;
-
-$base-outline-offset: 2px;
+@use './utils.scss' as utils;
 
 @mixin focus-outline {
   outline: $border-width-default solid $color-interface-accessibility;
-  outline-offset: $base-outline-offset;
+  outline-offset: utils.$base-outline-offset;
 }
 
 body {
@@ -13,16 +12,26 @@ body {
   color: $color-text-background-light;
 }
 
-a {
+// Link in text
+a.#{utils.$prefix}-link {
+  cursor: pointer;
   color: $color-interface-interaction;
+
   text-decoration: none;
+  border-bottom: $border-width-thin solid $color-neutral-grey-400;
+  padding-bottom: 1px;
+
   &:hover {
-    border-bottom-width: $border-width-thin;
-    border-bottom-style: solid;
-    padding-bottom: 1px;
+    border-color: $color-interface-interaction;
+    border-width: $border-width-default;
   }
+
   &:visited {
     color: $color-interface-visited;
+
+    &:hover {
+      border-color: $color-interface-visited;
+    }
   }
 }
 
