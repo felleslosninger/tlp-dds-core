@@ -1,5 +1,6 @@
 @use '../../../node_modules/@digdir/ds-tokens/build/tokens.scss' as *;
 @use './typography.scss' as *;
+@use './baseline/utils.scss' as utils;
 
 // Color variables
 $checkbox-color-unchecked: $color-neutral-grey-600;
@@ -13,16 +14,12 @@ $checkbox-checkmark-size-large: $spacing-base-5;
 $checkbox-margin-label-medium: $spacing-base-2;
 $checkbox-margin-label-large: $spacing-base-4;
 
-.dads-checkbox {
+.#{utils.$prefix}-checkbox {
   display: inline-flex;
   align-items: center;
   box-sizing: border-box;
   cursor: pointer;
-  @include dads-text(
-    $font-size-300,
-    $font-weight-regular,
-    $font-line-height-30
-  );
+  @include font($font-size-300, $font-weight-regular, $font-line-height-30);
 
   &--disabled {
     cursor: not-allowed;
@@ -69,11 +66,7 @@ $checkbox-margin-label-large: $spacing-base-4;
 
   // Size modifiers
   &--large {
-    @include dads-text(
-      $font-size-400,
-      $font-weight-regular,
-      $font-line-height-30
-    );
+    @include font($font-size-400, $font-weight-regular, $font-line-height-30);
 
     & > input {
       width: $checkbox-size-large;

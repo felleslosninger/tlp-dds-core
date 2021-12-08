@@ -1,95 +1,72 @@
 @use '../../../node_modules/@digdir/ds-tokens/build/tokens.scss' as *;
+@use './baseline/utils.scss' as utils;
 
 // General font mixin
-@mixin dads-text($font-size, $font-weight, $line-height) {
+@mixin font($font-size, $font-weight, $line-height) {
   font-size: $font-size;
   font-weight: $font-weight;
   line-height: $line-height;
 }
 
 // Font properties used in UI elements
-@mixin dads-text-interface($font-size) {
-  @include dads-text($font-size, $font-weight-medium, $font-line-height-10);
+@mixin font-interface($font-size) {
+  @include font($font-size, $font-weight-medium, $font-line-height-10);
 }
 
 // Font classes
 // Body
-.dads-text-body-100 {
-  @include dads-text(
-    $font-size-100,
-    $font-weight-regular,
-    $font-line-height-20
-  );
+.#{utils.$prefix}-text-body-100 {
+  @include font($font-size-100, $font-weight-regular, $font-line-height-20);
 }
 
-.dads-text-body-200 {
-  @include dads-text(
-    $font-size-200,
-    $font-weight-regular,
-    $font-line-height-30
-  );
+.#{utils.$prefix}-text-body-200 {
+  @include font($font-size-200, $font-weight-regular, $font-line-height-30);
 }
 
-.dads-text-body-300 {
-  @include dads-text(
-    $font-size-300,
-    $font-weight-regular,
-    $font-line-height-30
-  );
+.#{utils.$prefix}-text-body-300 {
+  @include font($font-size-300, $font-weight-regular, $font-line-height-30);
 }
 
-.dads-text-body-400 {
-  @include dads-text(
-    $font-size-400,
-    $font-weight-regular,
-    $font-line-height-30
-  );
+.#{utils.$prefix}-text-body-400 {
+  @include font($font-size-400, $font-weight-regular, $font-line-height-30);
 }
 
 // Heading
-.dads-text-heading-500 {
-  @include dads-text($font-size-500, $font-weight-medium, $font-line-height-20);
+.#{utils.$prefix}-text-heading-500 {
+  @include font($font-size-500, $font-weight-medium, $font-line-height-20);
 }
 
-.dads-text-heading-600 {
-  @include dads-text($font-size-600, $font-weight-medium, $font-line-height-20);
+.#{utils.$prefix}-text-heading-600 {
+  @include font($font-size-600, $font-weight-medium, $font-line-height-20);
 }
 
-.dads-text-heading-700 {
-  @include dads-text($font-size-700, $font-weight-medium, $font-line-height-20);
+.#{utils.$prefix}-text-heading-700 {
+  @include font($font-size-700, $font-weight-medium, $font-line-height-20);
 }
 
-.dads-text-heading-800 {
-  @include dads-text($font-size-800, $font-weight-medium, $font-line-height-10);
+.#{utils.$prefix}-text-heading-800 {
+  @include font($font-size-800, $font-weight-medium, $font-line-height-10);
 }
 
-.dads-text-heading-900 {
-  @include dads-text($font-size-900, $font-weight-medium, $font-line-height-10);
+.#{utils.$prefix}-text-heading-900 {
+  @include font($font-size-900, $font-weight-medium, $font-line-height-10);
 }
 
 // Ingress
-.dads-text-ingress-500 {
-  @include dads-text(
-    $font-size-500,
-    $font-weight-regular,
-    $font-line-height-30
-  );
+.#{utils.$prefix}-text-ingress-500 {
+  @include font($font-size-500, $font-weight-regular, $font-line-height-30);
 }
-.dads-text-ingress-600 {
-  @include dads-text(
-    $font-size-600,
-    $font-weight-regular,
-    $font-line-height-40
-  );
+.#{utils.$prefix}-text-ingress-600 {
+  @include font($font-size-600, $font-weight-regular, $font-line-height-40);
 }
 
 // Interface
-.dads-text-interface-200 {
-  @include dads-text-interface($font-size-200);
+.#{utils.$prefix}-text-interface-200 {
+  @include font-interface($font-size-200);
 }
-.dads-text-interface-300 {
-  @include dads-text-interface($font-size-300);
+.#{utils.$prefix}-text-interface-300 {
+  @include font-interface($font-size-300);
 }
-.dads-text-interface-400 {
-  @include dads-text-interface($font-size-400);
+.#{utils.$prefix}-text-interface-400 {
+  @include font-interface($font-size-400);
 }

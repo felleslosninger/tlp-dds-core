@@ -1,5 +1,6 @@
 @use '../../tokens/build/tokens.scss' as *;
 @use './typography.scss' as *;
+@use './baseline/utils.scss' as utils;
 
 @mixin hover {
   background-color: $color-interface-interaction-light;
@@ -26,10 +27,10 @@
   max-width: $height * 12;
   border-radius: $border-radius;
   padding: 0 $horizontal-padding;
-  @include dads-text-interface($font-size);
+  @include font-interface($font-size);
 }
 
-.dads-button {
+.#{utils.$prefix}-button {
   box-sizing: border-box;
   display: inline-flex;
   align-items: center;
@@ -75,10 +76,10 @@
     width: $spacing-base-6;
     transition: inherit;
   }
-  & > svg.dads-button__icon-left {
+  & > svg.#{utils.$prefix}-button__icon-left {
     margin-right: $spacing-base-2;
   }
-  & > svg.dads-button__icon-right {
+  & > svg.#{utils.$prefix}-button__icon-right {
     margin-left: $spacing-base-2;
   }
   &:hover > svg {

@@ -1,6 +1,6 @@
 @use '../../../node_modules/@digdir/ds-tokens/build/tokens.scss' as *;
 @use './typography.scss' as *;
-@use './baseline/baseline.scss' as *;
+@use './baseline/utils.scss' as utils;
 
 // Color variables
 $radio-color-unchecked: $color-neutral-grey-600;
@@ -20,17 +20,13 @@ $radio-border-width-inner-large: calc(
   ($radio-size-inner-large - $radio-size-checkmark-large) / 2
 );
 
-.dads-radio {
+.#{utils.$prefix}-radio {
   display: inline-flex;
   align-items: center;
   box-sizing: border-box;
   cursor: pointer;
 
-  @include dads-text(
-    $font-size-300,
-    $font-weight-regular,
-    $font-line-height-30
-  );
+  @include font($font-size-300, $font-weight-regular, $font-line-height-30);
 
   & input {
     cursor: pointer;
@@ -55,7 +51,7 @@ $radio-border-width-inner-large: calc(
     margin-top: $border-width-default;
     margin-bottom: $border-width-default;
     margin-left: $border-width-default;
-    outline-offset: calc($border-width-default + $base-outline-offset);
+    outline-offset: calc($border-width-default + utils.$base-outline-offset);
 
     &:checked {
       background-color: $radio-color-checked;
@@ -81,11 +77,7 @@ $radio-border-width-inner-large: calc(
 
   // Size modifiers
   &--large {
-    @include dads-text(
-      $font-size-400,
-      $font-weight-regular,
-      $font-line-height-30
-    );
+    @include font($font-size-400, $font-weight-regular, $font-line-height-30);
 
     & > input {
       width: $radio-size-inner-large;
