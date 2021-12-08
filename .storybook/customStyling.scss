@@ -1,3 +1,4 @@
+@use '../packages/css/src/baseline/baseline.scss' as base;
 /*
   This customization file alters Storybook's native classes.
   Before altering/adding custom styles, check if Storybook supports the required need (@storybook/theming),
@@ -9,4 +10,8 @@
   // Fix for lacking centering when <Story> is used inside <Canvas> in docs-page
   display: flex;
   justify-content: center;
+}
+
+body {
+  @extend .dds-body;
 }

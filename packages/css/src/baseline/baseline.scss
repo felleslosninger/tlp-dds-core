@@ -2,17 +2,12 @@
 @use './Inter.scss' as *;
 @use './utils.scss' as utils;
 
-@mixin focus-outline {
+.#{utils.$prefix}-focus-outline {
   outline: $border-width-default solid $color-interface-accessibility;
   outline-offset: utils.$base-outline-offset;
 }
 
-body {
-  font-family: $font-family;
-  color: $color-text-background-light;
-}
-
-// Link in text
+// Inline link
 a.#{utils.$prefix}-link {
   cursor: pointer;
   color: $color-interface-interaction;
@@ -37,14 +32,19 @@ a.#{utils.$prefix}-link {
   }
 }
 
-// Keyboard navigation focus styling
-*:focus-visible {
-  @include focus-outline();
-}
-// Compatibility for browsers not supporting :focus-visible (Safari, IE)
-*:focus {
-  @include focus-outline();
-}
-*:focus:not(:focus-visible) {
-  outline: none;
+.#{utils.$prefix}-body {
+  font-family: $font-family;
+  color: $color-text-background-light;
+
+  // Keyboard navigation focus styling
+  *:focus-visible {
+    @extend .#{utils.$prefix}-focus-outline;
+  }
+  // Compatibility for browsers not supporting :focus-visible (Safari, IE)
+  *:focus {
+    @extend .#{utils.$prefix}-focus-outline;
+  }
+  *:focus:not(:focus-visible) {
+    outline: none;
+  }
 }
