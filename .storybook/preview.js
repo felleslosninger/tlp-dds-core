@@ -26,7 +26,7 @@ export const parameters = {
         'Tokens',
         'Typografi',
         'Komponenter',
-        ['Introduksjon', 'Button', 'Checkbox', 'Radio', 'Icon-link'],
+        ['Introduksjon', 'Button', 'Checkbox', 'Radio', 'Link', 'Icon-link'],
       ],
     },
   },
