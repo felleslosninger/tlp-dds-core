@@ -28,7 +28,7 @@ $radio-border-width-inner-large: calc(
 
   @include font($font-size-300, $font-weight-regular, $font-line-height-30);
 
-  & input {
+  & input.#{utils.$prefix}-radio__input {
     cursor: pointer;
     // Hide browser-default radio appearance
     -webkit-appearance: none;
@@ -79,7 +79,7 @@ $radio-border-width-inner-large: calc(
   &--large {
     @include font($font-size-400, $font-weight-regular, $font-line-height-30);
 
-    & > input {
+    & > input.#{utils.$prefix}-radio__input {
       width: $radio-size-inner-large;
       height: $radio-size-inner-large;
       margin-right: $radio-margin-label-large;

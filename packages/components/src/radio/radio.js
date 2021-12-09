@@ -16,7 +16,7 @@ const createRadio = ({
   })
   return formatHtml(String.raw`
     <label class='${customRadioClasses}'>
-      <input type='radio'
+      <input class='${classPrefix}__input' type='radio'
         ${disabled ? 'disabled' : ''} 
         ${checked ? 'checked' : ''}
         ${required ? 'required' : ''}
