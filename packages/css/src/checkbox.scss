@@ -26,7 +26,7 @@ $checkbox-margin-label-large: $spacing-base-4;
     color: $checkbox-color-disabled;
   }
 
-  & input {
+  & input.#{utils.$prefix}-checkbox__input {
     box-sizing: border-box;
     cursor: pointer;
     // Hide browser-default checkmark appearance
@@ -68,7 +68,7 @@ $checkbox-margin-label-large: $spacing-base-4;
   &--large {
     @include font($font-size-400, $font-weight-regular, $font-line-height-30);
 
-    & > input {
+    & > input.#{utils.$prefix}-checkbox__input {
       width: $checkbox-size-large;
       height: $checkbox-size-large;
       margin-right: $checkbox-margin-label-large;
