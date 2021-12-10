@@ -1,13 +1,20 @@
 {
-  "name": "@digdir/ds-admin-css",
+  "name": "@digdir/ds-core-css",
   "version": "0.0.0",
   "private": true,
+  "description": "CSS core of the Digdir design system, including stylesheets for the baseline and core components",
+  "author": "Digdir design system team",
+  "license": "BSD-3-Clause",
+  "main": "./build/index.css",
+  "files": [
+    "/build"
+  ],
   "scripts": {
-    "build": "yarn clean && sass --no-source-map --style=compressed src/index.scss ../components/build/index.css",
+    "build": "yarn clean && sass --no-source-map --style=compressed src/index.scss build/index.css",
     "clean": "rm -rf ./build/"
   },
   "dependencies": {
-    "@digdir/ds-tokens": "^1.3.0"
+    "@digdir/ds-tokens": "^1.5.0"
   },
   "devDependencies": {
     "sass": "^1.42.1"
