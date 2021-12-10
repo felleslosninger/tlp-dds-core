@@ -1,5 +1,10 @@
-# CSS | DigDir Admin Designsystem
+# CSS Core | Digdir Designsystem
 
-Denne mappen inneholder all CSS som hører til komponentene i DigDir designsystem admin.
+Denne mappen inneholder all CSS som hører til kjernekomponentene (core) i DigDir designsystem.
 
-Innholdet brukes i utviklingen av [komponenter](../components/README.md), det er foreløbig ikke planlagt eksponert gjennom en separat pakke via NPM/CDN.
+CSS-klassene er prefikset med `dds-` og inneholder ikke noe implisitt global styling, så de kan trygt importeres uten at de overstyrer noe styling.
+For å sette relevante globale attributer: legg til klassen `.dds-body` på et parent-element for innholdet ditt, f.eks. på `<body>` elementet.
+
+## Kom i gang
+
+Gå til [dokumentasjonssiden (Storybook)](https://felleslosninger.github.io/tlp-storybook-base/) for informasjon om innholdet i pakken.
