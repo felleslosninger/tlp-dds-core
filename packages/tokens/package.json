@@ -2,8 +2,8 @@
   "name": "@digdir/ds-tokens",
   "version": "1.5.0",
   "private": false,
-  "description": "Design tokens for DigDir design system",
-  "author": "DigDir design system team",
+  "description": "Design tokens for Digdir design system",
+  "author": "Digdir design system team",
   "license": "BSD-3-Clause",
   "main": "./build/tokens.css",
   "files": [
