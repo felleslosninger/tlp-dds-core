@@ -35,6 +35,9 @@ $radio-border-width-inner-large: calc(
     -moz-appearance: none;
     appearance: none;
 
+    flex-shrink: 0;
+    flex-grow: 0;
+
     // Medium size
     width: $radio-size-inner-medium;
     height: $radio-size-inner-medium;
