@@ -2,7 +2,7 @@
 @use './Inter.scss' as *;
 @use './utils.scss' as utils;
 
-.#{utils.$prefix}-focus-outline {
+@mixin focus-outline() {
   outline: $border-width-default solid $color-interface-accessibility;
   outline-offset: utils.$base-outline-offset;
 }
@@ -38,11 +38,11 @@ a.#{utils.$prefix}-link {
 
   // Keyboard navigation focus styling
   *:focus-visible {
-    @extend .#{utils.$prefix}-focus-outline;
+    @include focus-outline;
   }
   // Compatibility for browsers not supporting :focus-visible (Safari, IE)
   *:focus {
-    @extend .#{utils.$prefix}-focus-outline;
+    @include focus-outline;
   }
   *:focus:not(:focus-visible) {
     outline: none;
