@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.1](https://github.com/felleslosninger/tlp-design-admin/compare/@digdir/ds-tokens@1.5.0...@digdir/ds-tokens@1.5.1) (2021-12-10)
+
+
+### Bug Fixes
+
+* **tokens:** update license ([d5f9aa5](https://github.com/felleslosninger/tlp-design-admin/commit/d5f9aa55ba227999e151a823a0e09768d23598e4))
+
+
+
+
+
 # [1.5.0](https://github.com/felleslosninger/tlp-design-admin/compare/@digdir/ds-tokens@1.4.0...@digdir/ds-tokens@1.5.0) (2021-12-03)
 
 
