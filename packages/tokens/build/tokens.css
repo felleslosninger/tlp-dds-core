@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 03 Dec 2021 08:49:09 GMT
+ * Generated on Tue, 14 Dec 2021 12:32:25 GMT
  */
 
 :root {
@@ -86,14 +86,14 @@
   --color-interface-visited: #7e0c67;
   --color-interface-accessibility-light: #deb5d6;
   --color-interface-accessibility: #98177e;
-  --color-interface-warning-light: #ffe491;
-  --color-interface-warning: #b38d18;
-  --color-interface-success-light: #a4e3b9;
-  --color-interface-success: #116e31;
-  --color-interface-interaction-light: #bacfed;
+  --color-interface-warning-light: #ffefbd;
+  --color-interface-warning: #ffc922;
+  --color-interface-success-light: #d2f1dc;
+  --color-interface-success: #148139;
+  --color-interface-interaction-light: #cce2ff;
   --color-interface-interaction: #0051be;
-  --color-interface-error-light: #fdbfbf;
-  --color-interface-error: #b30000;
+  --color-interface-error-light: #ffcccc;
+  --color-interface-error: #e60000;
   --breakpoint-2x-large: 1400px;
   --breakpoint-x-large: 1200px;
   --breakpoint-large: 992px;

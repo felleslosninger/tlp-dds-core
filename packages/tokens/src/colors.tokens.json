@@ -2,42 +2,42 @@
   "color": {
     "interface": {
       "error": {
-        "value": "#b30000",
+        "value": "#E60000",
         "type": "color",
         "description": "AAA 7.1 on white"
       },
       "error-light": {
-        "value": "#fdbfbf",
+        "value": "#FFCCCC",
         "type": "color",
         "description": "AAA 9.1 on grey 800\nAA 4.5 as background for interaction blue"
       },
       "interaction": {
-        "value": "#0051be",
+        "value": "#0051BE",
         "type": "color",
         "description": "AAA 7.2 on white"
       },
       "interaction-light": {
-        "value": "#bacfed",
+        "value": "#CCE2FF",
         "type": "color",
         "description": "AAA 9on grey 800\nAA 4.5 as background for interaction blue"
       },
       "success": {
-        "value": "#116e31",
+        "value": "#148139",
         "type": "color",
         "description": "AA 6.3 on white"
       },
       "success-light": {
-        "value": "#a4e3b9",
+        "value": "#D2F1DC",
         "type": "color",
         "description": "AAA 9.7 on grey 800\nAA 4.8 as background for interaction blue"
       },
       "warning": {
-        "value": "#b38d18",
+        "value": "#FFC922",
         "type": "color",
         "description": "AA18 3.1 on white"
       },
       "warning-light": {
-        "value": "#ffe491",
+        "value": "#FFEFBD",
         "type": "color",
         "description": "AAA 11.4 on grey 800\nAA 5.7 as background for interaction blue"
       },
