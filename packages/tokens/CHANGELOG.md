@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/felleslosninger/tlp-design-admin/compare/@digdir/ds-tokens@1.5.1...@digdir/ds-tokens@1.6.0) (2021-12-14)
+
+
+### Features
+
+* **tokens:** lighten interface colors (change existing color token values) ([9ba1bd4](https://github.com/felleslosninger/tlp-design-admin/commit/9ba1bd40688bf50832a4271294324170e8fd2790))
+
+
+
+
+
 ## [1.5.1](https://github.com/felleslosninger/tlp-design-admin/compare/@digdir/ds-tokens@1.5.0...@digdir/ds-tokens@1.5.1) (2021-12-10)
 
 

@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/felleslosninger/tlp-design-admin/compare/@digdir/ds-core-css@0.1.0...@digdir/ds-core-css@0.2.0) (2021-12-14)
+
+
+### Features
+
+* **css:** add panel link styles ([5cd94a2](https://github.com/felleslosninger/tlp-design-admin/commit/5cd94a23c4750dbbcd2a3b9a80c2fd2f724d29f7))
+
+
+### Reverts
+
+* Revert "refactor(css): update token imports" ([4769683](https://github.com/felleslosninger/tlp-design-admin/commit/4769683aa3f57ca2231248240a3e82a24662a35d))
+
+
+
+
+
 # 0.1.0 (2021-12-10)
 
 
