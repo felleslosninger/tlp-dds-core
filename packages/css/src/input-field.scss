@@ -1,0 +1,142 @@
+@use '../../../node_modules/@digdir/ds-tokens/build/tokens.scss' as *;
+@use './typography.scss' as *;
+@use './baseline/utils.scss' as utils;
+
+$classname: '#{utils.$prefix}-input-field';
+// Color variables
+$input-disabled-color: $color-neutral-grey-500;
+// Size variables
+$input-size-height-medium: $spacing-base-8;
+$input-size-height-large: $spacing-base-14;
+$input-size-width: calc($spacing-base-8 * 10);
+$input-icon-size-medium: $spacing-base-5;
+$input-icon-size-large: $spacing-base-8;
+// Padding sizes
+$input-icon-padding-medium: calc(
+  ($input-size-height-medium - $input-icon-size-medium) / 2
+);
+$input-icon-padding-large: calc(
+  ($input-size-height-large - $input-icon-size-large) / 2
+);
+$input-placeholder-padding-horizontal: $spacing-base-4;
+$input-placeholder-padding-horizontal-icon-medium: calc(
+  $input-placeholder-padding-horizontal + $input-icon-size-medium +
+    $input-icon-padding-medium
+);
+$input-placeholder-padding-horizontal-icon-large: calc(
+  $input-placeholder-padding-horizontal + $input-icon-size-large +
+    $input-icon-padding-large
+);
+
+.#{$classname} {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  // Elements
+  &__input {
+    // Size medium
+    min-width: $input-size-width;
+    min-height: $input-size-height-medium;
+    @include font($font-size-300, $font-weight-regular, $font-line-height-30);
+
+    background-color: $color-neutral-white;
+    color: $color-text-background-light;
+    padding: 0 $input-placeholder-padding-horizontal;
+
+    box-sizing: border-box;
+    border-radius: $border-radius-x-small;
+    border: $border-width-thin solid $color-neutral-grey-600;
+
+    transition: all $duration-normal;
+    transition-property: border, box-shadow;
+
+    &::placeholder {
+      color: $color-neutral-grey-600;
+    }
+    // States
+    &:hover:not(:focus):not(:disabled) {
+      border-color: $color-interface-interaction;
+    }
+    &:focus {
+      outline: none;
+      border-color: $color-interface-interaction;
+      box-shadow: inset 0 0 0 $border-width-thin $color-interface-interaction;
+    }
+    &:disabled {
+      cursor: not-allowed;
+      border-color: $input-disabled-color;
+      color: $input-disabled-color;
+      &::placeholder {
+        color: $input-disabled-color;
+      }
+    }
+    // Breakpoints
+    @media (max-width: $breakpoint-medium) {
+      min-width: calc($input-size-width / 2);
+    }
+  }
+
+  &__icon-left,
+  &__icon-right {
+    pointer-events: none;
+    position: absolute;
+    fill: $color-neutral-grey-700;
+
+    // Size medium
+    width: $input-icon-size-medium;
+    height: $input-icon-size-medium;
+
+    flex-shrink: 0;
+    flex-grow: 0;
+  }
+  &__icon-left {
+    left: $input-icon-padding-medium;
+  }
+  &__icon-right {
+    right: $input-icon-padding-medium;
+  }
+
+  // Variant modifiers
+  &--icon-left > &__input {
+    padding-left: $input-placeholder-padding-horizontal-icon-medium;
+  }
+  &--icon-right > &__input {
+    padding-right: $input-placeholder-padding-horizontal-icon-medium;
+  }
+  // State modifiers
+  &--disabled {
+    & > .#{$classname}__icon-right,
+    & > .#{$classname}__icon-left {
+      fill: $input-disabled-color;
+    }
+  }
+
+  // Size modifiers
+  &--large {
+    & > .#{$classname}__input {
+      min-height: $input-size-height-large;
+      @include font($font-size-400, $font-weight-regular, $font-line-height-30);
+    }
+    // Set icon size
+    & > .#{$classname}__icon-left,
+    & > .#{$classname}__icon-right {
+      width: $input-icon-size-large;
+      height: $input-icon-size-large;
+    }
+    // Set icon padding
+    & > .#{$classname}__icon-left {
+      left: $input-icon-padding-large;
+    }
+    & > .#{$classname}__icon-right {
+      right: $input-icon-padding-large;
+    }
+    // Set input field padding to large icon
+    &.#{$classname}--icon-left > .#{$classname}__input {
+      padding-left: $input-placeholder-padding-horizontal-icon-large;
+    }
+    &.#{$classname}--icon-right > .#{$classname}__input {
+      padding-right: $input-placeholder-padding-horizontal-icon-large;
+    }
+  }
+}
