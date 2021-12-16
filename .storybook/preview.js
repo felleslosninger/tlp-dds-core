@@ -47,6 +47,7 @@ export const parameters = {
           'Link',
           'Icon-link',
           'Panel-link',
+          'Input-field',
         ],
       ],
     },
