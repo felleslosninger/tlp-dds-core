@@ -7,8 +7,10 @@ const createRadio = ({
   disabled = false,
   checked = false,
   required = false,
+  nameAttribute = 'radio-group',
 }) => {
   label = sanitizeStrict(label)
+
   const classPrefix = 'dds-radio'
   const customRadioClasses = classnames([`${classPrefix}`], {
     [`${classPrefix}--large`]: size === 'large',
@@ -20,6 +22,7 @@ const createRadio = ({
         ${disabled ? 'disabled' : ''} 
         ${checked ? 'checked' : ''}
         ${required ? 'required' : ''}
+        name=${nameAttribute}
       />
       ${label}
     </label>`)

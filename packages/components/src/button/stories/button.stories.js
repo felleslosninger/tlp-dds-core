@@ -1,4 +1,3 @@
-import storyDocs from './buttonDocs.mdx'
 import { createButton } from '../button'
 import { withDesign } from 'storybook-addon-designs'
 
@@ -6,9 +5,6 @@ export default {
   title: 'Komponenter/Button',
   decorators: [withDesign],
   parameters: {
-    docs: {
-      page: storyDocs,
-    },
     design: {
       type: 'figma',
       url: 'https://www.figma.com/file/vpM9dqqQPHqU6ogfKp5tlr/Digdir-admin?node-id=1329%3A12287',
@@ -45,13 +41,6 @@ Primary.args = {
   variant: 'primary',
   size: 'medium',
 }
-Primary.parameters = {
-  docs: {
-    source: {
-      code: Template(Primary.args),
-    },
-  },
-}
 
 export const Secondary = Template.bind({})
 Secondary.args = {
@@ -59,13 +48,6 @@ Secondary.args = {
   disabled: false,
   variant: 'secondary',
   size: 'medium',
-}
-Secondary.parameters = {
-  docs: {
-    source: {
-      code: Template(Secondary.args),
-    },
-  },
 }
 
 export const Disabled = Template.bind({})
@@ -75,26 +57,61 @@ Disabled.args = {
   variant: 'primary',
   size: 'medium',
 }
-Disabled.parameters = {
-  docs: {
-    source: {
-      code: Template(Disabled.args),
-    },
-  },
+
+export const IconLeft = Template.bind({})
+IconLeft.args = {
+  label: 'Ikon',
+  disabled: false,
+  variant: 'primary',
+  size: 'medium',
+  icon: 'left',
 }
 
-export const IconButton = Template.bind({})
-IconButton.args = {
+export const IconRight = Template.bind({})
+IconRight.args = {
   label: 'Ikon',
   disabled: false,
   variant: 'primary',
   size: 'medium',
   icon: 'right',
 }
-IconButton.parameters = {
-  docs: {
-    source: {
-      code: Template(IconButton.args),
-    },
-  },
+
+export const ExtraSmall = Template.bind({})
+ExtraSmall.args = {
+  label: 'X-small',
+  disabled: false,
+  variant: 'primary',
+  size: 'x-small',
+}
+
+export const Small = Template.bind({})
+Small.args = {
+  label: 'Small',
+  disabled: false,
+  variant: 'primary',
+  size: 'small',
+}
+
+export const Medium = Template.bind({})
+Medium.args = {
+  label: 'Medium',
+  disabled: false,
+  variant: 'primary',
+  size: 'medium',
+}
+
+export const Large = Template.bind({})
+Large.args = {
+  label: 'Large',
+  disabled: false,
+  variant: 'primary',
+  size: 'large',
+}
+
+export const ExtraLarge = Template.bind({})
+ExtraLarge.args = {
+  label: 'X-large',
+  disabled: false,
+  variant: 'primary',
+  size: 'x-large',
 }

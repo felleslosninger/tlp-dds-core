@@ -1,4 +1,3 @@
-import storyDocs from './checkboxDocs.mdx'
 import { createCheckbox } from '../checkbox'
 import { withDesign } from 'storybook-addon-designs'
 
@@ -6,9 +5,6 @@ export default {
   title: 'Komponenter/Checkbox',
   decorators: [withDesign],
   parameters: {
-    docs: {
-      page: storyDocs,
-    },
     design: {
       type: 'figma',
       url: 'https://www.figma.com/file/vpM9dqqQPHqU6ogfKp5tlr/Digdir-admin?node-id=1553%3A13038',
@@ -36,13 +32,6 @@ Default.args = {
   checked: false,
   size: 'medium',
 }
-Default.parameters = {
-  docs: {
-    source: {
-      code: Template(Default.args),
-    },
-  },
-}
 
 export const Disabled = Template.bind({})
 Disabled.args = {
@@ -51,10 +40,27 @@ Disabled.args = {
   checked: false,
   size: 'medium',
 }
-Disabled.parameters = {
-  docs: {
-    source: {
-      code: Template(Disabled.args),
-    },
-  },
+
+export const DisabledAndChecked = Template.bind({})
+DisabledAndChecked.args = {
+  label: 'Deaktivert og avkrysset',
+  disabled: true,
+  checked: true,
+  size: 'medium',
+}
+
+export const Medium = Template.bind({})
+Medium.args = {
+  label: 'Medium',
+  disabled: false,
+  checked: false,
+  size: 'medium',
+}
+
+export const Large = Template.bind({})
+Large.args = {
+  label: 'Large',
+  disabled: false,
+  checked: false,
+  size: 'large',
 }
