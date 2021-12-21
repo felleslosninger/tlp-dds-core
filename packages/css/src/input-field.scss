@@ -1,10 +1,14 @@
 @use '../../../node_modules/@digdir/ds-tokens/build/tokens.scss' as *;
 @use './typography.scss' as *;
 @use './baseline/utils.scss' as utils;
+@use './form.scss' as form;
 
 $classname: '#{utils.$prefix}-input-field';
 // Color variables
-$input-disabled-color: $color-neutral-grey-500;
+$input-color-default-grey: $color-neutral-grey-600;
+$input-color-default-active-grey: $color-neutral-grey-800;
+$input-color-disabled-grey: $color-neutral-grey-500;
+$input-color-error-grey: $color-neutral-grey-700;
 // Size variables
 $input-size-height-medium: $spacing-base-8;
 $input-size-height-large: $spacing-base-14;
@@ -46,29 +50,35 @@ $input-placeholder-padding-horizontal-icon-large: calc(
 
     box-sizing: border-box;
     border-radius: $border-radius-x-small;
-    border: $border-width-thin solid $color-neutral-grey-600;
+    border: $border-width-thin solid $input-color-default-grey;
 
     transition: all $duration-normal;
     transition-property: border, box-shadow;
 
     &::placeholder {
-      color: $color-neutral-grey-600;
+      color: $input-color-default-grey;
     }
     // States
     &:hover:not(:focus):not(:disabled) {
       border-color: $color-interface-interaction;
+      &::placeholder {
+        color: $input-color-default-active-grey;
+      }
     }
     &:focus {
       outline: none;
       border-color: $color-interface-interaction;
       box-shadow: inset 0 0 0 $border-width-thin $color-interface-interaction;
+      &::placeholder {
+        color: $input-color-default-active-grey;
+      }
     }
     &:disabled {
       cursor: not-allowed;
-      border-color: $input-disabled-color;
-      color: $input-disabled-color;
+      border-color: $input-color-disabled-grey;
+      color: $input-color-disabled-grey;
       &::placeholder {
-        color: $input-disabled-color;
+        color: $input-color-disabled-grey;
       }
     }
     // Breakpoints
@@ -81,7 +91,7 @@ $input-placeholder-padding-horizontal-icon-large: calc(
   &__icon-right {
     pointer-events: none;
     position: absolute;
-    fill: $color-neutral-grey-700;
+    fill: $input-color-default-grey;
 
     // Size medium
     width: $input-icon-size-medium;
@@ -98,44 +108,93 @@ $input-placeholder-padding-horizontal-icon-large: calc(
   }
 
   // Variant modifiers
+
+  // Set extra padding when icon is used
   &--icon-left > &__input {
     padding-left: $input-placeholder-padding-horizontal-icon-medium;
   }
+  &--error &__input,
   &--icon-right > &__input {
     padding-right: $input-placeholder-padding-horizontal-icon-medium;
   }
-  // State modifiers
+  & &__input:focus ~ &__icon-left,
+  & &__input:focus ~ &__icon-right,
+  & &__input:hover:not(:focus):not(:disabled) ~ &__icon-left,
+  & &__input:hover:not(:focus):not(:disabled) ~ &__icon-right {
+    fill: $input-color-default-active-grey;
+  }
+
   &--disabled {
-    & > .#{$classname}__icon-right,
-    & > .#{$classname}__icon-left {
-      fill: $input-disabled-color;
+    & .#{$classname}__icon-right,
+    & .#{$classname}__icon-left {
+      fill: $input-color-disabled-grey;
+    }
+    & ~ .#{form.$field-label-classname} {
+      color: $input-color-disabled-grey;
+    }
+  }
+
+  &--error {
+    & .#{$classname}__input:not(:hover):not(:focus):not(:disabled) {
+      border-color: $color-interface-error;
+      box-shadow: inset 0 0 0 $border-width-thin $color-interface-error;
+    }
+    & .#{$classname}__icon-left {
+      fill: $input-color-error-grey;
+    }
+    & .#{$classname}__input::placeholder {
+      color: $input-color-error-grey;
+    }
+    &::after {
+      pointer-events: none;
+      position: absolute;
+      content: '';
+      background-color: $color-neutral-white;
+      background-image: utils.$icon-url-error;
+      background-repeat: no-repeat;
+
+      background-size: $input-icon-size-medium, $input-icon-size-medium;
+      width: $input-icon-size-medium;
+      height: $input-icon-size-medium;
+
+      right: $input-icon-padding-medium;
     }
   }
 
   // Size modifiers
   &--large {
-    & > .#{$classname}__input {
+    & ~ .#{form.$field-label-classname},
+    & ~ .#{form.$field-error-message-classname} {
+      @include font($font-size-300, $font-weight-regular, $font-line-height-30);
+    }
+    & .#{$classname}__input {
       min-height: $input-size-height-large;
       @include font($font-size-400, $font-weight-regular, $font-line-height-30);
     }
     // Set icon size
-    & > .#{$classname}__icon-left,
-    & > .#{$classname}__icon-right {
+    &::after,
+    & .#{$classname}__icon-left,
+    & .#{$classname}__icon-right {
       width: $input-icon-size-large;
       height: $input-icon-size-large;
     }
+    &::after {
+      background-size: $input-icon-size-large, $input-icon-size-large;
+    }
     // Set icon padding
-    & > .#{$classname}__icon-left {
+    & .#{$classname}__icon-left {
       left: $input-icon-padding-large;
     }
-    & > .#{$classname}__icon-right {
+    &::after,
+    & .#{$classname}__icon-right {
       right: $input-icon-padding-large;
     }
     // Set input field padding to large icon
-    &.#{$classname}--icon-left > .#{$classname}__input {
+    &.#{$classname}--icon-left .#{$classname}__input {
       padding-left: $input-placeholder-padding-horizontal-icon-large;
     }
-    &.#{$classname}--icon-right > .#{$classname}__input {
+    &.#{$classname}--error .#{$classname}__input,
+    &.#{$classname}--icon-right .#{$classname}__input {
       padding-right: $input-placeholder-padding-horizontal-icon-large;
     }
   }
