@@ -92,14 +92,6 @@ Small.args = {
   size: 'small',
 }
 
-export const Medium = Template.bind({})
-Medium.args = {
-  label: 'Medium',
-  disabled: false,
-  variant: 'primary',
-  size: 'medium',
-}
-
 export const Large = Template.bind({})
 Large.args = {
   label: 'Large',

@@ -49,14 +49,6 @@ DisabledAndChecked.args = {
   size: 'medium',
 }
 
-export const Medium = Template.bind({})
-Medium.args = {
-  label: 'Medium',
-  disabled: false,
-  checked: false,
-  size: 'medium',
-}
-
 export const Large = Template.bind({})
 Large.args = {
   label: 'Large',
