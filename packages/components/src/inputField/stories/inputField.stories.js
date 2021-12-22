@@ -36,8 +36,8 @@ const Template = (args) => {
   return createInputField(args)
 }
 
-export const InputWithLabel = Template.bind({})
-InputWithLabel.args = {
+export const Label = Template.bind({})
+Label.args = {
   label: 'Beskrivelse',
   size: 'medium',
   variant: 'default',
@@ -46,8 +46,8 @@ InputWithLabel.args = {
   showLabel: true,
 }
 
-export const InputNoLabel = Template.bind({})
-InputNoLabel.args = {
+export const NoLabel = Template.bind({})
+NoLabel.args = {
   label: 'Beskrivelse',
   size: 'medium',
   variant: 'default',
@@ -66,8 +66,8 @@ SearchBar.args = {
   showLabel: false,
 }
 
-export const IconInput = Template.bind({})
-IconInput.args = {
+export const Icon = Template.bind({})
+Icon.args = {
   label: 'Beskrivelse',
   size: 'medium',
   variant: 'default',
@@ -76,8 +76,8 @@ IconInput.args = {
   showLabel: true,
 }
 
-export const SearchWithIcon = Template.bind({})
-SearchWithIcon.args = {
+export const SearchBarWithIcon = Template.bind({})
+SearchBarWithIcon.args = {
   label: 'Beskrivelse',
   size: 'medium',
   variant: 'default',
@@ -86,8 +86,8 @@ SearchWithIcon.args = {
   showLabel: true,
 }
 
-export const LargeInput = Template.bind({})
-LargeInput.args = {
+export const Large = Template.bind({})
+Large.args = {
   label: 'Beskrivelse',
   size: 'large',
   variant: 'default',
@@ -96,8 +96,8 @@ LargeInput.args = {
   showLabel: true,
 }
 
-export const ErrorInput = Template.bind({})
-ErrorInput.args = {
+export const Error = Template.bind({})
+Error.args = {
   label: 'Beskrivelse',
   size: 'medium',
   variant: 'errorMessage',
@@ -106,8 +106,8 @@ ErrorInput.args = {
   showLabel: true,
 }
 
-export const DisabledInput = Template.bind({})
-DisabledInput.args = {
+export const Disabled = Template.bind({})
+Disabled.args = {
   label: 'Beskrivelse',
   size: 'medium',
   variant: 'disabled',
