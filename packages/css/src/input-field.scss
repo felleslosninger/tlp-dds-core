@@ -83,7 +83,7 @@ $input-placeholder-padding-horizontal-icon-large: calc(
     }
     // Breakpoints
     @media (max-width: $breakpoint-medium) {
-      min-width: calc($input-size-width / 2);
+      min-width: min(90vw, $input-size-width);
     }
   }
 

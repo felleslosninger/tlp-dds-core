@@ -95,6 +95,6 @@ $link-margin-icon-offset: $spacing-base-1;
 
   // Breakpoints
   @media (max-width: $breakpoint-medium) {
-    min-width: calc($link-size-width / 2);
+    min-width: min(90vw, $link-size-width);
   }
 }
