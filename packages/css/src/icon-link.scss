@@ -26,6 +26,7 @@ $link-margin-label-large: $spacing-base-2;
   transition: all $duration-normal;
   transition-property: border-color, padding-bottom;
 
+  // Make room for medium icon
   margin-right: ($link-icon-size-medium + $link-margin-label-medium);
 
   // Elements
@@ -35,7 +36,7 @@ $link-margin-label-large: $spacing-base-2;
 
     width: $link-icon-size-medium;
     height: $link-icon-size-medium;
-    margin-left: $link-margin-label-medium;
+    padding-left: $link-margin-label-medium;
     margin-top: $border-width-default;
 
     flex-shrink: 0;
@@ -68,7 +69,7 @@ $link-margin-label-large: $spacing-base-2;
   &--large > &__icon {
     width: $link-icon-size-large;
     height: $link-icon-size-large;
-    margin-left: $link-margin-label-large;
+    padding-left: $link-margin-label-large;
     margin-top: 0;
   }
 }
