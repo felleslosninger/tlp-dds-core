@@ -1,0 +1,100 @@
+@use '../../../node_modules/@digdir/ds-tokens/build/tokens.scss' as *;
+@use './typography.scss' as *;
+@use './baseline/utils.scss' as utils;
+
+// Color variables
+$link-border-color: $color-interface-interaction;
+$link-hover-color: $color-interface-interaction-light;
+$link-icon-color: $color-neutral-grey-700;
+// Size variables
+$link-size-height-medium: calc($spacing-base-8 + $border-width-default);
+$link-size-height-large: calc($spacing-base-14 + $border-width-default);
+$link-size-width: calc($spacing-base-8 * 10);
+$link-icon-size-medium: $spacing-base-6;
+$link-icon-size-large: $spacing-base-8;
+$link-margin-icon-offset: $spacing-base-1;
+
+.#{utils.$prefix}-panel-link {
+  display: grid;
+  grid-template-columns: $spacing-base-11 1fr $spacing-base-11;
+  place-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  box-sizing: border-box;
+  word-break: break-word;
+
+  background-color: $color-neutral-white;
+
+  border-bottom: $border-width-default solid transparent;
+
+  // Medium size
+  min-height: $link-size-height-medium;
+  min-width: $link-size-width;
+
+  @include text-interface-400();
+  color: $color-text-background-light;
+
+  transition: all $duration-normal;
+  transition-property: border-color, background-color, margin;
+
+  // Elements
+  & > &__icon-left {
+    fill: $link-icon-color;
+
+    width: $link-icon-size-medium;
+    height: $link-icon-size-medium;
+    margin-left: $link-margin-icon-offset;
+
+    flex-shrink: 0;
+    flex-grow: 0;
+  }
+  & > &__label {
+    justify-self: start;
+  }
+  & > &__icon-right {
+    fill: $link-icon-color;
+
+    width: $link-icon-size-medium;
+    height: $link-icon-size-medium;
+    margin-left: $link-margin-icon-offset;
+
+    flex-shrink: 0;
+    flex-grow: 0;
+
+    transition: margin-left $duration-normal;
+  }
+
+  // States
+  &:hover {
+    border-color: $link-border-color;
+
+    & > .#{utils.$prefix}-panel-link__icon-right {
+      margin-left: calc($link-margin-icon-offset + $spacing-base-2);
+    }
+  }
+  &:active {
+    border-color: $link-border-color;
+    background-color: $link-hover-color;
+  }
+
+  // Size modifiers
+  &--large {
+    min-height: $link-size-height-large;
+    grid-template-columns: $spacing-base-15 1fr $spacing-base-15;
+  }
+
+  &--large > &__icon-left {
+    width: $link-icon-size-large;
+    height: $link-icon-size-large;
+  }
+
+  &--large > &__icon-right {
+    width: $link-icon-size-large;
+    height: $link-icon-size-large;
+  }
+
+  // Breakpoints
+  @media (max-width: $breakpoint-medium) {
+    min-width: min(90vw, $link-size-width);
+  }
+}
