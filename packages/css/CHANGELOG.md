@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/felleslosninger/tlp-design-admin/compare/@digdir/ds-core-css@0.2.0...@digdir/ds-core-css@0.3.0) (2021-12-22)
+
+
+### Bug Fixes
+
+* **css:** checkbox: fix checkmark size ([9f3ad2a](https://github.com/felleslosninger/tlp-design-admin/commit/9f3ad2acf9b4514c964a7b5d248faa65ee467ba9))
+* **css:** fix non-interactive gap in icon-link ([2ccbe68](https://github.com/felleslosninger/tlp-design-admin/commit/2ccbe68d0c8d170da1b75e7031523b93b9aa7159))
+* **css:** icon-link: fix text overflow edge case ([d0199b8](https://github.com/felleslosninger/tlp-design-admin/commit/d0199b89844f0765077bd05e1d63e8685dea1516))
+
+
+### Features
+
+* **css:** add form-field utility classes ([aee5b07](https://github.com/felleslosninger/tlp-design-admin/commit/aee5b07a7c3c5fe18681b4734309ae9b6336081f))
+* **css:** add input field base styles ([089349e](https://github.com/felleslosninger/tlp-design-admin/commit/089349e3856ae1dc6bb8debf65fd9f2c4f619aaf))
+* **css:** add input field variant styles ([936872b](https://github.com/felleslosninger/tlp-design-admin/commit/936872bf3fce1cd748b9f5b038d2efd569874f06))
+* **css:** input-field, panel-link: improve responsiveness ([6cdef2a](https://github.com/felleslosninger/tlp-design-admin/commit/6cdef2a58296c03693306ce3d108e087040af9eb))
+
+
+
+
+
 # [0.2.0](https://github.com/felleslosninger/tlp-design-admin/compare/@digdir/ds-core-css@0.1.0...@digdir/ds-core-css@0.2.0) (2021-12-14)
 
 
