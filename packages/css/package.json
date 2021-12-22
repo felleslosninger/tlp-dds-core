@@ -10,7 +10,7 @@
     "/build"
   ],
   "scripts": {
-    "build": "yarn clean && sass --no-source-map --style=compressed src/index.scss build/index.css",
+    "build": "yarn clean && sass --no-source-map --style=compressed src/index.scss build/index.css && cp -R -v src/ build/src/",
     "clean": "rm -rf ./build/"
   },
   "dependencies": {
