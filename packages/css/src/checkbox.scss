@@ -45,8 +45,6 @@ $checkbox-margin-label-large: $spacing-base-4;
     border: $border-width-default solid $checkbox-color-unchecked;
 
     // Checkmark format
-    background-size: $checkbox-checkmark-size-medium
-      $checkbox-checkmark-size-medium;
     background-repeat: no-repeat;
     background-position: 50%;
 
@@ -55,14 +53,14 @@ $checkbox-margin-label-large: $spacing-base-4;
       border-color: $checkbox-color-disabled;
     }
     &:checked:not(:disabled) {
-      background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNyIgaGVpZ2h0PSIxMyIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDE3IDEzIj4KICA8cGF0aCBzdHJva2U9IiMwMDUxQkUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIiBkPSJNMTUuMjczIDEuNjY3bC05LjMzNCA5LjY5Ny00LjI0Mi00LjQwOCIvPgo8L3N2Zz4K');
+      background-image: #{utils.$icon-url-checkmark};
       border-color: $checkbox-color-checked;
     }
     &:checked:disabled {
-      background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNyIgaGVpZ2h0PSIxMyIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDE3IDEzIj4KICA8cGF0aCBzdHJva2U9IiNBNUFBQjEiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIiBkPSJNMTUuMjczIDEuNjY3bC05LjMzNCA5LjY5Ny00LjI0Mi00LjQwOCIvPgo8L3N2Zz4K');
+      background-image: #{utils.$icon-url-checkmark-disabled};
     }
     &:hover:not(:disabled):not(:checked) {
-      background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNyIgaGVpZ2h0PSIxMyIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDE3IDEzIj4KICA8cGF0aCBzdHJva2U9IiNCQUNGRUQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIiBkPSJNMTUuMjczIDEuNjY3bC05LjMzNCA5LjY5Ny00LjI0Mi00LjQwOCIvPgo8L3N2Zz4K');
+      background-image: #{utils.$icon-url-checkmark-hover};
       border-color: $checkbox-color-checked;
     }
   }
@@ -75,8 +73,18 @@ $checkbox-margin-label-large: $spacing-base-4;
       width: $checkbox-size-large;
       height: $checkbox-size-large;
       margin-right: $checkbox-margin-label-large;
-      background-size: $checkbox-checkmark-size-large
-        $checkbox-checkmark-size-large;
+
+      &:checked:not(:disabled) {
+        background-image: #{utils.$icon-url-checkmark-large};
+        border-color: $checkbox-color-checked;
+      }
+      &:checked:disabled {
+        background-image: #{utils.$icon-url-checkmark-large-disabled};
+      }
+      &:hover:not(:disabled):not(:checked) {
+        background-image: #{utils.$icon-url-checkmark-large-hover};
+        border-color: $checkbox-color-checked;
+      }
     }
   }
 }
