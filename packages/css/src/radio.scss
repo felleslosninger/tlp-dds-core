@@ -26,7 +26,7 @@ $radio-border-width-inner-large: calc(
   box-sizing: border-box;
   cursor: pointer;
 
-  @include font($font-size-300, $font-weight-regular, $font-line-height-30);
+  @include text-body-300();
 
   & input.#{utils.$prefix}-radio__input {
     cursor: pointer;
@@ -80,7 +80,7 @@ $radio-border-width-inner-large: calc(
 
   // Size modifiers
   &--large {
-    @include font($font-size-400, $font-weight-regular, $font-line-height-30);
+    @include text-body-400();
 
     & > input.#{utils.$prefix}-radio__input {
       width: $radio-size-inner-large;

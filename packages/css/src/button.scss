@@ -21,13 +21,12 @@
   cursor: not-allowed;
 }
 
-@mixin size($height, $border-radius, $horizontal-padding, $font-size) {
+@mixin size($height, $border-radius, $horizontal-padding) {
   min-height: $height;
   min-width: $height * 2;
   max-width: $height * 12;
   border-radius: $border-radius;
   padding: 0 $horizontal-padding;
-  @include font-interface($font-size);
 }
 
 .#{utils.$prefix}-button {
@@ -39,12 +38,8 @@
   overflow: hidden;
 
   // Size medium
-  @include size(
-    $spacing-base-10,
-    $border-radius-large,
-    $spacing-base-6,
-    $font-size-400
-  );
+  @include size($spacing-base-10, $border-radius-large, $spacing-base-6);
+  @include text-interface-400();
 
   // Primary
   background-color: $color-neutral-grey-800;
@@ -94,36 +89,20 @@
 
   // Size modifiers
   &--x-small {
-    @include size(
-      $spacing-base-6,
-      $border-radius-large,
-      $spacing-base-4,
-      $font-size-200
-    );
+    @include size($spacing-base-6, $border-radius-large, $spacing-base-4);
+    @include text-interface-200();
   }
   &--small {
-    @include size(
-      $spacing-base-8,
-      $border-radius-large,
-      $spacing-base-4,
-      $font-size-300
-    );
+    @include size($spacing-base-8, $border-radius-large, $spacing-base-4);
+    @include text-interface-300();
   }
   &--large {
-    @include size(
-      $spacing-base-12,
-      $border-radius-large,
-      $spacing-base-8,
-      $font-size-400
-    );
+    @include size($spacing-base-12, $border-radius-large, $spacing-base-8);
+    @include text-interface-400();
   }
   &--x-large {
-    @include size(
-      $spacing-base-14,
-      $border-radius-x-large,
-      $spacing-base-10,
-      $font-size-400
-    );
+    @include size($spacing-base-14, $border-radius-x-large, $spacing-base-10);
+    @include text-interface-400();
   }
 
   // Variant modifiers

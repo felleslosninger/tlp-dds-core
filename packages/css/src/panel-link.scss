@@ -31,7 +31,7 @@ $link-margin-icon-offset: $spacing-base-1;
   min-height: $link-size-height-medium;
   min-width: $link-size-width;
 
-  @include font-interface($font-size-400);
+  @include text-interface-400();
   color: $color-text-background-light;
 
   transition: all $duration-normal;

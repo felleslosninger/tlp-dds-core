@@ -8,65 +8,117 @@
   line-height: $line-height;
 }
 
-// Font properties used in UI elements
-@mixin font-interface($font-size) {
-  @include font($font-size, $font-weight-medium, $font-line-height-10);
-}
-
-// Font classes
-// Body
-.#{utils.$prefix}-text-body-100 {
+// Specific text class mixins
+@mixin text-body-100 {
   @include font($font-size-100, $font-weight-regular, $font-line-height-20);
 }
 
-.#{utils.$prefix}-text-body-200 {
+@mixin text-body-200 {
   @include font($font-size-200, $font-weight-regular, $font-line-height-30);
 }
 
-.#{utils.$prefix}-text-body-300 {
+@mixin text-body-300 {
   @include font($font-size-300, $font-weight-regular, $font-line-height-30);
 }
 
-.#{utils.$prefix}-text-body-400 {
+@mixin text-body-400 {
   @include font($font-size-400, $font-weight-regular, $font-line-height-30);
 }
 
 // Heading
-.#{utils.$prefix}-text-heading-500 {
+@mixin text-heading-500 {
   @include font($font-size-500, $font-weight-medium, $font-line-height-20);
 }
 
-.#{utils.$prefix}-text-heading-600 {
+@mixin text-heading-600 {
   @include font($font-size-600, $font-weight-medium, $font-line-height-20);
 }
 
-.#{utils.$prefix}-text-heading-700 {
+@mixin text-heading-700 {
   @include font($font-size-700, $font-weight-medium, $font-line-height-20);
 }
 
-.#{utils.$prefix}-text-heading-800 {
+@mixin text-heading-800 {
   @include font($font-size-800, $font-weight-medium, $font-line-height-10);
 }
 
-.#{utils.$prefix}-text-heading-900 {
+@mixin text-heading-900 {
   @include font($font-size-900, $font-weight-medium, $font-line-height-10);
 }
 
 // Ingress
-.#{utils.$prefix}-text-ingress-500 {
+@mixin text-ingress-500 {
   @include font($font-size-500, $font-weight-regular, $font-line-height-30);
 }
-.#{utils.$prefix}-text-ingress-600 {
+@mixin text-ingress-600 {
   @include font($font-size-600, $font-weight-regular, $font-line-height-40);
 }
 
 // Interface
+@mixin text-interface-200 {
+  @include font($font-size-200, $font-weight-medium, $font-line-height-10);
+}
+@mixin text-interface-300 {
+  @include font($font-size-300, $font-weight-medium, $font-line-height-10);
+}
+@mixin text-interface-400 {
+  @include font($font-size-400, $font-weight-medium, $font-line-height-10);
+}
+
+// Text classes
+// Body
+.#{utils.$prefix}-text-body-100 {
+  @include text-body-100();
+}
+
+.#{utils.$prefix}-text-body-200 {
+  @include text-body-200();
+}
+
+.#{utils.$prefix}-text-body-300 {
+  @include text-body-300();
+}
+
+.#{utils.$prefix}-text-body-400 {
+  @include text-body-400();
+}
+
+// Heading
+.#{utils.$prefix}-text-heading-500 {
+  @include text-heading-500();
+}
+
+.#{utils.$prefix}-text-heading-600 {
+  @include text-heading-600();
+}
+
+.#{utils.$prefix}-text-heading-700 {
+  @include text-heading-700();
+}
+
+.#{utils.$prefix}-text-heading-800 {
+  @include text-heading-800();
+}
+
+.#{utils.$prefix}-text-heading-900 {
+  @include text-heading-900();
+}
+
+// Ingress
+.#{utils.$prefix}-text-ingress-500 {
+  @include text-ingress-500();
+}
+.#{utils.$prefix}-text-ingress-600 {
+  @include text-ingress-600();
+}
+
+// Interface
 .#{utils.$prefix}-text-interface-200 {
-  @include font-interface($font-size-200);
+  @include text-interface-200();
 }
 .#{utils.$prefix}-text-interface-300 {
-  @include font-interface($font-size-300);
+  @include text-interface-300();
 }
 .#{utils.$prefix}-text-interface-400 {
-  @include font-interface($font-size-400);
+  @include text-interface-400();
 }

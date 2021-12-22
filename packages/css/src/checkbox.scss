@@ -19,7 +19,7 @@ $checkbox-margin-label-large: $spacing-base-4;
   align-items: center;
   box-sizing: border-box;
   cursor: pointer;
-  @include font($font-size-300, $font-weight-regular, $font-line-height-30);
+  @include text-body-300();
 
   &--disabled {
     cursor: not-allowed;
@@ -69,7 +69,7 @@ $checkbox-margin-label-large: $spacing-base-4;
 
   // Size modifiers
   &--large {
-    @include font($font-size-400, $font-weight-regular, $font-line-height-30);
+    @include text-body-400();
 
     & > input.#{utils.$prefix}-checkbox__input {
       width: $checkbox-size-large;

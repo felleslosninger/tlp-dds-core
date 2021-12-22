@@ -19,7 +19,7 @@ $link-margin-label-large: $spacing-base-2;
   text-decoration: none;
   word-break: break-word;
 
-  @include font-interface($font-size-300);
+  @include text-interface-300();
   color: $color-text-background-light;
 
   border-bottom: $border-width-thin solid $color-neutral-grey-400;
@@ -64,7 +64,7 @@ $link-margin-label-large: $spacing-base-2;
 
   // Size modifiers
   &--large {
-    @include font-interface($font-size-400);
+    @include text-interface-400();
     margin-right: ($link-icon-size-large + $link-margin-label-large);
   }
   &--large > &__icon {

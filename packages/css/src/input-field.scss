@@ -42,7 +42,7 @@ $input-placeholder-padding-horizontal-icon-large: calc(
     // Size medium
     min-width: $input-size-width;
     min-height: $input-size-height-medium;
-    @include font($font-size-300, $font-weight-regular, $font-line-height-30);
+    @include text-body-300();
 
     background-color: $color-neutral-white;
     color: $color-text-background-light;
@@ -165,11 +165,11 @@ $input-placeholder-padding-horizontal-icon-large: calc(
   &--large {
     & ~ .#{form.$field-label-classname},
     & ~ .#{form.$field-error-message-classname} {
-      @include font($font-size-300, $font-weight-regular, $font-line-height-30);
+      @include text-body-300();
     }
     & .#{$classname}__input {
       min-height: $input-size-height-large;
-      @include font($font-size-400, $font-weight-regular, $font-line-height-30);
+      @include text-body-400();
     }
     // Set icon size
     &::after,
