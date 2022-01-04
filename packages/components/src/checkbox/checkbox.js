@@ -18,7 +18,7 @@ const createCheckbox = ({
   return formatHtml(String.raw`
     <label class='${customCheckboxClasses}'>
       <input class='${classPrefix}__input' type='checkbox'
-        ${disabled ? 'disabled' : ''} 
+        ${disabled ? 'aria-disabled="true"' : ''}
         ${checked ? 'checked' : ''}
         ${required ? 'required' : ''}
       />

@@ -2,6 +2,7 @@
 @use './typography.scss' as *;
 @use './baseline/utils.scss' as utils;
 
+$classname: '#{utils.$prefix}-checkbox';
 // Color variables
 $checkbox-color-unchecked: $color-neutral-grey-600;
 $checkbox-color-checked: $color-interface-interaction;
@@ -14,19 +15,14 @@ $checkbox-checkmark-size-large: $spacing-base-5;
 $checkbox-margin-label-medium: $spacing-base-2;
 $checkbox-margin-label-large: $spacing-base-4;
 
-.#{utils.$prefix}-checkbox {
+.#{$classname} {
   display: inline-flex;
   align-items: center;
   box-sizing: border-box;
   cursor: pointer;
   @include text-body-300();
 
-  &--disabled {
-    cursor: not-allowed;
-    color: $checkbox-color-disabled;
-  }
-
-  & input.#{utils.$prefix}-checkbox__input {
+  & input.#{$classname}__input {
     box-sizing: border-box;
     cursor: pointer;
     // Hide browser-default checkmark appearance
@@ -47,21 +43,34 @@ $checkbox-margin-label-large: $spacing-base-4;
     // Checkmark format
     background-repeat: no-repeat;
     background-position: 50%;
-
-    &:disabled {
-      cursor: not-allowed;
-      border-color: $checkbox-color-disabled;
+  }
+  &:not([class*='#{$classname}--disabled']) > input.#{$classname}__input {
+    &:hover:not(:checked) {
+      background-image: #{utils.$icon-url-checkmark-hover};
+      border-color: $checkbox-color-checked;
     }
-    &:checked:not(:disabled) {
+
+    &:checked {
       background-image: #{utils.$icon-url-checkmark};
       border-color: $checkbox-color-checked;
     }
-    &:checked:disabled {
-      background-image: #{utils.$icon-url-checkmark-disabled};
+  }
+
+  &--disabled {
+    cursor: not-allowed;
+    color: $checkbox-color-disabled;
+
+    &:active {
+      pointer-events: none;
     }
-    &:hover:not(:disabled):not(:checked) {
-      background-image: #{utils.$icon-url-checkmark-hover};
-      border-color: $checkbox-color-checked;
+
+    & > input.#{$classname}__input {
+      cursor: not-allowed;
+      border-color: $checkbox-color-disabled;
+
+      &:checked {
+        background-image: #{utils.$icon-url-checkmark-disabled};
+      }
     }
   }
 
@@ -69,22 +78,24 @@ $checkbox-margin-label-large: $spacing-base-4;
   &--large {
     @include text-body-400();
 
-    & > input.#{utils.$prefix}-checkbox__input {
+    & > input.#{$classname}__input {
       width: $checkbox-size-large;
       height: $checkbox-size-large;
       margin-right: $checkbox-margin-label-large;
-
-      &:checked:not(:disabled) {
-        background-image: #{utils.$icon-url-checkmark-large};
-        border-color: $checkbox-color-checked;
-      }
-      &:checked:disabled {
-        background-image: #{utils.$icon-url-checkmark-large-disabled};
-      }
-      &:hover:not(:disabled):not(:checked) {
+    }
+    &:not([class*='#{$classname}--disabled']) > input.#{$classname}__input {
+      &:hover:not(:checked) {
         background-image: #{utils.$icon-url-checkmark-large-hover};
         border-color: $checkbox-color-checked;
       }
+
+      &:checked {
+        background-image: #{utils.$icon-url-checkmark-large};
+        border-color: $checkbox-color-checked;
+      }
+    }
+    &.#{$classname}--disabled > input.#{$classname}__input:checked {
+      background-image: #{utils.$icon-url-checkmark-large-disabled};
     }
   }
 }
