@@ -2,7 +2,6 @@ import customTheme from './customTheme.js'
 import tokens from '../node_modules/@digdir/ds-tokens/build/tokens.js'
 // Import assets available to all stories
 import '../packages/css/src/index.scss'
-import '../packages/components/src/index.js'
 import './customStyling.scss'
 
 // Parsing configuration for design-token storybook addon

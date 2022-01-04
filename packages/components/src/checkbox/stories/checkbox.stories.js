@@ -1,5 +1,7 @@
-import { createCheckbox } from '../checkbox'
+import { createCheckbox } from '../checkbox.js'
+import { checkboxScript } from '../checkbox.script.js'
 import { withDesign } from 'storybook-addon-designs'
+import { useEffect } from '@storybook/client-api'
 
 export default {
   title: 'Komponenter/Checkbox',
@@ -22,6 +24,9 @@ export default {
 }
 
 const Template = (args) => {
+  useEffect(() => {
+    checkboxScript()
+  })
   return createCheckbox(args)
 }
 

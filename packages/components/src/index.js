@@ -1,9 +1,9 @@
-import jQuery from 'jquery'
+// import jQuery from 'jquery'
 // Import component javascript modules
-// ...
+import { checkboxScript } from './checkbox/checkbox.script.js'
 
-// Set jQuery globally
-window.$ = window.jQuery = jQuery
+// Set jQuery globally (if needed)
+// window.$ = window.jQuery = jQuery
 
 // Run  ES6 modules
-// ...
+checkboxScript()
