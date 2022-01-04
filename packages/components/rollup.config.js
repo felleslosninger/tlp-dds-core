@@ -11,6 +11,7 @@ export default [
       file: './build/index.js',
       format: 'es',
     },
+    treeshake: 'recommended', // Remove unused imports
     plugins: [
       nodeResolve(), // Locate imported node modules
       commonjs(), // Enable rollup to handle cjs modules
@@ -28,6 +29,7 @@ export default [
       file: './build/index.cjs',
       format: 'cjs',
     },
+    treeshake: 'recommended', // Remove unused imports
     plugins: [
       nodeResolve(), // Locate imported node modules
       commonjs(), // Enable rollup to handle cjs modules
