@@ -1,5 +1,7 @@
 import { createRadio } from '../radio'
+import { radioScript } from '../radio.script.js'
 import { withDesign } from 'storybook-addon-designs'
+import { useEffect } from '@storybook/client-api'
 
 export default {
   title: 'Komponenter/Radio',
@@ -22,6 +24,9 @@ export default {
 }
 
 const Template = (args) => {
+  useEffect(() => {
+    radioScript()
+  })
   return createRadio(args)
 }
 
