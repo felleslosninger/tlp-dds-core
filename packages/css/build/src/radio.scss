@@ -2,6 +2,7 @@
 @use './typography.scss' as *;
 @use './baseline/utils.scss' as utils;
 
+$classname: '#{utils.$prefix}-radio';
 // Color variables
 $radio-color-unchecked: $color-neutral-grey-600;
 $radio-color-checked: $color-interface-interaction;
@@ -20,7 +21,7 @@ $radio-border-width-inner-large: calc(
   ($radio-size-inner-large - $radio-size-checkmark-large) / 2
 );
 
-.#{utils.$prefix}-radio {
+.#{$classname} {
   display: inline-flex;
   align-items: center;
   box-sizing: border-box;
@@ -28,7 +29,7 @@ $radio-border-width-inner-large: calc(
 
   @include text-body-300();
 
-  & input.#{utils.$prefix}-radio__input {
+  & input.#{$classname}__input {
     cursor: pointer;
     // Hide browser-default radio appearance
     -webkit-appearance: none;
@@ -55,20 +56,14 @@ $radio-border-width-inner-large: calc(
     margin-bottom: $border-width-default;
     margin-left: $border-width-default;
     outline-offset: calc($border-width-default + utils.$base-outline-offset);
-
-    &:checked {
-      background-color: $radio-color-checked;
+  }
+  &:not([class*='#{$classname}--disabled']) > input.#{$classname}__input {
+    &:hover:not(:checked) {
+      background-color: $color-interface-interaction-light;
       box-shadow: 0 0 0 $border-width-default $radio-color-checked;
     }
-    &:disabled {
-      cursor: not-allowed;
-      box-shadow: 0 0 0 $border-width-default $radio-color-disabled;
-    }
-    &:disabled:checked {
-      background-color: $radio-color-disabled;
-    }
-    &:hover:not(:checked):not(:disabled) {
-      background-color: $color-interface-interaction-light;
+    &:checked {
+      background-color: $radio-color-checked;
       box-shadow: 0 0 0 $border-width-default $radio-color-checked;
     }
   }
@@ -76,13 +71,26 @@ $radio-border-width-inner-large: calc(
   &--disabled {
     cursor: not-allowed;
     color: $radio-color-disabled;
+
+    &:active {
+      pointer-events: none;
+    }
+
+    & > input.#{$classname}__input {
+      cursor: not-allowed;
+      box-shadow: 0 0 0 $border-width-default $radio-color-disabled;
+
+      &:checked {
+        background-color: $radio-color-disabled;
+      }
+    }
   }
 
   // Size modifiers
   &--large {
     @include text-body-400();
 
-    & > input.#{utils.$prefix}-radio__input {
+    & > input.#{$classname}__input {
       width: $radio-size-inner-large;
       height: $radio-size-inner-large;
       margin-right: $radio-margin-label-large;
