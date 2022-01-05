@@ -4,6 +4,66 @@ import { Meta } from '@storybook/addon-docs'
 
 # Bruk av komponenter
 
-**_🛠Under arbeid🛠_**
+I hver komponent til venstre vil du finne hvordan komponentene er bygd opp med HTML/CSS. Disse kan kopieres og man kan få riktig styling ved å bruke **@digdir/ds-core-css** pakken.
 
-Denne siden vil gi en introduksjon på hvordan komme i gang med bruk av komponentene i dette biblioteket.
+## CSS / SCSS
+
+[![](https://img.shields.io/npm/v/@digdir/ds-core-css?label=latest%20release&color=0051be)](https://www.npmjs.com/package/@digdir/ds-core-css)
+
+I pakken **@digdir/ds-core-css** finner du både en minifisert CSS bundle-fil, og kildekoden i SCSS/SASS-format. CSS-klassene er prefikset med `dds-` og inneholder ikke noe implisitt global styling, så de kan trygt importeres uten at de overstyrer noe styling.
+
+For å eksplisitt sette relevante globale attributer: legg til klassen `.dds-body` på et parent-element for markup-innholdet ditt, f.eks. på `<body>` elementet. 
+```html
+<body class="dds-body">
+  <!-- Mitt innhold -->
+</body>
+```
+
+Dette setter følgende attributter:
+* font-family
+* color (tekstfarge)
+* focus outline
+
+
+#### NPM
+
+[![](https://img.shields.io/npm/dm/@digdir/ds-core-css.svg)](https://www.npmjs.com/package/@digdir/ds-core-css)
+
+**1. Installer pakken i kommandolinjen ved hjelp av NPM eller Yarn.**
+
+`npm install @digdir/ds-core-css`
+
+eller
+
+`yarn add @digdir/ds-core-css`
+
+**2. Importer og bruk deretter filene i ønsket format.**
+##### CSS
+
+```css
+/* Importer */
+@import '@digdir/ds-core-css/build/index.css';
+```
+
+##### SCSS
+
+Eksempel på bruk av tekst-klasser
+
+```scss
+// Hent tekst-stylingen
+@use '@digdir/ds-core-css/build/src/typography.scss' as textStyles;
+// Hent selve fonten og sett den hvis ikke det er gjort et annet sted
+@use '@digdir/ds-core-css/build/src/baseline/Inter.scss' as *;
+body {
+  font-family: "Inter", sans-serif;
+}
+// Bruk mixins, variabler eller annet
+.min-hjemmelagde-klasse {
+  @include textStyles.text-body-300(); // Setter font-size, font-weight, line-height
+}
+```
+
+
+
+
+
