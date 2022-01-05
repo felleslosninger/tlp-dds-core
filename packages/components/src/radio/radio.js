@@ -19,7 +19,7 @@ const createRadio = ({
   return formatHtml(String.raw`
     <label class='${customRadioClasses}'>
       <input class='${classPrefix}__input' type='radio'
-        ${disabled ? 'disabled' : ''} 
+        ${disabled ? 'aria-disabled="true"' : ''} 
         ${checked ? 'checked' : ''}
         ${required ? 'required' : ''}
         name=${nameAttribute}
