@@ -1,6 +1,6 @@
 {
   "name": "@digdir/ds-core-css",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "private": false,
   "description": "CSS core of the Digdir design system, including stylesheets for the baseline and core components",
   "author": "Digdir design system team",
@@ -14,7 +14,7 @@
     "clean": "rm -rf ./build/"
   },
   "dependencies": {
-    "@digdir/ds-tokens": "^1.6.0"
+    "@digdir/ds-tokens": "^1.6.1"
   },
   "devDependencies": {
     "sass": "^1.42.1"

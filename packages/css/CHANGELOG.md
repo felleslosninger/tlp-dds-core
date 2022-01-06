@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/felleslosninger/tlp-design-admin/compare/@digdir/ds-core-css@0.3.0...@digdir/ds-core-css@0.4.0) (2022-01-06)
+
+
+### Bug Fixes
+
+* **css:** form/text input field: remove hover gap ([9bf77d6](https://github.com/felleslosninger/tlp-design-admin/commit/9bf77d6d3e281db4f8bad6b15da34c48530117e6))
+* **css:** input field: fix container width Safari/Firefox ([92d1de0](https://github.com/felleslosninger/tlp-design-admin/commit/92d1de04f98f0bfea7323582dd828d3bb853bb0b))
+* **css:** input field: fix focus state deviation in error variant ([abfdb00](https://github.com/felleslosninger/tlp-design-admin/commit/abfdb00ceb7f6c11889eb8260bb38963ea39b1be))
+* **css:** input field: reset browser default margin ([07c85ae](https://github.com/felleslosninger/tlp-design-admin/commit/07c85aed6c2dd3fbe24d2ca20322a3ecde06ce39))
+
+
+### Features
+
+* **css:** button: improve accessibility of disabled state ([2e726df](https://github.com/felleslosninger/tlp-design-admin/commit/2e726dfd4e11922cd0763fc476fad13cfc625ed2))
+* **css:** checkbox: improve accessibility of disabled state ([f089f3a](https://github.com/felleslosninger/tlp-design-admin/commit/f089f3ada482471a171c2f13066830e6c04d4b57))
+* **css:** input field: improve accessibility of disabled state ([adc276a](https://github.com/felleslosninger/tlp-design-admin/commit/adc276a06d930aa44696cdc83ac455300a54f048))
+* **css:** radio: improve accessibility of disabled state ([b6600e5](https://github.com/felleslosninger/tlp-design-admin/commit/b6600e5ba1e385343a113b8fcac9640235ce4903))
+
+
+
+
+
 # [0.3.0](https://github.com/felleslosninger/tlp-design-admin/compare/@digdir/ds-core-css@0.2.0...@digdir/ds-core-css@0.3.0) (2021-12-22)
 
 
