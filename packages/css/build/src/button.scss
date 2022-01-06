@@ -1,6 +1,8 @@
-@use '../../tokens/build/tokens.scss' as *;
+@use '@digdir/ds-tokens/build/tokens.scss' as *;
 @use './typography.scss' as *;
 @use './baseline/utils.scss' as utils;
+
+$classname: '#{utils.$prefix}-button';
 
 @mixin hover {
   background-color: $color-interface-interaction-light;
@@ -29,7 +31,7 @@
   padding: 0 $horizontal-padding;
 }
 
-.#{utils.$prefix}-button {
+.#{$classname} {
   box-sizing: border-box;
   display: inline-flex;
   align-items: center;
@@ -46,16 +48,6 @@
   color: $color-neutral-white;
   border: $border-width-default solid transparent;
 
-  &:hover {
-    @include hover();
-  }
-  &:active {
-    @include active($color-neutral-grey-900);
-  }
-  &:disabled {
-    @include disabled($color-neutral-grey-500, $color-neutral-white);
-  }
-
   // Elements
   & > svg {
     fill: $color-neutral-white;
@@ -71,20 +63,11 @@
     width: $spacing-base-6;
     transition: inherit;
   }
-  & > svg.#{utils.$prefix}-button__icon-left {
+  & > svg.#{$classname}__icon-left {
     margin-right: $spacing-base-2;
   }
-  & > svg.#{utils.$prefix}-button__icon-right {
+  & > svg.#{$classname}__icon-right {
     margin-left: $spacing-base-2;
-  }
-  &:hover > svg {
-    fill: $color-neutral-grey-800;
-  }
-  &:active > svg {
-    fill: $color-neutral-white;
-  }
-  &:disabled > svg {
-    fill: $color-neutral-white;
   }
 
   // Size modifiers
@@ -106,28 +89,52 @@
   }
 
   // Variant modifiers
+  &:not([class*='#{$classname}--disabled']) {
+    &:hover {
+      @include hover();
+
+      & svg {
+        fill: $color-neutral-grey-800;
+      }
+    }
+    &:active {
+      @include active($color-neutral-grey-900);
+
+      & svg {
+        fill: $color-neutral-white;
+      }
+    }
+  }
+  &--disabled {
+    @include disabled($color-neutral-grey-500, $color-neutral-white);
+
+    & > svg {
+      fill: $color-neutral-white;
+    }
+  }
+
   &--secondary {
     background-color: $color-neutral-white;
     color: $color-neutral-grey-800;
     border: $border-width-default solid $color-neutral-grey-800;
 
-    &:active {
-      @include active($color-neutral-grey-800);
+    &:not([class*='#{$classname}--disabled']) {
+      &:active {
+        @include active($color-neutral-grey-800);
+      }
+      & > svg {
+        fill: $color-neutral-grey-800;
+      }
     }
-    &:disabled {
+    &.#{$classname}--disabled {
       @include disabled(
         $color-neutral-white,
         $color-neutral-grey-500,
         $color-neutral-grey-500
       );
-    }
-
-    & > svg {
-      fill: $color-neutral-grey-800;
-    }
-
-    &:disabled > svg {
-      fill: $color-neutral-grey-500;
+      & > svg {
+        fill: $color-neutral-grey-500;
+      }
     }
   }
 }
