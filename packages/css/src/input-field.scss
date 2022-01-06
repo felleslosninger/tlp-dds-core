@@ -40,8 +40,8 @@ $input-placeholder-padding-horizontal-icon-large: calc(
   // Elements
   &__input {
     // Size medium
-    min-width: $input-size-width;
-    min-height: $input-size-height-medium;
+    width: $input-size-width;
+    height: $input-size-height-medium;
     @include text-body-300();
 
     background-color: $color-neutral-white;
