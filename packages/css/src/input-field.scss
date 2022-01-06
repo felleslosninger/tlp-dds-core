@@ -39,6 +39,7 @@ $input-placeholder-padding-horizontal-icon-large: calc(
 
   // Elements
   &__input {
+    margin: 0;
     // Size medium
     width: $input-size-width;
     height: $input-size-height-medium;
