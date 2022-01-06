@@ -6,7 +6,7 @@ import './customStyling.scss'
 
 // Parsing configuration for design-token storybook addon
 const tokenContext = require.context(
-  '!!raw-loader!../packages/tokens/src/stories',
+  '!!raw-loader!../packages/tokens/stories',
   true,
   /.\.(css|less|scss|svg)$/,
 )
