@@ -48,6 +48,8 @@ export const parameters = {
           'Panel-link',
           'Input-field',
         ],
+        'Changelog',
+        ['Tokens', 'Core CSS'],
       ],
     },
   },
