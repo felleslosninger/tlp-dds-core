@@ -16,6 +16,7 @@ const createButton = ({
   const buttonClasses = classnames(
     classPrefix,
     { [`${classPrefix}--secondary`]: variant === 'secondary' },
+    { [`${classPrefix}--disabled`]: disabled },
     { [`${classPrefix}--x-small`]: size === 'x-small' },
     { [`${classPrefix}--small`]: size === 'small' },
     { [`${classPrefix}--large`]: size === 'large' },
@@ -43,7 +44,7 @@ const createButton = ({
   <button
     type='button'
     class='${buttonClasses}'
-    ${disabled ? 'disabled' : ''}
+    ${disabled ? 'aria-disabled="true"' : ''}
   >
     ${iconLeft ? iconSvgLeft : ''}
     ${label}
