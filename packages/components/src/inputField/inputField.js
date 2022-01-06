@@ -52,16 +52,16 @@ const createInputField = ({
     </svg>`
 
   // Attributes
-  const ariaAttribute = `aria-label='${label}'`
+  const ariaLabelAttribute = `aria-label='${label}'`
   const idAttribute = `id='${inputElementId}'`
 
   return formatHtml(String.raw`
     <div class='${baseClasses} ${extraClasses}'>
       <input class='${classPrefix}__input' 
         type='text'
-        ${setAriaLabel ? ariaAttribute : idAttribute} 
+        ${setAriaLabel ? ariaLabelAttribute : idAttribute} 
         placeholder=${placeholder}
-        ${disabled ? 'disabled' : ''} 
+        ${disabled ? 'aria-disabled="true" readonly' : ''} 
         ${required ? 'required' : ''}
       />
       ${iconLeft ? iconLeftSvg : ''}
