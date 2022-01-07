@@ -12,6 +12,7 @@ $link-icon-size-medium: $spacing-base-4;
 $link-icon-size-large: $spacing-base-6;
 $link-margin-label-medium: $spacing-base-1;
 $link-margin-label-large: $spacing-base-2;
+$link-margin-icon: ($link-icon-size-medium + $link-margin-label-medium);
 
 .#{utils.$prefix}-icon-link {
   cursor: pointer;
@@ -28,7 +29,7 @@ $link-margin-label-large: $spacing-base-2;
   transition-property: border-color, padding-bottom;
 
   // Make room for medium icon
-  margin-right: ($link-icon-size-medium + $link-margin-label-medium);
+  margin-right: $link-margin-icon;
 
   // Elements
   & > &__icon {
@@ -45,6 +46,20 @@ $link-margin-label-large: $spacing-base-2;
   }
 
   // States
+  &:focus-visible {
+    // Fit icon in focus outline
+    padding-right: $link-margin-icon;
+    margin-right: 0;
+  }
+  // Compatibility for browsers not supporting :focus-visible (Safari, IE)
+  &:focus {
+    padding-right: $link-margin-icon;
+    margin-right: 0;
+  }
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
   &:hover {
     border-color: $color-interface-interaction;
     border-width: $border-width-default;
