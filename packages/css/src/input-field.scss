@@ -160,7 +160,7 @@ $input-placeholder-padding-horizontal-icon-large: calc(
     & .#{$classname}__icon-left {
       fill: $input-color-error-grey;
     }
-    & .#{$classname}__input:not(:active)::placeholder {
+    & .#{$classname}__input:not(:focus)::placeholder {
       color: $input-color-error-grey;
     }
     // Error icon
