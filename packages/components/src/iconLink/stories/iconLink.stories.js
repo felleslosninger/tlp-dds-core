@@ -1,4 +1,4 @@
-import { createIconLink } from '../iconLink'
+import { createIconLink } from '../iconLink.js'
 import { withDesign } from 'storybook-addon-designs'
 
 export default {

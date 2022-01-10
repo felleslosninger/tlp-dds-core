@@ -1,5 +1,5 @@
-import prettier from 'prettier/standalone'
-import parserHtml from 'prettier/parser-html'
+import prettier from 'prettier/standalone.js'
+import parserHtml from 'prettier/parser-html.js'
 /*
  * Sanitizes text for use in HTML (allowlisting)
  * Allows alphanumerical characters including æøå (0-9a-zæøåA-ZÆØÅ), dash, underscore and whitespace (\-\_\s).

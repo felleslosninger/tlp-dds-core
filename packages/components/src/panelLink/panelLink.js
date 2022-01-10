@@ -1,5 +1,5 @@
 import classnames from 'classnames'
-import { sanitizeStrict, formatHtml } from '../utils'
+import { sanitizeStrict, formatHtml } from '../utils.js'
 
 const createPanelLink = ({
   label = 'Click me',

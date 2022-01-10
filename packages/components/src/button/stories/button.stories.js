@@ -1,4 +1,4 @@
-import { createButton } from '../button'
+import { createButton } from '../button.js'
 import { withDesign } from 'storybook-addon-designs'
 
 export default {

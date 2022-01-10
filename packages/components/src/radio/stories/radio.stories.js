@@ -1,4 +1,4 @@
-import { createRadio } from '../radio'
+import { createRadio } from '../radio.js'
 import { radioScript } from '../radio.script.js'
 import { withDesign } from 'storybook-addon-designs'
 import { useEffect } from '@storybook/client-api'

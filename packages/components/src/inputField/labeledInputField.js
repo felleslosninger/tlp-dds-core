@@ -1,5 +1,5 @@
-import { sanitizeStrict, formatHtml } from '../utils'
-import { createInputField } from './inputField'
+import { sanitizeStrict, formatHtml } from '../utils.js'
+import { createInputField } from './inputField.js'
 
 const createLabeledInputField = ({
   inputElementId = 'input-field-id',

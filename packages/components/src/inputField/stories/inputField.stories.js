@@ -1,5 +1,5 @@
-import { createInputField } from '../inputField'
-import { createLabeledInputField } from '../labeledInputField'
+import { createInputField } from '../inputField.js'
+import { createLabeledInputField } from '../labeledInputField.js'
 import { withDesign } from 'storybook-addon-designs'
 
 export default {
