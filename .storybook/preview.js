@@ -43,6 +43,7 @@ export const parameters = {
           'Button',
           'Checkbox',
           'Radio',
+          'Toggle',
           'Link',
           'Icon-link',
           'Panel-link',
