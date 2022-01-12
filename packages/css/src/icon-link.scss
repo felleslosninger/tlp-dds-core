@@ -18,7 +18,7 @@ $link-margin-icon: ($link-icon-size-medium + $link-margin-label-medium);
   cursor: pointer;
   position: relative;
   text-decoration: none;
-  word-break: break-word;
+  overflow-wrap: anywhere;
 
   @include text-interface-300();
   color: $color-text-background-light;
