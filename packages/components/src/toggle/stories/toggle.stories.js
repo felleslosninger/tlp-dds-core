@@ -18,6 +18,10 @@ export default {
       control: { type: 'select' },
     },
     toggleLabel: {},
+    size: {
+      options: ['small', 'medium'],
+      control: { type: 'select' },
+    },
   },
 }
 
@@ -31,6 +35,7 @@ RightLabel.args = {
   checked: false,
   variant: 'rightLabel',
   toggleLabel: true,
+  size: 'medium',
 }
 
 export const LeftLabel = Template.bind({})
@@ -39,6 +44,7 @@ LeftLabel.args = {
   checked: false,
   variant: 'leftLabel',
   toggleLabel: true,
+  size: 'medium',
 }
 
 export const RightStaticLabel = Template.bind({})
@@ -47,6 +53,7 @@ RightStaticLabel.args = {
   checked: false,
   variant: 'rightLabel',
   toggleLabel: false,
+  size: 'medium',
 }
 
 export const LeftStaticLabel = Template.bind({})
@@ -55,6 +62,7 @@ LeftStaticLabel.args = {
   checked: false,
   variant: 'leftLabel',
   toggleLabel: false,
+  size: 'medium',
 }
 
 export const DualLabel = Template.bind({})
@@ -63,4 +71,14 @@ DualLabel.args = {
   checked: false,
   variant: 'dualLabel',
   toggleLabel: true,
+  size: 'medium',
+}
+
+export const Small = Template.bind({})
+Small.args = {
+  label: 'Kompakt bryter',
+  checked: false,
+  variant: 'rightLabel',
+  toggleLabel: true,
+  size: 'small',
 }
