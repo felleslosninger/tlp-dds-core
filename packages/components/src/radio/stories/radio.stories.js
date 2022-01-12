@@ -27,6 +27,10 @@ const Template = (args) => {
   useEffect(() => {
     radioScript()
   })
+  if (args.disabled && args.checked) {
+    // Set unique name so it stays checked (in docs page)
+    args.nameAttribute = 'radio-deactivated-checked'
+  }
   return createRadio(args)
 }
 
@@ -52,7 +56,6 @@ DisabledAndChecked.args = {
   disabled: true,
   checked: true,
   size: 'medium',
-  nameAttribute: 'radio-deactivated-checked',
 }
 
 export const Large = Template.bind({})
