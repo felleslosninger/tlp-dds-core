@@ -21,7 +21,7 @@ $link-margin-icon-offset: $spacing-base-1;
   cursor: pointer;
   text-decoration: none;
   box-sizing: border-box;
-  word-break: break-word;
+  overflow-wrap: anywhere;
 
   background-color: $color-neutral-white;
 
