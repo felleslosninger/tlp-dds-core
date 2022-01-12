@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/felleslosninger/tlp-design-admin/compare/@digdir/ds-core-css@0.4.0...@digdir/ds-core-css@0.5.0) (2022-01-12)
+
+
+### Bug Fixes
+
+* **css:** input field: fix placeholder color deviation ([ab639bc](https://github.com/felleslosninger/tlp-design-admin/commit/ab639bc2d0cf8419673cab07a6411bc10ab27a21))
+
+
+### Features
+
+* **css:** icon link: fit icon inside focus outline ([6dceb81](https://github.com/felleslosninger/tlp-design-admin/commit/6dceb812dd9c1adbf760d688806066cee53a8c40))
+* **toggle:** add small (compact) modifier ([f91baf7](https://github.com/felleslosninger/tlp-design-admin/commit/f91baf7765fe2fadea92d9393294a93bdc2fba7e))
+* **toggle:** add toggle default style ([5170489](https://github.com/felleslosninger/tlp-design-admin/commit/517048903315079a474dd8787bb7ea4ac6104e62))
+* **toggle:** add variants: left label and dual label ([96328bb](https://github.com/felleslosninger/tlp-design-admin/commit/96328bb3d419791a8c935c97444ca0b1e0ad8c14))
+
+
+
+
+
 # [0.4.0](https://github.com/felleslosninger/tlp-design-admin/compare/@digdir/ds-core-css@0.3.0...@digdir/ds-core-css@0.4.0) (2022-01-06)
 
 

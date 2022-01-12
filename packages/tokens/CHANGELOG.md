@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.2](https://github.com/felleslosninger/tlp-design-admin/compare/@digdir/ds-tokens@1.6.1...@digdir/ds-tokens@1.6.2) (2022-01-12)
+
+**Note:** Version bump only for package @digdir/ds-tokens
+
+
+
+
+
 ## [1.6.1](https://github.com/felleslosninger/tlp-design-admin/compare/@digdir/ds-tokens@1.6.0...@digdir/ds-tokens@1.6.1) (2022-01-06)
 
 **Note:** Version bump only for package @digdir/ds-tokens
