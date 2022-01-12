@@ -14,7 +14,7 @@ export default {
     label: {},
     checked: {},
     variant: {
-      options: ['default', 'leftLabel', 'dualLabel'],
+      options: ['rightLabel', 'leftLabel', 'dualLabel'],
       control: { type: 'select' },
     },
     toggleLabel: {},
@@ -25,19 +25,11 @@ const Template = (args) => {
   return createToggle(args)
 }
 
-export const Default = Template.bind({})
-Default.args = {
+export const RightLabel = Template.bind({})
+RightLabel.args = {
   label: 'Bryter',
   checked: false,
-  variant: 'default',
-  toggleLabel: true,
-}
-
-export const DualLabel = Template.bind({})
-DualLabel.args = {
-  label: 'Bryter',
-  checked: false,
-  variant: 'dualLabel',
+  variant: 'rightLabel',
   toggleLabel: true,
 }
 
@@ -46,5 +38,29 @@ LeftLabel.args = {
   label: 'Bryter',
   checked: false,
   variant: 'leftLabel',
+  toggleLabel: true,
+}
+
+export const RightStaticLabel = Template.bind({})
+RightStaticLabel.args = {
+  label: 'Bryter',
+  checked: false,
+  variant: 'rightLabel',
   toggleLabel: false,
+}
+
+export const LeftStaticLabel = Template.bind({})
+LeftStaticLabel.args = {
+  label: 'Bryter',
+  checked: false,
+  variant: 'leftLabel',
+  toggleLabel: false,
+}
+
+export const DualLabel = Template.bind({})
+DualLabel.args = {
+  label: 'Bryter',
+  checked: false,
+  variant: 'dualLabel',
+  toggleLabel: true,
 }

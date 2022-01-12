@@ -7,7 +7,7 @@ const createToggle = ({
   size = 'medium',
   checked = false,
   toggleLabel = true,
-  variant = 'default', // default | leftLabel | dualLabel
+  variant = 'rightLabel', // rightLabel | leftLabel | dualLabel
 }) => {
   const dualLabel = variant === 'dualLabel'
   label = sanitizeStrict(label)
@@ -22,7 +22,7 @@ const createToggle = ({
     {
       [`${labelClassPrefix}--toggle-on`]: toggleLabel,
     },
-    { [`${labelClassPrefix}--right`]: variant === 'default' },
+    { [`${labelClassPrefix}--right`]: variant === 'rightLabel' },
     { [`${labelClassPrefix}--left`]: variant === 'leftLabel' },
   )
 
