@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.1](https://github.com/felleslosninger/tlp-design-admin/compare/@digdir/ds-core-css@0.5.0...@digdir/ds-core-css@0.5.1) (2022-01-13)
+
+
+### Bug Fixes
+
+* **toggle:** fix toggle button slider position in checked state when using small variant with label left ([4128a89](https://github.com/felleslosninger/tlp-design-admin/commit/4128a89f7a4091753c40518ce0d0e2928d2d1976))
+
+
+
+
+
 # [0.5.0](https://github.com/felleslosninger/tlp-design-admin/compare/@digdir/ds-core-css@0.4.0...@digdir/ds-core-css@0.5.0) (2022-01-12)
 
 
