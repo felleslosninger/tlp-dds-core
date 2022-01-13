@@ -1,6 +1,6 @@
-# DigDir Designsystem
+# Digdir Designsystem
 
-Dette monorepoet inneholder pakker relatert til implementasjon av et designsystem for generell bruk i DigDir, og noen deler mer spesifikt rettet mot bruk i DigDir admin-applikasjoner.
+Dette monorepoet inneholder pakker relatert til implementasjon av et designsystem for generell bruk i Digdir.
 
 ### Kom i gang med utvikling
 
@@ -20,7 +20,25 @@ _(Hvis dette gir feilmelding prøv `yarn start:clean`. Storybook kan feile derso
 
 ---
 
-### Bygging
+### Commit ✍️
+
+Start commits med `fix:`, `feat:`, eller `BREAKING CHANGE:` for å få de med i endringsloggen (`CHANGELOG.md`) som **automatisk** oppdateres på Storybook når nye versjoner publiseres. Dette burde gjøres på commits som endrer innholdet i det som publiseres (filene som bygges).
+
+Ved neste versjonering/publisering vil `fix:` trigge en patch (0.0.x), `feat:` en minor update (0.x.0), `BREAKING CHANGE:` eller `!` etter fix/feat en major update (x.0.0).
+
+Commit-teksten blir automatisk lagt til i endringsloggen i pakken til der commiten gjør en endring. Legg til et scope med parantes, f.eks.
+
+```
+feat(button): add secondary variant style
+
+Longer Description in a paragraph here.
+```
+
+Les mer om Conventional Commits på https://conventionalcommits.org.
+
+---
+
+### Bygging 🛠
 
 For å bygge filer til distribusjon:
 
@@ -39,7 +57,7 @@ For å bygge dokumentasjon manuelt (til `./docs/`):
 
 Yarn er brukt for å benytte komboen Lerna + Yarn workspaces til enklere vedlikehold av endringslogg, versjonering og publisering av pakkene. Noen `npm` script er laget for arbeidsflyt med lerna.
 
-### Versjonering og publisering
+### Versjonering og publisering 🚀
 
 #### Stegvis
 
@@ -48,9 +66,6 @@ Yarn er brukt for å benytte komboen Lerna + Yarn workspaces til enklere vedlike
 `yarn version:changed [major|minor|patch]`
 
 Dette vil lage en commit med ny versjon. `major`, `minor` eller `patch` brukes etter [semver](https://semver.org/) konvensjonen.
-
-(Alle commits gjort i respektive pakker med [Conventional Commits](https://conventionalcommits.org) (f.eks. starter med 'feat:'),
-vil bli lagt til i `CHANGELOG.md` i den/de oppdaterte pakken(e). Disse burde derfor med fordel være deskriptive og relevante for den nye versjonen som skal publiseres - for å unngå senere ekstraarbeid.)
 
 2️⃣ Helst **merge/push til main-branchen** før du publiserer.
 
