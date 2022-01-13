@@ -188,7 +188,7 @@ $toggle-padding-label: $spacing-base-2;
     }
   }
   &.#{$classname}--small input.#{$classname}__input:checked {
-    & ~ .#{$classname}__label::after {
+    & ~ .#{$classname}__label:not(.#{$classname}__label--left)::after {
       left: $spacing-base-6;
     }
   }
