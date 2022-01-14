@@ -28,6 +28,7 @@ $toggle-padding-label: $spacing-base-2;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    margin: 0;
 
     // Focus outline
     &:focus {
