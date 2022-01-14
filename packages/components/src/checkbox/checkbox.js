@@ -3,10 +3,10 @@ import { sanitizeStrict, formatHtml } from '../utils.js'
 
 const createCheckbox = ({
   label = 'Click me',
+  inputElementId = 'checkbox-input-id',
   size = 'medium',
   disabled = false,
   checked = false,
-  required = false,
 }) => {
   label = sanitizeStrict(label)
   const classPrefix = 'dds-checkbox'
@@ -16,14 +16,15 @@ const createCheckbox = ({
   })
 
   return formatHtml(String.raw`
-    <label class='${customCheckboxClasses}'>
-      <input class='${classPrefix}__input' type='checkbox'
+    <div class='${customCheckboxClasses}'>
+      <input class='${classPrefix}__input' type='checkbox' id=${inputElementId}
         ${disabled ? 'aria-disabled="true"' : ''}
         ${checked ? 'checked' : ''}
-        ${required ? 'required' : ''}
       />
-      ${label}
-    </label>`)
+      <label class='${classPrefix}__label ${classPrefix}__label--right' for=${inputElementId}>
+        ${label}
+      </label>
+    </div>`)
 }
 
 export { createCheckbox }
