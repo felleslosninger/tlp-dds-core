@@ -3,10 +3,10 @@ import { sanitizeStrict, formatHtml } from '../utils.js'
 
 const createRadio = ({
   label = 'Click me',
+  inputElementId = 'radio-input-id',
   size = 'medium',
   disabled = false,
   checked = false,
-  required = false,
   nameAttribute = 'radio-group',
 }) => {
   label = sanitizeStrict(label)
@@ -16,16 +16,18 @@ const createRadio = ({
     [`${classPrefix}--large`]: size === 'large',
     [`${classPrefix}--disabled`]: disabled,
   })
+
   return formatHtml(String.raw`
-    <label class='${customRadioClasses}'>
-      <input class='${classPrefix}__input' type='radio'
+    <div class='${customRadioClasses}'>
+      <input class='${classPrefix}__input' type='radio' id=${inputElementId}
         ${disabled ? 'aria-disabled="true"' : ''} 
         ${checked ? 'checked' : ''}
-        ${required ? 'required' : ''}
         name=${nameAttribute}
       />
-      ${label}
-    </label>`)
+      <label class='${classPrefix}__label ${classPrefix}__label--right' for=${inputElementId}>
+        ${label}
+      </label>
+    </div>`)
 }
 
 export { createRadio }
