@@ -61,7 +61,13 @@ Yarn er brukt for å benytte komboen Lerna + Yarn workspaces til enklere vedlike
 
 #### Stegvis
 
-1️⃣ For å klargjøre en ny versjon:
+1️⃣ For å klargjøre en ny versjon (og committe en versjon-tag):
+
+`yarn version:changed`
+
+Hva slags type versjon-bump det blir bestemmes automatisk fra commitloggen.
+
+Hvis man trenger å sette versjon eksplisitt, bruk:
 
 `yarn version:changed [major|minor|patch]`
 
