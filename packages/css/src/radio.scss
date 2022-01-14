@@ -79,6 +79,8 @@ $radio-padding-label-large: $spacing-base-4;
       background-color: $color-neutral-white;
 
       border: $border-width-default solid $radio-color-unchecked;
+
+      transition: border-color $duration-fast;
     }
 
     // Radio button checkmark
@@ -95,6 +97,8 @@ $radio-padding-label-large: $spacing-base-4;
 
       border-radius: 50%;
       background-color: $color-neutral-white;
+
+      transition: background-color $duration-fast;
     }
   }
 
