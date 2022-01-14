@@ -76,6 +76,9 @@ $checkbox-padding-label-large: $spacing-base-4;
       height: $checkbox-size-medium;
 
       border: $border-width-default solid $checkbox-color-unchecked;
+
+      transition: $duration-fast;
+      transition-property: border-color, background-image;
     }
   }
 
