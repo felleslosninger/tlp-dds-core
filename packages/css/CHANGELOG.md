@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/felleslosninger/tlp-storybook-base/compare/@digdir/ds-core-css@0.5.1...@digdir/ds-core-css@1.0.0) (2022-01-17)
+
+
+### Bug Fixes
+
+* **toggle:** reset browser default margin in hidden input element ([ece53b3](https://github.com/felleslosninger/tlp-storybook-base/commit/ece53b335ccb9f475b6e928ed7c410c0db3aacba))
+* **toggle:** set min-height for size consistent focus outline when using single label ([c376dbd](https://github.com/felleslosninger/tlp-storybook-base/commit/c376dbdfc8433fb7cf69355a90a2b612cd630b8c))
+
+
+### Features
+
+* **checkbox:** add transitions to checkbox ([52177ca](https://github.com/felleslosninger/tlp-storybook-base/commit/52177ca5227ca6cfc1aa7c1ed09288f42067608f))
+* **radio:** add transitions to radio button ([6a24f82](https://github.com/felleslosninger/tlp-storybook-base/commit/6a24f8295864e29615ec9dd402af2a6a3ffdc4ec))
+
+
+
+
+
 ## [0.5.1](https://github.com/felleslosninger/tlp-design-admin/compare/@digdir/ds-core-css@0.5.0...@digdir/ds-core-css@0.5.1) (2022-01-13)
 
 
