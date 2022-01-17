@@ -1,6 +1,7 @@
 @use '@digdir/ds-tokens/build/tokens.scss' as *;
 @use './typography.scss' as *;
 @use './baseline/utils.scss' as utils;
+@use './baseline/baseline.scss' as baseline;
 
 $classname: '#{utils.$prefix}-radio';
 // Color variables
@@ -8,18 +9,12 @@ $radio-color-unchecked: $color-neutral-grey-600;
 $radio-color-checked: $color-interface-interaction;
 $radio-color-disabled: $color-neutral-grey-500;
 // Size variables
-$radio-size-inner-medium: calc($spacing-base-6 - $border-width-default);
-$radio-size-inner-large: calc($spacing-base-8 - $border-width-default);
+$radio-size-medium: $spacing-base-6;
+$radio-size-large: $spacing-base-8;
 $radio-size-checkmark-medium: $spacing-base-3;
 $radio-size-checkmark-large: calc($radio-size-checkmark-medium * 1.5);
-$radio-margin-label-medium: calc($spacing-base-2 + $border-width-default);
-$radio-margin-label-large: calc($spacing-base-4 + $border-width-default);
-$radio-border-width-inner-medium: calc(
-  ($radio-size-inner-medium - $radio-size-checkmark-medium) / 2
-);
-$radio-border-width-inner-large: calc(
-  ($radio-size-inner-large - $radio-size-checkmark-large) / 2
-);
+$radio-padding-label-medium: $spacing-base-2;
+$radio-padding-label-large: $spacing-base-4;
 
 .#{$classname} {
   display: inline-flex;
@@ -27,75 +22,140 @@ $radio-border-width-inner-large: calc(
   box-sizing: border-box;
   cursor: pointer;
 
-  @include text-body-300();
-
   & input.#{$classname}__input {
     cursor: pointer;
     // Hide browser-default radio appearance
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    margin: 0;
 
-    flex-shrink: 0;
-    flex-grow: 0;
-
-    // Medium size
-    width: $radio-size-inner-medium;
-    height: $radio-size-inner-medium;
-    margin-right: $radio-margin-label-medium;
-
-    // Custom radio appearance
-    border-radius: 50%;
-    background-color: $color-neutral-white;
-    // Inner border
-    border: $radio-border-width-inner-medium solid $color-neutral-white;
-    // Outer border
-    box-shadow: 0 0 0 $border-width-default $radio-color-unchecked;
-    // Correct offsets for box-shadow outer border
-    margin-top: $border-width-default;
-    margin-bottom: $border-width-default;
-    margin-left: $border-width-default;
-    outline-offset: calc($border-width-default + utils.$base-outline-offset);
-  }
-  &:not([class*='#{$classname}--disabled']) > input.#{$classname}__input {
-    &:hover:not(:checked) {
-      background-color: $color-interface-interaction-light;
-      box-shadow: 0 0 0 $border-width-default $radio-color-checked;
+    // Focus outline
+    &:focus {
+      outline: none;
     }
-    &:checked {
-      background-color: $radio-color-checked;
-      box-shadow: 0 0 0 $border-width-default $radio-color-checked;
+    &:focus-visible ~ .#{$classname}__label {
+      @include baseline.focus-outline();
+    }
+    // Compatibility for browsers not supporting :focus-visible (Safari, IE)
+    &:focus ~ .#{$classname}__label {
+      @include baseline.focus-outline();
+    }
+    &:focus:not(:focus-visible) ~ .#{$classname}__label {
+      outline: none;
+    }
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    padding-left: $radio-size-medium;
+    min-height: $radio-size-medium;
+
+    cursor: pointer;
+    @include text-body-300();
+    color: $color-text-background-light;
+
+    &--right {
+      padding-left: calc($radio-size-medium + $radio-padding-label-medium);
+    }
+
+    // Radio button container
+    &::before {
+      content: '';
+      display: inline-block;
+      box-sizing: border-box;
+      position: absolute;
+      left: 0;
+
+      // Medium size
+      width: $radio-size-medium;
+      height: $radio-size-medium;
+
+      // Custom radio appearance
+      border-radius: 50%;
+      background-color: $color-neutral-white;
+
+      border: $border-width-default solid $radio-color-unchecked;
+
+      transition: border-color $duration-fast;
+    }
+
+    // Radio button checkmark
+    &::after {
+      content: '';
+      display: inline-block;
+      box-sizing: border-box;
+      position: absolute;
+      left: calc(($radio-size-medium - $radio-size-checkmark-medium) / 2);
+
+      // Medium size
+      width: $radio-size-checkmark-medium;
+      height: $radio-size-checkmark-medium;
+
+      border-radius: 50%;
+      background-color: $color-neutral-white;
+
+      transition: background-color $duration-fast;
+    }
+  }
+
+  // Hover and checked states
+  &:not([class*='#{$classname}--disabled']) > input.#{$classname}__input {
+    &:hover:not(:checked) ~ .#{$classname}__label {
+      &::before {
+        border-color: $radio-color-checked;
+      }
+      &::after {
+        background-color: $color-interface-interaction-light;
+      }
+    }
+    &:checked ~ .#{$classname}__label {
+      &::before {
+        border-color: $radio-color-checked;
+      }
+      &::after {
+        background-color: $radio-color-checked;
+      }
     }
   }
 
   &--disabled {
-    cursor: not-allowed;
-    color: $radio-color-disabled;
-
     &:active {
       pointer-events: none;
     }
 
-    & > input.#{$classname}__input {
+    & > .#{$classname}__label {
       cursor: not-allowed;
-      box-shadow: 0 0 0 $border-width-default $radio-color-disabled;
-
-      &:checked {
-        background-color: $radio-color-disabled;
+      color: $radio-color-disabled;
+      &::before {
+        border-color: $radio-color-disabled;
       }
+    }
+    & > input.#{$classname}__input:checked ~ .#{$classname}__label::after {
+      background-color: $radio-color-disabled;
     }
   }
 
   // Size modifiers
   &--large {
-    @include text-body-400();
+    & > .#{$classname}__label {
+      min-height: $radio-size-large;
+      padding-left: calc($radio-size-large + $radio-padding-label-large);
+      @include text-body-400();
 
-    & > input.#{$classname}__input {
-      width: $radio-size-inner-large;
-      height: $radio-size-inner-large;
-      margin-right: $radio-margin-label-large;
+      &::before {
+        width: $radio-size-large;
+        height: $radio-size-large;
+      }
 
-      border: $radio-border-width-inner-large solid $color-neutral-white;
+      &::after {
+        left: calc(($radio-size-large - $radio-size-checkmark-large) / 2);
+        width: $radio-size-checkmark-large;
+        height: $radio-size-checkmark-large;
+      }
     }
   }
 }

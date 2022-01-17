@@ -28,6 +28,7 @@ $toggle-padding-label: $spacing-base-2;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    margin: 0;
 
     // Focus outline
     &:focus {
@@ -56,7 +57,9 @@ $toggle-padding-label: $spacing-base-2;
     display: flex;
     align-items: center;
     position: relative;
+
     padding-left: $toggle-size-medium-width;
+    min-height: $toggle-size-medium-height;
 
     cursor: pointer;
     &--right {
@@ -139,6 +142,7 @@ $toggle-padding-label: $spacing-base-2;
     }
 
     &__label {
+      min-height: $toggle-size-small-height;
       &--right {
         padding-left: $toggle-size-small-width + $toggle-padding-label;
       }
