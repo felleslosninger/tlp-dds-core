@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.1](https://github.com/felleslosninger/tlp-storybook-base/compare/@digdir/ds-core-css@1.0.0...@digdir/ds-core-css@1.0.1) (2022-01-17)
+
+**Note:** Version bump only for package @digdir/ds-core-css
+
+
+
+
+
 # [1.0.0](https://github.com/felleslosninger/tlp-storybook-base/compare/@digdir/ds-core-css@0.5.1...@digdir/ds-core-css@1.0.0) (2022-01-17)
 
 

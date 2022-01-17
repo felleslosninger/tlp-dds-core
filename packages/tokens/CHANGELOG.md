@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0](https://github.com/felleslosninger/tlp-storybook-base/compare/@digdir/ds-tokens@1.6.2...@digdir/ds-tokens@1.7.0) (2022-01-17)
+
+
+### Features
+
+* **spacing:** add spacing tokens up to value of 6rem ([3fbeea4](https://github.com/felleslosninger/tlp-storybook-base/commit/3fbeea44385d40221a76d211f64ccf0ca178ae43))
+
+
+
+
+
 ## [1.6.2](https://github.com/felleslosninger/tlp-design-admin/compare/@digdir/ds-tokens@1.6.1...@digdir/ds-tokens@1.6.2) (2022-01-12)
 
 **Note:** Version bump only for package @digdir/ds-tokens
