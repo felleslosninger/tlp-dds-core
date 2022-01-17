@@ -80,6 +80,22 @@
       "20": {
         "value": "5rem",
         "type": "dimension"
+      },
+      "21": {
+        "value": "5.25rem",
+        "type": "dimension"
+      },
+      "22": {
+        "value": "5.5rem",
+        "type": "dimension"
+      },
+      "23": {
+        "value": "5.75rem",
+        "type": "dimension"
+      },
+      "24": {
+        "value": "6rem",
+        "type": "dimension"
       }
     }
   }
