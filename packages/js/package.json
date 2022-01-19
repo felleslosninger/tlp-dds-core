@@ -1,7 +1,7 @@
 {
   "name": "@digdir/ds-core-js",
   "version": "0.0.0",
-  "private": true,
+  "private": false,
   "description": "Javascript for Digdir core components",
   "author": "Digdir design system team",
   "license": "BSD-3-Clause",
@@ -25,5 +25,8 @@
     "node": "^16.10.0",
     "rollup": "^2.58.0",
     "rollup-plugin-terser": "^7.0.2"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
