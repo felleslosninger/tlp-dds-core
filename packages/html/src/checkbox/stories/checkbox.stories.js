@@ -1,15 +1,15 @@
-import { createRadio } from '../radio.js'
-import { radioScript } from '../radio.script.js'
+import { createCheckbox } from '../checkbox.js'
+import { checkboxScript } from '../../../../js/src/checkbox.script.js'
 import { withDesign } from 'storybook-addon-designs'
 import { useEffect } from '@storybook/client-api'
 
 export default {
-  title: 'Komponenter/Radio',
+  title: 'Komponenter/Checkbox',
   decorators: [withDesign],
   parameters: {
     design: {
       type: 'figma',
-      url: 'https://www.figma.com/file/vpM9dqqQPHqU6ogfKp5tlr/?node-id=1513%3A12889',
+      url: 'https://www.figma.com/file/vpM9dqqQPHqU6ogfKp5tlr/Digdir-admin?node-id=1553%3A13038',
     },
   },
   argTypes: {
@@ -25,18 +25,14 @@ export default {
 
 const Template = (args) => {
   useEffect(() => {
-    radioScript()
+    checkboxScript()
   })
-  if (args.disabled && args.checked) {
-    // Set unique name so it stays checked (in docs page)
-    args.nameAttribute = 'radio-deactivated-checked'
-  }
-  return createRadio(args)
+  return createCheckbox(args)
 }
 
 export const Default = Template.bind({})
 Default.args = {
-  label: 'Radioknapp',
+  label: 'Avkrysningsboks',
   disabled: false,
   checked: false,
   size: 'medium',
@@ -44,7 +40,7 @@ Default.args = {
 
 export const Disabled = Template.bind({})
 Disabled.args = {
-  label: 'Radioknapp',
+  label: 'Deaktivert',
   disabled: true,
   checked: false,
   size: 'medium',
