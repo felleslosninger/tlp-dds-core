@@ -8,3 +8,4 @@ import { radioScript } from './radio.script.js'
 
 // Run  ES6 modules
 checkboxScript()
+radioScript()
