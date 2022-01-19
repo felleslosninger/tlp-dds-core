@@ -1,6 +1,6 @@
 {
   "name": "@digdir/ds-core-js",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": false,
   "description": "Javascript for Digdir core components",
   "author": "Digdir design system team",
@@ -15,7 +15,6 @@
     "build": "yarn clean && rollup -c",
     "clean": "rm -rf ./build/"
   },
-  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.15.8",
     "@babel/preset-env": "^7.15.8",
