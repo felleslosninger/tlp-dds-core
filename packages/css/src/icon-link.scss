@@ -10,9 +10,10 @@ $link-size-medium: $spacing-base-4;
 $link-size-large: $spacing-base-6;
 $link-icon-size-medium: $spacing-base-4;
 $link-icon-size-large: $spacing-base-6;
-$link-margin-label-medium: $spacing-base-1;
-$link-margin-label-large: $spacing-base-2;
-$link-margin-icon: ($link-icon-size-medium + $link-margin-label-medium);
+$link-padding-label-medium: $spacing-base-1;
+$link-padding-label-large: $spacing-base-2;
+$link-margin-icon-medium: ($link-icon-size-medium + $link-padding-label-medium);
+$link-margin-icon-large: ($link-icon-size-large + $link-padding-label-large);
 
 .#{utils.$prefix}-icon-link {
   cursor: pointer;
@@ -30,7 +31,7 @@ $link-margin-icon: ($link-icon-size-medium + $link-margin-label-medium);
   transition-property: border-color, padding-bottom;
 
   // Make room for medium icon
-  margin-right: $link-margin-icon;
+  margin-right: $link-margin-icon-medium;
 
   // Elements
   & > &__icon {
@@ -40,7 +41,7 @@ $link-margin-icon: ($link-icon-size-medium + $link-margin-label-medium);
 
     width: $link-icon-size-medium;
     height: $link-icon-size-medium;
-    padding-left: $link-margin-label-medium;
+    padding-left: $link-padding-label-medium;
     padding-top: $border-width-default;
 
     flex-shrink: 0;
@@ -50,15 +51,17 @@ $link-margin-icon: ($link-icon-size-medium + $link-margin-label-medium);
   // States
   &:focus-visible {
     // Fit icon in focus outline
-    padding-right: $link-margin-icon;
+    padding-right: $link-margin-icon-medium;
     margin-right: 0;
   }
   // Compatibility for browsers not supporting :focus-visible (Safari, IE)
   &:focus {
-    padding-right: $link-margin-icon;
+    padding-right: $link-margin-icon-medium;
     margin-right: 0;
   }
   &:focus:not(:focus-visible) {
+    padding-right: 0;
+    margin-right: $link-margin-icon-medium;
     outline: none;
   }
 
@@ -82,12 +85,12 @@ $link-margin-icon: ($link-icon-size-medium + $link-margin-label-medium);
   // Size modifiers
   &--large {
     @include text-interface-400();
-    margin-right: ($link-icon-size-large + $link-margin-label-large);
+    margin-right: $link-margin-icon-large;
   }
   &--large > &__icon {
     width: $link-icon-size-large;
     height: $link-icon-size-large;
-    padding-left: $link-margin-label-large;
+    padding-left: $link-padding-label-large;
     padding-top: 0;
   }
 }
