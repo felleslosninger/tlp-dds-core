@@ -86,6 +86,17 @@ $link-margin-icon-large: ($link-icon-size-large + $link-padding-label-large);
   &--large {
     @include text-interface-400();
     margin-right: $link-margin-icon-large;
+
+    // Adapt focus outline to large size
+    &:focus-visible {
+      padding-right: $link-margin-icon-large;
+    }
+    &:focus {
+      padding-right: $link-margin-icon-large;
+    }
+    &:focus:not(:focus-visible) {
+      margin-right: $link-margin-icon-large;
+    }
   }
   &--large > &__icon {
     width: $link-icon-size-large;
