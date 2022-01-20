@@ -19,6 +19,7 @@ $link-margin-icon: ($link-icon-size-medium + $link-margin-label-medium);
   position: relative;
   text-decoration: none;
   overflow-wrap: anywhere;
+  box-sizing: border-box;
 
   @include text-interface-300();
   color: $color-text-background-light;
@@ -35,11 +36,12 @@ $link-margin-icon: ($link-icon-size-medium + $link-margin-label-medium);
   & > &__icon {
     display: inline-block;
     position: absolute;
+    box-sizing: content-box;
 
     width: $link-icon-size-medium;
     height: $link-icon-size-medium;
     padding-left: $link-margin-label-medium;
-    margin-top: $border-width-default;
+    padding-top: $border-width-default;
 
     flex-shrink: 0;
     flex-grow: 0;
@@ -86,6 +88,6 @@ $link-margin-icon: ($link-icon-size-medium + $link-margin-label-medium);
     width: $link-icon-size-large;
     height: $link-icon-size-large;
     padding-left: $link-margin-label-large;
-    margin-top: 0;
+    padding-top: 0;
   }
 }
