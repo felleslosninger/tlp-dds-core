@@ -1,17 +1,30 @@
 const StyleDictionary = require('style-dictionary')
 const { minifyDictionary } = StyleDictionary.formatHelpers
 
+StyleDictionary.registerFileHeader({
+  name: 'customHeader',
+  fileHeader: (defaultMessage) => {
+    return [`Do not edit directly`]
+  },
+})
+
 module.exports = {
   format: {
-    customCjsMinified({ dictionary }) {
+    customCjsMinified({ dictionary, options }) {
       return (
+        '/* ' +
+        options.fileHeader() +
+        ' */ ' +
         'module.exports=' +
         JSON.stringify(minifyDictionary(dictionary.tokens), null) +
         ';'
       )
     },
-    customEs6Minified({ dictionary }) {
+    customEs6Minified({ dictionary, options }) {
       return (
+        '/* ' +
+        options.fileHeader() +
+        ' */ ' +
         'export default ' +
         JSON.stringify(minifyDictionary(dictionary.tokens)) +
         ';'
@@ -27,10 +40,16 @@ module.exports = {
         {
           destination: 'tokens.cjs',
           format: 'customCjsMinified',
+          options: {
+            fileHeader: 'customHeader',
+          },
         },
         {
           destination: 'tokens.js',
           format: 'customEs6Minified',
+          options: {
+            fileHeader: 'customHeader',
+          },
         },
       ],
     },
@@ -43,6 +62,7 @@ module.exports = {
           format: 'css/variables',
           options: {
             outputReferences: true,
+            fileHeader: 'customHeader',
           },
         },
       ],
@@ -56,6 +76,7 @@ module.exports = {
           format: 'scss/variables',
           options: {
             outputReferences: true,
+            fileHeader: 'customHeader',
           },
         },
       ],
