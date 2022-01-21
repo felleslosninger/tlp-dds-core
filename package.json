@@ -58,9 +58,9 @@
     "build": "lerna run build",
     "build:docs": "build-storybook -o ./docs",
     "lint": "stylelint '**/*.scss'",
-    "version:changed": "lerna version --no-push --conventional-commits --no-private",
+    "version:changed": "yarn build && lerna version --no-push --conventional-commits --no-private",
     "publish:changed": "lerna publish from-git",
-    "version-publish-push": "lerna publish --conventional-commits"
+    "version-publish-push": "yarn build && lerna publish --conventional-commits"
   },
   "prettier": {
     "trailingComma": "all",
