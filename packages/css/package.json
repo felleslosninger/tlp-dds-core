@@ -3,6 +3,11 @@
   "version": "1.0.2",
   "private": false,
   "description": "CSS core of the Digdir design system, including stylesheets for the baseline and core components",
+  "keywords": [
+    "css",
+    "sass",
+    "scss"
+  ],
   "author": "Digdir design system team",
   "license": "BSD-3-Clause",
   "main": "./build/index.css",

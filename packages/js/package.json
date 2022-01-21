@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": false,
   "description": "JavaScript for Digdir core components",
+  "keywords": [
+    "script",
+    "javascript"
+  ],
   "author": "Digdir design system team",
   "license": "BSD-3-Clause",
   "type": "module",
