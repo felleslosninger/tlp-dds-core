@@ -110,6 +110,18 @@
   --border-width-regular: 2px;
   --border-width-thin: 1px;
   --z-index-default: var(--z-index-height-0);
+  --spacing-12: var(--spacing-base-24);
+  --spacing-11: var(--spacing-base-22);
+  --spacing-10: var(--spacing-base-20);
+  --spacing-9: var(--spacing-base-18);
+  --spacing-8: var(--spacing-base-16);
+  --spacing-7: var(--spacing-base-14);
+  --spacing-6: var(--spacing-base-12);
+  --spacing-5: var(--spacing-base-10);
+  --spacing-4: var(--spacing-base-8);
+  --spacing-3: var(--spacing-base-6);
+  --spacing-2: var(--spacing-base-4);
+  --spacing-1: var(--spacing-base-2);
   --color-text-background-dark: var(--color-neutral-white);
   --color-text-background-light: var(--color-neutral-grey-800);
   --border-width-default: var(--border-width-regular);
