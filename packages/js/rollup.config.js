@@ -5,7 +5,7 @@ import commonjs from '@rollup/plugin-commonjs'
 
 export default [
   {
-    // ES6 production build of javascript
+    // ESM production build
     input: './src/index.js',
     output: {
       file: './build/index.js',
@@ -23,11 +23,12 @@ export default [
     ],
   },
   {
-    // ES5 production build of all javascript to be used as fallback in IE11
+    // IIFE (Immediately Invoked Function Expression) production build
+    // ES5 compatible to be used as fallback <script> where backwards compatibility is needed (e.g. IE11)
     input: './src/index.js',
     output: {
-      file: './build/index.cjs',
-      format: 'cjs',
+      file: './build/index.iife.js',
+      format: 'iife',
     },
     treeshake: 'recommended', // Remove unused imports
     plugins: [
