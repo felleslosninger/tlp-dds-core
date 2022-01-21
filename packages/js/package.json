@@ -2,11 +2,11 @@
   "name": "@digdir/ds-core-js",
   "version": "0.1.0",
   "private": false,
-  "description": "Javascript for Digdir core components",
+  "description": "JavaScript for Digdir core components",
   "author": "Digdir design system team",
   "license": "BSD-3-Clause",
   "type": "module",
-  "main": "./build/index.cjs",
+  "main": "./build/index.iife.js",
   "module": "./build/index.js",
   "files": [
     "/build"
