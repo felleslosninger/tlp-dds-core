@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.2](https://github.com/felleslosninger/tlp-storybook-base/compare/@digdir/ds-core-css@1.0.1...@digdir/ds-core-css@1.0.2) (2022-01-21)
+
+
+### Bug Fixes
+
+* **icon-link:** fit focus outline in large variant ([dacdae6](https://github.com/felleslosninger/tlp-storybook-base/commit/dacdae6132e74710859c26b0fa6d5e38210dce12))
+* **icon-link:** remove long border-bottom on click focus ([2d1d0b3](https://github.com/felleslosninger/tlp-storybook-base/commit/2d1d0b315b8822c6d1b729bc46ea3e357dccf654))
+* **icon-link:** set box sizing to avoid overriding from potential global CSS selectors ([0435e8c](https://github.com/felleslosninger/tlp-storybook-base/commit/0435e8cff74310950794b5a802ac049c5d37ae3e))
+
+
+
+
+
 ## [1.0.1](https://github.com/felleslosninger/tlp-storybook-base/compare/@digdir/ds-core-css@1.0.0...@digdir/ds-core-css@1.0.1) (2022-01-17)
 
 **Note:** Version bump only for package @digdir/ds-core-css

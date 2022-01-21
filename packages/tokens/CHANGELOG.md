@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.8.0](https://github.com/felleslosninger/tlp-storybook-base/compare/@digdir/ds-tokens@1.7.0...@digdir/ds-tokens@1.8.0) (2022-01-21)
+
+
+### Features
+
+* **spacing:** add spacing alias tokens ([987961a](https://github.com/felleslosninger/tlp-storybook-base/commit/987961aba3172cf6fd57255b7ede548920115e53))
+
+
+
+
+
 # [1.7.0](https://github.com/felleslosninger/tlp-storybook-base/compare/@digdir/ds-tokens@1.6.2...@digdir/ds-tokens@1.7.0) (2022-01-17)
 
 
