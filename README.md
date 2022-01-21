@@ -61,15 +61,19 @@ Yarn er brukt for å benytte komboen Lerna + Yarn workspaces til enklere vedlike
 
 #### Stegvis
 
-1️⃣ For å klargjøre en ny versjon (og committe en versjon-tag):
+1️⃣ For å klargjøre en ny versjon:
 
 `yarn version:changed`
+
+- Kjører bygg-steget
+- Foreslår nye versjoner (yes/no prompt)
+- Committer en versjon-tag
 
 Hva slags type versjon-bump det blir bestemmes automatisk fra commitloggen.
 
 Hvis man trenger å sette versjon eksplisitt, bruk:
 
-`yarn version:changed [major|minor|patch]`
+`yarn version:changed [patch|minor|major]`
 
 Dette vil lage en commit med ny versjon. `major`, `minor` eller `patch` brukes etter [semver](https://semver.org/) konvensjonen.
 
@@ -77,10 +81,25 @@ Dette vil lage en commit med ny versjon. `major`, `minor` eller `patch` brukes e
 
 Sjekk evnt. at filene som blir publisert er riktige (`/build`-mappene til pakkene som er versjonert).
 
+`git push`
+
 3️⃣ For å publisere:
 
 `yarn publish:changed`
 
 Dette vil publisere pakken(e) tagget i nåværende commit 🚀
+
+#### Kombinert
+
+For å eventuelt kjøre alle disse stegene i et, for eksempel hvis man ikke trenger å velge versjon manuelt og trenger en raskere måte å publisere på.
+
+**(⚠️ Vær sikker på at alt er riktig hvis denne brukes ⚠️)**
+
+`yarn version-publish-push`
+
+- Kjører bygg-steget
+- Committer en versjon-tag
+- Publiserer til NPM
+- Pusher til Github
 
 ---
