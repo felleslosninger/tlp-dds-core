@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1](https://github.com/felleslosninger/tlp-storybook-base/compare/@digdir/ds-core-js@0.1.0...@digdir/ds-core-js@0.1.1) (2022-01-21)
+
+
+### Bug Fixes
+
+* **build:** swap *.cjs build with *.iife.js build ([06f3e16](https://github.com/felleslosninger/tlp-storybook-base/commit/06f3e1672edcbe4ee7a2a9e28fba56e5e9517d2b))
+
+
+
+
+
 # 0.1.0 (2022-01-19)
 
 

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.8.1](https://github.com/felleslosninger/tlp-storybook-base/compare/@digdir/ds-tokens@1.8.0...@digdir/ds-tokens@1.8.1) (2022-01-21)
+
+**Note:** Version bump only for package @digdir/ds-tokens
+
+
+
+
+
 # [1.8.0](https://github.com/felleslosninger/tlp-storybook-base/compare/@digdir/ds-tokens@1.7.0...@digdir/ds-tokens@1.8.0) (2022-01-21)
 
 
