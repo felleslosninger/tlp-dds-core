@@ -39,7 +39,7 @@ export const parameters = {
         'Typografi',
         'Komponenter',
         [
-          'Introduksjon',
+          'Kom i gang',
           'Button',
           'Checkbox',
           'Radio',
