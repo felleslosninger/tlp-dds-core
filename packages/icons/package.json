@@ -1,0 +1,16 @@
+{
+  "name": "@digdir/ds-icons",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Icons of the Digdir design system",
+  "keywords": [
+    "icons",
+    "svg"
+  ],
+  "author": "Digdir design system team",
+  "license": "",
+  "files": [
+    "/src"
+  ],
+  "scripts": {}
+}
