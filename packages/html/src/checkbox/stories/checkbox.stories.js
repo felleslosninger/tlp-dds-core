@@ -54,7 +54,7 @@ Default.args = {
   size: 'medium',
 }
 
-const disabledDescription = `Denne varianten av komponenten trenger JavaScript for komplett funksjonalitet. Se *"Kom i gang"* for mer info.`
+const disabledDescription = `Til en deaktivert avkrysningsboks benyttes JavaScript for komplett funksjonalitet. Se *"Kom i gang"* for mer info.`
 
 export const Disabled = Template.bind({})
 Disabled.args = {
@@ -77,6 +77,13 @@ DisabledAndChecked.args = {
   disabled: true,
   checked: true,
   size: 'medium',
+}
+DisabledAndChecked.parameters = {
+  docs: {
+    description: {
+      story: disabledDescription,
+    },
+  },
 }
 
 export const Large = Template.bind({})
