@@ -8,9 +8,9 @@
     "svg"
   ],
   "author": "Digdir design system team",
-  "license": "",
+  "license": "Apache-2.0",
   "files": [
-    "/src"
+    "/svg"
   ],
   "scripts": {}
 }
