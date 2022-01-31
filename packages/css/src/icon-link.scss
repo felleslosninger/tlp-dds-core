@@ -2,6 +2,7 @@
 @use './typography.scss' as *;
 @use './baseline/utils.scss' as utils;
 
+$classname: '#{utils.$prefix}-icon-link';
 // Color variables
 $link-color-default: $color-interface-interaction;
 $link-color-border-default: $color-neutral-grey-400;
@@ -15,7 +16,7 @@ $link-padding-label-large: $spacing-base-2;
 $link-margin-icon-medium: ($link-icon-size-medium + $link-padding-label-medium);
 $link-margin-icon-large: ($link-icon-size-large + $link-padding-label-large);
 
-.#{utils.$prefix}-icon-link {
+.#{$classname} {
   cursor: pointer;
   position: relative;
   text-decoration: none;
@@ -28,10 +29,7 @@ $link-margin-icon-large: ($link-icon-size-large + $link-padding-label-large);
   border-bottom: $border-width-thin solid $color-neutral-grey-400;
 
   transition: all $duration-normal;
-  transition-property: border-color, padding-bottom;
-
-  // Make room for medium icon
-  margin-right: $link-margin-icon-medium;
+  transition-property: border-color;
 
   // Elements
   & > &__icon {
@@ -41,28 +39,10 @@ $link-margin-icon-large: ($link-icon-size-large + $link-padding-label-large);
 
     width: $link-icon-size-medium;
     height: $link-icon-size-medium;
-    padding-left: $link-padding-label-medium;
     padding-top: $border-width-default;
 
     flex-shrink: 0;
     flex-grow: 0;
-  }
-
-  // States
-  &:focus-visible {
-    // Fit icon in focus outline
-    padding-right: $link-margin-icon-medium;
-    margin-right: 0;
-  }
-  // Compatibility for browsers not supporting :focus-visible (Safari, IE)
-  &:focus {
-    padding-right: $link-margin-icon-medium;
-    margin-right: 0;
-  }
-  &:focus:not(:focus-visible) {
-    padding-right: 0;
-    margin-right: $link-margin-icon-medium;
-    outline: none;
   }
 
   &:hover {
@@ -82,26 +62,124 @@ $link-margin-icon-large: ($link-icon-size-large + $link-padding-label-large);
     fill: $color-interface-visited;
   }
 
+  &--shortcut {
+    color: $link-color-default;
+    border-color: transparent;
+    border-width: $border-width-default;
+
+    & > svg {
+      fill: $link-color-default;
+    }
+  }
+
   // Size modifiers
   &--large {
     @include text-interface-400();
-    margin-right: $link-margin-icon-large;
-
-    // Adapt focus outline to large size
-    &:focus-visible {
-      padding-right: $link-margin-icon-large;
-    }
-    &:focus {
-      padding-right: $link-margin-icon-large;
-    }
-    &:focus:not(:focus-visible) {
-      margin-right: $link-margin-icon-large;
-    }
   }
   &--large > &__icon {
     width: $link-icon-size-large;
     height: $link-icon-size-large;
-    padding-left: $link-padding-label-large;
     padding-top: 0;
+  }
+
+  // ---------------------------------
+  // Focus outline mixins
+  //
+  // Padding/margin, and icon placement adjustment
+  // to fit icon in focus outline
+  // ---------------------------------
+  @mixin icon-left-outline-padding($padding) {
+    padding-left: $padding;
+    margin-left: 0;
+    & > .#{$classname}__icon {
+      left: 0;
+    }
+  }
+  @mixin icon-left-outline-reset($margin, $size-icon, $size-label) {
+    margin-left: $margin;
+    padding-left: 0;
+    & > .#{$classname}__icon {
+      left: -($size-icon + $size-label);
+    }
+    outline: none;
+  }
+  @mixin icon-left-outline($margin, $size-icon, $size-label) {
+    &:focus-visible {
+      @include icon-left-outline-padding($margin);
+    }
+    &:focus {
+      @include icon-left-outline-padding($margin);
+    }
+    &:focus:not(:focus-visible) {
+      @include icon-left-outline-reset($margin, $size-icon, $size-label);
+    }
+  }
+  @mixin icon-right-outline-padding($padding) {
+    padding-right: $padding;
+    margin-right: 0;
+  }
+  @mixin icon-right-outline-reset($margin) {
+    margin-right: $margin;
+    padding-right: 0;
+    outline: none;
+  }
+  @mixin icon-right-outline($margin) {
+    // Fit icon in focus outline
+    &:focus-visible {
+      @include icon-right-outline-padding($margin);
+    }
+    // Compatibility for browsers not supporting :focus-visible (Safari, IE)
+    &:focus {
+      @include icon-right-outline-padding($margin);
+    }
+    &:focus:not(:focus-visible) {
+      @include icon-right-outline-reset($margin);
+    }
+  }
+
+  // ---------------------------------
+
+  &--icon-left {
+    margin-left: $link-margin-icon-medium;
+    & > .#{$classname}__icon {
+      left: -($link-icon-size-medium + $link-padding-label-medium);
+      padding-right: $link-padding-label-medium;
+    }
+    @include icon-left-outline(
+      $link-margin-icon-medium,
+      $link-icon-size-medium,
+      $link-padding-label-medium
+    );
+
+    &.#{$classname}--large {
+      margin-left: $link-margin-icon-large;
+      & > .#{$classname}__icon {
+        left: -($link-icon-size-large + $link-padding-label-large);
+        padding-right: $link-padding-label-large;
+      }
+      @include icon-left-outline(
+        $link-margin-icon-large,
+        $link-icon-size-large,
+        $link-padding-label-large
+      );
+    }
+  }
+
+  &--icon-right {
+    // Make room for icon
+    margin-right: $link-margin-icon-medium;
+    & > .#{$classname}__icon {
+      // Remove "hover gap" between icon and text
+      padding-left: $link-padding-label-medium;
+    }
+    @include icon-right-outline($link-margin-icon-medium);
+
+    &.#{$classname}--large {
+      margin-right: $link-margin-icon-large;
+      & > .#{$classname}__icon {
+        padding-left: $link-padding-label-large;
+      }
+      @include icon-right-outline($link-margin-icon-large);
+    }
   }
 }
