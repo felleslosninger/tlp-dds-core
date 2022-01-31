@@ -25,8 +25,11 @@ const createIconLink = ({
     'M10 6L8.59 7.41L13.17 12l-4.58 4.59L10 18l6-6l-6-6z'
 
   let iconSvgPath = svgPathArrowForward
+  let targetAttribute = ''
+
   if (variant === 'external') {
     iconSvgPath = svgPathOpenInNew
+    targetAttribute = "target='_blank'"
   } else if (variant === 'shortcut') {
     iconSvgPath = svgPathChevronRight
   }
@@ -43,7 +46,7 @@ const createIconLink = ({
     </svg>`
 
   return formatHtml(String.raw`
-  <a class='${linkClasses}' href='${href}' target='_blank' rel='noreferrer noopener'>
+  <a class='${linkClasses}' href='${href}' ${targetAttribute} rel='noreferrer noopener'>
     ${label}
     ${iconSvg}
   </a>`)
