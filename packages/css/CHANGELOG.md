@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/felleslosninger/tlp-storybook-base/compare/@digdir/ds-core-css@1.0.3...@digdir/ds-core-css@2.0.0) (2022-01-31)
+
+
+### Features
+
+* **icon-link:** remove required svg element class ([f3ea31e](https://github.com/felleslosninger/tlp-storybook-base/commit/f3ea31e49566ca61c15529f13716042633074c2f))
+
+
+
+
+
 ## [1.0.3](https://github.com/felleslosninger/tlp-storybook-base/compare/@digdir/ds-core-css@1.0.2...@digdir/ds-core-css@1.0.3) (2022-01-21)
 
 **Note:** Version bump only for package @digdir/ds-core-css
