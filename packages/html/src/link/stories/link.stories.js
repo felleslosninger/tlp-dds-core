@@ -55,10 +55,3 @@ Link.args = {
   textClass: 'dds-text-body-400',
   paragraph: false,
 }
-Link.parameters = {
-  docs: {
-    source: {
-      code: Template(Link.args),
-    },
-  },
-}

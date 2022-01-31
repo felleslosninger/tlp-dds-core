@@ -31,10 +31,3 @@ Default.args = {
   label: 'Panel link',
   size: 'medium',
 }
-Default.parameters = {
-  docs: {
-    source: {
-      code: Template(Default.args),
-    },
-  },
-}

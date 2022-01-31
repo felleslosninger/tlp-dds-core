@@ -35,13 +35,6 @@ InternalLink.args = {
   variant: 'internal',
   iconLeft: false,
 }
-InternalLink.parameters = {
-  docs: {
-    source: {
-      code: Template(InternalLink.args),
-    },
-  },
-}
 
 export const ExternalLink = Template.bind({})
 ExternalLink.args = {
@@ -49,13 +42,6 @@ ExternalLink.args = {
   size: 'medium',
   variant: 'external',
   iconLeft: false,
-}
-ExternalLink.parameters = {
-  docs: {
-    source: {
-      code: Template(ExternalLink.args),
-    },
-  },
 }
 
 export const Shortcut = Template.bind({})
