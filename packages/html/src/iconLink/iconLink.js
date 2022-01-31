@@ -33,7 +33,6 @@ const createIconLink = ({
 
   const iconSvg = String.raw`
     <svg
-      class="${classPrefix}__icon"
       focusable="false"
       width="24"
       height="24"

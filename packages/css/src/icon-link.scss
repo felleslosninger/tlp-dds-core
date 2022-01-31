@@ -32,7 +32,7 @@ $link-margin-icon-large: ($link-icon-size-large + $link-padding-label-large);
   transition-property: border-color;
 
   // Elements
-  & > &__icon {
+  & > svg {
     display: inline-block;
     position: absolute;
     box-sizing: content-box;
@@ -58,7 +58,7 @@ $link-margin-icon-large: ($link-icon-size-large + $link-padding-label-large);
     }
   }
 
-  &:visited > &__icon {
+  &:visited > svg {
     fill: $color-interface-visited;
   }
 
@@ -75,11 +75,12 @@ $link-margin-icon-large: ($link-icon-size-large + $link-padding-label-large);
   // Size modifiers
   &--large {
     @include text-interface-400();
-  }
-  &--large > &__icon {
-    width: $link-icon-size-large;
-    height: $link-icon-size-large;
-    padding-top: 0;
+
+    & > svg {
+      width: $link-icon-size-large;
+      height: $link-icon-size-large;
+      padding-top: 0;
+    }
   }
 
   // ---------------------------------
@@ -91,14 +92,14 @@ $link-margin-icon-large: ($link-icon-size-large + $link-padding-label-large);
   @mixin icon-left-outline-padding($padding) {
     padding-left: $padding;
     margin-left: 0;
-    & > .#{$classname}__icon {
+    & > svg {
       left: 0;
     }
   }
   @mixin icon-left-outline-reset($margin, $size-icon, $size-label) {
     margin-left: $margin;
     padding-left: 0;
-    & > .#{$classname}__icon {
+    & > svg {
       left: -($size-icon + $size-label);
     }
     outline: none;
@@ -140,9 +141,11 @@ $link-margin-icon-large: ($link-icon-size-large + $link-padding-label-large);
   // ---------------------------------
 
   &--icon-left {
+    // Make room for icon
     margin-left: $link-margin-icon-medium;
-    & > .#{$classname}__icon {
+    & > svg {
       left: -($link-icon-size-medium + $link-padding-label-medium);
+      // Remove "hover gap" between icon and text
       padding-right: $link-padding-label-medium;
     }
     @include icon-left-outline(
@@ -153,7 +156,7 @@ $link-margin-icon-large: ($link-icon-size-large + $link-padding-label-large);
 
     &.#{$classname}--large {
       margin-left: $link-margin-icon-large;
-      & > .#{$classname}__icon {
+      & > svg {
         left: -($link-icon-size-large + $link-padding-label-large);
         padding-right: $link-padding-label-large;
       }
@@ -166,17 +169,15 @@ $link-margin-icon-large: ($link-icon-size-large + $link-padding-label-large);
   }
 
   &--icon-right {
-    // Make room for icon
     margin-right: $link-margin-icon-medium;
-    & > .#{$classname}__icon {
-      // Remove "hover gap" between icon and text
+    & > svg {
       padding-left: $link-padding-label-medium;
     }
     @include icon-right-outline($link-margin-icon-medium);
 
     &.#{$classname}--large {
       margin-right: $link-margin-icon-large;
-      & > .#{$classname}__icon {
+      & > svg {
         padding-left: $link-padding-label-large;
       }
       @include icon-right-outline($link-margin-icon-large);
