@@ -17,9 +17,10 @@ export default {
       control: { type: 'select' },
     },
     variant: {
-      options: ['internal', 'external'],
+      options: ['internal', 'external', 'shortcut'],
       control: { type: 'select' },
     },
+    iconLeft: {},
   },
 }
 
@@ -32,6 +33,7 @@ InternalLink.args = {
   label: 'Internal link',
   size: 'medium',
   variant: 'internal',
+  iconLeft: false,
 }
 InternalLink.parameters = {
   docs: {
@@ -46,6 +48,7 @@ ExternalLink.args = {
   label: 'External link',
   size: 'medium',
   variant: 'external',
+  iconLeft: false,
 }
 ExternalLink.parameters = {
   docs: {
@@ -53,4 +56,12 @@ ExternalLink.parameters = {
       code: Template(ExternalLink.args),
     },
   },
+}
+
+export const Shortcut = Template.bind({})
+Shortcut.args = {
+  label: 'Snarvei',
+  size: 'medium',
+  variant: 'shortcut',
+  iconLeft: true,
 }
