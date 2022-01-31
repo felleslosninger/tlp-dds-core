@@ -30,7 +30,7 @@ const Template = (args) => {
 
 export const InternalLink = Template.bind({})
 InternalLink.args = {
-  label: 'Internal link',
+  label: 'Intern lenke',
   size: 'medium',
   variant: 'internal',
   iconLeft: false,
@@ -45,7 +45,7 @@ InternalLink.parameters = {
 
 export const ExternalLink = Template.bind({})
 ExternalLink.args = {
-  label: 'External link',
+  label: 'Ekstern lenke',
   size: 'medium',
   variant: 'external',
   iconLeft: false,
