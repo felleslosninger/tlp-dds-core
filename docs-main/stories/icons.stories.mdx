@@ -1,0 +1,53 @@
+import { Meta } from '@storybook/addon-docs'
+
+import searchIcon from '../../packages/icons/svg/search/outline.svg'
+
+<Meta title="Ikoner" />
+
+# Ikoner
+[![](https://img.shields.io/npm/v/@digdir/ds-icons?label=@digdir/ds-icons&color=0051be)](https://www.npmjs.com/package/@digdir/ds-icons)
+
+Digdir designsystem bruker hovedsaklig ikoner fra Material Icons som er gratis.
+
+Disse kan søkes i her: https://fonts.google.com/icons
+
+Et subset av disse ikonene som er mest relevant for designsystemet er redistribuert gjennom pakken `@digdir/ds-icons`.
+Dette er et minifisert sett (størrelse under 800 kB [v1.0.0]) bestående av *outlined*-varianten av ikonene i SVG-format.
+For konsistens inneholder det en variant av alle ikonene.
+
+**Egenskaper**
+
+* Format: SVG
+* Variant: *outlined*
+* Størrelse: 24x24 px
+
+---
+
+#### NPM
+[![](https://img.shields.io/npm/dm/@digdir/ds-icons.svg)](https://www.npmjs.com/package/@digdir/ds-icons)
+
+**1. Installer pakken i kommandolinjen ved hjelp av NPM eller Yarn**
+
+`npm install @digdir/ds-icons`
+
+eller
+
+`yarn add @digdir/ds-icons`
+
+**2. Importer og bruk**
+
+Pakkestruktur:
+
+
+`/svg/ikon_navn/outline.svg`
+
+Eksempel-filbane til søkeikon:
+
+`@digdir/ds-icons/svg/search/outline.svg`
+
+
+Eksempel på importering i JavaScript:
+
+```javascript
+import searchIcon from '@digdir/ds-icons/svg/search/outline.svg'
+```
