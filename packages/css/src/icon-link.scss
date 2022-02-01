@@ -83,12 +83,14 @@ $link-margin-icon-large: ($link-icon-size-large + $link-padding-label-large);
     }
   }
 
-  // ---------------------------------
-  // Focus outline mixins
-  //
-  // Padding/margin, and icon placement adjustment
-  // to fit icon in focus outline
-  // ---------------------------------
+  /* 
+    ---------------------------------------------------
+      Focus outline mixins
+
+      Padding/margin, and icon placement adjustment
+      to fit icon in focus outline
+    --------------------------------------------------- 
+  */
   @mixin icon-left-outline-padding($padding) {
     padding-left: $padding;
     margin-left: 0;
