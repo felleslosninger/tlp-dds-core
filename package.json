@@ -75,6 +75,9 @@
     ]
   },
   "stylelint": {
+    "ignoreFiles": [
+      "./packages/**/build/**"
+    ],
     "plugins": [
       "stylelint-scss"
     ],
