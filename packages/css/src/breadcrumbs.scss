@@ -1,0 +1,65 @@
+@use '@digdir/ds-tokens/build/tokens.scss' as *;
+@use './typography.scss' as *;
+@use './baseline/utils.scss' as utils;
+
+$classname: '#{utils.$prefix}-breadcrumbs';
+// Color variables
+$link-color-default: $color-interface-interaction;
+// Size variables
+$breadcrumb-size-height: $spacing-base-6;
+$breadcrumb-size-icon: $spacing-base-5;
+$breadcrumb-margin-icon: $spacing-base-2;
+
+.#{$classname} {
+  box-sizing: border-box;
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+  }
+  &__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    min-height: $breadcrumb-size-height;
+
+    list-style: none;
+
+    & .#{utils.$prefix}-link,
+    .#{$classname}__text {
+      @include text-interface-300();
+    }
+
+    & .#{utils.$prefix}-link {
+      &:hover {
+        border-width: $border-width-thin;
+      }
+    }
+
+    // Breadcrumb seperator icon
+    &::after {
+      content: '';
+      display: inline-block;
+      box-sizing: border-box;
+
+      align-self: center;
+
+      width: $breadcrumb-size-icon;
+      height: $breadcrumb-size-icon;
+      margin: 0 $breadcrumb-margin-icon;
+
+      background-image: #{utils.$icon-url-chevron-right};
+      background-repeat: no-repeat;
+      background-position: 50%;
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+  }
+}
