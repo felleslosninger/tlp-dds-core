@@ -18,7 +18,6 @@ export const parameters = {
   docs: {
     theme: customTheme,
   },
-  layout: 'centered',
   backgrounds: {
     values: [
       {

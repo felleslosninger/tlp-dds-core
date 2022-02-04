@@ -6,11 +6,6 @@
   and ./preview.js (for Storybook docs and canvas / main content).
   See: https://storybook.js.org/docs/react/configure/theming
 */
-.docs-story {
-  // Fix for lacking centering when <Story> is used inside <Canvas> in docs-page
-  display: flex;
-  justify-content: center;
-}
 
 body {
   @extend .dds-body;
