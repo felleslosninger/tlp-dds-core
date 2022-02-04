@@ -19,6 +19,9 @@ export default {
       options: ['medium', 'large'],
       control: { type: 'select' },
     },
+    iconLeft: {
+      control: { type: 'boolean' },
+    },
   },
 }
 
@@ -30,4 +33,12 @@ export const Default = Template.bind({})
 Default.args = {
   label: 'Panel link',
   size: 'medium',
+  iconLeft: false,
+}
+
+export const IconLeft = Template.bind({})
+IconLeft.args = {
+  label: 'Panel link',
+  size: 'medium',
+  iconLeft: true,
 }
