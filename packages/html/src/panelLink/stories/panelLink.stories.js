@@ -36,6 +36,13 @@ Default.args = {
   iconLeft: false,
 }
 
+export const Large = Template.bind({})
+Large.args = {
+  label: 'Panel link',
+  size: 'large',
+  iconLeft: false,
+}
+
 export const IconLeft = Template.bind({})
 IconLeft.args = {
   label: 'Panel link',
