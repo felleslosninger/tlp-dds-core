@@ -33,7 +33,7 @@ $link-padding-right-large: $spacing-base-4;
 
   background-color: $color-neutral-white;
 
-  border-bottom: $border-width-default solid transparent;
+  border: $border-width-default solid transparent;
 
   // Medium size
   min-height: $link-size-height-medium;
