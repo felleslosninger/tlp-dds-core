@@ -42,14 +42,14 @@ $link-padding-right-large: $spacing-base-4;
   padding-left: $link-padding-left-medium;
   padding-right: $link-padding-right-medium;
 
-  @include text-interface-400();
-  color: $color-text-background-light;
-
   transition: all $duration-normal;
   transition-property: border-color, background-color, margin;
 
   // Elements
   & > &__label {
+    @include text-body-300();
+    color: $color-text-background-light;
+
     padding-right: $link-icon-size-medium;
   }
   & > svg {
@@ -100,6 +100,10 @@ $link-padding-right-large: $spacing-base-4;
 
     &:hover > svg:nth-last-of-type(1) {
       right: calc($link-padding-right-large - $spacing-base-1);
+    }
+
+    & > .#{$classname}__label {
+      @include text-body-400();
     }
 
     & > svg {
