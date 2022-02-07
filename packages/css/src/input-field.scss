@@ -70,7 +70,7 @@ $input-placeholder-padding-horizontal-icon-large: calc(
       border-color: $color-interface-interaction;
       box-shadow: inset 0 0 0 $border-width-thin $color-interface-interaction;
       &::placeholder {
-        color: $input-color-default-active-grey;
+        opacity: 0;
       }
     }
   }
