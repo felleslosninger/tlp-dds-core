@@ -64,6 +64,12 @@ $link-margin-icon-large: ($link-icon-size-large + $link-padding-label-large);
 
   &--shortcut {
     border-width: $border-width-default;
+
+    & > svg {
+      width: $link-icon-size-large;
+      height: $link-icon-size-large;
+      padding: 0;
+    }
   }
 
   // Size modifiers
@@ -163,6 +169,18 @@ $link-margin-icon-large: ($link-icon-size-large + $link-padding-label-large);
         $link-padding-label-large
       );
     }
+    &.#{$classname}--shortcut {
+      margin-left: $link-icon-size-large;
+      & > svg {
+        left: -$link-icon-size-large;
+        padding-right: 0;
+      }
+      @include icon-left-outline(
+        $link-icon-size-large,
+        $link-icon-size-large,
+        0
+      );
+    }
   }
 
   &--icon-right {
@@ -178,6 +196,14 @@ $link-margin-icon-large: ($link-icon-size-large + $link-padding-label-large);
         padding-left: $link-padding-label-large;
       }
       @include icon-right-outline($link-margin-icon-large);
+    }
+
+    &.#{$classname}--shortcut {
+      margin-right: $link-icon-size-large;
+      & > svg {
+        padding-left: 0;
+      }
+      @include icon-right-outline($link-icon-size-large);
     }
   }
 }
