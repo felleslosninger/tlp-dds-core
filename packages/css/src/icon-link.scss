@@ -63,13 +63,7 @@ $link-margin-icon-large: ($link-icon-size-large + $link-padding-label-large);
   }
 
   &--shortcut {
-    color: $link-color-default;
-    border-color: transparent;
     border-width: $border-width-default;
-
-    & > svg {
-      fill: $link-color-default;
-    }
   }
 
   // Size modifiers
