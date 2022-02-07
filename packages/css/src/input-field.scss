@@ -116,9 +116,6 @@ $input-placeholder-padding-horizontal-icon-large: calc(
     }
     &:hover:not(:focus) {
       border-color: $color-interface-interaction;
-      &::placeholder {
-        color: $input-color-default-active-grey;
-      }
       & ~ .#{$classname}__icon-left,
       & ~ .#{$classname}__icon-right {
         fill: $input-color-default-active-grey;
@@ -138,8 +135,8 @@ $input-placeholder-padding-horizontal-icon-large: calc(
       fill: $input-color-disabled-grey;
     }
     & ~ .#{form.$field-label-classname} {
-      color: $input-color-disabled-grey;
       cursor: not-allowed;
+      color: $input-color-disabled-grey;
     }
     & > input.#{$classname}__input {
       cursor: not-allowed;
