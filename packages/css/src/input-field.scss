@@ -33,16 +33,21 @@ $input-placeholder-padding-horizontal-icon-large: calc(
 );
 
 .#{$classname} {
-  position: relative;
   display: flex;
+  flex-direction: row;
   align-items: center;
+  position: relative;
+
+  // Size medium
+  width: $input-size-width;
+  height: $input-size-height-medium;
 
   // Elements
   &__input {
     margin: 0;
-    // Size medium
-    min-width: $input-size-width;
-    height: $input-size-height-medium;
+    width: 100%;
+    height: 100%;
+
     @include text-body-300();
 
     background-color: $color-neutral-white;
@@ -68,14 +73,11 @@ $input-placeholder-padding-horizontal-icon-large: calc(
         color: $input-color-default-active-grey;
       }
     }
-    // Breakpoints
-    @media (max-width: $breakpoint-medium) {
-      min-width: Min(90vw, $input-size-width);
-    }
   }
 
   & ~ .#{form.$field-label-classname} {
     cursor: text;
+    width: $input-size-width;
   }
 
   &__icon-left,
@@ -182,12 +184,13 @@ $input-placeholder-padding-horizontal-icon-large: calc(
 
   // Size modifiers
   &--large {
+    height: $input-size-height-large;
+
     & ~ .#{form.$field-label-classname},
     & ~ .#{form.$field-error-message-classname} {
       @include text-body-300();
     }
     & .#{$classname}__input {
-      min-height: $input-size-height-large;
       @include text-body-400();
     }
     // Set icon size
@@ -216,5 +219,10 @@ $input-placeholder-padding-horizontal-icon-large: calc(
     &.#{$classname}--icon-right .#{$classname}__input {
       padding-right: $input-placeholder-padding-horizontal-icon-large;
     }
+  }
+
+  // Breakpoints
+  @media (max-width: $breakpoint-medium) {
+    width: Min(90vw, $input-size-width);
   }
 }
