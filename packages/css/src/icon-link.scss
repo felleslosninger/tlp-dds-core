@@ -140,6 +140,7 @@ $link-margin-icon-large: ($link-icon-size-large + $link-padding-label-large);
     // Make room for icon
     margin-left: $link-margin-icon-medium;
     & > svg {
+      top: 0;
       left: -($link-icon-size-medium + $link-padding-label-medium);
       // Remove "hover gap" between icon and text
       padding-right: $link-padding-label-medium;
