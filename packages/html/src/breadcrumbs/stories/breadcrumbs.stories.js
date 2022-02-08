@@ -23,3 +23,11 @@ const Template = (args) => {
 
 export const Default = Template.bind({})
 Default.args = { depth: 2 }
+
+export const MobileView = Template.bind({})
+MobileView.args = { depth: 2 }
+MobileView.parameters = {
+  viewport: {
+    defaultViewport: 'mobile1',
+  },
+}
