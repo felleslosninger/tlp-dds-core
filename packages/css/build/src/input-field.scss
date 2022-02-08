@@ -33,16 +33,21 @@ $input-placeholder-padding-horizontal-icon-large: calc(
 );
 
 .#{$classname} {
-  position: relative;
   display: flex;
+  flex-direction: row;
   align-items: center;
+  position: relative;
+
+  // Size medium
+  width: $input-size-width;
+  height: $input-size-height-medium;
 
   // Elements
   &__input {
     margin: 0;
-    // Size medium
-    width: $input-size-width;
-    height: $input-size-height-medium;
+    width: 100%;
+    height: 100%;
+
     @include text-body-300();
 
     background-color: $color-neutral-white;
@@ -65,17 +70,14 @@ $input-placeholder-padding-horizontal-icon-large: calc(
       border-color: $color-interface-interaction;
       box-shadow: inset 0 0 0 $border-width-thin $color-interface-interaction;
       &::placeholder {
-        color: $input-color-default-active-grey;
+        opacity: 0;
       }
-    }
-    // Breakpoints
-    @media (max-width: $breakpoint-medium) {
-      min-width: min(90vw, $input-size-width);
     }
   }
 
   & ~ .#{form.$field-label-classname} {
     cursor: text;
+    width: $input-size-width;
   }
 
   &__icon-left,
@@ -114,9 +116,6 @@ $input-placeholder-padding-horizontal-icon-large: calc(
     }
     &:hover:not(:focus) {
       border-color: $color-interface-interaction;
-      &::placeholder {
-        color: $input-color-default-active-grey;
-      }
       & ~ .#{$classname}__icon-left,
       & ~ .#{$classname}__icon-right {
         fill: $input-color-default-active-grey;
@@ -136,8 +135,8 @@ $input-placeholder-padding-horizontal-icon-large: calc(
       fill: $input-color-disabled-grey;
     }
     & ~ .#{form.$field-label-classname} {
-      color: $input-color-disabled-grey;
       cursor: not-allowed;
+      color: $input-color-disabled-grey;
     }
     & > input.#{$classname}__input {
       cursor: not-allowed;
@@ -182,12 +181,13 @@ $input-placeholder-padding-horizontal-icon-large: calc(
 
   // Size modifiers
   &--large {
+    height: $input-size-height-large;
+
     & ~ .#{form.$field-label-classname},
     & ~ .#{form.$field-error-message-classname} {
       @include text-body-300();
     }
     & .#{$classname}__input {
-      min-height: $input-size-height-large;
       @include text-body-400();
     }
     // Set icon size
@@ -216,5 +216,10 @@ $input-placeholder-padding-horizontal-icon-large: calc(
     &.#{$classname}--icon-right .#{$classname}__input {
       padding-right: $input-placeholder-padding-horizontal-icon-large;
     }
+  }
+
+  // Breakpoints
+  @media (max-width: $breakpoint-medium) {
+    width: Min(90vw, $input-size-width);
   }
 }
