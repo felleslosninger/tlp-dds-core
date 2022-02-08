@@ -7,14 +7,17 @@ $classname: '#{utils.$prefix}-icon-link';
 $link-color-default: $color-interface-interaction;
 $link-color-border-default: $color-neutral-grey-400;
 // Size variables
-$link-size-medium: $spacing-base-4;
-$link-size-large: $spacing-base-6;
 $link-icon-size-medium: $spacing-base-4;
 $link-icon-size-large: $spacing-base-6;
+$link-icon-size-large-external: 1.125rem;
 $link-padding-label-medium: 0.4375rem;
-$link-padding-label-large: 0.375rem;
+$link-padding-label-large: 0.25rem;
+$link-padding-label-large-external: 0.375rem;
 $link-margin-icon-medium: ($link-icon-size-medium + $link-padding-label-medium);
 $link-margin-icon-large: ($link-icon-size-large + $link-padding-label-large);
+$link-margin-icon-large-external: (
+  $link-icon-size-large-external + $link-padding-label-large-external
+);
 
 .#{$classname} {
   cursor: pointer;
@@ -80,6 +83,12 @@ $link-margin-icon-large: ($link-icon-size-large + $link-padding-label-large);
       width: $link-icon-size-large;
       height: $link-icon-size-large;
       padding-top: 0;
+    }
+
+    &.#{$classname}--external > svg {
+      width: $link-icon-size-large-external;
+      height: $link-icon-size-large-external;
+      padding-top: $border-width-default;
     }
   }
 
@@ -168,6 +177,19 @@ $link-margin-icon-large: ($link-icon-size-large + $link-padding-label-large);
         $link-icon-size-large,
         $link-padding-label-large
       );
+
+      &.#{$classname}--external {
+        margin-left: $link-margin-icon-large-external;
+        & > svg {
+          left: -($link-margin-icon-large-external);
+          padding-right: $link-padding-label-large-external;
+        }
+        @include icon-left-outline(
+          $link-margin-icon-large-external,
+          $link-icon-size-large-external,
+          $link-padding-label-large-external
+        );
+      }
     }
     &.#{$classname}--shortcut {
       margin-left: $link-icon-size-large;
@@ -196,6 +218,14 @@ $link-margin-icon-large: ($link-icon-size-large + $link-padding-label-large);
         padding-left: $link-padding-label-large;
       }
       @include icon-right-outline($link-margin-icon-large);
+
+      &.#{$classname}--external {
+        margin-right: $link-margin-icon-large-external;
+        & > svg {
+          padding-left: $link-padding-label-large-external;
+        }
+        @include icon-right-outline($link-margin-icon-large-external);
+      }
     }
 
     &.#{$classname}--shortcut {
