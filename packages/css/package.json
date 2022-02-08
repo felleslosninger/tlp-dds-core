@@ -1,6 +1,6 @@
 {
   "name": "@digdir/ds-core-css",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "private": false,
   "description": "CSS core of the Digdir design system, including stylesheets for the baseline and core components",
   "keywords": [

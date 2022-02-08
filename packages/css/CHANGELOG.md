@@ -3,6 +3,39 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/felleslosninger/tlp-storybook-base/compare/@digdir/ds-core-css@2.0.0...@digdir/ds-core-css@3.0.0) (2022-02-08)
+
+
+### Bug Fixes
+
+* **icon-link:** fix external link icon size and padding ([df71452](https://github.com/felleslosninger/tlp-storybook-base/commit/df71452c17e24a60f4cdba2cd7134e43a859127b))
+* **icon-link:** fix icon left placement when text is multiline ([fdf8a38](https://github.com/felleslosninger/tlp-storybook-base/commit/fdf8a3867cdc7a06ad1b331dc6cac9c05a6acea1))
+* **icon-link:** fix icon padding on internal and external variants ([6e4493f](https://github.com/felleslosninger/tlp-storybook-base/commit/6e4493f379957e4457a514be54d62e2b5d9b757d))
+* **icon-link:** fix shortcut variant icon size and padding ([73c106b](https://github.com/felleslosninger/tlp-storybook-base/commit/73c106b26de0afcc71fc7b780e4f74a95a10ea52))
+* **icon-link:** shortcut variant: remove color deviation, use same colors as in other variants ([b1a2bab](https://github.com/felleslosninger/tlp-storybook-base/commit/b1a2bab38b73ce8be2f62ba9866893f4d346aece))
+* **input-field:** fix icon-right placement with box anatomy ([f01e749](https://github.com/felleslosninger/tlp-storybook-base/commit/f01e74924fb91aba58d753c6789c42a37c66e8c0))
+* **input-field:** fix responsive width ([35c0dd5](https://github.com/felleslosninger/tlp-storybook-base/commit/35c0dd5a029b1010e5ab9bf57c9fd24f5b29e845))
+* **input-field:** make placeholder transparent when clicked/focused ([f5a1ffc](https://github.com/felleslosninger/tlp-storybook-base/commit/f5a1ffcb1ac8510619493b5f22e05155036ad52e))
+* **input-field:** remove change of placeholder color on hover ([0123747](https://github.com/felleslosninger/tlp-storybook-base/commit/0123747845791662f9dfc2ab3fe3a134adc28501))
+* **panel-link:** use body text classes ([b7916e4](https://github.com/felleslosninger/tlp-storybook-base/commit/b7916e48dd2a981ecd894747489333d691e4b0a7))
+
+
+### Features
+
+* **breadcrumbs:** add breadcrumbs component styling ([438d48f](https://github.com/felleslosninger/tlp-storybook-base/commit/438d48f000a5d34203e3a6f66bb623e5b90364e4))
+* **breadcrumbs:** responsiveness: use single parent breadcrumb in mobile viewport width ([b397365](https://github.com/felleslosninger/tlp-storybook-base/commit/b397365f0425d93b807304134548f44072748549))
+* **panel-link:** add styling support for variant with no icon left ([38a9b2c](https://github.com/felleslosninger/tlp-storybook-base/commit/38a9b2cafdcfb51984a810dc46676bd9caca23a1))
+* **panel-link:** use full border in :hover and :active interaction ([7f3af28](https://github.com/felleslosninger/tlp-storybook-base/commit/7f3af28684d9e3460083465aa1a6fc9df408bd3f))
+
+
+### BREAKING CHANGES
+
+* **panel-link:** use --icon-left modifier to apply correct padding for variant with icon left.
+
+
+
+
+
 # [2.0.0](https://github.com/felleslosninger/tlp-storybook-base/compare/@digdir/ds-core-css@1.0.3...@digdir/ds-core-css@2.0.0) (2022-01-31)
 
 
