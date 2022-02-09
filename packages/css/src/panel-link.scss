@@ -38,7 +38,7 @@ $link-padding-right-large: $spacing-base-4;
   // Medium size
   min-height: $link-size-height-medium;
   min-width: $link-size-width;
-  max-width: calc($spacing-base-19 * 10);
+  max-width: utils.$component-max-width;
   padding-left: $link-padding-left-medium;
   padding-right: $link-padding-right-medium;
 
