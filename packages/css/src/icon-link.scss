@@ -65,14 +65,10 @@ $link-margin-icon-large-external: (
     fill: $color-interface-visited;
   }
 
-  &--shortcut {
-    border-width: $border-width-default;
-
-    & > svg {
-      width: $link-icon-size-large;
-      height: $link-icon-size-large;
-      padding: 0;
-    }
+  &--shortcut > svg {
+    width: $link-icon-size-large;
+    height: $link-icon-size-large;
+    padding: 0;
   }
 
   // Size modifiers
