@@ -39,7 +39,8 @@ $input-placeholder-padding-horizontal-icon-large: calc(
   position: relative;
 
   // Size medium
-  width: $input-size-width;
+  min-width: $input-size-width;
+  max-width: utils.$component-max-width;
   height: $input-size-height-medium;
 
   // Elements
@@ -77,7 +78,7 @@ $input-placeholder-padding-horizontal-icon-large: calc(
 
   & ~ .#{form.$field-label-classname} {
     cursor: text;
-    width: $input-size-width;
+    width: fit-content;
   }
 
   &__icon-left,
@@ -220,6 +221,6 @@ $input-placeholder-padding-horizontal-icon-large: calc(
 
   // Breakpoints
   @media (max-width: $breakpoint-medium) {
-    width: Min(90vw, $input-size-width);
+    min-width: Min(90vw, $input-size-width);
   }
 }
