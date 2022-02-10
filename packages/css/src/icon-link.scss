@@ -6,6 +6,7 @@ $classname: '#{utils.$prefix}-icon-link';
 // Color variables
 $link-color-default: $color-interface-interaction;
 $link-color-border-default: $color-neutral-grey-400;
+$link-color-icon: $color-neutral-grey-800;
 // Size variables
 $link-icon-size-medium: $spacing-base-4;
 $link-icon-size-large: $spacing-base-6;
@@ -46,6 +47,8 @@ $link-margin-icon-large-external: (
 
     flex-shrink: 0;
     flex-grow: 0;
+
+    fill: $link-color-icon;
   }
 
   &:hover {
