@@ -5,7 +5,7 @@
 $classname: '#{utils.$prefix}-icon-link';
 // Color variables
 $link-color-default: $color-interface-interaction;
-$link-color-border-default: $color-neutral-grey-400;
+$link-color-border-default: $color-neutral-grey-600;
 $link-color-icon: $color-neutral-grey-800;
 // Size variables
 $link-icon-size-medium: $spacing-base-4;
@@ -30,7 +30,7 @@ $link-margin-icon-large-external: (
   @include text-interface-300();
   color: $color-text-background-light;
 
-  border-bottom: $border-width-thin solid $color-neutral-grey-400;
+  border-bottom: $border-width-thin solid $link-color-border-default;
 
   transition: all $duration-normal;
   transition-property: border-color;
