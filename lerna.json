@@ -3,7 +3,7 @@
   "version": "independent",
   "command": {
     "publish": {
-      "ignoreChanges": ["**/stories/*"]
+      "ignoreChanges": ["**/stories/*", "**/build/*"]
     }
   },
   "npmClient": "yarn",
