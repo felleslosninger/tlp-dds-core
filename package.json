@@ -5,7 +5,7 @@
     "packages/*"
   ],
   "author": "DigDir design system team",
-  "license": "BSD3",
+  "license": "BSD-3-Clause",
   "devDependencies": {
     "@babel/core": "^7.15.8",
     "@storybook/addon-a11y": "^6.5.0-alpha.19",
