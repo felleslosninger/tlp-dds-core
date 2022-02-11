@@ -51,12 +51,6 @@ $breadcrumb-margin-icon: $spacing-base-2;
       @include text-interface-300();
     }
 
-    & .#{utils.$prefix}-link {
-      &:hover {
-        border-width: $border-width-thin;
-      }
-    }
-
     &::after {
       @include separatorIcon();
       margin: 0 $breadcrumb-margin-icon;

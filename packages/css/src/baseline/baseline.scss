@@ -15,12 +15,16 @@ a.#{utils.$prefix}-link {
   text-decoration: none;
   border-bottom: $border-width-thin solid $color-neutral-grey-600;
   padding-bottom: 1px;
+  // Compensation for wider border width in hover state.
+  // Making links center-able without moving on hover.
+  margin-bottom: 1px;
 
   transition: border-color $duration-normal;
 
   &:hover {
     border-color: $color-interface-interaction;
     border-width: $border-width-default;
+    margin-bottom: 0;
   }
 
   &:visited {
