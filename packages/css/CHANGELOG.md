@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.1](https://github.com/felleslosninger/tlp-storybook-base/compare/@digdir/ds-core-css@3.0.0...@digdir/ds-core-css@3.0.1) (2022-02-11)
+
+
+### Bug Fixes
+
+* **breadcrumbs, link:** use consistent link-hover effect for link in breadcrumbs, and make link box size consistent. ([7e53bad](https://github.com/felleslosninger/tlp-storybook-base/commit/7e53badbaf59951653c4146093a0957fb09d2c6b))
+* **icon-link:** set border width in shortcut variant to the same as in other variants ([788e3a6](https://github.com/felleslosninger/tlp-storybook-base/commit/788e3a6359a2c0d89cc613a57d6ca29ccf642153))
+* **icon-link:** set default border color to grey-600 ([a171c95](https://github.com/felleslosninger/tlp-storybook-base/commit/a171c953ad5a5d0b0b213e76062872623f098648))
+* **icon-link:** set default icon color to be grey-800 ([9c0e8ae](https://github.com/felleslosninger/tlp-storybook-base/commit/9c0e8ae128ebf1225cbac6faea43b078c9a7680b))
+* **input-field:** disable fixed width, set min/max width ([a836db7](https://github.com/felleslosninger/tlp-storybook-base/commit/a836db7e8051eedce8dd96a03375c5f5249c4506))
+* **input-field:** keep placeholder visible when focusing disabled input field ([bcc65ec](https://github.com/felleslosninger/tlp-storybook-base/commit/bcc65ec0a848043fd811134521587832a46d3915))
+* **link:** set default border color to grey-600 ([f4f5cd0](https://github.com/felleslosninger/tlp-storybook-base/commit/f4f5cd0983296e97a28d3e11b996c9c790e05fa0))
+
+
+
+
+
 # [3.0.0](https://github.com/felleslosninger/tlp-storybook-base/compare/@digdir/ds-core-css@2.0.0...@digdir/ds-core-css@3.0.0) (2022-02-08)
 
 
