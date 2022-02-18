@@ -49,7 +49,6 @@ $link-padding-right-large: $spacing-base-4;
   & > &__label {
     @include text-body-300();
     color: $color-text-background-light;
-
     padding-right: $link-icon-size-medium;
   }
   & > svg {
@@ -77,7 +76,7 @@ $link-padding-right-large: $spacing-base-4;
     border-color: $link-border-color;
 
     & > svg:nth-last-of-type(1) {
-      right: calc($link-padding-right-medium - $spacing-base-1);
+      right: calc($link-padding-right-medium - $link-padding-icon-offset);
     }
   }
   &:active {
@@ -99,11 +98,12 @@ $link-padding-right-large: $spacing-base-4;
     }
 
     &:hover > svg:nth-last-of-type(1) {
-      right: calc($link-padding-right-large - $spacing-base-1);
+      right: calc($link-padding-right-large - $link-padding-icon-offset);
     }
 
     & > .#{$classname}__label {
       @include text-body-400();
+      padding-right: $link-icon-size-large;
     }
 
     & > svg {
