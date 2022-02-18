@@ -21,9 +21,10 @@ const createButton = ({
     { [`${classPrefix}--small`]: size === 'small' },
     { [`${classPrefix}--large`]: size === 'large' },
     { [`${classPrefix}--x-large`]: size === 'x-large' },
+    { [`${classPrefix}--icon-left`]: iconLeft },
+    { [`${classPrefix}--icon-right`]: iconRight },
   )
   const iconSvgLeft = String.raw`<svg
-    class="${classPrefix}__icon-left"
     focusable="false"
     viewBox="0 0 24 24"
     aria-hidden="true"
@@ -32,7 +33,6 @@ const createButton = ({
     </svg>`
 
   const iconSvgRight = String.raw`<svg
-    class="${classPrefix}__icon-right"
     focusable="false"
     viewBox="0 0 24 24"
     aria-hidden="true"
