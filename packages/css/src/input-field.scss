@@ -82,14 +82,19 @@ $input-placeholder-padding-horizontal-icon-large: calc(
   &__icon-right {
     pointer-events: none;
     position: absolute;
-    fill: $input-color-default-grey;
+  }
+  &__icon-left svg,
+  &__icon-right svg {
+    display: block;
+    flex-shrink: 0;
+    flex-grow: 0;
 
     // Size medium
     width: $input-icon-size-medium;
     height: $input-icon-size-medium;
 
-    flex-shrink: 0;
-    flex-grow: 0;
+    fill: $input-color-default-grey;
+    transition: all $duration-normal;
   }
   &__icon-left {
     left: $input-icon-padding-medium;
@@ -114,14 +119,14 @@ $input-placeholder-padding-horizontal-icon-large: calc(
     }
     &:hover:not(:focus) {
       border-color: $color-interface-interaction;
-      & ~ .#{$classname}__icon-left,
-      & ~ .#{$classname}__icon-right {
+      & ~ .#{$classname}__icon-left svg,
+      & ~ .#{$classname}__icon-right svg {
         fill: $input-color-default-active-grey;
       }
     }
     &:focus {
-      & ~ .#{$classname}__icon-left,
-      & ~ .#{$classname}__icon-right {
+      & ~ .#{$classname}__icon-left svg,
+      & ~ .#{$classname}__icon-right svg {
         fill: $input-color-default-active-grey;
       }
       &::placeholder {
@@ -131,8 +136,8 @@ $input-placeholder-padding-horizontal-icon-large: calc(
   }
 
   &--disabled {
-    & .#{$classname}__icon-left,
-    & .#{$classname}__icon-right {
+    & .#{$classname}__icon-left svg,
+    & .#{$classname}__icon-right svg {
       fill: $input-color-disabled-grey;
     }
     & ~ .#{form.$field-label-classname} {
@@ -157,7 +162,7 @@ $input-placeholder-padding-horizontal-icon-large: calc(
       border-color: $color-interface-error;
       box-shadow: inset 0 0 0 $border-width-thin $color-interface-error;
     }
-    & .#{$classname}__icon-left {
+    & .#{$classname}__icon-left svg {
       fill: $input-color-error-grey;
     }
     & .#{$classname}__input:not(:focus)::placeholder {
@@ -193,8 +198,8 @@ $input-placeholder-padding-horizontal-icon-large: calc(
     }
     // Set icon size
     &::after,
-    & .#{$classname}__icon-left,
-    & .#{$classname}__icon-right {
+    & .#{$classname}__icon-left svg,
+    & .#{$classname}__icon-right svg {
       width: $input-icon-size-large;
       height: $input-icon-size-large;
     }
