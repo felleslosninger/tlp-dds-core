@@ -14,6 +14,20 @@ module.exports = {
     '@storybook/addon-a11y',
     'storybook-addon-designs',
   ],
+  refs: {
+    // Digdir Websites Components storybook integration
+    websites: {
+      title: 'Websider',
+      url: 'https://felleslosninger.github.io/tlp-storybook-websites/',
+      expanded: false,
+    },
+    // ID-porten storybook integration
+    idporten: {
+      title: 'ID-porten',
+      url: 'https://felleslosninger.github.io/idporten-design-system/',
+      expanded: false,
+    },
+  },
   core: {
     builder: 'webpack5',
   },
