@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0](https://github.com/felleslosninger/tlp-storybook-base/compare/@digdir/ds-core-css@3.0.1...@digdir/ds-core-css@4.0.0) (2022-02-25)
+
+
+### Bug Fixes
+
+* **input-field:** update padding to placeholder/text ([b68f66d](https://github.com/felleslosninger/tlp-storybook-base/commit/b68f66d2a49047a7866c80447689f81a9fd6fc4f))
+* **panel-link:** large variant: set correct padding between text and icon right ([4521d22](https://github.com/felleslosninger/tlp-storybook-base/commit/4521d2245bf0451a8ba835aae462f644c4ba27fb))
+
+
+### Code Refactoring
+
+* **input-field:** use directly imported SVG ([1d5e852](https://github.com/felleslosninger/tlp-storybook-base/commit/1d5e852fdfbc8a752ba0dc871adcb2771a65a791))
+
+
+### BREAKING CHANGES
+
+* **input-field:** The change requires use of wrapper span on SVG elements in the input-field component structure. The classes previously used directly on the SVG's (&__icon-left and &__icon-right) are moved to the parent wrapper span.
+
+
+
+
+
 ## [3.0.1](https://github.com/felleslosninger/tlp-storybook-base/compare/@digdir/ds-core-css@3.0.0...@digdir/ds-core-css@3.0.1) (2022-02-11)
 
 
