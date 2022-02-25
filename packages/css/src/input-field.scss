@@ -22,14 +22,13 @@ $input-icon-padding-medium: calc(
 $input-icon-padding-large: calc(
   ($input-size-height-large - $input-icon-size-large) / 2
 );
-$input-placeholder-padding-horizontal: $spacing-base-4;
+$input-placeholder-padding-horizontal-medium: $spacing-base-4;
+$input-placeholder-padding-horizontal-large: $spacing-base-6;
 $input-placeholder-padding-horizontal-icon-medium: calc(
-  $input-placeholder-padding-horizontal + $input-icon-size-medium +
-    $input-icon-padding-medium
+  $input-icon-size-medium + $input-icon-padding-medium * 2
 );
 $input-placeholder-padding-horizontal-icon-large: calc(
-  $input-placeholder-padding-horizontal + $input-icon-size-large +
-    $input-icon-padding-large
+  $input-icon-size-large + $input-icon-padding-large * 2
 );
 
 .#{$classname} {
@@ -53,7 +52,7 @@ $input-placeholder-padding-horizontal-icon-large: calc(
 
     background-color: $color-neutral-white;
     color: $color-text-background-light;
-    padding: 0 $input-placeholder-padding-horizontal;
+    padding: 0 $input-placeholder-padding-horizontal-medium;
 
     box-sizing: border-box;
     border-radius: $border-radius-x-small;
@@ -195,6 +194,7 @@ $input-placeholder-padding-horizontal-icon-large: calc(
     }
     & .#{$classname}__input {
       @include text-body-400();
+      padding: 0 $input-placeholder-padding-horizontal-large;
     }
     // Set icon size
     &::after,
