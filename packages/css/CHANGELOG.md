@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.2](https://github.com/felleslosninger/tlp-storybook-base/compare/@digdir/ds-core-css@4.0.1...@digdir/ds-core-css@4.0.2) (2022-03-07)
+
+
+### Bug Fixes
+
+* **icon-link:** remove background color in SVG icon introduced in v4.0.1 ([738e83c](https://github.com/felleslosninger/tlp-storybook-base/commit/738e83c759d342ea2c2d056de92c12b88f141b9b))
+
+
+
+
+
 ## [4.0.1](https://github.com/felleslosninger/tlp-storybook-base/compare/@digdir/ds-core-css@4.0.0...@digdir/ds-core-css@4.0.1) (2022-03-07)
 
 
