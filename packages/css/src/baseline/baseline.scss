@@ -12,26 +12,23 @@ a.#{utils.$prefix}-link {
   cursor: pointer;
   color: $color-interface-interaction;
 
-  text-decoration: none;
-  border-bottom: $border-width-thin solid $color-neutral-grey-600;
-  padding-bottom: 1px;
-  // Compensation for wider border width in hover state.
-  // Making links center-able without moving on hover.
-  margin-bottom: 1px;
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+  text-decoration-thickness: $border-width-thin;
+  text-decoration-color: $color-neutral-grey-600;
 
-  transition: border-color $duration-normal;
+  transition: all $duration-normal;
 
   &:hover {
-    border-color: $color-interface-interaction;
-    border-width: $border-width-default;
-    margin-bottom: 0;
+    text-decoration-thickness: $border-width-default;
+    text-decoration-color: $color-interface-interaction;
   }
 
   &:visited {
     color: $color-interface-visited;
 
     &:hover {
-      border-color: $color-interface-visited;
+      text-decoration-color: $color-interface-visited;
     }
   }
 }
