@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.1](https://github.com/felleslosninger/tlp-storybook-base/compare/@digdir/ds-core-css@4.0.0...@digdir/ds-core-css@4.0.1) (2022-03-07)
+
+
+### Bug Fixes
+
+* **icon-link:** rewrite to use underline and non-absolute positioned icon to support use in more contexts ([fccfee7](https://github.com/felleslosninger/tlp-storybook-base/commit/fccfee716d2df7a54ec424291786de92a2ac85cf))
+* **link:** use underline instead of border-bottom with responsive underline offset ([5e128a7](https://github.com/felleslosninger/tlp-storybook-base/commit/5e128a7d037c025df8a3755b9e0b8df91f96a38c))
+
+
+
+
+
 # [4.0.0](https://github.com/felleslosninger/tlp-storybook-base/compare/@digdir/ds-core-css@3.0.1...@digdir/ds-core-css@4.0.0) (2022-02-25)
 
 
