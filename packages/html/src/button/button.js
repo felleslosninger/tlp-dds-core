@@ -16,10 +16,8 @@ const createButton = ({
     classPrefix,
     { [`${classPrefix}--secondary`]: variant === 'secondary' },
     { [`${classPrefix}--disabled`]: disabled },
-    { [`${classPrefix}--x-small`]: size === 'x-small' },
     { [`${classPrefix}--small`]: size === 'small' },
     { [`${classPrefix}--large`]: size === 'large' },
-    { [`${classPrefix}--x-large`]: size === 'x-large' },
     { [`${classPrefix}--icon-left`]: iconLeft },
     { [`${classPrefix}--icon-right`]: iconRight },
   )

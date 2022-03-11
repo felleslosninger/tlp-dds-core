@@ -40,8 +40,8 @@ $classname: '#{utils.$prefix}-button';
   overflow: hidden;
 
   // Size medium
-  @include size($spacing-base-10, $border-radius-large, $spacing-base-6);
-  @include text-interface-400();
+  @include size($spacing-base-12, $border-radius-large, $spacing-base-6);
+  @include text-interface-300();
 
   // Primary
   background-color: $color-neutral-grey-800;
@@ -71,20 +71,12 @@ $classname: '#{utils.$prefix}-button';
   }
 
   // Size modifiers
-  &--x-small {
-    @include size($spacing-base-6, $border-radius-large, $spacing-base-4);
-    @include text-interface-200();
-  }
   &--small {
-    @include size($spacing-base-8, $border-radius-large, $spacing-base-4);
+    @include size($spacing-base-10, $border-radius-large, $spacing-base-4);
     @include text-interface-300();
   }
   &--large {
-    @include size($spacing-base-12, $border-radius-large, $spacing-base-8);
-    @include text-interface-400();
-  }
-  &--x-large {
-    @include size($spacing-base-14, $border-radius-x-large, $spacing-base-10);
+    @include size($spacing-base-14, $border-radius-x-large, $spacing-base-8);
     @include text-interface-400();
   }
 

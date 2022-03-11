@@ -18,7 +18,7 @@ export default {
     },
     disabled: {},
     size: {
-      options: ['x-small', 'small', 'medium', 'large', 'x-large'],
+      options: ['small', 'medium', 'large'],
       control: { type: 'select' },
     },
     icon: {
@@ -76,17 +76,9 @@ IconRight.args = {
   icon: 'right',
 }
 
-export const ExtraSmall = Template.bind({})
-ExtraSmall.args = {
-  label: 'X-small',
-  disabled: false,
-  variant: 'primary',
-  size: 'x-small',
-}
-
 export const Small = Template.bind({})
 Small.args = {
-  label: 'Small',
+  label: 'Liten',
   disabled: false,
   variant: 'primary',
   size: 'small',
@@ -94,16 +86,8 @@ Small.args = {
 
 export const Large = Template.bind({})
 Large.args = {
-  label: 'Large',
+  label: 'Stor',
   disabled: false,
   variant: 'primary',
   size: 'large',
-}
-
-export const ExtraLarge = Template.bind({})
-ExtraLarge.args = {
-  label: 'X-large',
-  disabled: false,
-  variant: 'primary',
-  size: 'x-large',
 }
