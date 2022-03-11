@@ -35,6 +35,7 @@ $classname: '#{utils.$prefix}-button';
   box-sizing: border-box;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   transition: all $duration-normal;
   transition-property: background-color, border-color, color;
   overflow: hidden;
