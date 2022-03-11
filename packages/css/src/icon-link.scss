@@ -65,11 +65,8 @@ $link-icon-padding: $spacing-base-2;
   &--icon-right > svg {
     margin-left: $link-icon-padding;
   }
-
-  &--shortcut > svg {
-    width: $link-icon-size-medium;
-    height: $link-icon-size-medium;
-    margin-bottom: -2px;
+  &--shortcut {
+    text-decoration-color: transparent;
   }
 
   // Size modifiers
@@ -85,7 +82,7 @@ $link-icon-padding: $spacing-base-2;
     &.#{$classname}--shortcut > svg {
       width: $link-icon-size-medium;
       height: $link-icon-size-medium;
-      margin-bottom: -1px;
+      margin-bottom: 0px;
     }
   }
 }
