@@ -14,7 +14,7 @@ $radio-size-large: $spacing-base-8;
 $radio-size-checkmark-medium: $spacing-base-3;
 $radio-size-checkmark-large: calc($radio-size-checkmark-medium * 1.5);
 $radio-padding-label-medium: $spacing-base-2;
-$radio-padding-label-large: $spacing-base-4;
+$radio-padding-label-large: $spacing-base-3;
 
 .#{$classname} {
   display: inline-flex;
