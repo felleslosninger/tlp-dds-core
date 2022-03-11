@@ -19,7 +19,7 @@ $input-icon-size-large: $spacing-base-8;
 $input-icon-padding-medium: utils.pxToRem(6px);
 $input-icon-padding-large: utils.pxToRem(10px);
 $input-placeholder-padding-horizontal-medium: $spacing-base-4;
-$input-placeholder-padding-horizontal-large: $spacing-base-6;
+$input-placeholder-padding-horizontal-large: $spacing-base-5;
 $input-placeholder-padding-horizontal-icon-medium: calc(
   $input-icon-size-medium + $input-icon-padding-medium * 2
 );
