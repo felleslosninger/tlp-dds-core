@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.0.0](https://github.com/felleslosninger/tlp-storybook-base/compare/@digdir/ds-core-css@4.0.2...@digdir/ds-core-css@5.0.0) (2022-03-11)
+
+
+### Bug Fixes
+
+* **button:** vertically center button content ([b60cf34](https://github.com/felleslosninger/tlp-storybook-base/commit/b60cf34e1f24d9fba82d910668ef609379f254ae))
+
+
+### Features
+
+* **button:** restructure size set ([d213094](https://github.com/felleslosninger/tlp-storybook-base/commit/d2130946e44cebef002a6cd5cf99bc3cc0209340))
+* **checkbox:** large variant: decrease padding between checkbox and label from 16px to 12px ([98c9d2d](https://github.com/felleslosninger/tlp-storybook-base/commit/98c9d2d8a7662d04850d690cfec75a2c3f5865d1))
+* **form-field, input-field:** increase font-size of label and error-message from 14px to 16px ([f719be4](https://github.com/felleslosninger/tlp-storybook-base/commit/f719be4d49e54b99d69925830a5f22916d9396e9))
+* **input-field:** increase height of medium variant from 32px to 48px ([66c15e4](https://github.com/felleslosninger/tlp-storybook-base/commit/66c15e4c60cf692d6b5ef9b364ff07374987612b))
+* **input-field:** reduce horizontal padding in large variant from 24px to 20px ([252ab09](https://github.com/felleslosninger/tlp-storybook-base/commit/252ab090597ccfdc1c225f6b2db92fe3ee16a69d))
+* **input-field:** reduce padding around icons ([eb7a72b](https://github.com/felleslosninger/tlp-storybook-base/commit/eb7a72bfe5322e101b62cf0b1774b25c2b11893c))
+* **radio:** large variant: decrease padding between radio button checkbox and label from 16px to 12px ([4e82f14](https://github.com/felleslosninger/tlp-storybook-base/commit/4e82f1426ff1b37b1d88cfbd4af31bf3f418c3ba))
+
+
+### BREAKING CHANGES
+
+* **button:** Size variant modifiers --x-small and --x-large are removed. No modifier (medium size), --small and --large modifiers are kept and adjusted to fit new design guidelines.
+
+
+
+
+
 ## [4.0.2](https://github.com/felleslosninger/tlp-storybook-base/compare/@digdir/ds-core-css@4.0.1...@digdir/ds-core-css@4.0.2) (2022-03-07)
 
 
