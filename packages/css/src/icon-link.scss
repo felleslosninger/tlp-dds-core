@@ -18,7 +18,7 @@ $link-icon-padding: $spacing-base-2;
   overflow-wrap: anywhere;
   box-sizing: border-box;
 
-  @include text-interface-300();
+  @include text-body-300();
   color: $color-text-background-light;
 
   text-decoration: underline;
@@ -74,7 +74,7 @@ $link-icon-padding: $spacing-base-2;
 
   // Size modifiers
   &--large {
-    @include text-interface-400();
+    @include text-body-400();
 
     & > svg {
       width: $link-icon-size-large;
