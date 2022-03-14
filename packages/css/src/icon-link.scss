@@ -76,13 +76,11 @@ $link-icon-padding: $spacing-base-2;
     & > svg {
       width: $link-icon-size-large;
       height: $link-icon-size-large;
-      margin-bottom: -2px;
     }
 
     &.#{$classname}--shortcut > svg {
       width: $link-icon-size-medium;
       height: $link-icon-size-medium;
-      margin-bottom: 0px;
     }
   }
 }
