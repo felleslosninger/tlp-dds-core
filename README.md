@@ -24,14 +24,16 @@ _(Hvis dette gir feilmelding prøv `yarn start:clean`. Storybook kan feile derso
 
 Start commits med `fix:`, `feat:`, eller `BREAKING CHANGE:` for å få de med i endringsloggen (`CHANGELOG.md`) som **automatisk** oppdateres på Storybook når nye versjoner publiseres. Dette burde gjøres på commits som endrer innholdet i det som publiseres (filene som bygges).
 
-Ved neste versjonering/publisering vil `fix:` trigge en patch (0.0.x), `feat:` en minor update (0.x.0), `BREAKING CHANGE:` eller `!` etter fix/feat en major update (x.0.0).
+Ved neste versjonering/publisering vil `fix:` trigge en patch (0.0.x), `feat:` en minor update (0.x.0), og `BREAKING CHANGE:` alene eller etter fix:/feat: vil trigge en major update (x.0.0).
 
 Commit-teksten blir automatisk lagt til i endringsloggen i pakken til der commiten gjør en endring. Legg til et scope med parantes, f.eks.
 
 ```
-feat(button): add secondary variant style
+fix(button): short description of what commit does (e.g. add secondary variant style)
 
-Longer Description in a paragraph here.
+Longer in-depth description in a paragraph here, if needed.
+
+BREAKING CHANGE: Explanation of things that break with this commit and what users need to do to migrate, if needed.
 ```
 
 Les mer om Conventional Commits på https://conventionalcommits.org.
