@@ -13,7 +13,6 @@ const createIconLink = ({
   const classPrefix = 'dds-icon-link'
   const linkClasses = classnames(classPrefix, {
     [`${classPrefix}--shortcut`]: variant === 'shortcut',
-    [`${classPrefix}--external`]: variant === 'external',
     [`${classPrefix}--large`]: size === 'large',
     [`${classPrefix}--icon-left`]: iconLeft,
     [`${classPrefix}--icon-right`]: !iconLeft,
