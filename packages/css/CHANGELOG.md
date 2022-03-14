@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.1.0](https://github.com/felleslosninger/tlp-storybook-base/compare/@digdir/ds-core-css@5.0.0...@digdir/ds-core-css@5.1.0) (2022-03-14)
+
+
+### Features
+
+* **icon-link:** add utility class for --inline variant: inherit font attributes from parent element ([356f381](https://github.com/felleslosninger/tlp-storybook-base/commit/356f381f28278f967ee2bc7be5050caa03116713))
+* **icon-link:** change text class from interface to body (font weight from bold to regular) ([d3d35c2](https://github.com/felleslosninger/tlp-storybook-base/commit/d3d35c265444154c6835804ceb8cba5d8f310e07))
+* **icon-link:** large variant: fix icon placement to text baseline (remove placement adjustment relative to underline) ([1c740b9](https://github.com/felleslosninger/tlp-storybook-base/commit/1c740b962f7707d0d1a3d24f242ab039dec35ee3))
+* **icon-link:** shortcut variant: remove underline in default state ([41ec66c](https://github.com/felleslosninger/tlp-storybook-base/commit/41ec66c98d8b3495bed1bce515fd188669f91cae))
+
+
+
+
+
 # [5.0.0](https://github.com/felleslosninger/tlp-storybook-base/compare/@digdir/ds-core-css@4.0.2...@digdir/ds-core-css@5.0.0) (2022-03-11)
 
 
