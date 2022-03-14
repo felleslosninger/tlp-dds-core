@@ -34,6 +34,7 @@ InternalLink.args = {
   size: 'medium',
   variant: 'internal',
   iconLeft: false,
+  inline: false,
 }
 
 export const ExternalLink = Template.bind({})
@@ -42,6 +43,7 @@ ExternalLink.args = {
   size: 'medium',
   variant: 'external',
   iconLeft: false,
+  inline: false,
 }
 
 export const Shortcut = Template.bind({})
@@ -50,4 +52,42 @@ Shortcut.args = {
   size: 'medium',
   variant: 'shortcut',
   iconLeft: true,
+  inline: false,
+}
+
+export const Inline = () => {
+  return String.raw`
+    <div class='dds-text-heading-700'>
+      Overskrift med
+      ${createIconLink({
+        label: 'intern lenke',
+        size: 'large',
+        variant: 'internal',
+        inline: true,
+      })}
+    </div>
+
+    <div class='dds-text-ingress-500'>
+      Ingress med en
+      ${createIconLink({
+        label: 'ekstern lenke',
+        size: 'large',
+        variant: 'external',
+        inline: true,
+      })}
+      til et sted.
+    </div>
+
+    <div class='dds-text-body-200'>
+      Liten body med
+      ${createIconLink({
+        label: 'lenke',
+        size: 'medium',
+        variant: 'external',
+        inline: true,
+      })} til et sted.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed dolor mi. 
+      Cras quis velit erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      Maecenas tempor quam vel elit aliquam, id vulputate neque rutrum.
+    </div>`
 }
