@@ -6,6 +6,7 @@ const createIconLink = ({
   size = 'medium',
   variant = 'internal',
   iconLeft = false,
+  inline = false,
   href = 'https://www.digdir.no/',
 }) => {
   label = sanitizeStrict(label)
@@ -16,6 +17,7 @@ const createIconLink = ({
     [`${classPrefix}--large`]: size === 'large',
     [`${classPrefix}--icon-left`]: iconLeft,
     [`${classPrefix}--icon-right`]: !iconLeft,
+    [`${classPrefix}--inline`]: inline,
   })
 
   const croppedChevronSvg = String.raw`<svg 
@@ -49,7 +51,7 @@ const createIconLink = ({
 
   if (iconLeft) {
     return formatHtml(String.raw`
-    <a class='${linkClasses}' href='${href}' ${targetAttribute} rel='noreferrer noopener'>${iconSvg}${label}</a>`)
+      <a class='${linkClasses}' href='${href}' ${targetAttribute} rel='noreferrer noopener'>${iconSvg}${label}</a>`)
   }
 
   return formatHtml(String.raw`
