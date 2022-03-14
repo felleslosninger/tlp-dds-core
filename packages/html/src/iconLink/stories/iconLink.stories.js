@@ -55,6 +55,15 @@ Shortcut.args = {
   inline: false,
 }
 
+export const Large = Template.bind({})
+Large.args = {
+  label: 'Stor ekstern lenke',
+  size: 'large',
+  variant: 'external',
+  iconLeft: false,
+  inline: false,
+}
+
 export const Inline = () => {
   return String.raw`
     <div class='dds-text-heading-700'>
