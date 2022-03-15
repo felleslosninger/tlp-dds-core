@@ -37,7 +37,7 @@ $link-padding-right-large: $spacing-base-4;
 
   // Medium size
   min-height: $link-size-height-medium;
-  min-width: $link-size-width;
+  min-width: Min($link-size-width, 100%);
   max-width: utils.$component-max-width;
   padding-left: $link-padding-left-medium;
   padding-right: $link-padding-right-medium;
@@ -89,6 +89,7 @@ $link-padding-right-large: $spacing-base-4;
     min-height: $link-size-height-large;
     padding-left: $link-padding-left-large;
     padding-right: $link-padding-right-large;
+
     & > svg:nth-last-of-type(1) {
       right: $link-padding-right-large;
     }
@@ -110,10 +111,5 @@ $link-padding-right-large: $spacing-base-4;
       width: $link-icon-size-large;
       height: $link-icon-size-large;
     }
-  }
-
-  // Breakpoints
-  @media (max-width: $breakpoint-medium) {
-    min-width: Min(90vw, $link-size-width);
   }
 }
