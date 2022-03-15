@@ -8,8 +8,8 @@ $link-border-color: $color-interface-interaction;
 $link-hover-color: $color-interface-interaction-light;
 $link-icon-color: $color-neutral-grey-700;
 // Size variables
-$link-size-height-medium: calc($spacing-base-10 + $border-width-default);
-$link-size-height-large: calc($spacing-base-14 + $border-width-default);
+$link-size-height-medium: $spacing-base-10;
+$link-size-height-large: $spacing-base-14;
 $link-size-width: calc($spacing-base-8 * 10);
 $link-icon-size-medium: $spacing-base-6;
 $link-icon-size-large: $spacing-base-8;
