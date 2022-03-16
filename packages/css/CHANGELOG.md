@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.2.0](https://github.com/felleslosninger/tlp-storybook-base/compare/@digdir/ds-core-css@5.1.0...@digdir/ds-core-css@5.2.0) (2022-03-16)
+
+
+### Bug Fixes
+
+* **input-field:** responsive min-width limited to width of parent container ([25cbaaf](https://github.com/felleslosninger/tlp-storybook-base/commit/25cbaafefdecf6a27c214b1aea0a65acc4f52751))
+* **panel-link:** add vertical padding (for when label is wrapping to multiple lines) ([e68e31e](https://github.com/felleslosninger/tlp-storybook-base/commit/e68e31e3d46bd9d38e528283c3adaf514e2f6c29))
+* **panel-link:** adjust min-height to current design guidelines (M: 40px / L: 56px) ([2f5cb9b](https://github.com/felleslosninger/tlp-storybook-base/commit/2f5cb9b89f5953ec93a7add4b3fcc939de1ce419))
+* **panel-link:** responsive min-width limited to width of parent container ([d08d4d3](https://github.com/felleslosninger/tlp-storybook-base/commit/d08d4d3398f9808345cabeb8f4593e780218286b))
+
+
+### Features
+
+* **panel-link:** add padding between label and icon ([0f4f001](https://github.com/felleslosninger/tlp-storybook-base/commit/0f4f00116a9ff6ba64bb0254572688d90cee4ef7))
+
+
+
+
+
 # [5.1.0](https://github.com/felleslosninger/tlp-storybook-base/compare/@digdir/ds-core-css@5.0.0...@digdir/ds-core-css@5.1.0) (2022-03-14)
 
 
