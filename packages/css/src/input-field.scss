@@ -34,7 +34,7 @@ $input-placeholder-padding-horizontal-icon-large: calc(
   position: relative;
 
   // Size medium
-  min-width: $input-size-width;
+  min-width: Min($input-size-width, 100%);
   max-width: utils.$component-max-width;
   height: $input-size-height-medium;
 
@@ -214,10 +214,5 @@ $input-placeholder-padding-horizontal-icon-large: calc(
     &.#{$classname}--icon-right .#{$classname}__input {
       padding-right: $input-placeholder-padding-horizontal-icon-large;
     }
-  }
-
-  // Breakpoints
-  @media (max-width: $breakpoint-medium) {
-    min-width: Min(90vw, $input-size-width);
   }
 }
