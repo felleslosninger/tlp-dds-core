@@ -19,6 +19,8 @@ const createIconLink = ({
     [`${classPrefix}--inline`]: inline,
   })
 
+  // Icons from Material icon library cropped of surrounding whitespace
+  // Used to avoid line overflow in text-wrap (multiline text) contexts
   const croppedChevronSvg = String.raw`<svg 
       xmlns="http://www.w3.org/2000/svg" 
       viewBox="8.59 6 7.41 12"
