@@ -3,20 +3,34 @@
 @use './baseline/utils.scss' as utils;
 
 $classname: '#{utils.$prefix}-button';
+// Color variables
+$color-primary: $color-neutral-grey-800;
+$color-primary-active: $color-neutral-grey-900;
+$color-secondary: $color-neutral-white;
+$color-hover: $color-interface-interaction-light;
+$color-disabled: $color-neutral-grey-500;
+// Size variables
+$min-height-small: $spacing-base-10;
+$min-height-medium: $spacing-base-12;
+$min-height-large: $spacing-base-14;
+$padding-small: $spacing-base-4;
+$padding-medium: $spacing-base-6;
+$padding-large: $spacing-base-8;
+$size-icon: $spacing-base-6;
 
 @mixin hover {
-  background-color: $color-interface-interaction-light;
-  color: $color-neutral-grey-800;
-  border: $border-width-default solid $color-neutral-grey-800;
+  background-color: $color-hover;
+  color: $color-primary;
+  border: $border-width-default solid $color-primary;
   cursor: pointer;
 }
 
 @mixin active($bg-color) {
   background-color: $bg-color;
-  color: $color-neutral-white;
+  color: $color-secondary;
 }
 
-@mixin disabled($bg-color, $text-color, $border-color: transparent) {
+@mixin disabled($bg-color, $text-color, $border-color) {
   background-color: $bg-color;
   color: $text-color;
   border-color: $border-color;
@@ -41,17 +55,17 @@ $classname: '#{utils.$prefix}-button';
   overflow: hidden;
 
   // Size medium
-  @include size($spacing-base-12, $border-radius-large, $spacing-base-6);
+  @include size($min-height-medium, $border-radius-large, $padding-medium);
   @include text-interface-300();
 
   // Primary
-  background-color: $color-neutral-grey-800;
-  color: $color-neutral-white;
+  background-color: $color-primary;
+  color: $color-secondary;
   border: $border-width-default solid transparent;
 
   // Elements
   & > svg {
-    fill: $color-neutral-white;
+    fill: $color-secondary;
     box-sizing: border-box;
 
     display: inline-block;
@@ -60,8 +74,8 @@ $classname: '#{utils.$prefix}-button';
 
     text-align: end;
 
-    height: $spacing-base-6;
-    width: $spacing-base-6;
+    height: $size-icon;
+    width: $size-icon;
     transition: inherit;
   }
   &--icon-left svg {
@@ -73,11 +87,11 @@ $classname: '#{utils.$prefix}-button';
 
   // Size modifiers
   &--small {
-    @include size($spacing-base-10, $border-radius-large, $spacing-base-4);
+    @include size($min-height-small, $border-radius-large, $padding-small);
     @include text-interface-300();
   }
   &--large {
-    @include size($spacing-base-14, $border-radius-x-large, $spacing-base-8);
+    @include size($min-height-large, $border-radius-x-large, $padding-large);
     @include text-interface-400();
   }
 
@@ -87,48 +101,45 @@ $classname: '#{utils.$prefix}-button';
       @include hover();
 
       & svg {
-        fill: $color-neutral-grey-800;
+        fill: $color-primary;
       }
     }
     &:active {
-      @include active($color-neutral-grey-900);
+      @include active($color-primary-active);
 
       & svg {
-        fill: $color-neutral-white;
+        fill: $color-secondary;
       }
     }
   }
+
   &--disabled {
-    @include disabled($color-neutral-grey-500, $color-neutral-white);
+    @include disabled($color-disabled, $color-secondary, $color-disabled);
 
     & > svg {
-      fill: $color-neutral-white;
+      fill: $color-secondary;
     }
   }
 
   &--secondary {
-    background-color: $color-neutral-white;
-    color: $color-neutral-grey-800;
-    border: $border-width-default solid $color-neutral-grey-800;
+    background-color: $color-secondary;
+    color: $color-primary;
+    border: $border-width-default solid $color-primary;
 
     &:not([class*='#{$classname}--disabled']) {
       &:active {
-        @include active($color-neutral-grey-800);
+        @include active($color-primary);
       }
 
       & > svg {
-        fill: $color-neutral-grey-800;
+        fill: $color-primary;
       }
     }
     &.#{$classname}--disabled {
-      @include disabled(
-        $color-neutral-white,
-        $color-neutral-grey-500,
-        $color-neutral-grey-500
-      );
+      @include disabled($color-secondary, $color-disabled, $color-disabled);
 
       & > svg {
-        fill: $color-neutral-grey-500;
+        fill: $color-disabled;
       }
     }
   }
