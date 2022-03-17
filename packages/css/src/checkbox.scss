@@ -49,16 +49,12 @@ $padding-label-large: $spacing-base-3;
     align-items: center;
     position: relative;
 
-    padding-left: $size-medium;
+    padding-left: $size-medium + $padding-label-medium;
     min-height: $size-medium;
 
     cursor: pointer;
     @include text-body-300();
     color: $color-text-background-light;
-
-    &--right {
-      padding-left: $size-medium + $padding-label-medium;
-    }
 
     // Checkbox button container
     &::before {
@@ -115,12 +111,8 @@ $padding-label-large: $spacing-base-3;
   &--large {
     & > .#{$classname}__label {
       min-height: $size-large;
-      padding-left: $size-large;
+      padding-left: $size-large + $padding-label-large;
       @include text-body-400();
-
-      &.#{$classname}__label--right {
-        padding-left: $size-large + $padding-label-large;
-      }
     }
     & > .#{$classname}__label::before {
       width: $size-large;

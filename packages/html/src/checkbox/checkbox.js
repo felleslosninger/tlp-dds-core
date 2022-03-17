@@ -21,7 +21,7 @@ const createCheckbox = ({
         ${disabled ? 'aria-disabled="true"' : ''}
         ${checked ? 'checked' : ''}
       />
-      <label class='${classPrefix}__label ${classPrefix}__label--right' for=${inputElementId}>
+      <label class='${classPrefix}__label' for=${inputElementId}>
         ${label}
       </label>
     </div>`)
