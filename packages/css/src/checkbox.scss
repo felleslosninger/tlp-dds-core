@@ -5,14 +5,14 @@
 
 $classname: '#{utils.$prefix}-checkbox';
 // Color variables
-$checkbox-color-unchecked: $color-neutral-grey-600;
-$checkbox-color-checked: $color-interface-interaction;
-$checkbox-color-disabled: $color-neutral-grey-500;
+$color-unchecked: $color-neutral-grey-600;
+$color-checked: $color-interface-interaction;
+$color-disabled: $color-neutral-grey-500;
 // Size variables
-$checkbox-size-medium: $spacing-base-6;
-$checkbox-size-large: $spacing-base-8;
-$checkbox-padding-label-medium: $spacing-base-2;
-$checkbox-padding-label-large: $spacing-base-3;
+$size-medium: $spacing-base-6;
+$size-large: $spacing-base-8;
+$padding-label-medium: $spacing-base-2;
+$padding-label-large: $spacing-base-3;
 
 .#{$classname} {
   display: inline-flex;
@@ -49,15 +49,15 @@ $checkbox-padding-label-large: $spacing-base-3;
     align-items: center;
     position: relative;
 
-    padding-left: $checkbox-size-medium;
-    min-height: $checkbox-size-medium;
+    padding-left: $size-medium;
+    min-height: $size-medium;
 
     cursor: pointer;
     @include text-body-300();
     color: $color-text-background-light;
 
     &--right {
-      padding-left: $checkbox-size-medium + $checkbox-padding-label-medium;
+      padding-left: $size-medium + $padding-label-medium;
     }
 
     // Checkbox button container
@@ -72,10 +72,10 @@ $checkbox-padding-label-large: $spacing-base-3;
       background-position: 50%;
 
       // Medium size
-      width: $checkbox-size-medium;
-      height: $checkbox-size-medium;
+      width: $size-medium;
+      height: $size-medium;
 
-      border: $border-width-default solid $checkbox-color-unchecked;
+      border: $border-width-default solid $color-unchecked;
 
       transition: $duration-fast;
       transition-property: border-color, background-image;
@@ -85,12 +85,12 @@ $checkbox-padding-label-large: $spacing-base-3;
   &:not([class*='#{$classname}--disabled']) > input.#{$classname}__input {
     &:hover:not(:checked) ~ .#{$classname}__label::before {
       background-image: #{utils.$icon-url-checkmark-hover};
-      border-color: $checkbox-color-checked;
+      border-color: $color-checked;
     }
 
     &:checked ~ .#{$classname}__label::before {
       background-image: #{utils.$icon-url-checkmark};
-      border-color: $checkbox-color-checked;
+      border-color: $color-checked;
     }
   }
 
@@ -101,9 +101,9 @@ $checkbox-padding-label-large: $spacing-base-3;
 
     & > .#{$classname}__label {
       cursor: not-allowed;
-      color: $checkbox-color-disabled;
+      color: $color-disabled;
       &::before {
-        border-color: $checkbox-color-disabled;
+        border-color: $color-disabled;
       }
     }
     & > input.#{$classname}__input:checked ~ .#{$classname}__label::before {
@@ -114,27 +114,27 @@ $checkbox-padding-label-large: $spacing-base-3;
   // Size modifiers
   &--large {
     & > .#{$classname}__label {
-      min-height: $checkbox-size-large;
-      padding-left: $checkbox-size-large;
+      min-height: $size-large;
+      padding-left: $size-large;
       @include text-body-400();
 
       &.#{$classname}__label--right {
-        padding-left: $checkbox-size-large + $checkbox-padding-label-large;
+        padding-left: $size-large + $padding-label-large;
       }
     }
     & > .#{$classname}__label::before {
-      width: $checkbox-size-large;
-      height: $checkbox-size-large;
+      width: $size-large;
+      height: $size-large;
     }
     &:not([class*='#{$classname}--disabled']) > input.#{$classname}__input {
       &:hover:not(:checked) ~ .#{$classname}__label::before {
         background-image: #{utils.$icon-url-checkmark-large-hover};
-        border-color: $checkbox-color-checked;
+        border-color: $color-checked;
       }
 
       &:checked ~ .#{$classname}__label::before {
         background-image: #{utils.$icon-url-checkmark-large};
-        border-color: $checkbox-color-checked;
+        border-color: $color-checked;
       }
     }
     &.#{$classname}--disabled
