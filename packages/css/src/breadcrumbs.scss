@@ -3,12 +3,10 @@
 @use './baseline/utils.scss' as utils;
 
 $classname: '#{utils.$prefix}-breadcrumbs';
-// Color variables
-$link-color-default: $color-interface-interaction;
 // Size variables
-$breadcrumb-size-height: $spacing-base-6;
-$breadcrumb-size-icon: $spacing-base-5;
-$breadcrumb-margin-icon: $spacing-base-2;
+$min-height: $spacing-base-6;
+$size-icon: $spacing-base-5;
+$margin-icon: $spacing-base-2;
 
 @mixin separatorIcon {
   content: '';
@@ -17,8 +15,8 @@ $breadcrumb-margin-icon: $spacing-base-2;
 
   align-self: center;
 
-  width: $breadcrumb-size-icon;
-  height: $breadcrumb-size-icon;
+  width: $size-icon;
+  height: $size-icon;
 
   background-image: #{utils.$icon-url-chevron-right};
   background-repeat: no-repeat;
@@ -42,7 +40,7 @@ $breadcrumb-margin-icon: $spacing-base-2;
     flex-direction: row;
     align-items: center;
 
-    min-height: $breadcrumb-size-height;
+    min-height: $min-height;
 
     list-style: none;
 
@@ -53,7 +51,7 @@ $breadcrumb-margin-icon: $spacing-base-2;
 
     &::after {
       @include separatorIcon();
-      margin: 0 $breadcrumb-margin-icon;
+      margin: 0 $margin-icon;
     }
 
     &:last-child::after {
@@ -76,7 +74,7 @@ $breadcrumb-margin-icon: $spacing-base-2;
       // Add icon before
       &::before {
         @include separatorIcon();
-        margin: 0 $breadcrumb-margin-icon 0 0;
+        margin: 0 $margin-icon 0 0;
       }
     }
   }
