@@ -79,8 +79,7 @@ $padding-placeholder-horizontal-icon-large: calc(
     pointer-events: none;
     position: absolute;
   }
-  &__icon-left svg,
-  &__icon-right svg {
+  & svg {
     display: block;
     flex-shrink: 0;
     flex-grow: 0;
@@ -130,8 +129,7 @@ $padding-placeholder-horizontal-icon-large: calc(
   }
 
   &--disabled {
-    & .#{$classname}__icon-left svg,
-    & .#{$classname}__icon-right svg {
+    & svg {
       fill: $color-disabled-grey;
     }
     & ~ .#{form.$field-label-classname} {
@@ -182,8 +180,7 @@ $padding-placeholder-horizontal-icon-large: calc(
     }
     // Set icon size
     &::after,
-    & .#{$classname}__icon-left svg,
-    & .#{$classname}__icon-right svg {
+    & svg {
       width: $icon-size-large;
       height: $icon-size-large;
     }
