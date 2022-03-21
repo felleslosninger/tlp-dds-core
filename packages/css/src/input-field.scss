@@ -5,26 +5,27 @@
 
 $classname: '#{utils.$prefix}-input-field';
 // Color variables
-$input-color-default-grey: $color-neutral-grey-600;
-$input-color-default-active-grey: $color-neutral-grey-800;
-$input-color-disabled-grey: $color-neutral-grey-500;
-$input-color-error-grey: $color-neutral-grey-700;
+$color-default-grey: $color-neutral-grey-600;
+$color-active-grey: $color-neutral-grey-800;
+$color-interaction: $color-interface-interaction;
+$color-disabled-grey: $color-neutral-grey-500;
+$color-error-grey: $color-neutral-grey-700;
 // Size variables
-$input-size-height-medium: $spacing-base-12;
-$input-size-height-large: $spacing-base-14;
-$input-size-width: calc($spacing-base-8 * 10);
-$input-icon-size-medium: $spacing-base-5;
-$input-icon-size-large: $spacing-base-8;
+$min-width: calc($spacing-base-8 * 10);
+$height-medium: $spacing-base-12;
+$height-large: $spacing-base-14;
+$icon-size-medium: $spacing-base-5;
+$icon-size-large: $spacing-base-8;
 // Padding sizes
-$input-icon-padding-medium: utils.pxToRem(6px);
-$input-icon-padding-large: utils.pxToRem(10px);
-$input-placeholder-padding-horizontal-medium: $spacing-base-4;
-$input-placeholder-padding-horizontal-large: $spacing-base-5;
-$input-placeholder-padding-horizontal-icon-medium: calc(
-  $input-icon-size-medium + $input-icon-padding-medium * 2
+$padding-icon-medium: utils.pxToRem(6px);
+$padding-icon-large: utils.pxToRem(10px);
+$padding-placeholder-horizontal-medium: $spacing-base-4;
+$padding-placeholder-horizontal-large: $spacing-base-5;
+$padding-placeholder-horizontal-icon-medium: calc(
+  $icon-size-medium + $padding-icon-medium * 2
 );
-$input-placeholder-padding-horizontal-icon-large: calc(
-  $input-icon-size-large + $input-icon-padding-large * 2
+$padding-placeholder-horizontal-icon-large: calc(
+  $icon-size-large + $padding-icon-large * 2
 );
 
 .#{$classname} {
@@ -34,9 +35,9 @@ $input-placeholder-padding-horizontal-icon-large: calc(
   position: relative;
 
   // Size medium
-  min-width: Min($input-size-width, 100%);
+  min-width: Min($min-width, 100%);
   max-width: utils.$component-max-width;
-  height: $input-size-height-medium;
+  height: $height-medium;
 
   // Elements
   &__input {
@@ -48,23 +49,23 @@ $input-placeholder-padding-horizontal-icon-large: calc(
 
     background-color: $color-neutral-white;
     color: $color-text-background-light;
-    padding: 0 $input-placeholder-padding-horizontal-medium;
+    padding: 0 $padding-placeholder-horizontal-medium;
 
     box-sizing: border-box;
     border-radius: $border-radius-x-small;
-    border: $border-width-thin solid $input-color-default-grey;
+    border: $border-width-thin solid $color-default-grey;
 
     transition: all $duration-normal;
     transition-property: border, box-shadow;
 
     &::placeholder {
-      color: $input-color-default-grey;
+      color: $color-default-grey;
     }
 
     &:focus {
       outline: none;
-      border-color: $color-interface-interaction;
-      box-shadow: inset 0 0 0 $border-width-thin $color-interface-interaction;
+      border-color: $color-interaction;
+      box-shadow: inset 0 0 0 $border-width-thin $color-interaction;
     }
   }
 
@@ -85,26 +86,26 @@ $input-placeholder-padding-horizontal-icon-large: calc(
     flex-grow: 0;
 
     // Size medium
-    width: $input-icon-size-medium;
-    height: $input-icon-size-medium;
+    width: $icon-size-medium;
+    height: $icon-size-medium;
 
-    fill: $input-color-default-grey;
+    fill: $color-default-grey;
     transition: all $duration-normal;
   }
   &__icon-left {
-    left: $input-icon-padding-medium;
+    left: $padding-icon-medium;
   }
   &__icon-right {
-    right: $input-icon-padding-medium;
+    right: $padding-icon-medium;
   }
 
   // Set extra padding when icon is used
   &--icon-left > &__input {
-    padding-left: $input-placeholder-padding-horizontal-icon-medium;
+    padding-left: $padding-placeholder-horizontal-icon-medium;
   }
   &--error &__input,
   &--icon-right > &__input {
-    padding-right: $input-placeholder-padding-horizontal-icon-medium;
+    padding-right: $padding-placeholder-horizontal-icon-medium;
   }
 
   // State modifiers of non-disabled states
@@ -113,16 +114,16 @@ $input-placeholder-padding-horizontal-icon-large: calc(
       cursor: text;
     }
     &:hover:not(:focus) {
-      border-color: $color-interface-interaction;
+      border-color: $color-interaction;
       & ~ .#{$classname}__icon-left svg,
       & ~ .#{$classname}__icon-right svg {
-        fill: $input-color-default-active-grey;
+        fill: $color-active-grey;
       }
     }
     &:focus {
       & ~ .#{$classname}__icon-left svg,
       & ~ .#{$classname}__icon-right svg {
-        fill: $input-color-default-active-grey;
+        fill: $color-active-grey;
       }
       &::placeholder {
         opacity: 0;
@@ -133,20 +134,20 @@ $input-placeholder-padding-horizontal-icon-large: calc(
   &--disabled {
     & .#{$classname}__icon-left svg,
     & .#{$classname}__icon-right svg {
-      fill: $input-color-disabled-grey;
+      fill: $color-disabled-grey;
     }
     & ~ .#{form.$field-label-classname} {
       cursor: not-allowed;
-      color: $input-color-disabled-grey;
+      color: $color-disabled-grey;
     }
     & > input.#{$classname}__input {
       cursor: not-allowed;
-      color: $input-color-disabled-grey;
+      color: $color-disabled-grey;
       &:not(:focus) {
-        border-color: $input-color-disabled-grey;
+        border-color: $color-disabled-grey;
       }
       &::placeholder {
-        color: $input-color-disabled-grey;
+        color: $color-disabled-grey;
       }
     }
   }
@@ -158,10 +159,10 @@ $input-placeholder-padding-horizontal-icon-large: calc(
       box-shadow: inset 0 0 0 $border-width-thin $color-interface-error;
     }
     & .#{$classname}__icon-left svg {
-      fill: $input-color-error-grey;
+      fill: $color-error-grey;
     }
     & .#{$classname}__input:not(:focus)::placeholder {
-      color: $input-color-error-grey;
+      color: $color-error-grey;
     }
     // Error icon
     &::after {
@@ -172,47 +173,47 @@ $input-placeholder-padding-horizontal-icon-large: calc(
       background-image: utils.$icon-url-error;
       background-repeat: no-repeat;
 
-      background-size: $input-icon-size-medium, $input-icon-size-medium;
-      width: $input-icon-size-medium;
-      height: $input-icon-size-medium;
+      background-size: $icon-size-medium, $icon-size-medium;
+      width: $icon-size-medium;
+      height: $icon-size-medium;
 
-      right: $input-icon-padding-medium;
+      right: $padding-icon-medium;
     }
   }
 
   // Size modifiers
   &--large {
-    height: $input-size-height-large;
+    height: $height-large;
 
     & .#{$classname}__input {
       @include text-body-400();
-      padding: 0 $input-placeholder-padding-horizontal-large;
+      padding: 0 $padding-placeholder-horizontal-large;
     }
     // Set icon size
     &::after,
     & .#{$classname}__icon-left svg,
     & .#{$classname}__icon-right svg {
-      width: $input-icon-size-large;
-      height: $input-icon-size-large;
+      width: $icon-size-large;
+      height: $icon-size-large;
     }
     &::after {
-      background-size: $input-icon-size-large, $input-icon-size-large;
+      background-size: $icon-size-large, $icon-size-large;
     }
     // Set icon padding
     & .#{$classname}__icon-left {
-      left: $input-icon-padding-large;
+      left: $padding-icon-large;
     }
     &::after,
     & .#{$classname}__icon-right {
-      right: $input-icon-padding-large;
+      right: $padding-icon-large;
     }
     // Set input field padding to large icon
     &.#{$classname}--icon-left .#{$classname}__input {
-      padding-left: $input-placeholder-padding-horizontal-icon-large;
+      padding-left: $padding-placeholder-horizontal-icon-large;
     }
     &.#{$classname}--error .#{$classname}__input,
     &.#{$classname}--icon-right .#{$classname}__input {
-      padding-right: $input-placeholder-padding-horizontal-icon-large;
+      padding-right: $padding-placeholder-horizontal-icon-large;
     }
   }
 }
