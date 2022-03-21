@@ -4,24 +4,24 @@
 
 $classname: '#{utils.$prefix}-panel-link';
 // Color variables
-$link-border-color: $color-interface-interaction;
-$link-hover-color: $color-interface-interaction-light;
-$link-icon-color: $color-neutral-grey-700;
+$color-border: $color-interface-interaction;
+$color-hover: $color-interface-interaction-light;
+$color-icon: $color-neutral-grey-700;
 // Size variables
-$link-size-height-medium: $spacing-base-10;
-$link-size-height-large: $spacing-base-14;
-$link-size-width: calc($spacing-base-8 * 10);
-$link-icon-size-medium: $spacing-base-6;
-$link-icon-size-large: $spacing-base-8;
+$min-height-medium: $spacing-base-10;
+$min-height-large: $spacing-base-14;
+$min-width: calc($spacing-base-8 * 10);
+$size-icon-medium: $spacing-base-6;
+$size-icon-large: $spacing-base-8;
 
-$link-padding-left-medium: $spacing-base-4;
-$link-padding-left-large: $spacing-base-6;
-$link-padding-right-medium: $spacing-base-3;
-$link-padding-right-large: $spacing-base-4;
-$link-padding-vertical-medium: $spacing-base-1;
-$link-padding-vertical-large: $spacing-base-2;
-$link-padding-label-icon: $spacing-base-2;
-$link-padding-icon-hover-offset: $spacing-base-1;
+$padding-left-medium: $spacing-base-4;
+$padding-left-large: $spacing-base-6;
+$padding-right-medium: $spacing-base-3;
+$padding-right-large: $spacing-base-4;
+$padding-vertical-medium: $spacing-base-1;
+$padding-vertical-large: $spacing-base-2;
+$padding-label-icon: $spacing-base-2;
+$padding-icon-hover-offset: $spacing-base-1;
 
 .#{$classname} {
   display: flex;
@@ -38,14 +38,14 @@ $link-padding-icon-hover-offset: $spacing-base-1;
   border: $border-width-default solid transparent;
 
   // Medium size
-  min-height: $link-size-height-medium;
-  min-width: Min($link-size-width, 100%);
+  min-height: $min-height-medium;
+  min-width: Min($min-width, 100%);
   max-width: utils.$component-max-width;
 
-  padding-left: $link-padding-left-medium;
-  padding-right: $link-padding-right-medium;
-  padding-top: $link-padding-vertical-medium;
-  padding-bottom: $link-padding-vertical-medium;
+  padding-left: $padding-left-medium;
+  padding-right: $padding-right-medium;
+  padding-top: $padding-vertical-medium;
+  padding-bottom: $padding-vertical-medium;
 
   transition: all $duration-normal;
   transition-property: border-color, background-color, margin;
@@ -54,69 +54,69 @@ $link-padding-icon-hover-offset: $spacing-base-1;
   & > &__label {
     @include text-body-300();
     color: $color-text-background-light;
-    padding-right: calc($link-icon-size-medium + $link-padding-label-icon);
+    padding-right: calc($size-icon-medium + $padding-label-icon);
   }
   & > svg {
-    fill: $link-icon-color;
+    fill: $color-icon;
 
-    width: $link-icon-size-medium;
-    height: $link-icon-size-medium;
+    width: $size-icon-medium;
+    height: $size-icon-medium;
 
     flex-shrink: 0;
     flex-grow: 0;
   }
   & > svg:nth-last-of-type(2) {
-    padding-right: $link-padding-left-medium;
+    padding-right: $padding-left-medium;
   }
   & > svg:nth-last-of-type(1) {
     display: inline-block;
     position: absolute;
-    right: $link-padding-right-medium;
+    right: $padding-right-medium;
 
     transition: right $duration-normal;
   }
 
   // States
   &:hover {
-    border-color: $link-border-color;
+    border-color: $color-border;
 
     & > svg:nth-last-of-type(1) {
-      right: calc($link-padding-right-medium - $link-padding-icon-hover-offset);
+      right: calc($padding-right-medium - $padding-icon-hover-offset);
     }
   }
   &:active {
-    border-color: $link-border-color;
-    background-color: $link-hover-color;
+    border-color: $color-border;
+    background-color: $color-hover;
   }
 
   // Size modifiers
   &--large {
-    min-height: $link-size-height-large;
-    padding-left: $link-padding-left-large;
-    padding-right: $link-padding-right-large;
-    padding-top: $link-padding-vertical-large;
-    padding-bottom: $link-padding-vertical-large;
+    min-height: $min-height-large;
+    padding-left: $padding-left-large;
+    padding-right: $padding-right-large;
+    padding-top: $padding-vertical-large;
+    padding-bottom: $padding-vertical-large;
 
     & > svg:nth-last-of-type(1) {
-      right: $link-padding-right-large;
+      right: $padding-right-large;
     }
 
     &.#{$classname}--icon-left {
-      padding-left: $link-padding-left-medium;
+      padding-left: $padding-left-medium;
     }
 
     &:hover > svg:nth-last-of-type(1) {
-      right: calc($link-padding-right-large - $link-padding-icon-hover-offset);
+      right: calc($padding-right-large - $padding-icon-hover-offset);
     }
 
     & > .#{$classname}__label {
       @include text-body-400();
-      padding-right: calc($link-icon-size-large + $link-padding-label-icon);
+      padding-right: calc($size-icon-large + $padding-label-icon);
     }
 
     & > svg {
-      width: $link-icon-size-large;
-      height: $link-icon-size-large;
+      width: $size-icon-large;
+      height: $size-icon-large;
     }
   }
 }

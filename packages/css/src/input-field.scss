@@ -14,18 +14,18 @@ $color-disabled-grey: $color-neutral-grey-500;
 $min-width: calc($spacing-base-8 * 10);
 $height-medium: $spacing-base-12;
 $height-large: $spacing-base-14;
-$icon-size-medium: $spacing-base-5;
-$icon-size-large: $spacing-base-8;
+$size-icon-medium: $spacing-base-5;
+$size-icon-large: $spacing-base-8;
 // Padding sizes
 $padding-icon-medium: utils.pxToRem(6px);
 $padding-icon-large: utils.pxToRem(10px);
 $padding-placeholder-horizontal-medium: $spacing-base-4;
 $padding-placeholder-horizontal-large: $spacing-base-5;
 $padding-placeholder-horizontal-icon-medium: calc(
-  $icon-size-medium + $padding-icon-medium * 2
+  $size-icon-medium + $padding-icon-medium * 2
 );
 $padding-placeholder-horizontal-icon-large: calc(
-  $icon-size-large + $padding-icon-large * 2
+  $size-icon-large + $padding-icon-large * 2
 );
 
 .#{$classname} {
@@ -85,8 +85,8 @@ $padding-placeholder-horizontal-icon-large: calc(
     flex-grow: 0;
 
     // Size medium
-    width: $icon-size-medium;
-    height: $icon-size-medium;
+    width: $size-icon-medium;
+    height: $size-icon-medium;
 
     fill: $color-default-grey;
     transition: all $duration-normal;
@@ -163,9 +163,9 @@ $padding-placeholder-horizontal-icon-large: calc(
       background-image: utils.$icon-url-error;
       background-repeat: no-repeat;
 
-      background-size: $icon-size-medium, $icon-size-medium;
-      width: $icon-size-medium;
-      height: $icon-size-medium;
+      background-size: $size-icon-medium, $size-icon-medium;
+      width: $size-icon-medium;
+      height: $size-icon-medium;
       right: $padding-icon-medium;
     }
   }
@@ -181,11 +181,11 @@ $padding-placeholder-horizontal-icon-large: calc(
     // Set icon size
     &::after,
     & svg {
-      width: $icon-size-large;
-      height: $icon-size-large;
+      width: $size-icon-large;
+      height: $size-icon-large;
     }
     &::after {
-      background-size: $icon-size-large, $icon-size-large;
+      background-size: $size-icon-large, $size-icon-large;
     }
     // Set icon padding
     & .#{$classname}__icon-left {
