@@ -5,17 +5,17 @@
 
 $classname: '#{utils.$prefix}-toggle';
 // Color variables
-$toggle-color-checked: $color-interface-interaction;
-$toggle-color-unchecked: $color-neutral-grey-300;
-$toggle-color-border: $color-neutral-grey-600;
+$color-checked: $color-interface-interaction;
+$color-unchecked: $color-neutral-grey-300;
+$color-border: $color-neutral-grey-600;
 // Size variables
-$toggle-size-small-width: $spacing-base-11;
-$toggle-size-small-height: $spacing-base-6;
-$toggle-size-medium-width: $spacing-base-13;
-$toggle-size-medium-height: $spacing-base-7;
-$toggle-size-slider-small: $spacing-base-4;
-$toggle-size-slider-medium: $spacing-base-5;
-$toggle-padding-label: $spacing-base-2;
+$width-small: $spacing-base-11;
+$height-small: $spacing-base-6;
+$width-medium: $spacing-base-13;
+$height-medium: $spacing-base-7;
+$size-slider-small: $spacing-base-4;
+$size-slider-medium: $spacing-base-5;
+$padding-label: $spacing-base-2;
 
 .#{$classname} {
   display: flex;
@@ -58,30 +58,30 @@ $toggle-padding-label: $spacing-base-2;
     align-items: center;
     position: relative;
 
-    padding-left: $toggle-size-medium-width;
-    min-height: $toggle-size-medium-height;
+    padding-left: $width-medium;
+    min-height: $height-medium;
 
     cursor: pointer;
     &--right {
-      padding-left: $toggle-size-medium-width + $toggle-padding-label;
+      padding-left: $width-medium + $padding-label;
     }
     &--left {
       padding-left: 0;
-      padding-right: $toggle-size-medium-width + $toggle-padding-label;
+      padding-right: $width-medium + $padding-label;
     }
 
     &--toggle-on {
-      color: $toggle-color-border;
+      color: $color-border;
     }
     &--toggle-off {
       color: $color-text-background-light;
     }
   }
   &__decoupled-label-left {
-    padding-right: $toggle-padding-label;
+    padding-right: $padding-label;
   }
   &__decoupled-label-right {
-    padding-left: $toggle-padding-label;
+    padding-left: $padding-label;
   }
 
   & .#{$classname}__label {
@@ -93,11 +93,11 @@ $toggle-padding-label: $spacing-base-2;
       position: absolute;
       left: 0;
 
-      width: $toggle-size-medium-width;
-      height: $toggle-size-medium-height;
+      width: $width-medium;
+      height: $height-medium;
 
-      background-color: $toggle-color-unchecked;
-      border: $border-width-default solid $toggle-color-border;
+      background-color: $color-unchecked;
+      border: $border-width-default solid $color-border;
       border-radius: $border-radius-medium;
 
       transition: $duration-normal;
@@ -116,12 +116,12 @@ $toggle-padding-label: $spacing-base-2;
       position: absolute;
       left: $spacing-base-1;
 
-      width: $toggle-size-slider-medium;
-      height: $toggle-size-slider-medium;
+      width: $size-slider-medium;
+      height: $size-slider-medium;
       border-radius: 50%;
 
       background-color: $color-neutral-white;
-      border: $border-width-default solid $toggle-color-border;
+      border: $border-width-default solid $color-border;
 
       transition: $duration-normal;
       transition-property: left, right, border-color;
@@ -140,22 +140,22 @@ $toggle-padding-label: $spacing-base-2;
     }
 
     &__label {
-      min-height: $toggle-size-small-height;
+      min-height: $height-small;
       &--right {
-        padding-left: $toggle-size-small-width + $toggle-padding-label;
+        padding-left: $width-small + $padding-label;
       }
       &--left {
-        padding-right: $toggle-size-small-width + $toggle-padding-label;
+        padding-right: $width-small + $padding-label;
       }
     }
 
     &__label::before {
-      width: $toggle-size-small-width;
-      height: $toggle-size-small-height;
+      width: $width-small;
+      height: $height-small;
     }
     &__label::after {
-      width: $toggle-size-slider-small;
-      height: $toggle-size-slider-small;
+      width: $size-slider-small;
+      height: $size-slider-small;
     }
     &__label--left::after {
       right: $spacing-base-6;
@@ -168,12 +168,12 @@ $toggle-padding-label: $spacing-base-2;
       color: $color-text-background-light;
     }
     & ~ .#{$classname}__label--toggle-off {
-      color: $toggle-color-border;
+      color: $color-border;
     }
     // Checked toggle button container
     & ~ .#{$classname}__label::before {
-      background-color: $toggle-color-checked;
-      border-color: $toggle-color-checked;
+      background-color: $color-checked;
+      border-color: $color-checked;
     }
     // Checked toggle button slider
     & ~ .#{$classname}__label::after {
