@@ -161,9 +161,6 @@ $padding-placeholder-horizontal-icon-large: calc(
     & .#{$classname}__icon-left svg {
       fill: $color-error-grey;
     }
-    & .#{$classname}__input:not(:focus)::placeholder {
-      color: $color-error-grey;
-    }
     // Error icon
     &::after {
       pointer-events: none;
