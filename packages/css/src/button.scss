@@ -1,27 +1,27 @@
-@use '@digdir/ds-tokens/build/tokens.scss' as *;
+@use '@digdir/ds-tokens/build/tokens.scss' as tokens;
 @use './typography.scss' as typography;
 @use './baseline/utils.scss' as utils;
 
 $classname: '#{utils.$prefix}-button';
 // Color variables
-$color-primary: $color-neutral-grey-800;
-$color-primary-active: $color-neutral-grey-900;
-$color-secondary: $color-neutral-white;
-$color-hover: $color-interface-interaction-light;
-$color-disabled: $color-neutral-grey-500;
+$color-primary: tokens.$color-neutral-grey-800;
+$color-primary-active: tokens.$color-neutral-grey-900;
+$color-secondary: tokens.$color-neutral-white;
+$color-hover: tokens.$color-interface-interaction-light;
+$color-disabled: tokens.$color-neutral-grey-500;
 // Size variables
-$min-height-small: $spacing-base-10;
-$min-height-medium: $spacing-base-12;
-$min-height-large: $spacing-base-14;
-$padding-small: $spacing-base-4;
-$padding-medium: $spacing-base-6;
-$padding-large: $spacing-base-8;
-$size-icon: $spacing-base-6;
+$min-height-small: tokens.$spacing-base-10;
+$min-height-medium: tokens.$spacing-base-12;
+$min-height-large: tokens.$spacing-base-14;
+$padding-small: tokens.$spacing-base-4;
+$padding-medium: tokens.$spacing-base-6;
+$padding-large: tokens.$spacing-base-8;
+$size-icon: tokens.$spacing-base-6;
 
 @mixin hover {
   background-color: $color-hover;
   color: $color-primary;
-  border: $border-width-default solid $color-primary;
+  border: tokens.$border-width-default solid $color-primary;
   cursor: pointer;
 }
 
@@ -50,18 +50,22 @@ $size-icon: $spacing-base-6;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: all $duration-normal;
+  transition: all tokens.$duration-normal;
   transition-property: background-color, border-color, color;
   overflow: hidden;
 
   // Size medium
-  @include size($min-height-medium, $border-radius-large, $padding-medium);
+  @include size(
+    $min-height-medium,
+    tokens.$border-radius-large,
+    $padding-medium
+  );
   @include typography.text-interface-300();
 
   // Primary
   background-color: $color-primary;
   color: $color-secondary;
-  border: $border-width-default solid transparent;
+  border: tokens.$border-width-default solid transparent;
 
   // Elements
   & > svg {
@@ -79,19 +83,27 @@ $size-icon: $spacing-base-6;
     transition: inherit;
   }
   &--icon-left svg {
-    margin-right: $spacing-base-2;
+    margin-right: tokens.$spacing-base-2;
   }
   &--icon-right svg {
-    margin-left: $spacing-base-2;
+    margin-left: tokens.$spacing-base-2;
   }
 
   // Size modifiers
   &--small {
-    @include size($min-height-small, $border-radius-large, $padding-small);
+    @include size(
+      $min-height-small,
+      tokens.$border-radius-large,
+      $padding-small
+    );
     @include typography.text-interface-300();
   }
   &--large {
-    @include size($min-height-large, $border-radius-x-large, $padding-large);
+    @include size(
+      $min-height-large,
+      tokens.$border-radius-x-large,
+      $padding-large
+    );
     @include typography.text-interface-400();
   }
 
@@ -124,7 +136,7 @@ $size-icon: $spacing-base-6;
   &--secondary {
     background-color: $color-secondary;
     color: $color-primary;
-    border: $border-width-default solid $color-primary;
+    border: tokens.$border-width-default solid $color-primary;
 
     &:not([class*='#{$classname}--disabled']) {
       &:active {

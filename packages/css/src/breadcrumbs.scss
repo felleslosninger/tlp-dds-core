@@ -1,12 +1,12 @@
-@use '@digdir/ds-tokens/build/tokens.scss' as *;
+@use '@digdir/ds-tokens/build/tokens.scss' as tokens;
 @use './typography.scss' as typography;
 @use './baseline/utils.scss' as utils;
 
 $classname: '#{utils.$prefix}-breadcrumbs';
 // Size variables
-$min-height: $spacing-base-6;
-$size-icon: $spacing-base-5;
-$margin-icon: $spacing-base-2;
+$min-height: tokens.$spacing-base-6;
+$size-icon: tokens.$spacing-base-5;
+$margin-icon: tokens.$spacing-base-2;
 
 @mixin separatorIcon {
   content: '';
@@ -60,7 +60,7 @@ $margin-icon: $spacing-base-2;
   }
 
   // Breakpoints
-  @media (max-width: $breakpoint-medium) {
+  @media (max-width: tokens.$breakpoint-medium) {
     // Show only parent link in breadcrumbs
     .#{$classname}__list > li {
       display: none;

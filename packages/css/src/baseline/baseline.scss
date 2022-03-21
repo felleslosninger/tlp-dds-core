@@ -1,41 +1,42 @@
-@use '@digdir/ds-tokens/build/tokens.scss' as *;
+@use '@digdir/ds-tokens/build/tokens.scss' as tokens;
 @use './Inter.scss' as *;
 @use './utils.scss' as utils;
 
 @mixin focus-outline() {
-  outline: $border-width-default solid $color-interface-accessibility;
+  outline: tokens.$border-width-default solid
+    tokens.$color-interface-accessibility;
   outline-offset: utils.$base-outline-offset;
 }
 
 // Inline link
 a.#{utils.$prefix}-link {
   cursor: pointer;
-  color: $color-interface-interaction;
+  color: tokens.$color-interface-interaction;
 
   text-decoration: underline;
   text-underline-offset: 0.25em;
-  text-decoration-thickness: $border-width-thin;
-  text-decoration-color: $color-neutral-grey-600;
+  text-decoration-thickness: tokens.$border-width-thin;
+  text-decoration-color: tokens.$color-neutral-grey-600;
 
-  transition: all $duration-normal;
+  transition: all tokens.$duration-normal;
 
   &:hover {
-    text-decoration-thickness: $border-width-default;
-    text-decoration-color: $color-interface-interaction;
+    text-decoration-thickness: tokens.$border-width-default;
+    text-decoration-color: tokens.$color-interface-interaction;
   }
 
   &:visited {
-    color: $color-interface-visited;
+    color: tokens.$color-interface-visited;
 
     &:hover {
-      text-decoration-color: $color-interface-visited;
+      text-decoration-color: tokens.$color-interface-visited;
     }
   }
 }
 
 .#{utils.$prefix}-body {
-  font-family: $font-family;
-  color: $color-text-background-light;
+  font-family: tokens.$font-family;
+  color: tokens.$color-text-background-light;
 
   // Keyboard navigation focus styling
   *:focus-visible {

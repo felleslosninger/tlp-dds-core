@@ -1,4 +1,4 @@
-@use '@digdir/ds-tokens/build/tokens.scss' as *;
+@use '@digdir/ds-tokens/build/tokens.scss' as tokens;
 @use './baseline/utils.scss' as utils;
 
 // General font mixin
@@ -10,59 +10,115 @@
 
 // Specific text class mixins
 @mixin text-body-100 {
-  @include font($font-size-100, $font-weight-regular, $font-line-height-20);
+  @include font(
+    tokens.$font-size-100,
+    tokens.$font-weight-regular,
+    tokens.$font-line-height-20
+  );
 }
 
 @mixin text-body-200 {
-  @include font($font-size-200, $font-weight-regular, $font-line-height-30);
+  @include font(
+    tokens.$font-size-200,
+    tokens.$font-weight-regular,
+    tokens.$font-line-height-30
+  );
 }
 
 @mixin text-body-300 {
-  @include font($font-size-300, $font-weight-regular, $font-line-height-30);
+  @include font(
+    tokens.$font-size-300,
+    tokens.$font-weight-regular,
+    tokens.$font-line-height-30
+  );
 }
 
 @mixin text-body-400 {
-  @include font($font-size-400, $font-weight-regular, $font-line-height-30);
+  @include font(
+    tokens.$font-size-400,
+    tokens.$font-weight-regular,
+    tokens.$font-line-height-30
+  );
 }
 
 // Heading
 @mixin text-heading-500 {
-  @include font($font-size-500, $font-weight-medium, $font-line-height-20);
+  @include font(
+    tokens.$font-size-500,
+    tokens.$font-weight-medium,
+    tokens.$font-line-height-20
+  );
 }
 
 @mixin text-heading-600 {
-  @include font($font-size-600, $font-weight-medium, $font-line-height-20);
+  @include font(
+    tokens.$font-size-600,
+    tokens.$font-weight-medium,
+    tokens.$font-line-height-20
+  );
 }
 
 @mixin text-heading-700 {
-  @include font($font-size-700, $font-weight-medium, $font-line-height-20);
+  @include font(
+    tokens.$font-size-700,
+    tokens.$font-weight-medium,
+    tokens.$font-line-height-20
+  );
 }
 
 @mixin text-heading-800 {
-  @include font($font-size-800, $font-weight-medium, $font-line-height-10);
+  @include font(
+    tokens.$font-size-800,
+    tokens.$font-weight-medium,
+    tokens.$font-line-height-10
+  );
 }
 
 @mixin text-heading-900 {
-  @include font($font-size-900, $font-weight-medium, $font-line-height-10);
+  @include font(
+    tokens.$font-size-900,
+    tokens.$font-weight-medium,
+    tokens.$font-line-height-10
+  );
 }
 
 // Ingress
 @mixin text-ingress-500 {
-  @include font($font-size-500, $font-weight-regular, $font-line-height-30);
+  @include font(
+    tokens.$font-size-500,
+    tokens.$font-weight-regular,
+    tokens.$font-line-height-30
+  );
 }
 @mixin text-ingress-600 {
-  @include font($font-size-600, $font-weight-regular, $font-line-height-40);
+  @include font(
+    tokens.$font-size-600,
+    tokens.$font-weight-regular,
+    tokens.$font-line-height-40
+  );
 }
 
 // Interface
 @mixin text-interface-200 {
-  @include font($font-size-200, $font-weight-medium, $font-line-height-10);
+  @include font(
+    tokens.$font-size-200,
+    tokens.$font-weight-medium,
+    tokens.$font-line-height-10
+  );
 }
 @mixin text-interface-300 {
-  @include font($font-size-300, $font-weight-medium, $font-line-height-10);
+  @include font(
+    tokens.$font-size-300,
+    tokens.$font-weight-medium,
+    tokens.$font-line-height-10
+  );
 }
 @mixin text-interface-400 {
-  @include font($font-size-400, $font-weight-medium, $font-line-height-10);
+  @include font(
+    tokens.$font-size-400,
+    tokens.$font-weight-medium,
+    tokens.$font-line-height-10
+  );
 }
 
 // Text classes

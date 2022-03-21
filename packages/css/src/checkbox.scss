@@ -1,18 +1,18 @@
-@use '@digdir/ds-tokens/build/tokens.scss' as *;
+@use '@digdir/ds-tokens/build/tokens.scss' as tokens;
 @use './typography.scss' as typography;
 @use './baseline/utils.scss' as utils;
 @use './baseline/baseline.scss' as baseline;
 
 $classname: '#{utils.$prefix}-checkbox';
 // Color variables
-$color-unchecked: $color-neutral-grey-600;
-$color-checked: $color-interface-interaction;
-$color-disabled: $color-neutral-grey-500;
+$color-unchecked: tokens.$color-neutral-grey-600;
+$color-checked: tokens.$color-interface-interaction;
+$color-disabled: tokens.$color-neutral-grey-500;
 // Size variables
-$size-medium: $spacing-base-6;
-$size-large: $spacing-base-8;
-$padding-label-medium: $spacing-base-2;
-$padding-label-large: $spacing-base-3;
+$size-medium: tokens.$spacing-base-6;
+$size-large: tokens.$spacing-base-8;
+$padding-label-medium: tokens.$spacing-base-2;
+$padding-label-large: tokens.$spacing-base-3;
 
 .#{$classname} {
   display: inline-flex;
@@ -54,7 +54,7 @@ $padding-label-large: $spacing-base-3;
 
     cursor: pointer;
     @include typography.text-body-300();
-    color: $color-text-background-light;
+    color: tokens.$color-text-background-light;
 
     // Checkbox button container
     &::before {
@@ -71,9 +71,9 @@ $padding-label-large: $spacing-base-3;
       width: $size-medium;
       height: $size-medium;
 
-      border: $border-width-default solid $color-unchecked;
+      border: tokens.$border-width-default solid $color-unchecked;
 
-      transition: $duration-fast;
+      transition: tokens.$duration-fast;
       transition-property: border-color, background-image;
     }
   }

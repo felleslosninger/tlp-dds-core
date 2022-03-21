@@ -1,27 +1,27 @@
-@use '@digdir/ds-tokens/build/tokens.scss' as *;
+@use '@digdir/ds-tokens/build/tokens.scss' as tokens;
 @use './typography.scss' as typography;
 @use './baseline/utils.scss' as utils;
 @use './form.scss' as form;
 
 $classname: '#{utils.$prefix}-input-field';
 // Color variables
-$color-background: $color-neutral-white;
-$color-default-grey: $color-neutral-grey-600;
-$color-hover-grey: $color-neutral-grey-700;
-$color-active-grey: $color-neutral-grey-800;
-$color-interaction: $color-interface-interaction;
-$color-disabled-grey: $color-neutral-grey-500;
+$color-background: tokens.$color-neutral-white;
+$color-default-grey: tokens.$color-neutral-grey-600;
+$color-hover-grey: tokens.$color-neutral-grey-700;
+$color-active-grey: tokens.$color-neutral-grey-800;
+$color-interaction: tokens.$color-interface-interaction;
+$color-disabled-grey: tokens.$color-neutral-grey-500;
 // Size variables
-$min-width: calc($spacing-base-8 * 10);
-$height-medium: $spacing-base-12;
-$height-large: $spacing-base-14;
-$size-icon-medium: $spacing-base-5;
-$size-icon-large: $spacing-base-8;
+$min-width: calc(tokens.$spacing-base-8 * 10);
+$height-medium: tokens.$spacing-base-12;
+$height-large: tokens.$spacing-base-14;
+$size-icon-medium: tokens.$spacing-base-5;
+$size-icon-large: tokens.$spacing-base-8;
 // Padding sizes
 $padding-icon-medium: utils.pxToRem(6px);
 $padding-icon-large: utils.pxToRem(10px);
-$padding-placeholder-horizontal-medium: $spacing-base-4;
-$padding-placeholder-horizontal-large: $spacing-base-5;
+$padding-placeholder-horizontal-medium: tokens.$spacing-base-4;
+$padding-placeholder-horizontal-large: tokens.$spacing-base-5;
 $padding-placeholder-horizontal-icon-medium: calc(
   $size-icon-medium + $padding-icon-medium * 2
 );
@@ -49,14 +49,14 @@ $padding-placeholder-horizontal-icon-large: calc(
     @include typography.text-body-300();
 
     background-color: $color-background;
-    color: $color-text-background-light;
+    color: tokens.$color-text-background-light;
     padding: 0 $padding-placeholder-horizontal-medium;
 
     box-sizing: border-box;
-    border-radius: $border-radius-x-small;
-    border: $border-width-thin solid $color-default-grey;
+    border-radius: tokens.$border-radius-x-small;
+    border: tokens.$border-width-thin solid $color-default-grey;
 
-    transition: all $duration-normal;
+    transition: all tokens.$duration-normal;
     transition-property: border, box-shadow;
 
     &::placeholder {
@@ -66,7 +66,7 @@ $padding-placeholder-horizontal-icon-large: calc(
     &:focus {
       outline: none;
       border-color: $color-interaction;
-      box-shadow: inset 0 0 0 $border-width-thin $color-interaction;
+      box-shadow: inset 0 0 0 tokens.$border-width-thin $color-interaction;
     }
   }
 
@@ -90,7 +90,7 @@ $padding-placeholder-horizontal-icon-large: calc(
     height: $size-icon-medium;
 
     fill: $color-default-grey;
-    transition: all $duration-normal;
+    transition: all tokens.$duration-normal;
   }
   &__icon-left {
     left: $padding-icon-medium;
@@ -152,15 +152,16 @@ $padding-placeholder-horizontal-icon-large: calc(
   &--error {
     &:not([class*='#{$classname}--disabled'])
       .#{$classname}__input:not(:hover):not(:focus) {
-      border-color: $color-interface-error;
-      box-shadow: inset 0 0 0 $border-width-thin $color-interface-error;
+      border-color: tokens.$color-interface-error;
+      box-shadow: inset 0 0 0 tokens.$border-width-thin
+        tokens.$color-interface-error;
     }
     // Error icon
     &::after {
       pointer-events: none;
       position: absolute;
       content: '';
-      background-color: $color-neutral-white;
+      background-color: tokens.$color-neutral-white;
       background-image: utils.$icon-url-error;
       background-repeat: no-repeat;
 

@@ -1,4 +1,4 @@
-@use '@digdir/ds-tokens/build/tokens.scss' as *;
+@use '@digdir/ds-tokens/build/tokens.scss' as tokens;
 @use './typography.scss' as typography;
 @use './baseline/utils.scss' as utils;
 
@@ -34,14 +34,14 @@ $field-error-message-classname: '#{$field-classname}__error-message';
   & > .#{$field-label-classname} {
     display: block;
     order: 1;
-    padding-bottom: $spacing-base-2;
+    padding-bottom: tokens.$spacing-base-2;
     @include typography.text-body-300();
   }
   & > .#{$field-error-message-classname} {
     display: block;
     order: 3;
-    padding-top: $spacing-base-2;
+    padding-top: tokens.$spacing-base-2;
     @include typography.text-body-300();
-    color: $color-interface-error;
+    color: tokens.$color-interface-error;
   }
 }

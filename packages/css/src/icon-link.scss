@@ -1,17 +1,17 @@
-@use '@digdir/ds-tokens/build/tokens.scss' as *;
+@use '@digdir/ds-tokens/build/tokens.scss' as tokens;
 @use './typography.scss' as typography;
 @use './baseline/utils.scss' as utils;
 
 $classname: '#{utils.$prefix}-icon-link';
 // Color variables
-$color-default: $color-interface-interaction;
-$color-visited: $color-interface-visited;
-$color-border-default: $color-neutral-grey-600;
-$color-icon: $color-neutral-grey-800;
+$color-default: tokens.$color-interface-interaction;
+$color-visited: tokens.$color-interface-visited;
+$color-border-default: tokens.$color-neutral-grey-600;
+$color-icon: tokens.$color-neutral-grey-800;
 // Size variables
-$icon-size-medium: $spacing-base-3;
-$icon-size-large: $spacing-base-4;
-$icon-padding: $spacing-base-2;
+$icon-size-medium: tokens.$spacing-base-3;
+$icon-size-large: tokens.$spacing-base-4;
+$icon-padding: tokens.$spacing-base-2;
 
 .#{$classname} {
   cursor: pointer;
@@ -20,14 +20,14 @@ $icon-padding: $spacing-base-2;
   box-sizing: border-box;
 
   @include typography.text-body-300();
-  color: $color-text-background-light;
+  color: tokens.$color-text-background-light;
 
   text-decoration: underline;
   text-underline-offset: 0.25em;
-  text-decoration-thickness: $border-width-thin;
+  text-decoration-thickness: tokens.$border-width-thin;
   text-decoration-color: $color-border-default;
 
-  transition: all $duration-normal;
+  transition: all tokens.$duration-normal;
 
   // Elements
   & > svg {
@@ -45,7 +45,7 @@ $icon-padding: $spacing-base-2;
 
   // States
   &:hover {
-    text-decoration-thickness: $border-width-default;
+    text-decoration-thickness: tokens.$border-width-default;
     text-decoration-color: $color-default;
   }
 
