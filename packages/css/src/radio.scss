@@ -5,16 +5,16 @@
 
 $classname: '#{utils.$prefix}-radio';
 // Color variables
-$radio-color-unchecked: $color-neutral-grey-600;
-$radio-color-checked: $color-interface-interaction;
-$radio-color-disabled: $color-neutral-grey-500;
+$color-unchecked: $color-neutral-grey-600;
+$color-checked: $color-interface-interaction;
+$color-disabled: $color-neutral-grey-500;
 // Size variables
-$radio-size-medium: $spacing-base-6;
-$radio-size-large: $spacing-base-8;
-$radio-size-checkmark-medium: $spacing-base-3;
-$radio-size-checkmark-large: calc($radio-size-checkmark-medium * 1.5);
-$radio-padding-label-medium: $spacing-base-2;
-$radio-padding-label-large: $spacing-base-3;
+$size-medium: utils.pxToRem(24px);
+$size-large: utils.pxToRem(32px);
+$size-checkmark-medium: utils.pxToRem(12px);
+$size-checkmark-large: utils.pxToRem(18px);
+$padding-label-medium: $spacing-base-2;
+$padding-label-large: $spacing-base-3;
 
 .#{$classname} {
   display: inline-flex;
@@ -51,15 +51,15 @@ $radio-padding-label-large: $spacing-base-3;
     align-items: center;
     position: relative;
 
-    padding-left: $radio-size-medium;
-    min-height: $radio-size-medium;
+    padding-left: $size-medium;
+    min-height: $size-medium;
 
     cursor: pointer;
     @include text-body-300();
     color: $color-text-background-light;
 
     &--right {
-      padding-left: calc($radio-size-medium + $radio-padding-label-medium);
+      padding-left: calc($size-medium + $padding-label-medium);
     }
 
     // Radio button container
@@ -71,14 +71,14 @@ $radio-padding-label-large: $spacing-base-3;
       left: 0;
 
       // Medium size
-      width: $radio-size-medium;
-      height: $radio-size-medium;
+      width: $size-medium;
+      height: $size-medium;
 
       // Custom radio appearance
       border-radius: 50%;
       background-color: $color-neutral-white;
 
-      border: $border-width-default solid $radio-color-unchecked;
+      border: $border-width-default solid $color-unchecked;
 
       transition: border-color $duration-fast;
     }
@@ -89,11 +89,11 @@ $radio-padding-label-large: $spacing-base-3;
       display: inline-block;
       box-sizing: border-box;
       position: absolute;
-      left: calc(($radio-size-medium - $radio-size-checkmark-medium) / 2);
+      left: calc(($size-medium - $size-checkmark-medium) / 2);
 
       // Medium size
-      width: $radio-size-checkmark-medium;
-      height: $radio-size-checkmark-medium;
+      width: $size-checkmark-medium;
+      height: $size-checkmark-medium;
 
       border-radius: 50%;
       background-color: $color-neutral-white;
@@ -106,7 +106,7 @@ $radio-padding-label-large: $spacing-base-3;
   &:not([class*='#{$classname}--disabled']) > input.#{$classname}__input {
     &:hover:not(:checked) ~ .#{$classname}__label {
       &::before {
-        border-color: $radio-color-checked;
+        border-color: $color-checked;
       }
       &::after {
         background-color: $color-interface-interaction-light;
@@ -114,10 +114,10 @@ $radio-padding-label-large: $spacing-base-3;
     }
     &:checked ~ .#{$classname}__label {
       &::before {
-        border-color: $radio-color-checked;
+        border-color: $color-checked;
       }
       &::after {
-        background-color: $radio-color-checked;
+        background-color: $color-checked;
       }
     }
   }
@@ -129,32 +129,32 @@ $radio-padding-label-large: $spacing-base-3;
 
     & > .#{$classname}__label {
       cursor: not-allowed;
-      color: $radio-color-disabled;
+      color: $color-disabled;
       &::before {
-        border-color: $radio-color-disabled;
+        border-color: $color-disabled;
       }
     }
     & > input.#{$classname}__input:checked ~ .#{$classname}__label::after {
-      background-color: $radio-color-disabled;
+      background-color: $color-disabled;
     }
   }
 
   // Size modifiers
   &--large {
     & > .#{$classname}__label {
-      min-height: $radio-size-large;
-      padding-left: calc($radio-size-large + $radio-padding-label-large);
+      min-height: $size-large;
+      padding-left: calc($size-large + $padding-label-large);
       @include text-body-400();
 
       &::before {
-        width: $radio-size-large;
-        height: $radio-size-large;
+        width: $size-large;
+        height: $size-large;
       }
 
       &::after {
-        left: calc(($radio-size-large - $radio-size-checkmark-large) / 2);
-        width: $radio-size-checkmark-large;
-        height: $radio-size-checkmark-large;
+        left: calc(($size-large - $size-checkmark-large) / 2);
+        width: $size-checkmark-large;
+        height: $size-checkmark-large;
       }
     }
   }
