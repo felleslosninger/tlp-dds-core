@@ -1,5 +1,5 @@
 @use '@digdir/ds-tokens/build/tokens.scss' as *;
-@use './typography.scss' as *;
+@use './typography.scss' as typography;
 @use './baseline/utils.scss' as utils;
 @use './baseline/baseline.scss' as baseline;
 
@@ -55,7 +55,7 @@ $padding-label-large: $spacing-base-3;
     min-height: $size-medium;
 
     cursor: pointer;
-    @include text-body-300();
+    @include typography.text-body-300();
     color: $color-text-background-light;
 
     &--right {
@@ -144,7 +144,7 @@ $padding-label-large: $spacing-base-3;
     & > .#{$classname}__label {
       min-height: $size-large;
       padding-left: calc($size-large + $padding-label-large);
-      @include text-body-400();
+      @include typography.text-body-400();
 
       &::before {
         width: $size-large;

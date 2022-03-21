@@ -1,5 +1,5 @@
 @use '@digdir/ds-tokens/build/tokens.scss' as *;
-@use './typography.scss' as *;
+@use './typography.scss' as typography;
 @use './baseline/utils.scss' as utils;
 
 $classname: '#{utils.$prefix}-panel-link';
@@ -53,7 +53,7 @@ $padding-icon-hover-offset: $spacing-base-1;
 
   // Elements
   & > &__label {
-    @include text-body-300();
+    @include typography.text-body-300();
     color: $color-text-background-light;
     padding-right: calc($size-icon-medium + $padding-label-icon);
   }
@@ -111,7 +111,7 @@ $padding-icon-hover-offset: $spacing-base-1;
     }
 
     & > .#{$classname}__label {
-      @include text-body-400();
+      @include typography.text-body-400();
       padding-right: calc($size-icon-large + $padding-label-icon);
     }
 

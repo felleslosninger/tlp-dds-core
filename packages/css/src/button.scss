@@ -1,5 +1,5 @@
 @use '@digdir/ds-tokens/build/tokens.scss' as *;
-@use './typography.scss' as *;
+@use './typography.scss' as typography;
 @use './baseline/utils.scss' as utils;
 
 $classname: '#{utils.$prefix}-button';
@@ -56,7 +56,7 @@ $size-icon: $spacing-base-6;
 
   // Size medium
   @include size($min-height-medium, $border-radius-large, $padding-medium);
-  @include text-interface-300();
+  @include typography.text-interface-300();
 
   // Primary
   background-color: $color-primary;
@@ -88,11 +88,11 @@ $size-icon: $spacing-base-6;
   // Size modifiers
   &--small {
     @include size($min-height-small, $border-radius-large, $padding-small);
-    @include text-interface-300();
+    @include typography.text-interface-300();
   }
   &--large {
     @include size($min-height-large, $border-radius-x-large, $padding-large);
-    @include text-interface-400();
+    @include typography.text-interface-400();
   }
 
   // Variant modifiers

@@ -1,5 +1,5 @@
 @use '@digdir/ds-tokens/build/tokens.scss' as *;
-@use './typography.scss' as *;
+@use './typography.scss' as typography;
 @use './baseline/utils.scss' as utils;
 
 $classname: '#{utils.$prefix}-icon-link';
@@ -19,7 +19,7 @@ $icon-padding: $spacing-base-2;
   overflow-wrap: anywhere;
   box-sizing: border-box;
 
-  @include text-body-300();
+  @include typography.text-body-300();
   color: $color-text-background-light;
 
   text-decoration: underline;
@@ -73,7 +73,7 @@ $icon-padding: $spacing-base-2;
   }
 
   &--large {
-    @include text-body-400();
+    @include typography.text-body-400();
 
     & > svg {
       width: $icon-size-large;

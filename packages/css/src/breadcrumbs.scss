@@ -1,5 +1,5 @@
 @use '@digdir/ds-tokens/build/tokens.scss' as *;
-@use './typography.scss' as *;
+@use './typography.scss' as typography;
 @use './baseline/utils.scss' as utils;
 
 $classname: '#{utils.$prefix}-breadcrumbs';
@@ -46,7 +46,7 @@ $margin-icon: $spacing-base-2;
 
     & .#{utils.$prefix}-link,
     .#{$classname}__text {
-      @include text-interface-300();
+      @include typography.text-interface-300();
     }
 
     &::after {
