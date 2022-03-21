@@ -112,8 +112,6 @@ $padding-placeholder-horizontal-icon-large: calc(
   &:not([class*='#{$classname}--disabled']) > input.#{$classname}__input {
     &:hover {
       cursor: text;
-    }
-    &:hover:not(:focus) {
       border-color: $color-interaction;
       & ~ .#{$classname}__icon-left svg,
       & ~ .#{$classname}__icon-right svg {
@@ -173,7 +171,6 @@ $padding-placeholder-horizontal-icon-large: calc(
       background-size: $icon-size-medium, $icon-size-medium;
       width: $icon-size-medium;
       height: $icon-size-medium;
-
       right: $padding-icon-medium;
     }
   }
