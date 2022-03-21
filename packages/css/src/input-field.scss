@@ -6,10 +6,10 @@
 $classname: '#{utils.$prefix}-input-field';
 // Color variables
 $color-default-grey: $color-neutral-grey-600;
+$color-hover-grey: $color-neutral-grey-700;
 $color-active-grey: $color-neutral-grey-800;
 $color-interaction: $color-interface-interaction;
 $color-disabled-grey: $color-neutral-grey-500;
-$color-error-grey: $color-neutral-grey-700;
 // Size variables
 $min-width: calc($spacing-base-8 * 10);
 $height-medium: $spacing-base-12;
@@ -115,7 +115,7 @@ $padding-placeholder-horizontal-icon-large: calc(
       border-color: $color-interaction;
       & ~ .#{$classname}__icon-left svg,
       & ~ .#{$classname}__icon-right svg {
-        fill: $color-active-grey;
+        fill: $color-hover-grey;
       }
     }
     &:focus {
@@ -155,9 +155,6 @@ $padding-placeholder-horizontal-icon-large: calc(
       .#{$classname}__input:not(:hover):not(:focus) {
       border-color: $color-interface-error;
       box-shadow: inset 0 0 0 $border-width-thin $color-interface-error;
-    }
-    & .#{$classname}__icon-left svg {
-      fill: $color-error-grey;
     }
     // Error icon
     &::after {
