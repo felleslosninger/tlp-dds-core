@@ -5,6 +5,7 @@
 
 $classname: '#{utils.$prefix}-input-field';
 // Color variables
+$color-background: $color-neutral-white;
 $color-default-grey: $color-neutral-grey-600;
 $color-hover-grey: $color-neutral-grey-700;
 $color-active-grey: $color-neutral-grey-800;
@@ -47,7 +48,7 @@ $padding-placeholder-horizontal-icon-large: calc(
 
     @include text-body-300();
 
-    background-color: $color-neutral-white;
+    background-color: $color-background;
     color: $color-text-background-light;
     padding: 0 $padding-placeholder-horizontal-medium;
 

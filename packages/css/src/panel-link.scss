@@ -4,6 +4,7 @@
 
 $classname: '#{utils.$prefix}-panel-link';
 // Color variables
+$color-background: $color-neutral-white;
 $color-border: $color-interface-interaction;
 $color-hover: $color-interface-interaction-light;
 $color-icon: $color-neutral-grey-700;
@@ -34,7 +35,7 @@ $padding-icon-hover-offset: $spacing-base-1;
   box-sizing: border-box;
   overflow-wrap: anywhere;
 
-  background-color: $color-neutral-white;
+  background-color: $color-background;
   border: $border-width-default solid transparent;
 
   // Medium size
