@@ -55,6 +55,8 @@
     "build": "lerna run build",
     "build:docs": "build-storybook -o ./docs",
     "lint": "stylelint '**/*.scss'",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check",
     "version:changed": "yarn build && lerna version --no-push --conventional-commits --no-private",
     "publish:changed": "lerna publish from-git",
     "version-publish-push": "yarn build && lerna publish --conventional-commits",
@@ -64,10 +66,7 @@
     "trailingComma": "all",
     "tabWidth": 2,
     "semi": false,
-    "singleQuote": true,
-    "cssEnable": [
-      "scss"
-    ]
+    "singleQuote": true
   },
   "stylelint": {
     "ignoreFiles": [
