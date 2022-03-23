@@ -54,7 +54,9 @@
     "start:clean": "start-storybook -p 6006 --no-manager-cache",
     "build": "lerna run build",
     "build:docs": "build-storybook -o ./docs",
-    "lint": "stylelint '**/*.scss'",
+    "lint": "yarn lint:scss && yarn lint:css",
+    "lint:scss": "stylelint '**/*.scss' --config='./stylelint.config.js'",
+    "lint:css": "stylelint './packages/css/build/index.css' --config='./stylelint-post.config.js'",
     "format": "prettier . --write",
     "format:check": "prettier . --check",
     "version:changed": "yarn build && lerna version --no-push --conventional-commits --no-private",
@@ -67,22 +69,5 @@
     "tabWidth": 2,
     "semi": false,
     "singleQuote": true
-  },
-  "stylelint": {
-    "ignoreFiles": [
-      "./packages/**/build/**"
-    ],
-    "plugins": [
-      "stylelint-scss"
-    ],
-    "extends": [
-      "stylelint-config-recommended-scss",
-      "stylelint-config-prettier"
-    ],
-    "rules": {
-      "at-rule-no-unknown": null,
-      "scss/operator-no-newline-after": null,
-      "scss/at-rule-no-unknown": true
-    }
   }
 }
