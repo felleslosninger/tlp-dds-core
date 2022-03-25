@@ -29,13 +29,17 @@ På denne siden finner du alle design tokens og instrukser til hvordan man kan b
 
 [![](https://data.jsdelivr.com/v1/package/npm/@digdir/ds-tokens/badge)](https://www.jsdelivr.com/package/npm/@digdir/ds-tokens)
 
+Bruk av design tokens gjennom CDN (Content Delivery Network). 
+
+Tjenesten jsDelivr er brukt i eksemplene her. Verktøyet 
+[https://www.srihash.org/](https://www.srihash.org/) kan brukes til å generere Subresource Integrity hash `integrity="..."` til riktig versjon av ønsket fil fra tokens-pakken. Dette brukes for å sikre at filen som hentes ikke er endret.
 
 ```html
 <!-- kun CSS v1.8.1-->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@digdir/ds-tokens@1.8.1/build/tokens.css" integrity="sha512-P6F9pSg9sm/8QwAI90VhIIl15eBFRiKWfoGPw4HYNFY3FTxeGuny08Q6RqWI5IafZiDlUArbixX+Qn/CzvlQOg==" crossorigin="anonymous">
 ```
+
 **1. Link stilarked i `<head>` i HTML-dokumentet.**
-([https://www.srihash.org/](https://www.srihash.org/) kan brukes til å generere Subresource Integrity hash `integrity="..."` til riktig versjon av ønsket fil fra tokens-pakken. Dette brukes for å sikre at filen som hentes ikke er endret.)
 
 **2. Bruk variablene etter behov i inkluderte CSS-stilark.**
 
@@ -60,6 +64,8 @@ På denne siden finner du alle design tokens og instrukser til hvordan man kan b
 
 [![](https://img.shields.io/npm/dm/@digdir/ds-tokens.svg)](https://www.npmjs.com/package/@digdir/ds-tokens)
 
+Bruk av design tokens gjennom NPM (Node Package Manager).
+
 **1. Installer pakken i kommandolinjen ved hjelp av NPM eller Yarn.**
 
 `npm install @digdir/ds-tokens`
@@ -70,7 +76,7 @@ eller
 
 **2. Importer og bruk deretter variablene i ønsket format.**
 
-##### CSS
+##### Bruk i CSS
 
 ```css
 /* Importer */
@@ -81,7 +87,7 @@ eller
 }
 ```
 
-##### SCSS
+##### Bruk i SCSS
 
 ```scss
 // Importer
@@ -140,9 +146,9 @@ og tar utgangspunkt i den vanligste standarden der `1rem = 16px`.
 
 ### Bruddpunkter
 
-Bruddpunktene tar utgangspunkt i verdiene benyttet i [Bootstrap grid](https://getbootstrap.com/docs/5.1/layout/grid/), og følger de samme t-skjortestørrelsene. De er ment for å brukes som `min-width` i responsivt design av nettsider ved hjelp av [media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries).
+Bruddpunktene tar utgangspunkt i verdiene benyttet i [Bootstrap grid](https://getbootstrap.com/docs/5.1/layout/grid/), og følger de samme t-skjortestørrelsene. De er ment for å brukes som `min-width`, eller `max-width` i responsivt design av nettsider ved hjelp av [media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries).
 
-For eksempel vil `@media (min-width: var(--breakpoint-medium)) { ... } ` kunne brukes for å treffe de fleste tablets.
+For eksempel vil `@media (min-width: var(--breakpoint-medium)) { ... } ` kunne brukes for å treffe de fleste tablets (og større skjermstørrelser).
 
 <DesignTokenDocBlock categoryName="Breakpoints" />
 
