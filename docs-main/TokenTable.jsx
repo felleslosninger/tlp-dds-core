@@ -76,7 +76,6 @@ const FontWeightPreview = ({ value }) => {
 
   return <div style={boxStyling}>Lorem ipsum</div>
 }
-
 const FontLineHeightPreview = ({ value }) => {
   const boxStyling = {
     lineHeight: value,
@@ -89,6 +88,17 @@ const FontLineHeightPreview = ({ value }) => {
       dicta.
     </div>
   )
+}
+const BorderWidthPreview = ({ value }) => {
+  const boxStyling = {
+    borderWidth: value,
+    borderStyle: 'solid',
+    borderColor: tokens.color.neutral.grey['800'],
+    width: tokens.spacing.base['10'],
+    height: tokens.spacing.base['10'],
+  }
+
+  return <div style={boxStyling}></div>
 }
 
 /**
@@ -104,7 +114,7 @@ const TokenRow = ({ name, value, children, preview = true }) => {
   let displayedValue = value
 
   // Display pixel value
-  if (value.substr(value.length - 3) === 'rem') {
+  if (value.length > 3 && value.substr(value.length - 3) === 'rem') {
     const pixelValue = parseFloat(value) * 16
     displayedValue = `${value} (${pixelValue}px)`
   }
@@ -142,19 +152,20 @@ const TokenRow = ({ name, value, children, preview = true }) => {
 /**
  * Table displaying design tokens ( |-name-|-value-|-preview-| ).
  *
- * @param {string} category: spacing | color | font-size | font-weight | font-line-height
+ * @param {string} category: spacing | color | font-size | font-weight | font-line-height | font-family | border-width
  * @param {boolean} preview: display preview of token
  */
 const TokenTable = ({ category = '', preview = true }) => {
   let tokenSubset = tokens[category]
 
-  if (category.startsWith('font')) {
-    const subcategory = category.split('-')[1]
-    tokenSubset = tokens['font'][subcategory]
+  // Resolve kebab-case categories
+  if (category.startsWith('font') || category.startsWith('border')) {
+    const subcategories = category.split('-')
+    tokenSubset = tokens[subcategories[0]][subcategories[1]]
   }
 
   let tokensMap = {}
-  // Check edge case where category has one value
+  // Resolve edge case where category has one value
   if (typeof tokenSubset !== 'object') {
     tokensMap = { [category]: tokenSubset }
   } else {
@@ -179,6 +190,9 @@ const TokenTable = ({ category = '', preview = true }) => {
             {category === 'font-weight' && <FontWeightPreview value={value} />}
             {category === 'font-line-height' && (
               <FontLineHeightPreview value={value} />
+            )}
+            {category === 'border-width' && (
+              <BorderWidthPreview value={value} />
             )}
           </TokenRow>
         ))}
