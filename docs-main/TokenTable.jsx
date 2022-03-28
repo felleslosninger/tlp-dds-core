@@ -39,20 +39,31 @@ const flattenObject = (jsonObject = {}, prefix = '', result = {}) => {
   return result
 }
 
+const SpacingPreview = ({ value }) => {
+  const boxStyling = {
+    backgroundColor: tokens.color.brand.third['400'],
+    height: value,
+    width: value,
+  }
+
+  return <div style={boxStyling}></div>
+}
+
 /**
  * Table row displaying spacing design token ( name | value | example ).
  *
  * @param {string} name
  * @param {string} value: unit in rem, e.g. "1rem"
+ * @param {React.ReactNode} children: preview of token
  */
-const SpacingRow = ({ name, value }) => {
+const TokenRow = ({ name, value, children }) => {
   const scssVariable = `$${name}`
-  const pixelValue = parseFloat(value) * 16
+  let displayedValue = value
 
-  const boxStyling = {
-    backgroundColor: tokens.color.brand.third['400'],
-    height: value,
-    width: value,
+  // Display pixel value
+  if (value.substr(value.length - 3) === 'rem') {
+    const pixelValue = parseFloat(value) * 16
+    displayedValue = `${value} (${pixelValue}px)`
   }
 
   return (
@@ -78,13 +89,9 @@ const SpacingRow = ({ name, value }) => {
         </Tippy>
       </td>
       <td className="ddsdocs-table__data-cell">
-        <code>
-          {value} ({pixelValue}px)
-        </code>
+        <code>{displayedValue}</code>
       </td>
-      <td className="ddsdocs-table__data-cell">
-        <div style={boxStyling}></div>
-      </td>
+      {children && <td className="ddsdocs-table__data-cell">{children}</td>}
     </tr>
   )
 }
@@ -108,7 +115,9 @@ const TokenTable = () => {
       </thead>
       <tbody className="ddsdocs-table__body">
         {Object.entries(tokensMap).map(([key, value]) => (
-          <SpacingRow name={key} value={value} key={key} />
+          <TokenRow name={key} value={value} key={key}>
+            <SpacingPreview value={value} />
+          </TokenRow>
         ))}
       </tbody>
     </table>
