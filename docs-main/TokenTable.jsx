@@ -70,6 +70,13 @@ const FontSizePreview = ({ value }) => {
 
   return <div style={boxStyling}>Lorem ipsum</div>
 }
+const FontWeightPreview = ({ value }) => {
+  const boxStyling = {
+    fontWeight: value,
+  }
+
+  return <div style={boxStyling}>Lorem ipsum</div>
+}
 
 /**
  * Table row displaying spacing design token ( name | value | example ).
@@ -148,6 +155,7 @@ const TokenTable = ({ category = '' }) => {
             {category === 'spacing' && <SpacingPreview value={value} />}
             {category === 'color' && <ColorPreview value={value} />}
             {category === 'font-size' && <FontSizePreview value={value} />}
+            {category === 'font-weight' && <FontWeightPreview value={value} />}
           </TokenRow>
         ))}
       </tbody>
