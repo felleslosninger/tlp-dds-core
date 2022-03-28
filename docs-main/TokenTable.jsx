@@ -49,6 +49,16 @@ const SpacingPreview = ({ value }) => {
   return <div style={boxStyling}></div>
 }
 
+const ColorPreview = ({ value }) => {
+  const boxStyling = {
+    backgroundColor: value,
+    height: tokens.spacing['4'],
+    width: '100%',
+  }
+
+  return <div style={boxStyling}></div>
+}
+
 /**
  * Table row displaying spacing design token ( name | value | example ).
  *
@@ -99,10 +109,11 @@ const TokenRow = ({ name, value, children }) => {
 /**
  * Table displaying design tokens ( name | value | example ).
  *
+ * @param {string} category: spacing, color
  */
-const TokenTable = () => {
-  const spacingTokens = tokens.spacing
-  const tokensMap = flattenObject(spacingTokens, 'spacing-')
+const TokenTable = ({ category = '' }) => {
+  const spacingTokens = tokens[category]
+  const tokensMap = flattenObject(spacingTokens, `${category}-`)
 
   return (
     <table className="ddsdocs-table">
@@ -116,7 +127,8 @@ const TokenTable = () => {
       <tbody className="ddsdocs-table__body">
         {Object.entries(tokensMap).map(([key, value]) => (
           <TokenRow name={key} value={value} key={key}>
-            <SpacingPreview value={value} />
+            {category === 'spacing' && <SpacingPreview value={value} />}
+            {category === 'color' && <ColorPreview value={value} />}
           </TokenRow>
         ))}
       </tbody>
