@@ -100,6 +100,18 @@ const BorderWidthPreview = ({ value }) => {
 
   return <div style={boxStyling}></div>
 }
+const BorderRadiusPreview = ({ value }) => {
+  const boxStyling = {
+    borderRadius: value,
+    borderWidth: tokens.border.width.default,
+    borderStyle: 'solid',
+    borderColor: tokens.color.neutral.grey['800'],
+    width: tokens.spacing.base['20'],
+    height: tokens.spacing.base['15'],
+  }
+
+  return <div style={boxStyling}></div>
+}
 
 /**
  * Table row displaying spacing design token ( |-name-|-value-|-preview-| ).
@@ -193,6 +205,9 @@ const TokenTable = ({ category = '', preview = true }) => {
             )}
             {category === 'border-width' && (
               <BorderWidthPreview value={value} />
+            )}
+            {category === 'border-radius' && (
+              <BorderRadiusPreview value={value} />
             )}
           </TokenRow>
         ))}
