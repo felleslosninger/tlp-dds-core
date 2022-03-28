@@ -1,0 +1,26 @@
+@use '@digdir/ds-tokens/build/tokens.scss' as tokens;
+@use '@digdir/ds-core-css/build/src/typography.scss' as typography;
+
+.ddsdocs-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  // &__header {}
+  &__body {
+    @include typography.text-body-200();
+  }
+  &__row {
+    border-bottom: tokens.$border-width-default solid
+      tokens.$color-neutral-grey-300;
+  }
+  &__header-cell {
+    padding: tokens.$spacing-base-6 tokens.$spacing-base-6;
+  }
+  &__data-cell {
+    padding: tokens.$spacing-base-3 tokens.$spacing-base-6;
+  }
+
+  & .dds-button {
+    @include typography.text-body-200();
+  }
+}

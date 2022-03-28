@@ -8,6 +8,7 @@
   "license": "BSD-3-Clause",
   "devDependencies": {
     "@babel/core": "^7.15.8",
+    "@babel/preset-react": "^7.16.7",
     "@storybook/addon-a11y": "^6.5.0-alpha.41",
     "@storybook/addon-actions": "^6.5.0-alpha.41",
     "@storybook/addon-essentials": "^6.5.0-alpha.41",
@@ -19,6 +20,7 @@
     "@storybook/manager-webpack5": "^6.5.0-alpha.41",
     "@storybook/preset-scss": "^1.0.3",
     "@storybook/theming": "^6.5.0-alpha.41",
+    "@tippyjs/react": "^4.2.6",
     "@whitespace/storybook-addon-html": "^5.0.0",
     "babel-loader": "^8.2.2",
     "classnames": "^2.3.1",

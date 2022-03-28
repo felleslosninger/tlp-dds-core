@@ -40,4 +40,10 @@ module.exports = {
     })
     return config
   },
+  babel: async (options) => {
+    return {
+      ...options,
+      presets: [...options.presets, '@babel/preset-react'],
+    }
+  },
 }
