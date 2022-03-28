@@ -39,6 +39,12 @@ const flattenObject = (jsonObject = {}, prefix = '', result = {}) => {
   return result
 }
 
+/**
+ * Token preview cell block
+ *
+ * @param {string} value
+ * @returns React.ReactNode
+ */
 const SpacingPreview = ({ value }) => {
   const boxStyling = {
     backgroundColor: tokens.color.brand.third['400'],
@@ -48,7 +54,6 @@ const SpacingPreview = ({ value }) => {
 
   return <div style={boxStyling}></div>
 }
-
 const ColorPreview = ({ value }) => {
   const boxStyling = {
     backgroundColor: value,
@@ -57,6 +62,13 @@ const ColorPreview = ({ value }) => {
   }
 
   return <div style={boxStyling}></div>
+}
+const FontSizePreview = ({ value }) => {
+  const boxStyling = {
+    fontSize: value,
+  }
+
+  return <div style={boxStyling}>Lorem ipsum</div>
 }
 
 /**
@@ -109,11 +121,17 @@ const TokenRow = ({ name, value, children }) => {
 /**
  * Table displaying design tokens ( name | value | example ).
  *
- * @param {string} category: spacing, color
+ * @param {string} category: spacing, color, font-size
  */
 const TokenTable = ({ category = '' }) => {
-  const spacingTokens = tokens[category]
-  const tokensMap = flattenObject(spacingTokens, `${category}-`)
+  let tokensObject = tokens[category]
+
+  if (category.startsWith('font')) {
+    const subcategory = category.split('-')[1]
+    tokensObject = tokens['font'][subcategory]
+  }
+
+  const tokensMap = flattenObject(tokensObject, `${category}-`)
 
   return (
     <table className="ddsdocs-table">
@@ -129,6 +147,7 @@ const TokenTable = ({ category = '' }) => {
           <TokenRow name={key} value={value} key={key}>
             {category === 'spacing' && <SpacingPreview value={value} />}
             {category === 'color' && <ColorPreview value={value} />}
+            {category === 'font-size' && <FontSizePreview value={value} />}
           </TokenRow>
         ))}
       </tbody>
