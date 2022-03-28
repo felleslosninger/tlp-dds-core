@@ -78,11 +78,25 @@ const FontWeightPreview = ({ value }) => {
   return <div style={boxStyling}>Lorem ipsum</div>
 }
 
+const FontLineHeightPreview = ({ value }) => {
+  const boxStyling = {
+    lineHeight: value,
+    maxWidth: '150px',
+  }
+
+  return (
+    <div style={boxStyling}>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam veniam eum
+      dicta.
+    </div>
+  )
+}
+
 /**
  * Table row displaying spacing design token ( name | value | example ).
  *
  * @param {string} name
- * @param {string} value: unit in rem, e.g. "1rem"
+ * @param {string} value
  * @param {React.ReactNode} children: preview of token
  */
 const TokenRow = ({ name, value, children }) => {
@@ -156,6 +170,9 @@ const TokenTable = ({ category = '' }) => {
             {category === 'color' && <ColorPreview value={value} />}
             {category === 'font-size' && <FontSizePreview value={value} />}
             {category === 'font-weight' && <FontWeightPreview value={value} />}
+            {category === 'font-line-height' && (
+              <FontLineHeightPreview value={value} />
+            )}
           </TokenRow>
         ))}
       </tbody>
