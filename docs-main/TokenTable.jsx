@@ -43,7 +43,6 @@ const flattenObject = (jsonObject = {}, prefix = '', result = {}) => {
  * Token preview cell block
  *
  * @param {string} value
- * @returns React.ReactNode
  */
 const SpacingPreview = ({ value }) => {
   const boxStyling = {
@@ -93,13 +92,14 @@ const FontLineHeightPreview = ({ value }) => {
 }
 
 /**
- * Table row displaying spacing design token ( name | value | example ).
+ * Table row displaying spacing design token ( |-name-|-value-|-preview-| ).
  *
  * @param {string} name
  * @param {string} value
- * @param {React.ReactNode} children: preview of token
+ * @param {React.ReactNode} children: element to be displayed as preview of token
+ * @param {boolean} preview: display preview of token
  */
-const TokenRow = ({ name, value, children }) => {
+const TokenRow = ({ name, value, children, preview = true }) => {
   const scssVariable = `$${name}`
   let displayedValue = value
 
@@ -134,25 +134,32 @@ const TokenRow = ({ name, value, children }) => {
       <td className="ddsdocs-table__data-cell">
         <code>{displayedValue}</code>
       </td>
-      {children && <td className="ddsdocs-table__data-cell">{children}</td>}
+      {preview && <td className="ddsdocs-table__data-cell">{children}</td>}
     </tr>
   )
 }
 
 /**
- * Table displaying design tokens ( name | value | example ).
+ * Table displaying design tokens ( |-name-|-value-|-preview-| ).
  *
- * @param {string} category: spacing, color, font-size
+ * @param {string} category: spacing | color | font-size | font-weight | font-line-height
+ * @param {boolean} preview: display preview of token
  */
-const TokenTable = ({ category = '' }) => {
-  let tokensObject = tokens[category]
+const TokenTable = ({ category = '', preview = true }) => {
+  let tokenSubset = tokens[category]
 
   if (category.startsWith('font')) {
     const subcategory = category.split('-')[1]
-    tokensObject = tokens['font'][subcategory]
+    tokenSubset = tokens['font'][subcategory]
   }
 
-  const tokensMap = flattenObject(tokensObject, `${category}-`)
+  let tokensMap = {}
+  // Check edge case where category has one value
+  if (typeof tokenSubset !== 'object') {
+    tokensMap = { [category]: tokenSubset }
+  } else {
+    tokensMap = flattenObject(tokenSubset, `${category}-`)
+  }
 
   return (
     <table className="ddsdocs-table">
@@ -160,12 +167,12 @@ const TokenTable = ({ category = '' }) => {
         <tr className="ddsdocs-table__row">
           <td className="ddsdocs-table__header-cell">Navn</td>
           <td className="ddsdocs-table__header-cell">Verdi</td>
-          <td className="ddsdocs-table__header-cell">Eksempel</td>
+          {preview && <td className="ddsdocs-table__header-cell">Eksempel</td>}
         </tr>
       </thead>
       <tbody className="ddsdocs-table__body">
         {Object.entries(tokensMap).map(([key, value]) => (
-          <TokenRow name={key} value={value} key={key}>
+          <TokenRow name={key} value={value} key={key} preview={preview}>
             {category === 'spacing' && <SpacingPreview value={value} />}
             {category === 'color' && <ColorPreview value={value} />}
             {category === 'font-size' && <FontSizePreview value={value} />}
