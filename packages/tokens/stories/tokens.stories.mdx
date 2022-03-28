@@ -1,5 +1,6 @@
 import { Meta } from '@storybook/addon-docs'
 import { DesignTokenDocBlock } from 'storybook-design-token/dist/doc-blocks'
+import TokenTable from '/docs-main/TokenTable.jsx'
 
 <Meta title="Tokens" />
 
@@ -121,7 +122,7 @@ og tar utgangspunkt i den vanligste standarden der __1rem = 16px__.
 `spacing-base-x` er et større sett med avstander til dersom man trenger flere verdier enn det som er definert i designet (for eksempel til å håndtere padding inni en komponent man bygger).
 Variablene tar utgangspunkt i inkrement på 0.25rem (4px) fra `spacing-base-1` som starter på verdien 0.25rem, slik at `spacing-base-4` er det samme som `4 * 0.25rem == 4 * 4px == 4 * spacing-base-1`, nemlig 1rem (16px).
 
-<DesignTokenDocBlock categoryName="Spacing" />
+<TokenTable />
 
 ### Typografi
 
