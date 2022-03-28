@@ -10,13 +10,9 @@ import 'tippy.js/dist/tippy.css'
  * Example input:
  * {
  *   "spacing": {
- *     "one": {
- *       "value": "0.5rem",
- *     },
+ *     "one": "0.5rem",
  *     "base": {
- *       "one": {
- *         "value": "0.25rem",
- *       },
+ *       "one": "0.25rem",
  *     }
  *   }
  * }
