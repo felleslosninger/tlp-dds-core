@@ -8,13 +8,13 @@ import 'tippy.js/dist/tippy.css'
  * Flatten object structure
  *
  * Example input:
- * const jsonObject = {
- *   "one": {
- *     "first": {
+ * {
+ *   "spacing": {
+ *     "one": {
  *       "value": "0.5rem",
  *     },
- *     "second": {
- *       "1": {
+ *     "base": {
+ *       "one": {
  *         "value": "0.25rem",
  *       },
  *     }
@@ -22,10 +22,14 @@ import 'tippy.js/dist/tippy.css'
  * }
  *
  * Example output:
- * const output = {
- *  'spacing-1': '0.5rem',
- *  'spacing-base-1': '0.25rem'
+ * {
+ *  'spacing-one': '0.5rem',
+ *  'spacing-base-one': '0.25rem'
  * }
+ *
+ *  @param {Object} jsonObject
+ *  @param {string} prefix
+ *  @param {Object} name
  *
  */
 const flattenObject = (jsonObject = {}, prefix = '', result = {}) => {
