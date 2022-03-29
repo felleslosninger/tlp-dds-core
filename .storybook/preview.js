@@ -49,7 +49,7 @@ export const parameters = {
           'Input-field',
         ],
         'Changelog',
-        ['Tokens', 'Core CSS'],
+        ['Tokens', 'Ikoner', 'Core CSS', 'Core JS'],
       ],
     },
   },
