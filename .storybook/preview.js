@@ -47,6 +47,7 @@ export const parameters = {
           'Icon-link',
           'Panel-link',
           'Input-field',
+          'Breadcrumbs',
         ],
         'Changelog',
         ['Tokens', 'Ikoner', 'Core CSS', 'Core JS'],
