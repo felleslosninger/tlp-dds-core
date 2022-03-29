@@ -112,6 +112,17 @@ const BorderRadiusPreview = ({ value }) => {
 
   return <div style={boxStyling}></div>
 }
+const DurationPreview = ({ value }) => {
+  const boxStyling = {
+    transitionDuration: value,
+  }
+
+  return (
+    <div className="ddsdocs-table__preview-duration" style={boxStyling}>
+      Hold over for forhåndsvisning
+    </div>
+  )
+}
 
 /**
  * Table row displaying spacing design token ( |-name-|-value-|-preview-| ).
@@ -209,6 +220,7 @@ const TokenTable = ({ category = '', preview = true }) => {
             {category === 'border-radius' && (
               <BorderRadiusPreview value={value} />
             )}
+            {category === 'duration' && <DurationPreview value={value} />}
           </TokenRow>
         ))}
       </tbody>

@@ -23,4 +23,19 @@
   & .dds-button {
     @include typography.text-body-200();
   }
+
+  // Preview cells
+  &__preview-duration {
+    display: grid;
+    place-content: center;
+    width: 100%;
+    border-width: tokens.$border-width-default;
+    border-style: solid;
+    border-color: tokens.$color-neutral-grey-800;
+    height: tokens.$spacing-6;
+
+    &:hover {
+      background-color: tokens.$color-brand-second-300;
+    }
+  }
 }
