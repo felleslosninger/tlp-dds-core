@@ -25,17 +25,42 @@
   }
 
   // Preview cells
-  &__preview-duration {
-    display: grid;
-    place-content: center;
-    width: 100%;
-    border-width: tokens.$border-width-default;
-    border-style: solid;
-    border-color: tokens.$color-neutral-grey-800;
-    height: tokens.$spacing-6;
+  &__preview {
+    &-spacing {
+      background-color: tokens.$color-brand-third-400;
+    }
+    &-color {
+      width: 100%;
+      height: tokens.$spacing-4;
+    }
+    &-font-line-height {
+      max-width: 150px;
+    }
+    &-border-width {
+      width: tokens.$spacing-base-10;
+      height: tokens.$spacing-base-10;
+      border-style: solid;
+      border-color: tokens.$color-neutral-grey-800;
+    }
+    &-border-radius {
+      width: tokens.$spacing-base-20;
+      height: tokens.$spacing-base-15;
+      border-width: tokens.$border-width-default;
+      border-style: solid;
+      border-color: tokens.$color-neutral-grey-800;
+    }
+    &-duration {
+      display: grid;
+      place-content: center;
+      width: 100%;
+      height: tokens.$spacing-6;
+      border-width: tokens.$border-width-default;
+      border-style: solid;
+      border-color: tokens.$color-neutral-grey-800;
 
-    &:hover {
-      background-color: tokens.$color-brand-second-300;
+      &:hover {
+        background-color: tokens.$color-brand-second-300;
+      }
     }
   }
 }

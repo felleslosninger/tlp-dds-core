@@ -42,84 +42,13 @@ const flattenObject = (jsonObject = {}, prefix = '', result = {}) => {
 /**
  * Token preview cell block
  *
- * @param {string} value
+ * @param {string} category: token category (used in CSS class name)
  */
-const SpacingPreview = ({ value }) => {
-  const boxStyling = {
-    backgroundColor: tokens.color.brand.third['400'],
-    height: value,
-    width: value,
-  }
-
-  return <div style={boxStyling}></div>
-}
-const ColorPreview = ({ value }) => {
-  const boxStyling = {
-    backgroundColor: value,
-    height: tokens.spacing['4'],
-    width: '100%',
-  }
-
-  return <div style={boxStyling}></div>
-}
-const FontSizePreview = ({ value }) => {
-  const boxStyling = {
-    fontSize: value,
-  }
-
-  return <div style={boxStyling}>Lorem ipsum</div>
-}
-const FontWeightPreview = ({ value }) => {
-  const boxStyling = {
-    fontWeight: value,
-  }
-
-  return <div style={boxStyling}>Lorem ipsum</div>
-}
-const FontLineHeightPreview = ({ value }) => {
-  const boxStyling = {
-    lineHeight: value,
-    maxWidth: '150px',
-  }
-
+const PreviewCell = ({ category, ...props }) => {
+  const classnamePrefix = 'ddsdocs-table__preview'
   return (
-    <div style={boxStyling}>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam veniam eum
-      dicta.
-    </div>
-  )
-}
-const BorderWidthPreview = ({ value }) => {
-  const boxStyling = {
-    borderWidth: value,
-    borderStyle: 'solid',
-    borderColor: tokens.color.neutral.grey['800'],
-    width: tokens.spacing.base['10'],
-    height: tokens.spacing.base['10'],
-  }
-
-  return <div style={boxStyling}></div>
-}
-const BorderRadiusPreview = ({ value }) => {
-  const boxStyling = {
-    borderRadius: value,
-    borderWidth: tokens.border.width.default,
-    borderStyle: 'solid',
-    borderColor: tokens.color.neutral.grey['800'],
-    width: tokens.spacing.base['20'],
-    height: tokens.spacing.base['15'],
-  }
-
-  return <div style={boxStyling}></div>
-}
-const DurationPreview = ({ value }) => {
-  const boxStyling = {
-    transitionDuration: value,
-  }
-
-  return (
-    <div className="ddsdocs-table__preview-duration" style={boxStyling}>
-      Hold over for forhåndsvisning
+    <div className={`${classnamePrefix}-${category}`} {...props}>
+      {props.children}
     </div>
   )
 }
@@ -180,6 +109,12 @@ const TokenRow = ({ name, value, children, preview = true }) => {
  */
 const TokenTable = ({ category = '', preview = true }) => {
   let tokenSubset = tokens[category]
+  let tokenMap = {}
+  // Preview cell sample text
+  const textDuration = 'Hold over for forhåndsvisning'
+  const textLongLorem =
+    'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam veniam eumdicta.'
+  const textShortLorem = 'Lorem ipsum'
 
   // Resolve kebab-case categories
   if (category.startsWith('font') || category.startsWith('border')) {
@@ -187,12 +122,11 @@ const TokenTable = ({ category = '', preview = true }) => {
     tokenSubset = tokens[subcategories[0]][subcategories[1]]
   }
 
-  let tokensMap = {}
   // Resolve edge case where category has one value
   if (typeof tokenSubset !== 'object') {
-    tokensMap = { [category]: tokenSubset }
+    tokenMap = { [category]: tokenSubset }
   } else {
-    tokensMap = flattenObject(tokenSubset, `${category}-`)
+    tokenMap = flattenObject(tokenSubset, `${category}-`)
   }
 
   return (
@@ -205,22 +139,52 @@ const TokenTable = ({ category = '', preview = true }) => {
         </tr>
       </thead>
       <tbody className="ddsdocs-table__body">
-        {Object.entries(tokensMap).map(([key, value]) => (
+        {Object.entries(tokenMap).map(([key, value]) => (
           <TokenRow name={key} value={value} key={key} preview={preview}>
-            {category === 'spacing' && <SpacingPreview value={value} />}
-            {category === 'color' && <ColorPreview value={value} />}
-            {category === 'font-size' && <FontSizePreview value={value} />}
-            {category === 'font-weight' && <FontWeightPreview value={value} />}
+            {category === 'color' && (
+              <PreviewCell
+                category={category}
+                style={{ backgroundColor: value }}
+              />
+            )}
+            {category === 'spacing' && (
+              <PreviewCell
+                category={category}
+                style={{ width: value, height: value }}
+              />
+            )}
+            {category === 'font-size' && (
+              <PreviewCell category={category} style={{ fontSize: value }}>
+                {textShortLorem}
+              </PreviewCell>
+            )}
+            {category === 'font-weight' && (
+              <PreviewCell category={category} style={{ fontWeight: value }}>
+                {textShortLorem}
+              </PreviewCell>
+            )}
             {category === 'font-line-height' && (
-              <FontLineHeightPreview value={value} />
+              <PreviewCell category={category} style={{ lineHeight: value }}>
+                {textLongLorem}
+              </PreviewCell>
             )}
             {category === 'border-width' && (
-              <BorderWidthPreview value={value} />
+              <PreviewCell category={category} style={{ borderWidth: value }} />
             )}
             {category === 'border-radius' && (
-              <BorderRadiusPreview value={value} />
+              <PreviewCell
+                category={category}
+                style={{ borderRadius: value }}
+              />
             )}
-            {category === 'duration' && <DurationPreview value={value} />}
+            {category === 'duration' && (
+              <PreviewCell
+                category={category}
+                style={{ transitionDuration: value }}
+              >
+                {textDuration}
+              </PreviewCell>
+            )}
           </TokenRow>
         ))}
       </tbody>
