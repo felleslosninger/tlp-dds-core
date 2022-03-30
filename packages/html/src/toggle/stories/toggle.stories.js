@@ -29,8 +29,8 @@ const Template = (args) => {
   return createToggle(args)
 }
 
-export const RightLabel = Template.bind({})
-RightLabel.args = {
+export const LabelRight = Template.bind({})
+LabelRight.args = {
   label: 'Bryter',
   checked: false,
   variant: 'rightLabel',
@@ -38,8 +38,17 @@ RightLabel.args = {
   size: 'medium',
 }
 
-export const LeftLabel = Template.bind({})
-LeftLabel.args = {
+export const CheckedAndLabelRight = Template.bind({})
+CheckedAndLabelRight.args = {
+  label: 'Bryter',
+  checked: true,
+  variant: 'rightLabel',
+  toggleLabel: true,
+  size: 'medium',
+}
+
+export const LabelLeft = Template.bind({})
+LabelLeft.args = {
   label: 'Bryter',
   checked: false,
   variant: 'leftLabel',
@@ -47,8 +56,17 @@ LeftLabel.args = {
   size: 'medium',
 }
 
-export const RightStaticLabel = Template.bind({})
-RightStaticLabel.args = {
+export const CheckedAndLabelLeft = Template.bind({})
+CheckedAndLabelLeft.args = {
+  label: 'Bryter',
+  checked: true,
+  variant: 'leftLabel',
+  toggleLabel: true,
+  size: 'medium',
+}
+
+export const StaticLabelRight = Template.bind({})
+StaticLabelRight.args = {
   label: 'Bryter',
   checked: false,
   variant: 'rightLabel',
@@ -56,8 +74,17 @@ RightStaticLabel.args = {
   size: 'medium',
 }
 
-export const LeftStaticLabel = Template.bind({})
-LeftStaticLabel.args = {
+export const CheckedAndStaticLabelRight = Template.bind({})
+CheckedAndStaticLabelRight.args = {
+  label: 'Bryter',
+  checked: true,
+  variant: 'rightLabel',
+  toggleLabel: false,
+  size: 'medium',
+}
+
+export const StaticLabelLeft = Template.bind({})
+StaticLabelLeft.args = {
   label: 'Bryter',
   checked: false,
   variant: 'leftLabel',
@@ -76,7 +103,7 @@ DualLabel.args = {
 
 export const Small = Template.bind({})
 Small.args = {
-  label: 'Kompakt bryter',
+  label: 'Liten bryter',
   checked: false,
   variant: 'rightLabel',
   toggleLabel: true,
