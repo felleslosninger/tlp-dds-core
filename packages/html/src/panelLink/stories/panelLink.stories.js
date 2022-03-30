@@ -49,3 +49,10 @@ IconLeft.args = {
   size: 'medium',
   iconLeft: true,
 }
+
+export const LargeWithIconLeft = Template.bind({})
+LargeWithIconLeft.args = {
+  label: 'Panel link',
+  size: 'large',
+  iconLeft: true,
+}
