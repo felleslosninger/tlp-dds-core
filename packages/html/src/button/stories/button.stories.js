@@ -1,5 +1,7 @@
 import { createButton } from '../button.js'
 import { withDesign } from 'storybook-addon-designs'
+import { useEffect } from '@storybook/client-api'
+import { buttonScript } from '../../../../js/src/button.script.js'
 
 export default {
   title: 'Komponenter/Button',
@@ -29,6 +31,9 @@ export default {
 }
 
 const Template = ({ icon, ...args }) => {
+  useEffect(() => {
+    buttonScript()
+  })
   const iconLeft = icon === 'left'
   const iconRight = icon === 'right'
   return createButton({ iconLeft, iconRight, ...args })
