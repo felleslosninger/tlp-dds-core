@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/felleslosninger/tlp-storybook-base/compare/@digdir/ds-core-js@0.1.1...@digdir/ds-core-js@0.2.0) (2022-03-30)
+
+
+### Bug Fixes
+
+* **checkbox, radio:** remove event listeners when disabled ([2833827](https://github.com/felleslosninger/tlp-storybook-base/commit/28338278a1e4bef8e8aa350f2b8a1e0fe40b9bf5))
+
+
+### Features
+
+* **button:** add button script (remove event listeners and default action when disabled) ([bdb0050](https://github.com/felleslosninger/tlp-storybook-base/commit/bdb005034da1028e0f2014d85d540cb319a9e643))
+
+
+
+
+
 ## [0.1.1](https://github.com/felleslosninger/tlp-storybook-base/compare/@digdir/ds-core-js@0.1.0...@digdir/ds-core-js@0.1.1) (2022-01-21)
 
 
