@@ -2,6 +2,7 @@ import { createButton } from '../button.js'
 import { withDesign } from 'storybook-addon-designs'
 import { useEffect } from '@storybook/client-api'
 import { buttonScript } from '../../../../js/src/button.script.js'
+import { jsInfo } from '/docs-main/docsComponents.js'
 
 export default {
   title: 'Komponenter/Button',
@@ -10,6 +11,11 @@ export default {
     design: {
       type: 'figma',
       url: 'https://www.figma.com/file/vpM9dqqQPHqU6ogfKp5tlr/Digdir-admin?node-id=1329%3A12287',
+    },
+    docs: {
+      description: {
+        component: jsInfo,
+      },
     },
   },
   argTypes: {
@@ -55,12 +61,21 @@ Secondary.args = {
   size: 'medium',
 }
 
+const disabledDescription = `Til en deaktivert knapp benyttes JavaScript for komplett funksjonalitet. Se *"Kom i gang"* for mer info.`
+
 export const Disabled = Template.bind({})
 Disabled.args = {
   label: 'Deaktivert',
   disabled: true,
   variant: 'primary',
   size: 'medium',
+}
+Disabled.parameters = {
+  docs: {
+    description: {
+      story: disabledDescription,
+    },
+  },
 }
 
 export const IconLeft = Template.bind({})
