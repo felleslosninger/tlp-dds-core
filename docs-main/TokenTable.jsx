@@ -10,13 +10,9 @@ import 'tippy.js/dist/tippy.css'
  * Example input:
  * {
  *   "spacing": {
- *     "one": {
- *       "value": "0.5rem",
- *     },
+ *     "one": "0.5rem",
  *     "base": {
- *       "one": {
- *         "value": "0.25rem",
- *       },
+ *       "one": "0.25rem",
  *     }
  *   }
  * }
@@ -44,19 +40,35 @@ const flattenObject = (jsonObject = {}, prefix = '', result = {}) => {
 }
 
 /**
- * Table row displaying spacing design token ( name | value | example ).
+ * Token preview cell block
+ *
+ * @param {string} category: token category (used in CSS class name)
+ */
+const PreviewCell = ({ category, ...props }) => {
+  const classnamePrefix = 'ddsdocs-table__preview'
+  return (
+    <div className={`${classnamePrefix}-${category}`} {...props}>
+      {props.children}
+    </div>
+  )
+}
+
+/**
+ * Table row displaying spacing design token ( |-name-|-value-|-preview-| ).
  *
  * @param {string} name
- * @param {string} value: unit in rem, e.g. "1rem"
+ * @param {string} value
+ * @param {React.ReactNode} children: element to be displayed as preview of token
+ * @param {boolean} preview: display preview of token
  */
-const SpacingRow = ({ name, value }) => {
+const TokenRow = ({ name, value, children, preview = true }) => {
   const scssVariable = `$${name}`
-  const pixelValue = parseFloat(value) * 16
+  let displayedValue = value
 
-  const boxStyling = {
-    backgroundColor: tokens.color.brand.third['400'],
-    height: value,
-    width: value,
+  // Display pixel value
+  if (value.length > 3 && value.substr(value.length - 3) === 'rem') {
+    const pixelValue = parseFloat(value) * 16
+    displayedValue = `${value} (${pixelValue}px)`
   }
 
   return (
@@ -82,24 +94,40 @@ const SpacingRow = ({ name, value }) => {
         </Tippy>
       </td>
       <td className="ddsdocs-table__data-cell">
-        <code>
-          {value} ({pixelValue}px)
-        </code>
+        <code>{displayedValue}</code>
       </td>
-      <td className="ddsdocs-table__data-cell">
-        <div style={boxStyling}></div>
-      </td>
+      {preview && <td className="ddsdocs-table__data-cell">{children}</td>}
     </tr>
   )
 }
 
 /**
- * Table displaying design tokens ( name | value | example ).
+ * Table displaying design tokens ( |-name-|-value-|-preview-| ).
  *
+ * @param {string} category: spacing | color | font-size | font-weight | font-line-height | font-family | border-width
+ * @param {boolean} preview: display preview of token
  */
-const TokenTable = () => {
-  const spacingTokens = tokens.spacing
-  const tokensMap = flattenObject(spacingTokens, 'spacing-')
+const TokenTable = ({ category = '', preview = true }) => {
+  let tokenSubset = tokens[category]
+  let tokenMap = {}
+  // Preview cell sample text
+  const textDuration = 'Hold over for forhåndsvisning'
+  const textLongLorem =
+    'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam veniam eumdicta.'
+  const textShortLorem = 'Lorem ipsum'
+
+  // Resolve kebab-case categories
+  if (category.startsWith('font') || category.startsWith('border')) {
+    const subcategories = category.split('-')
+    tokenSubset = tokens[subcategories[0]][subcategories[1]]
+  }
+
+  // Resolve edge case where category has one value
+  if (typeof tokenSubset !== 'object') {
+    tokenMap = { [category]: tokenSubset }
+  } else {
+    tokenMap = flattenObject(tokenSubset, `${category}-`)
+  }
 
   return (
     <table className="ddsdocs-table">
@@ -107,12 +135,57 @@ const TokenTable = () => {
         <tr className="ddsdocs-table__row">
           <td className="ddsdocs-table__header-cell">Navn</td>
           <td className="ddsdocs-table__header-cell">Verdi</td>
-          <td className="ddsdocs-table__header-cell">Eksempel</td>
+          {preview && <td className="ddsdocs-table__header-cell">Eksempel</td>}
         </tr>
       </thead>
       <tbody className="ddsdocs-table__body">
-        {Object.entries(tokensMap).map(([key, value]) => (
-          <SpacingRow name={key} value={value} key={key} />
+        {Object.entries(tokenMap).map(([key, value]) => (
+          <TokenRow name={key} value={value} key={key} preview={preview}>
+            {category === 'color' && (
+              <PreviewCell
+                category={category}
+                style={{ backgroundColor: value }}
+              />
+            )}
+            {category === 'spacing' && (
+              <PreviewCell
+                category={category}
+                style={{ width: value, height: value }}
+              />
+            )}
+            {category === 'font-size' && (
+              <PreviewCell category={category} style={{ fontSize: value }}>
+                {textShortLorem}
+              </PreviewCell>
+            )}
+            {category === 'font-weight' && (
+              <PreviewCell category={category} style={{ fontWeight: value }}>
+                {textShortLorem}
+              </PreviewCell>
+            )}
+            {category === 'font-line-height' && (
+              <PreviewCell category={category} style={{ lineHeight: value }}>
+                {textLongLorem}
+              </PreviewCell>
+            )}
+            {category === 'border-width' && (
+              <PreviewCell category={category} style={{ borderWidth: value }} />
+            )}
+            {category === 'border-radius' && (
+              <PreviewCell
+                category={category}
+                style={{ borderRadius: value }}
+              />
+            )}
+            {category === 'duration' && (
+              <PreviewCell
+                category={category}
+                style={{ transitionDuration: value }}
+              >
+                {textDuration}
+              </PreviewCell>
+            )}
+          </TokenRow>
         ))}
       </tbody>
     </table>

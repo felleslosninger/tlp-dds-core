@@ -4,16 +4,6 @@ import tokens from '../node_modules/@digdir/ds-tokens/build/tokens.js'
 import '../packages/css/src/index.scss'
 import './customStyling.scss'
 
-// Parsing configuration for design-token storybook addon
-const tokenContext = require.context(
-  '!!raw-loader!../packages/tokens/stories',
-  true,
-  /.\.(css|less|scss|svg)$/,
-)
-const tokenFiles = tokenContext.keys().map(function (filename) {
-  return { filename: filename, content: tokenContext(filename).default }
-})
-
 export const parameters = {
   docs: {
     theme: customTheme,
@@ -56,8 +46,5 @@ export const parameters = {
   },
   actions: {
     disabled: true,
-  },
-  designToken: {
-    files: tokenFiles,
   },
 }
