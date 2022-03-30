@@ -51,7 +51,7 @@ Default.args = {
 const disabledDescription = `Til en deaktivert radioknapp benyttes JavaScript for komplett funksjonalitet. Se *"Kom i gang"* for mer info.`
 export const Disabled = Template.bind({})
 Disabled.args = {
-  label: 'Radioknapp',
+  label: 'Deaktivert radioknapp',
   disabled: true,
   checked: false,
   size: 'medium',
@@ -81,7 +81,7 @@ DisabledAndChecked.parameters = {
 
 export const Large = Template.bind({})
 Large.args = {
-  label: 'Large',
+  label: 'Stor',
   disabled: false,
   checked: false,
   size: 'large',
