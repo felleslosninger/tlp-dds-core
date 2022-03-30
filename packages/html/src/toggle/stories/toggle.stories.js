@@ -1,6 +1,11 @@
 import { createToggle } from '../toggle.js'
 import { withDesign } from 'storybook-addon-designs'
 
+const description = `
+  Toggle-komponenenten (bryter) kan enten ha en eller to etiketter (Dual label). 
+  Det fins varianter for å ha etikett som blir dempet når bryteren er skrudd av,
+  og varianter hvor etiketten har samme farge uavhengig av tilstand (Static label).
+  `
 export default {
   title: 'Komponenter/Toggle',
   decorators: [withDesign],
@@ -8,6 +13,11 @@ export default {
     design: {
       type: 'figma',
       url: 'https://www.figma.com/file/vpM9dqqQPHqU6ogfKp5tlr/DDS---Core-Components?node-id=5556%3A17012',
+    },
+    docs: {
+      description: {
+        component: description,
+      },
     },
   },
   argTypes: {
@@ -38,8 +48,8 @@ LabelRight.args = {
   size: 'medium',
 }
 
-export const CheckedAndLabelRight = Template.bind({})
-CheckedAndLabelRight.args = {
+export const CheckedWithLabelRight = Template.bind({})
+CheckedWithLabelRight.args = {
   label: 'Bryter',
   checked: true,
   variant: 'rightLabel',
@@ -56,8 +66,8 @@ LabelLeft.args = {
   size: 'medium',
 }
 
-export const CheckedAndLabelLeft = Template.bind({})
-CheckedAndLabelLeft.args = {
+export const CheckedWithLabelLeft = Template.bind({})
+CheckedWithLabelLeft.args = {
   label: 'Bryter',
   checked: true,
   variant: 'leftLabel',
@@ -74,8 +84,8 @@ StaticLabelRight.args = {
   size: 'medium',
 }
 
-export const CheckedAndStaticLabelRight = Template.bind({})
-CheckedAndStaticLabelRight.args = {
+export const CheckedWithStaticLabelRight = Template.bind({})
+CheckedWithStaticLabelRight.args = {
   label: 'Bryter',
   checked: true,
   variant: 'rightLabel',
@@ -96,6 +106,15 @@ export const DualLabel = Template.bind({})
 DualLabel.args = {
   label: 'Bryter',
   checked: false,
+  variant: 'dualLabel',
+  toggleLabel: true,
+  size: 'medium',
+}
+
+export const CheckedWithDualLabel = Template.bind({})
+CheckedWithDualLabel.args = {
+  label: 'Bryter',
+  checked: true,
   variant: 'dualLabel',
   toggleLabel: true,
   size: 'medium',
