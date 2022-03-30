@@ -24,7 +24,7 @@ export default {
       options: ['primary', 'secondary'],
       control: { type: 'select' },
     },
-    disabled: {},
+    disabled: { defaultValue: false, control: { type: 'boolean' } },
     size: {
       options: ['small', 'medium', 'large'],
       control: { type: 'select' },
@@ -48,17 +48,19 @@ const Template = ({ icon, ...args }) => {
 export const Primary = Template.bind({})
 Primary.args = {
   label: 'Primærknapp',
-  disabled: false,
   variant: 'primary',
+  disabled: false,
   size: 'medium',
+  icon: 'none',
 }
 
 export const Secondary = Template.bind({})
 Secondary.args = {
   label: 'Sekundærknapp',
-  disabled: false,
   variant: 'secondary',
+  disabled: false,
   size: 'medium',
+  icon: 'none',
 }
 
 const disabledDescription = `Til en deaktivert knapp benyttes JavaScript for komplett funksjonalitet. Se *"Kom i gang"* for mer info.`
@@ -66,9 +68,10 @@ const disabledDescription = `Til en deaktivert knapp benyttes JavaScript for kom
 export const Disabled = Template.bind({})
 Disabled.args = {
   label: 'Deaktivert',
-  disabled: true,
   variant: 'primary',
+  disabled: true,
   size: 'medium',
+  icon: 'none',
 }
 Disabled.parameters = {
   docs: {
@@ -81,8 +84,8 @@ Disabled.parameters = {
 export const IconLeft = Template.bind({})
 IconLeft.args = {
   label: 'Ikon',
-  disabled: false,
   variant: 'primary',
+  disabled: false,
   size: 'medium',
   icon: 'left',
 }
@@ -90,8 +93,8 @@ IconLeft.args = {
 export const IconRight = Template.bind({})
 IconRight.args = {
   label: 'Ikon',
-  disabled: false,
   variant: 'primary',
+  disabled: false,
   size: 'medium',
   icon: 'right',
 }
@@ -99,15 +102,35 @@ IconRight.args = {
 export const Small = Template.bind({})
 Small.args = {
   label: 'Liten',
-  disabled: false,
   variant: 'primary',
+  disabled: false,
   size: 'small',
+  icon: 'none',
 }
 
 export const Large = Template.bind({})
 Large.args = {
   label: 'Stor',
-  disabled: false,
   variant: 'primary',
+  disabled: false,
   size: 'large',
+  icon: 'none',
+}
+
+export const LargeAndSecondary = Template.bind({})
+LargeAndSecondary.args = {
+  label: 'Stor sekundærknapp',
+  variant: 'secondary',
+  disabled: false,
+  size: 'large',
+  icon: 'none',
+}
+
+export const DisabledWithIcon = Template.bind({})
+DisabledWithIcon.args = {
+  label: 'Deaktivert med ikon',
+  variant: 'primary',
+  disabled: true,
+  size: 'medium',
+  icon: 'right',
 }
