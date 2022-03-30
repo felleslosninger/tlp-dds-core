@@ -2,8 +2,8 @@ import classnames from 'classnames'
 import { sanitizeStrict, formatHtml } from '../utils.js'
 
 /**
- * @property {string} size: large (medium by default)
- * @property {string} variant: internal | external | shortcut (internal by default)
+ * @property {string} size - options: large (medium by default)
+ * @property {string} variant - options: internal | external | shortcut (internal by default)
  */
 const createIconLink = ({
   label = 'Click me',

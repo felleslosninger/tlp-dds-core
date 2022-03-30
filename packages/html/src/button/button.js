@@ -3,8 +3,8 @@ import { sanitizeStrict, formatHtml } from '../utils.js'
 import imageIcon from '@digdir/ds-icons/svg/image/outline.svg'
 
 /**
- * @property {string} variant: secondary (primary by default)
- * @property {string} size: small | large (medium by default)
+ * @property {string} variant - options: secondary (primary by default)
+ * @property {string} size - options: small | large (medium by default)
  */
 const createButton = ({
   label = 'Click me',

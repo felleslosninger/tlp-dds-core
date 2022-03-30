@@ -2,8 +2,8 @@ import classnames from 'classnames'
 import { sanitizeStrict, formatHtml } from '../utils.js'
 
 /**
- * @property {string} size: large (medium by default)
- * @property {string} variant: rightLabel | leftLabel | dualLabel (rightLabel by default)
+ * @property {string} size - options: large (medium by default)
+ * @property {string} variant - options: rightLabel | leftLabel | dualLabel (rightLabel by default)
  */
 const createToggle = ({
   label = 'Click me',
