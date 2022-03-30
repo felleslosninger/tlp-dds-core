@@ -1,10 +1,13 @@
 import classnames from 'classnames'
 import { sanitizeStrict, formatHtml } from '../utils.js'
 
+/**
+ * @property {string} size: large (medium by default)
+ */
 const createCheckbox = ({
   label = 'Click me',
   inputElementId = 'checkbox-input-id',
-  size = 'medium',
+  size = '',
   disabled = false,
   checked = false,
 }) => {

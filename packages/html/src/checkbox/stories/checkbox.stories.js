@@ -21,8 +21,8 @@ export default {
 
   argTypes: {
     label: {},
-    disabled: {},
-    checked: {},
+    disabled: { control: { type: 'boolean' } },
+    checked: { control: { type: 'boolean' } },
     size: {
       options: ['medium', 'large'],
       control: { type: 'select' },
@@ -46,7 +46,6 @@ Default.args = {
 }
 
 const disabledDescription = `Til en deaktivert avkrysningsboks benyttes JavaScript for komplett funksjonalitet. Se *"Kom i gang"* for mer info.`
-
 export const Disabled = Template.bind({})
 Disabled.args = {
   label: 'Deaktivert',
@@ -79,7 +78,7 @@ DisabledAndChecked.parameters = {
 
 export const Large = Template.bind({})
 Large.args = {
-  label: 'Large',
+  label: 'Stor',
   disabled: false,
   checked: false,
   size: 'large',
