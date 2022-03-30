@@ -1,5 +1,6 @@
 import { Meta } from '@storybook/addon-docs'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import InclusionSnippet from '../InclusionSnippet.jsx'
 
 <Meta title="Komponenter/Kom i gang" />
 
@@ -15,16 +16,18 @@ Noen komponenter trenger litt JavaScript for komplett funksjonalitet. Dette er t
 
 *Eksempel på direkte inkludering av CSS og JS i HTML:*
 
-```html
-<!-- CSS bundle -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@digdir/ds-core-css@1.0.3/build/index.css" integrity="sha512-Xh3c2/1ojGFr7MGchzlE14XNg1p8pf1iNUWVHVu9ceabMVHpHXaaJMrEvXmK9JoVTySeijfhXQt1F53CQ9XN/g==" crossorigin="anonymous">
+__CSS bundle__
 
-<!-- JS bundle -->
-<!-- ES module -->
-<script type="module" src="https://cdn.jsdelivr.net/npm/@digdir/ds-core-js@0.1.1/build/index.js" integrity="sha512-3Bd6k3gDs/yIlec7s6FJSZZpKwe5noPUzqG4G23uwLozlJO2HarT4xvnMBaembxoa/tbfRBLKnpN2Ag9oWM9AQ==" crossorigin="anonymous"></script>
-<!-- ES5-compatible fallback IIFE script -->
-<script nomodule defer src="https://cdn.jsdelivr.net/npm/@digdir/ds-core-js@0.1.1/build/index.iife.js" integrity="sha512-Jzk/oXlu3XLCrTYxORoLN58+0g/tz4axiHqKjnOHtkGp655T+DEZjtu6KNQpEQyH3RkfaZeNtSGQKipM3ph4XQ==" crossorigin="anonymous"></script>
-```
+<InclusionSnippet absoluteFilepath="packages/css/build/index.css" format="css"/>
+
+__JS bundle (ES module)__
+
+<InclusionSnippet absoluteFilepath="packages/js/build/index.js" format="js"/>
+
+__JS bundle (ES5-compatible fallback IIFE script)__
+
+<InclusionSnippet absoluteFilepath="packages/js/build/index.iife.js" format="iife"/>
+
 ## Innhold
 
 - [CSS / SCSS](#css--scss)
@@ -127,9 +130,10 @@ Radio | Disabled | [samme som over]
 
 *Link bundlen i `<head>` i HTML-dokumentet:*
 
-```html
-<!-- JS bundle (self-executing script) -->
-<script type="module" src="https://cdn.jsdelivr.net/npm/@digdir/ds-core-js@0.1.1/build/index.js" integrity="sha512-3Bd6k3gDs/yIlec7s6FJSZZpKwe5noPUzqG4G23uwLozlJO2HarT4xvnMBaembxoa/tbfRBLKnpN2Ag9oWM9AQ==" crossorigin="anonymous"></script>
-<!-- ES5-compatible fallback script -->
-<script nomodule defer src="https://cdn.jsdelivr.net/npm/@digdir/ds-core-js@0.1.1/build/index.iife.js" integrity="sha512-Jzk/oXlu3XLCrTYxORoLN58+0g/tz4axiHqKjnOHtkGp655T+DEZjtu6KNQpEQyH3RkfaZeNtSGQKipM3ph4XQ==" crossorigin="anonymous"></script>
-```
+__JS bundle (ES module)__
+
+<InclusionSnippet absoluteFilepath="packages/js/build/index.js" format="js"/>
+
+__ES5-compatible fallback IIFE script__
+
+<InclusionSnippet absoluteFilepath="packages/js/build/index.iife.js" format="iife"/>
