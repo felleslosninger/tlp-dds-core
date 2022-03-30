@@ -1,12 +1,8 @@
+import { disableElement } from './utils.js'
+
 const buttonScript = () => {
   const classPrefix = 'dds-button'
-  document.querySelectorAll(`.${classPrefix}--disabled`).forEach((element) => {
-    const clone = element.cloneNode(true)
-    clone.addEventListener('click', (event) => {
-      event.preventDefault()
-    })
-    element.replaceWith(clone)
-  })
+  disableElement(`.${classPrefix}--disabled`)
 }
 
 export { buttonScript }
