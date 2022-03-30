@@ -21,6 +21,7 @@ export default {
       control: { type: 'select' },
     },
     iconLeft: {},
+    inline: {},
   },
 }
 
@@ -64,7 +65,7 @@ Large.args = {
   inline: false,
 }
 
-export const Inline = () => {
+export const InlinePreview = () => {
   return String.raw`
     <div class='dds-text-heading-700'>
       Overskrift med
@@ -72,6 +73,7 @@ export const Inline = () => {
         label: 'intern lenke',
         size: 'large',
         variant: 'internal',
+        iconLeft: false,
         inline: true,
       })}
     </div>
@@ -82,6 +84,7 @@ export const Inline = () => {
         label: 'ekstern lenke',
         size: 'large',
         variant: 'external',
+        iconLeft: false,
         inline: true,
       })}
       til et sted.
@@ -93,10 +96,14 @@ export const Inline = () => {
         label: 'lenke',
         size: 'medium',
         variant: 'external',
+        iconLeft: false,
         inline: true,
       })} til et sted.
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed dolor mi. 
       Cras quis velit erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
       Maecenas tempor quam vel elit aliquam, id vulputate neque rutrum.
     </div>`
+}
+InlinePreview.parameters = {
+  controls: { disable: true },
 }

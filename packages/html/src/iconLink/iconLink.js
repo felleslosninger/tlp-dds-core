@@ -1,9 +1,13 @@
 import classnames from 'classnames'
 import { sanitizeStrict, formatHtml } from '../utils.js'
 
+/**
+ * @property {string} size: large (medium by default)
+ * @property {string} variant: internal | external | shortcut (internal by default)
+ */
 const createIconLink = ({
   label = 'Click me',
-  size = 'medium',
+  size = '',
   variant = 'internal',
   iconLeft = false,
   inline = false,
