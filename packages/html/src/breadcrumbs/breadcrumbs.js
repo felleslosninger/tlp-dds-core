@@ -1,5 +1,8 @@
 import { formatHtml } from '../utils.js'
 
+/**
+ * @property {number} depth - options: value >= 1
+ */
 const createBreadcrumbs = ({ depth = 1 }) => {
   const classPrefix = 'dds-breadcrumbs'
 
