@@ -21,11 +21,16 @@ export default {
         'dds-text-body-200',
         'dds-text-body-300',
         'dds-text-body-400',
-        'dds-text-ingress-500',
-        'dds-text-ingress-600',
         'dds-text-interface-200',
         'dds-text-interface-300',
         'dds-text-interface-400',
+        'dds-text-ingress-500',
+        'dds-text-ingress-600',
+        'dds-text-heading-500',
+        'dds-text-heading-600',
+        'dds-text-heading-700',
+        'dds-text-heading-800',
+        'dds-text-heading-900',
       ],
       control: { type: 'select' },
     },
@@ -50,7 +55,36 @@ const Template = ({ textClass = '', ...args }) => {
   return formatHtml(linkHtml)
 }
 
-export const Link = Template.bind({})
-Link.args = {
+export const Default = Template.bind({})
+Default.args = {
   paragraph: false,
+}
+
+export const InlinePreview = Template.bind({})
+InlinePreview.args = {
+  paragraph: true,
+}
+
+export const Interface200 = Template.bind({})
+Interface200.args = {
+  paragraph: false,
+  textClass: 'dds-text-interface-200',
+}
+
+export const Body400 = Template.bind({})
+Body400.args = {
+  paragraph: false,
+  textClass: 'dds-text-body-400',
+}
+
+export const Ingress500 = Template.bind({})
+Ingress500.args = {
+  paragraph: false,
+  textClass: 'dds-text-ingress-500',
+}
+
+export const Heading600 = Template.bind({})
+Heading600.args = {
+  paragraph: false,
+  textClass: 'dds-text-heading-600',
 }
