@@ -3,13 +3,17 @@ import { sanitizeStrict, formatHtml } from '../utils.js'
 import imageIcon from '@digdir/ds-icons/svg/image/outline.svg'
 import searchIcon from '@digdir/ds-icons/svg/search/outline.svg'
 
+/**
+ * @property {string} size - options: large (medium by default)
+ * @property {string} variant - options: disabled | error | errorMessage (none by default)
+ */
 const createInputField = ({
   label = 'Label',
   inputElementId = 'input-field-id',
   extraClasses = '',
   setAriaLabel = true,
-  size = 'medium',
-  variant = 'default',
+  size = '',
+  variant = '',
   iconLeft = false,
   iconRight = false,
   required = false,
