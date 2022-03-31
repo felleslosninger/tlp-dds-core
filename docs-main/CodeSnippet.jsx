@@ -27,7 +27,8 @@ import sriHashes from './generated-sri.json'
  * Generate HTML resource inclusion element <link> or <script>.
  * The CDN link and the SRI hash is generated from the given file.
  *
- * @param {string} linkFormat
+ * @property {string} absoluteFilepath - filepath relative to project root: e.g. packages/css/build/index.css
+ * @property {string} linkFormat
  * @returns {string} code snippet as string
  */
 const getCdnLinkElement = ({ absoluteFilepath, linkFormat }) => {

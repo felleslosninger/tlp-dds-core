@@ -102,7 +102,7 @@ const TokenRow = ({ name, value, children, preview = true }) => {
 }
 
 /**
- * Table displaying design tokens ( |-name-|-value-|-preview-| ).
+ * Table displaying design tokens ( |-name-|-value-|-preview-| or |-name-|-value-| ).
  *
  * @property {string} category - spacing | color | font-size | font-weight | font-line-height | font-family | border-width
  * @property {boolean} preview - display preview of token
