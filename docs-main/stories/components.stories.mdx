@@ -1,6 +1,6 @@
 import { Meta } from '@storybook/addon-docs'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
-import InclusionSnippet from '../InclusionSnippet.jsx'
+import { CdnSnippet } from '../CodeSnippet.jsx'
 
 <Meta title="Komponenter/Kom i gang" />
 
@@ -18,15 +18,15 @@ Noen komponenter trenger litt JavaScript for komplett funksjonalitet. Dette er t
 
 __CSS bundle__
 
-<InclusionSnippet absoluteFilepath="packages/css/build/index.css" format="css"/>
+<CdnSnippet absoluteFilepath="packages/css/build/index.css" linkFormat="css"/>
 
 __JS bundle (ES module)__
 
-<InclusionSnippet absoluteFilepath="packages/js/build/index.js" format="js"/>
+<CdnSnippet absoluteFilepath="packages/js/build/index.js" linkFormat="js"/>
 
 __JS bundle (ES5-compatible fallback IIFE script)__
 
-<InclusionSnippet absoluteFilepath="packages/js/build/index.iife.js" format="iife"/>
+<CdnSnippet absoluteFilepath="packages/js/build/index.iife.js" linkFormat="iife"/>
 
 ## Innhold
 
@@ -132,8 +132,8 @@ Radio | Disabled | [samme som over]
 
 __JS bundle (ES module)__
 
-<InclusionSnippet absoluteFilepath="packages/js/build/index.js" format="js"/>
+<CdnSnippet absoluteFilepath="packages/js/build/index.js" linkFormat="js"/>
 
 __ES5-compatible fallback IIFE script__
 
-<InclusionSnippet absoluteFilepath="packages/js/build/index.iife.js" format="iife"/>
+<CdnSnippet absoluteFilepath="packages/js/build/index.iife.js" linkFormat="iife"/>

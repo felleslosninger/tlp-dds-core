@@ -1,6 +1,6 @@
 import { Meta } from '@storybook/addon-docs'
 import TokenTable from '/docs-main/TokenTable.jsx'
-import InclusionSnippet from '/docs-main/InclusionSnippet.jsx'
+import { CdnSnippet, CodeSnippet } from '/docs-main/CodeSnippet.jsx'
 
 <Meta title="Tokens" />
 
@@ -43,14 +43,13 @@ Tjenesten jsDelivr er brukt i eksemplene her. Verktøyet
 
 __CSS bundle__
 
-<InclusionSnippet absoluteFilepath="packages/css/build/index.css" format="css"/>
+<CdnSnippet absoluteFilepath="packages/css/build/index.css" linkFormat="css"/>
 
 **1. Link stilarked i `<head>` i HTML-dokumentet.**
 
 **2. Bruk variablene etter behov i inkluderte CSS-stilark.**
 
-```html
-<!-- Eksempel på plassering i HTML-dokument -->
+<CodeSnippet children='<!-- Eksempel på plassering i HTML-dokument -->
 <!DOCTYPE html>
 <html lang="no">
   <head>
@@ -63,8 +62,7 @@ __CSS bundle__
   <body>
     <!-- [Innhold] -->
   </body>
-</html>
-```
+</html>'/>
 
 #### NPM
 

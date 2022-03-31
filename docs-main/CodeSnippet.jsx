@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
-import './InclusionSnippet.scss'
+import './CodeSnippet.scss'
 // Syntax highlighting
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter'
-import jsx from 'react-syntax-highlighter/dist/esm/languages/prism/jsx'
 import prism from 'react-syntax-highlighter/dist/esm/styles/prism/prism'
-SyntaxHighlighter.registerLanguage('jsx', jsx)
+import markup from 'react-syntax-highlighter/dist/esm/languages/prism/markup'
+// Import more language support here as needed e.g.:
+// import jsx from 'react-syntax-highlighter/dist/esm/languages/prism/jsx'
+SyntaxHighlighter.registerLanguage('markup', markup)
 // Tooltip
 import Tippy from '@tippyjs/react'
 import 'tippy.js/dist/tippy.css'
@@ -12,11 +14,17 @@ import 'tippy.js/dist/tippy.css'
 import { formatHtml } from '../packages/html/src/utils.js'
 import packageCss from '../packages/css/package.json'
 import packageJs from '../packages/js/package.json'
-import packageTokens from '../packages/tokens/package.json'
+import packageTokens from '@digdir/ds-tokens/package'
 import sriHashes from './generated-sri.json'
 
-const InclusionSnippet = ({ absoluteFilepath, format }) => {
-  const [tooltipText, setTooltipText] = useState('Kopier til utklippstavle')
+/**
+ * Generate HTML resource inclusion element <link> or <script>.
+ * The CDN link and the SRI hash is generated from the given file.
+ *
+ * @param {string} linkFormat
+ * @returns {string} code snippet as string
+ */
+const getCdnLinkElement = ({ absoluteFilepath, linkFormat }) => {
   let packageJson = {}
   // Find correct package.json based on package folder in absolute path
   switch (absoluteFilepath.split('/')[1]) {
@@ -40,7 +48,7 @@ const InclusionSnippet = ({ absoluteFilepath, format }) => {
   const sriHash = sriHashes[absoluteFilepath]
 
   let codeString = ''
-  switch (format) {
+  switch (linkFormat) {
     case 'css':
       codeString = `<link rel="stylesheet" href="${cdnLinkJsDelivr}" integrity="${sriHash}" crossorigin="anonymous">`
       break
@@ -54,12 +62,28 @@ const InclusionSnippet = ({ absoluteFilepath, format }) => {
       throw 'Invalid format value given.'
   }
 
+  return codeString
+}
+
+/**
+ * Code snippet block with syntax highlighting
+ *
+ * @property {string} children - string of code to be included in code snippet
+ * @property {boolean} formatAsHtml
+ */
+const CodeSnippet = ({ children = '', formatAsHtml = true }) => {
+  const [tooltipText, setTooltipText] = useState('Kopier til utklippstavle')
+
   const handleHoverOff = () => {
     setTimeout(() => setTooltipText('Kopier til utklippstavle'), 200)
   }
   const handleClick = () => {
-    navigator.clipboard.writeText(codeString)
+    navigator.clipboard.writeText(children)
     setTooltipText('Kopiert!')
+  }
+
+  if (formatAsHtml) {
+    children = formatHtml(children)
   }
 
   return (
@@ -67,21 +91,33 @@ const InclusionSnippet = ({ absoluteFilepath, format }) => {
       <button
         onClick={handleClick}
         onMouseLeave={handleHoverOff}
-        className="ddsdocs-inclusion-snippet"
+        className="ddsdocs-cdn-snippet"
       >
         <SyntaxHighlighter
-          language="jsx"
+          language="markup"
           style={prism}
           customStyle={{
             fontSize: '14px',
             margin: 0,
           }}
         >
-          {formatHtml(codeString)}
+          {children}
         </SyntaxHighlighter>
       </button>
     </Tippy>
   )
 }
 
-export default InclusionSnippet
+/**
+ * Code snippet with HTML resource inclusion element (with CDN link + SRI hash).
+ *
+ * @property {string} absoluteFilepath - filepath relative to project root: e.g. packages/css/build/index.css
+ * @property {string} linkFormat - options: css | js | iife
+ */
+const CdnSnippet = ({ absoluteFilepath, linkFormat, ...props }) => {
+  let codeString = getCdnLinkElement({ absoluteFilepath, linkFormat })
+
+  return <CodeSnippet {...props}>{codeString}</CodeSnippet>
+}
+
+export { CodeSnippet, CdnSnippet }
