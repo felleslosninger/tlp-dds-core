@@ -13,11 +13,15 @@ SyntaxHighlighter.registerLanguage('markup', markup)
 SyntaxHighlighter.registerLanguage('css', css)
 SyntaxHighlighter.registerLanguage('scss', scss)
 SyntaxHighlighter.registerLanguage('javascript', javascript)
+// Formatting
+import prettier from 'prettier/standalone.js'
+import parserJs from 'prettier/parser-flow.js'
+import parserHtml from 'prettier/parser-html.js'
+import parserCss from 'prettier/parser-postcss.js'
 // Tooltip
 import Tippy from '@tippyjs/react'
 import 'tippy.js/dist/tippy.css'
 
-import { formatHtml } from '../packages/html/src/utils.js'
 import packageCss from '../packages/css/package.json'
 import packageJs from '../packages/js/package.json'
 import packageTokens from '@digdir/ds-tokens/package'
@@ -76,14 +80,9 @@ const getCdnLinkElement = ({ absoluteFilepath, linkFormat }) => {
  * Code snippet block with syntax highlighting
  *
  * @property {string} children - string of code to be included in code snippet
- * @property {boolean} formatAsHtml
  * @property {string} language - options: markup | css | scss | javascript
  */
-const CodeSnippet = ({
-  children = '',
-  formatAsHtml = true,
-  language = 'markup',
-}) => {
+const CodeSnippet = ({ children = '', language = 'markup' }) => {
   const [tooltipText, setTooltipText] = useState('Kopier til utklippstavle')
 
   const handleHoverOff = () => {
@@ -94,8 +93,23 @@ const CodeSnippet = ({
     setTooltipText('Kopiert!')
   }
 
-  if (formatAsHtml) {
-    children = formatHtml(children)
+  if (language === 'css' || language === 'scss') {
+    children = prettier.format(children, {
+      parser: 'css',
+      plugins: [parserCss],
+    })
+  }
+  if (language === 'markup') {
+    children = prettier.format(children, {
+      parser: 'html',
+      plugins: [parserHtml],
+    })
+  }
+  if (language === 'javascript') {
+    children = prettier.format(children, {
+      parser: 'flow',
+      plugins: [parserJs],
+    })
   }
 
   return (
