@@ -4,9 +4,15 @@ import './CodeSnippet.scss'
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter'
 import prism from 'react-syntax-highlighter/dist/esm/styles/prism/prism'
 import markup from 'react-syntax-highlighter/dist/esm/languages/prism/markup'
+import css from 'react-syntax-highlighter/dist/esm/languages/prism/css'
+import scss from 'react-syntax-highlighter/dist/esm/languages/prism/scss'
+import javascript from 'react-syntax-highlighter/dist/esm/languages/prism/javascript'
 // Import more language support here as needed e.g.:
 // import jsx from 'react-syntax-highlighter/dist/esm/languages/prism/jsx'
 SyntaxHighlighter.registerLanguage('markup', markup)
+SyntaxHighlighter.registerLanguage('css', css)
+SyntaxHighlighter.registerLanguage('scss', scss)
+SyntaxHighlighter.registerLanguage('javascript', javascript)
 // Tooltip
 import Tippy from '@tippyjs/react'
 import 'tippy.js/dist/tippy.css'
@@ -70,8 +76,13 @@ const getCdnLinkElement = ({ absoluteFilepath, linkFormat }) => {
  *
  * @property {string} children - string of code to be included in code snippet
  * @property {boolean} formatAsHtml
+ * @property {string} language - options: markup | css | scss | javascript
  */
-const CodeSnippet = ({ children = '', formatAsHtml = true }) => {
+const CodeSnippet = ({
+  children = '',
+  formatAsHtml = true,
+  language = 'markup',
+}) => {
   const [tooltipText, setTooltipText] = useState('Kopier til utklippstavle')
 
   const handleHoverOff = () => {
@@ -94,7 +105,7 @@ const CodeSnippet = ({ children = '', formatAsHtml = true }) => {
         className="ddsdocs-cdn-snippet"
       >
         <SyntaxHighlighter
-          language="markup"
+          language={language}
           style={prism}
           customStyle={{
             fontSize: '14px',

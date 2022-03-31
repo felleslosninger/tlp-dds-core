@@ -82,32 +82,26 @@ eller
 
 ##### Bruk i CSS
 
-```css
-/* Importer */
-@import '@digdir/ds-tokens/build/tokens.css';
+<CodeSnippet children='/* Importer */
+@import "@digdir/ds-tokens/build/tokens.css";
 /* Bruk variablene på følgende format: */
 :root {
   --my-text-color: var(--color-text-background-light);
-}
-```
+}' formatAsHtml={false} language='css'/>
 
 ##### Bruk i SCSS
 
-```scss
-// Importer
-@use '@digdir/ds-tokens/build/tokens.scss' as tokens;
+<CodeSnippet children='// Importer
+@use "@digdir/ds-tokens/build/tokens.scss" as tokens;
 // Bruk variablene på følgende format:
-$my-text-color: tokens.$color-text-background-light;
-```
+$my-text-color: tokens.$color-text-background-light;' formatAsHtml={false} language='scss'/>
 
 ##### JavaScript
 
-```javascript
-// Importer
-import tokens from '@digdir/ds-tokens/build/tokens.js'
+<CodeSnippet children='// Importer
+import tokens from "@digdir/ds-tokens/build/tokens.js"
 // Bruk variablene på følgende format:
-const myTextColor = tokens.color.text.background.light
-```
+const myTextColor = tokens.color.text.background.light' formatAsHtml={false} language='javascript'/>
 
 ## Tokens
 

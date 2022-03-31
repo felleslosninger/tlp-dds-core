@@ -1,6 +1,5 @@
 import { Meta } from '@storybook/addon-docs'
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
-import { CdnSnippet } from '../CodeSnippet.jsx'
+import { CdnSnippet, CodeSnippet } from '../CodeSnippet.jsx'
 
 <Meta title="Komponenter/Kom i gang" />
 
@@ -43,11 +42,11 @@ __JS bundle (ES5-compatible fallback IIFE script)__
 I pakken **@digdir/ds-core-css** finner du både en minifisert CSS bundle-fil, og kildekoden i SCSS-format (Sass). CSS-klassene er prefikset med `dds-` og inneholder ikke noe implisitt global styling, så de kan trygt importeres uten at de overstyrer noe styling (så lenge man selv ikke har brukt klassenavn som starter med `dds-`).
 
 For å eksplisitt sette relevante globale attributer: legg til klassen `.dds-body` på et parent-element for markup-innholdet ditt, f.eks. på `<body>` elementet. 
-```html
+
+<CodeSnippet children='
 <body class="dds-body">
   <!-- Mitt innhold -->
-</body>
-```
+</body>'/>
 
 Dette setter følgende attributter:
 * font-family
@@ -72,41 +71,31 @@ eller
 
 *Eksempel på overstyring av attributter: Overstyr bakgrunnsfarge i Panel link*
 
-```css
-/* Importer core CSS */
-@import '@digdir/ds-core-css/build/index.css';
+<CodeSnippet children='/* Importer core CSS */
+@import "@digdir/ds-core-css/build/index.css";
 /* Importer eventuelt tokens */
-@import '@digdir/ds-tokens/build/tokens.css';
-
-
+@import "@digdir/ds-tokens/build/tokens.css";
 /* Velg klasse (Antar her at man bruker Panel link inni et element med klassen .min-kontainer) */
 .min-kontainer .dds-panel-link {
-  /* Overstyr styling */
-  background-color: var(--color-brand-first-400);
-}
-```
+/* Overstyr styling */
+background-color: var(--color-brand-first-400);
+}' formatAsHtml={false} language='css'/>
 
 ##### SCSS
 
 *Eksempel på bruk av tekst-klasser:*
 
-```scss
-// Hent tekst-stylingen
-@use '@digdir/ds-core-css/build/src/typography.scss' as textStyles;
+<CodeSnippet children='// Hent tekst-stylingen
+@use "@digdir/ds-core-css/build/src/typography.scss" as textStyles;
 // Hent selve fonten og sett den hvis ikke det allerede er gjort i HTML
-@use '@digdir/ds-core-css/build/src/baseline/Inter.scss' as *;
+@use "@digdir/ds-core-css/build/src/baseline/Inter.scss" as *;
 body {
-  font-family: "Inter", sans-serif;
+font-family: "Inter", sans-serif;
 }
 // Bruk mixins, variabler eller annet
 .min-hjemmelagde-klasse {
-  @include textStyles.text-body-300(); // Setter font-size, font-weight, line-height
-}
-```
-
-export const Component = () => {
-  return <SyntaxHighlighter/>;
-};
+@include textStyles.text-body-300(); // Setter font-size, font-weight, line-height
+}' formatAsHtml={false} language='scss'/>
 
 ## JavaScript
 
