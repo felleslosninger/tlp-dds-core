@@ -7,7 +7,7 @@ export default {
   parameters: {
     design: {
       type: 'figma',
-      url: 'https://www.figma.com/file/vpM9dqqQPHqU6ogfKp5tlr/?node-id=2365%3A23464',
+      url: 'https://www.figma.com/file/vpM9dqqQPHqU6ogfKp5tlr/DDS---Core-Components?node-id=5556%3A17074',
     },
     backgrounds: {
       default: 'grey-200',
@@ -47,5 +47,12 @@ export const IconLeft = Template.bind({})
 IconLeft.args = {
   label: 'Panel link',
   size: 'medium',
+  iconLeft: true,
+}
+
+export const LargeWithIconLeft = Template.bind({})
+LargeWithIconLeft.args = {
+  label: 'Panel link',
+  size: 'large',
   iconLeft: true,
 }

@@ -1,10 +1,13 @@
 import classnames from 'classnames'
 import { sanitizeStrict, formatHtml } from '../utils.js'
 
+/**
+ * @property {string} size - options: large (medium by default)
+ */
 const createRadio = ({
   label = 'Click me',
   inputElementId = 'radio-input-id',
-  size = 'medium',
+  size = '',
   disabled = false,
   checked = false,
   nameAttribute = 'radio-group',

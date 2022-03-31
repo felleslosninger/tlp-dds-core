@@ -7,7 +7,7 @@ export default {
   parameters: {
     design: {
       type: 'figma',
-      url: 'https://www.figma.com/file/vpM9dqqQPHqU6ogfKp5tlr/?node-id=2519%3A26775',
+      url: 'https://www.figma.com/file/vpM9dqqQPHqU6ogfKp5tlr/DDS---Core-Components?node-id=4490%3A19550',
     },
   },
   argTypes: {
@@ -21,12 +21,15 @@ const Template = (args) => {
   return createBreadcrumbs(args)
 }
 
-export const Default = Template.bind({})
-Default.args = { depth: 2 }
+export const DefaultPreview = Template.bind({})
+DefaultPreview.args = { depth: 2 }
 
-export const MobileView = Template.bind({})
-MobileView.args = { depth: 2 }
-MobileView.parameters = {
+export const SeveralLevelsPreview = Template.bind({})
+SeveralLevelsPreview.args = { depth: 8 }
+
+export const MobilePreview = Template.bind({})
+MobilePreview.args = { depth: 2 }
+MobilePreview.parameters = {
   viewport: {
     defaultViewport: 'mobile1',
   },

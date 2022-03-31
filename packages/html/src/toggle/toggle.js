@@ -1,13 +1,17 @@
 import classnames from 'classnames'
 import { sanitizeStrict, formatHtml } from '../utils.js'
 
+/**
+ * @property {string} size - options: large (medium by default)
+ * @property {string} variant - options: rightLabel | leftLabel | dualLabel (rightLabel by default)
+ */
 const createToggle = ({
   label = 'Click me',
   inputElementId = 'toggle-input-id',
-  size = 'medium',
+  size = '',
   checked = false,
   toggleLabel = true,
-  variant = 'rightLabel', // rightLabel | leftLabel | dualLabel
+  variant = 'rightLabel',
 }) => {
   const dualLabel = variant === 'dualLabel'
   label = sanitizeStrict(label)

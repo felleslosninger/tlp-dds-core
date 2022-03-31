@@ -3,14 +3,15 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 
 <Meta title="Komponenter/Kom i gang" />
 
-# Komponenter
+# Kom i gang 
+med kjernekomponenter (Core components)
 
 [![](https://img.shields.io/npm/v/@digdir/ds-core-css?label=@digdir/ds-core-css&color=0051be)](https://www.npmjs.com/package/@digdir/ds-core-css)
 [![](https://img.shields.io/npm/v/@digdir/ds-core-js?label=@digdir/ds-core-js&color=0051be)](https://www.npmjs.com/package/@digdir/ds-core-js)
 
 I hver komponent i sidemenyen vil du finne hvordan komponentene er bygd opp med HTML/CSS. Disse kan kopieres og man kan få riktig styling ved å bruke **@digdir/ds-core-css** pakken. 
 
-Noen komponenter trenger litt JavaScript for komplett funksjonalitet. Dette er tilgjengelig i pakken **@digdir/ds-core-js**. Se i dokumentasjonen til komponenten om dette er nødvendig.
+Noen komponenter trenger litt JavaScript for komplett funksjonalitet. Dette er tilgjengelig i pakken **@digdir/ds-core-js**. Se i dokumentasjonen til komponenten (eller tabellen nederst her) om dette er nødvendig.
 
 *Eksempel på direkte inkludering av CSS og JS i HTML:*
 
@@ -18,9 +19,10 @@ Noen komponenter trenger litt JavaScript for komplett funksjonalitet. Dette er t
 <!-- CSS bundle -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@digdir/ds-core-css@1.0.3/build/index.css" integrity="sha512-Xh3c2/1ojGFr7MGchzlE14XNg1p8pf1iNUWVHVu9ceabMVHpHXaaJMrEvXmK9JoVTySeijfhXQt1F53CQ9XN/g==" crossorigin="anonymous">
 
-<!-- JS bundle (self-executing script) -->
+<!-- JS bundle -->
+<!-- ES module -->
 <script type="module" src="https://cdn.jsdelivr.net/npm/@digdir/ds-core-js@0.1.1/build/index.js" integrity="sha512-3Bd6k3gDs/yIlec7s6FJSZZpKwe5noPUzqG4G23uwLozlJO2HarT4xvnMBaembxoa/tbfRBLKnpN2Ag9oWM9AQ==" crossorigin="anonymous"></script>
-<!-- ES5-compatible fallback script -->
+<!-- ES5-compatible fallback IIFE script -->
 <script nomodule defer src="https://cdn.jsdelivr.net/npm/@digdir/ds-core-js@0.1.1/build/index.iife.js" integrity="sha512-Jzk/oXlu3XLCrTYxORoLN58+0g/tz4axiHqKjnOHtkGp655T+DEZjtu6KNQpEQyH3RkfaZeNtSGQKipM3ph4XQ==" crossorigin="anonymous"></script>
 ```
 ## Innhold
@@ -65,9 +67,20 @@ eller
 **2. Importer og bruk deretter filene i ønsket format.**
 ##### CSS
 
+*Eksempel på overstyring av attributter: Overstyr bakgrunnsfarge i Panel link*
+
 ```css
-/* Importer */
+/* Importer core CSS */
 @import '@digdir/ds-core-css/build/index.css';
+/* Importer eventuelt tokens */
+@import '@digdir/ds-tokens/build/tokens.css';
+
+
+/* Velg klasse (Antar her at man bruker Panel link inni et element med klassen .min-kontainer) */
+.min-kontainer .dds-panel-link {
+  /* Overstyr styling */
+  background-color: var(--color-brand-first-400);
+}
 ```
 
 ##### SCSS
@@ -77,7 +90,7 @@ eller
 ```scss
 // Hent tekst-stylingen
 @use '@digdir/ds-core-css/build/src/typography.scss' as textStyles;
-// Hent selve fonten og sett den hvis ikke det er gjort et annet sted
+// Hent selve fonten og sett den hvis ikke det allerede er gjort i HTML
 @use '@digdir/ds-core-css/build/src/baseline/Inter.scss' as *;
 body {
   font-family: "Inter", sans-serif;
@@ -104,7 +117,8 @@ Oversikt over komponentene som bruker JavaScript og hva det brukes til.
 
 Komponent | Variant | Beskrivelse
 --- | --- | ---
-Checkbox | Disabled | Deaktiverer muligheten å huke av checkbox-knappen ved hjelp av tastatur-navigasjon (tab + space).
+Button | Disabled | Fjerner alle event listeners og forhindrer default action.
+Checkbox | Disabled | Deaktiverer muligheten å huke av checkbox-knappen ved hjelp av tastatur-navigasjon (tab + space). (Fjerner alle event listeners og forhindrer default action.)
 Radio | Disabled | [samme som over] 
 
 ### CDN 

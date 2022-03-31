@@ -8,22 +8,22 @@ export default {
   parameters: {
     design: {
       type: 'figma',
-      url: 'https://www.figma.com/file/vpM9dqqQPHqU6ogfKp5tlr/?node-id=1656%3A14991',
+      url: 'https://www.figma.com/file/vpM9dqqQPHqU6ogfKp5tlr/DDS---Core-Components?node-id=5556%3A17042',
     },
   },
   argTypes: {
     label: {},
-    showLabel: {},
-    iconLeft: {},
-    iconRight: {},
-    variant: {
-      options: ['default', 'error', 'errorMessage', 'disabled'],
-      control: { type: 'select' },
-    },
     size: {
       options: ['medium', 'large'],
       control: { type: 'select' },
     },
+    variant: {
+      options: ['default', 'error', 'errorMessage', 'disabled'],
+      control: { type: 'select' },
+    },
+    iconLeft: {},
+    iconRight: {},
+    showLabel: {},
   },
 }
 
@@ -92,6 +92,16 @@ Large.args = {
   size: 'large',
   variant: 'default',
   iconLeft: false,
+  iconRight: false,
+  showLabel: true,
+}
+
+export const LargeWithIcon = Template.bind({})
+LargeWithIcon.args = {
+  label: 'Beskrivelse',
+  size: 'large',
+  variant: 'default',
+  iconLeft: true,
   iconRight: false,
   showLabel: true,
 }
@@ -479,4 +489,7 @@ export const All = () => {
       inputElementId: `input-id-${idCounter++}`,
     })
   )
+}
+All.parameters = {
+  controls: { disable: true },
 }
