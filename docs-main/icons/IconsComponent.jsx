@@ -1,19 +1,14 @@
 import React from 'react'
 import {useState, useEffect} from "react";
 import './icons.scss'
+import './icon-modal.scss'
 import iconList from "./iconList";
-
 
 import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter';
 
-<SyntaxHighlighter language="javascript" style={nightOwl}>
-    {reactImportString}
-</SyntaxHighlighter>
-
-
 import {nightOwl} from "react-syntax-highlighter/dist/cjs/styles/prism";
 
-const groups = ['Navigasjon', 'Vær', 'Brand', 'Smily', 'Generelt'];
+const groups = ['Brand', 'Editor', 'Fil', 'Hardware', 'Innhold', 'Kart', 'Lyd & Bilde', 'Kommunikasjon', 'Navigasjon', 'Sosialt',  'Sted', 'Varsling', 'Vær', 'Generelt'];
 
 const IconsComponent = () => {
 
@@ -95,11 +90,19 @@ const IconsComponent = () => {
             <div className={'icon-modal ' + showModalClass}>
                 <div className="icon-modal__bg" onClick={() => setShowModalClass('')}/>
                 <div className="icon-modal__content">
+
                     <div className="icon-modal__header">
                         <h2 className="icon-modal__title">{activeName}</h2>
+                        <div className="icon-modal__buttons">
+                            <a className="icon-modal__button" href={'/outline/' + activeName + '.svg'} download>
+                                <div className="icon-modal__dl-icon" dangerouslySetInnerHTML={{__html: iconList.download.icon}}/>
+                                SVG
+                            </a>
+                        </div>
                         <div className="icon-modal__close" onClick={() => setShowModalClass('')}
-                             dangerouslySetInnerHTML={{__html: iconList.x.icon}}/>
+                             dangerouslySetInnerHTML={{__html: iconList.close.icon}}/>
                     </div>
+
                     <div className="icon-modal__body">
                         <div className="icon-modal__left">
                             <div dangerouslySetInnerHTML={{__html: activeIcon}}/>
@@ -115,6 +118,7 @@ const IconsComponent = () => {
                             </SyntaxHighlighter>
                         </div>
                     </div>
+
                 </div>
             </div>
 

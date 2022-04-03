@@ -37,9 +37,11 @@ import bookOpen from '@digdir/ds-icons/svg/outline/BookOpen.svg'
 import bookmark from '@digdir/ds-icons/svg/outline/Bookmark.svg'
 import box from '@digdir/ds-icons/svg/outline/Box.svg'
 import briefCase from '@digdir/ds-icons/svg/outline/Briefcase.svg'
+import building from '@digdir/ds-icons/svg/outline/Building.svg'
 import calendar from '@digdir/ds-icons/svg/outline/Calendar.svg'
 import camera from '@digdir/ds-icons/svg/outline/Camera.svg'
 import cameraOff from '@digdir/ds-icons/svg/outline/CameraOff.svg'
+import car from '@digdir/ds-icons/svg/outline/Car.svg'
 import cast from '@digdir/ds-icons/svg/outline/Cast.svg'
 import check from '@digdir/ds-icons/svg/outline/Check.svg'
 import checkCircle from '@digdir/ds-icons/svg/outline/CheckCircle.svg'
@@ -56,9 +58,14 @@ import chrome from '@digdir/ds-icons/svg/outline/Chrome.svg'
 import circle from '@digdir/ds-icons/svg/outline/Circle.svg'
 import clipboard from '@digdir/ds-icons/svg/outline/Clipboard.svg'
 import clock from '@digdir/ds-icons/svg/outline/Clock.svg'
+import close from '@digdir/ds-icons/svg/outline/Close.svg'
+import closeCircle from '@digdir/ds-icons/svg/outline/CloseCircle.svg'
+import closeOctagon from '@digdir/ds-icons/svg/outline/CloseOctagon.svg'
+import closeSquare from '@digdir/ds-icons/svg/outline/CloseSquare.svg'
 import cloud from '@digdir/ds-icons/svg/outline/Cloud.svg'
 import cloudDrizzle from '@digdir/ds-icons/svg/outline/CloudDrizzle.svg'
 import cloudLightning from '@digdir/ds-icons/svg/outline/CloudLightning.svg'
+import cloudOff from '@digdir/ds-icons/svg/outline/CloudOff.svg'
 import cloudRain from '@digdir/ds-icons/svg/outline/CloudRain.svg'
 import cloudSnow from '@digdir/ds-icons/svg/outline/CloudSnow.svg'
 import code from '@digdir/ds-icons/svg/outline/Code.svg'
@@ -80,20 +87,20 @@ import cornerUpRight from '@digdir/ds-icons/svg/outline/CornerUpRight.svg'
 import cpu from '@digdir/ds-icons/svg/outline/Cpu.svg'
 import creditCard from '@digdir/ds-icons/svg/outline/CreditCard.svg'
 import crop from '@digdir/ds-icons/svg/outline/Crop.svg'
+import cross from '@digdir/ds-icons/svg/outline/Cross.svg'
 import crossHair from '@digdir/ds-icons/svg/outline/Crosshair.svg'
+import crown from '@digdir/ds-icons/svg/outline/Crown.svg'
 import database from '@digdir/ds-icons/svg/outline/Database.svg'
 import deleteIcon from '@digdir/ds-icons/svg/outline/Delete.svg'
 import disc from '@digdir/ds-icons/svg/outline/Disc.svg'
 import divide from '@digdir/ds-icons/svg/outline/Divide.svg'
-import divideCircle from '@digdir/ds-icons/svg/outline/DivideCircle.svg'
-import divideSquare from '@digdir/ds-icons/svg/outline/DivideSquare.svg'
 import dollarSign from '@digdir/ds-icons/svg/outline/DollarSign.svg'
 import download from '@digdir/ds-icons/svg/outline/Download.svg'
 import downloadCloud from '@digdir/ds-icons/svg/outline/DownloadCloud.svg'
 import dribbble from '@digdir/ds-icons/svg/outline/Dribbble.svg'
 import droplet from '@digdir/ds-icons/svg/outline/Droplet.svg'
 import edit from '@digdir/ds-icons/svg/outline/Edit.svg'
-import pencil from '@digdir/ds-icons/svg/outline/Edit2.svg'
+import editSquare from '@digdir/ds-icons/svg/outline/EditSquare.svg'
 import externalLink from '@digdir/ds-icons/svg/outline/ExternalLink.svg'
 import eye from '@digdir/ds-icons/svg/outline/Eye.svg'
 import eyeOff from '@digdir/ds-icons/svg/outline/EyeOff.svg'
@@ -115,11 +122,12 @@ import frown from '@digdir/ds-icons/svg/outline/Frown.svg'
 import gift from '@digdir/ds-icons/svg/outline/Gift.svg'
 import gitBranch from '@digdir/ds-icons/svg/outline/GitBranch.svg'
 import gitCommit from '@digdir/ds-icons/svg/outline/GitCommit.svg'
-import gitMerge from '@digdir/ds-icons/svg/outline/GitMerge.svg'
-import gitPullRequest from '@digdir/ds-icons/svg/outline/GitPullRequest.svg'
 import github from '@digdir/ds-icons/svg/outline/Github.svg'
 import gitlab from '@digdir/ds-icons/svg/outline/Gitlab.svg'
+import gitMerge from '@digdir/ds-icons/svg/outline/GitMerge.svg'
+import gitPullRequest from '@digdir/ds-icons/svg/outline/GitPullRequest.svg'
 import globe from '@digdir/ds-icons/svg/outline/Globe.svg'
+import globe2 from '@digdir/ds-icons/svg/outline/Globe2.svg'
 import grid from '@digdir/ds-icons/svg/outline/Grid.svg'
 import hardDrive from '@digdir/ds-icons/svg/outline/HardDrive.svg'
 import hash from '@digdir/ds-icons/svg/outline/Hash.svg'
@@ -128,15 +136,20 @@ import heart from '@digdir/ds-icons/svg/outline/Heart.svg'
 import helpCircle from '@digdir/ds-icons/svg/outline/HelpCircle.svg'
 import hexagon from '@digdir/ds-icons/svg/outline/Hexagon.svg'
 import home from '@digdir/ds-icons/svg/outline/Home.svg'
+import hospital from '@digdir/ds-icons/svg/outline/Hospital.svg'
 import image from '@digdir/ds-icons/svg/outline/Image.svg'
 import inbox from '@digdir/ds-icons/svg/outline/Inbox.svg'
 import info from '@digdir/ds-icons/svg/outline/Info.svg'
 import instagram from '@digdir/ds-icons/svg/outline/Instagram.svg'
 import italic from '@digdir/ds-icons/svg/outline/Italic.svg'
 import key from '@digdir/ds-icons/svg/outline/Key.svg'
+import keyboard from '@digdir/ds-icons/svg/outline/Keyboard.svg'
+import landmark from '@digdir/ds-icons/svg/outline/Landmark.svg'
+import laptop from '@digdir/ds-icons/svg/outline/Laptop.svg'
 import layers from '@digdir/ds-icons/svg/outline/Layers.svg'
 import layout from '@digdir/ds-icons/svg/outline/Layout.svg'
 import lifeBuoy from '@digdir/ds-icons/svg/outline/LifeBuoy.svg'
+import lightBulb from '@digdir/ds-icons/svg/outline/Lightbulb.svg'
 import link from '@digdir/ds-icons/svg/outline/Link.svg'
 import linkedin from '@digdir/ds-icons/svg/outline/Linkedin.svg'
 import list from '@digdir/ds-icons/svg/outline/List.svg'
@@ -157,7 +170,8 @@ import micOff from '@digdir/ds-icons/svg/outline/MicOff.svg'
 import minimize from '@digdir/ds-icons/svg/outline/Minimize.svg'
 import minus from '@digdir/ds-icons/svg/outline/Minus.svg'
 import minusCircle from '@digdir/ds-icons/svg/outline/MinusCircle.svg'
-import minusSquare from '@digdir/ds-icons/svg/outline/Minus-Square.svg'
+import minusSquare from '@digdir/ds-icons/svg/outline/MinusSquare.svg'
+import moneyBag from '@digdir/ds-icons/svg/outline/MoneyBag.svg'
 import monitor from '@digdir/ds-icons/svg/outline/Monitor.svg'
 import moon from '@digdir/ds-icons/svg/outline/Moon.svg'
 import moreHorizontal from '@digdir/ds-icons/svg/outline/MoreHorizontal.svg'
@@ -168,11 +182,13 @@ import music from '@digdir/ds-icons/svg/outline/Music.svg'
 import navigation from '@digdir/ds-icons/svg/outline/Navigation.svg'
 import octagon from '@digdir/ds-icons/svg/outline/Octagon.svg'
 import packageIcon from '@digdir/ds-icons/svg/outline/Package.svg'
+import palette from '@digdir/ds-icons/svg/outline/Palette.svg'
 import paperclip from '@digdir/ds-icons/svg/outline/Paperclip.svg'
 import pause from '@digdir/ds-icons/svg/outline/Pause.svg'
 import pauseCircle from '@digdir/ds-icons/svg/outline/PauseCircle.svg'
 import penTool from '@digdir/ds-icons/svg/outline/PenTool.svg'
 import percent from '@digdir/ds-icons/svg/outline/Percent.svg'
+import personStanding from '@digdir/ds-icons/svg/outline/PersonStanding.svg'
 import phone from '@digdir/ds-icons/svg/outline/Phone.svg'
 import phoneCall from '@digdir/ds-icons/svg/outline/PhoneCall.svg'
 import phoneForwarded from '@digdir/ds-icons/svg/outline/PhoneForwarded.svg'
@@ -181,6 +197,8 @@ import phoneMissed from '@digdir/ds-icons/svg/outline/PhoneMissed.svg'
 import phoneOff from '@digdir/ds-icons/svg/outline/PhoneOff.svg'
 import phoneOutgoing from '@digdir/ds-icons/svg/outline/PhoneOutgoing.svg'
 import pieChart from '@digdir/ds-icons/svg/outline/PieChart.svg'
+import piggyBank from '@digdir/ds-icons/svg/outline/PiggyBank.svg'
+import plane from '@digdir/ds-icons/svg/outline/Plane.svg'
 import play from '@digdir/ds-icons/svg/outline/Play.svg'
 import playCircle from '@digdir/ds-icons/svg/outline/PlayCircle.svg'
 import plus from '@digdir/ds-icons/svg/outline/Plus.svg'
@@ -189,12 +207,17 @@ import plusSquare from '@digdir/ds-icons/svg/outline/PlusSquare.svg'
 import pocket from '@digdir/ds-icons/svg/outline/Pocket.svg'
 import power from '@digdir/ds-icons/svg/outline/Power.svg'
 import printer from '@digdir/ds-icons/svg/outline/Printer.svg'
+import radio from '@digdir/ds-icons/svg/outline/Radio.svg'
+import refreshCcw from '@digdir/ds-icons/svg/outline/RefreshCcw.svg'
+import refreshCw from '@digdir/ds-icons/svg/outline/RefreshCw.svg'
 import repeat from '@digdir/ds-icons/svg/outline/Repeat.svg'
 import rewind from '@digdir/ds-icons/svg/outline/Rewind.svg'
+import rocket from '@digdir/ds-icons/svg/outline/Rocket.svg'
 import rotateCcw from '@digdir/ds-icons/svg/outline/RotateCcw.svg'
 import rotateCw from '@digdir/ds-icons/svg/outline/RotateCw.svg'
 import rss from '@digdir/ds-icons/svg/outline/Rss.svg'
 import save from '@digdir/ds-icons/svg/outline/Save.svg'
+import scale from '@digdir/ds-icons/svg/outline/Scale.svg'
 import scissors from '@digdir/ds-icons/svg/outline/Scissors.svg'
 import search from '@digdir/ds-icons/svg/outline/Search.svg'
 import send from '@digdir/ds-icons/svg/outline/Send.svg'
@@ -215,10 +238,12 @@ import slash from '@digdir/ds-icons/svg/outline/Slash.svg'
 import sliders from '@digdir/ds-icons/svg/outline/Sliders.svg'
 import smartphone from '@digdir/ds-icons/svg/outline/Smartphone.svg'
 import smile from '@digdir/ds-icons/svg/outline/Smile.svg'
+import snowFlake from '@digdir/ds-icons/svg/outline/Snowflake.svg'
 import speaker from '@digdir/ds-icons/svg/outline/Speaker.svg'
 import square from '@digdir/ds-icons/svg/outline/Square.svg'
 import star from '@digdir/ds-icons/svg/outline/Star.svg'
 import stopCircle from '@digdir/ds-icons/svg/outline/StopCircle.svg'
+import storting from '@digdir/ds-icons/svg/outline/Storting.svg'
 import sun from '@digdir/ds-icons/svg/outline/Sun.svg'
 import sunrise from '@digdir/ds-icons/svg/outline/Sunrise.svg'
 import sunset from '@digdir/ds-icons/svg/outline/Sunset.svg'
@@ -228,12 +253,11 @@ import target from '@digdir/ds-icons/svg/outline/Target.svg'
 import terminal from '@digdir/ds-icons/svg/outline/Terminal.svg'
 import thermometer from '@digdir/ds-icons/svg/outline/Thermometer.svg'
 import thumbsDown from '@digdir/ds-icons/svg/outline/ThumbsDown.svg'
-import thumbsUp from '@digdir/ds-icons/svg/outline/Thumbs-Up.svg'
+import thumbsUp from '@digdir/ds-icons/svg/outline/ThumbsUp.svg'
 import toggleLeft from '@digdir/ds-icons/svg/outline/ToggleLeft.svg'
 import toggleRight from '@digdir/ds-icons/svg/outline/ToggleRight.svg'
 import tool from '@digdir/ds-icons/svg/outline/Tool.svg'
 import trash from '@digdir/ds-icons/svg/outline/Trash.svg'
-import trash2 from '@digdir/ds-icons/svg/outline/Trash2.svg'
 import trello from '@digdir/ds-icons/svg/outline/Trello.svg'
 import trendingDown from '@digdir/ds-icons/svg/outline/TrendingDown.svg'
 import trendingUp from '@digdir/ds-icons/svg/outline/TrendingUp.svg'
@@ -250,9 +274,9 @@ import upload from '@digdir/ds-icons/svg/outline/Upload.svg'
 import uploadCloud from '@digdir/ds-icons/svg/outline/UploadCloud.svg'
 import user from '@digdir/ds-icons/svg/outline/User.svg'
 import userCheck from '@digdir/ds-icons/svg/outline/UserCheck.svg'
+import userClose from '@digdir/ds-icons/svg/outline/UserClose.svg'
 import userMinus from '@digdir/ds-icons/svg/outline/UserMinus.svg'
 import userPlus from '@digdir/ds-icons/svg/outline/UserPlus.svg'
-import userX from '@digdir/ds-icons/svg/outline/UserX.svg'
 import users from '@digdir/ds-icons/svg/outline/Users.svg'
 import video from '@digdir/ds-icons/svg/outline/Video.svg'
 import videoOff from '@digdir/ds-icons/svg/outline/VideoOff.svg'
@@ -260,13 +284,11 @@ import voicemail from '@digdir/ds-icons/svg/outline/Voicemail.svg'
 import volume from '@digdir/ds-icons/svg/outline/Volume.svg'
 import volume1 from '@digdir/ds-icons/svg/outline/Volume1.svg'
 import volume2 from '@digdir/ds-icons/svg/outline/Volume2.svg'
-import volumeMute from '@digdir/ds-icons/svg/outline/VolumeX.svg'
+import volumeMute from '@digdir/ds-icons/svg/outline/VolumeMute.svg'
+import watch from '@digdir/ds-icons/svg/outline/Watch.svg'
 import wifi from '@digdir/ds-icons/svg/outline/Wifi.svg'
 import wifiOff from '@digdir/ds-icons/svg/outline/WifiOff.svg'
-import xIcon from '@digdir/ds-icons/svg/outline/Close.svg'
-import xCircle from '@digdir/ds-icons/svg/outline/CloseCircle.svg'
-import xOctagon from '@digdir/ds-icons/svg/outline/CloseOctagon.svg'
-import xSquare from '@digdir/ds-icons/svg/outline/CloseSquare.svg'
+import wind from '@digdir/ds-icons/svg/outline/Wind.svg'
 import youtube from '@digdir/ds-icons/svg/outline/Youtube.svg'
 import zap from '@digdir/ds-icons/svg/outline/Zap.svg'
 import zapOff from '@digdir/ds-icons/svg/outline/ZapOff.svg'
@@ -276,47 +298,55 @@ import zoomOut from '@digdir/ds-icons/svg/outline/ZoomOut.svg'
 const iconList = {
     activity: {
         name: 'Activity',
-        alias: ['heart', 'rytme', 'hjerte'],
+        alias: ['heart', 'rytme', 'hjerte', 'aktivitet'],
         icon: activity,
     },
     airplay: {
         name: 'Airplay',
-        alias: [],
+        alias: ['share'],
+        group: 'Kommunikasjon',
         icon: airplay,
     },
     alertCircle: {
         name: 'AlertCircle',
         alias: ['warning', 'advarsel', 'sirkel'],
+        group: 'Varsling',
         icon: alertCircle,
     },
     alertOctagon: {
         name: 'AlertOctagon',
         alias: ['warning', 'advarsel'],
+        group: 'Varsling',
         icon: alertOctagon,
     },
     alertTriangle: {
         name: 'AlertTriangle',
         alias: ['warning', 'advarsel'],
+        group: 'Varsling',
         icon: alertTriangle,
     },
     alignCenter: {
         name: 'AlignCenter',
         alias: ['midten', 'juster'],
+        group: 'Editor',
         icon: alignCenter,
     },
     alignJustify: {
         name: 'AlignJustify',
         alias: ['midstill', 'juster'],
+        group: 'Editor',
         icon: alignJustify,
     },
     alignLeft: {
         name: 'AlignLeft',
         alias: ['venstre', 'juster'],
+        group: 'Editor',
         icon: alignLeft,
     },
     alignRight: {
         name: 'AlignRight',
         alias: ['høgre', 'juster'],
+        group: 'Editor',
         icon: alignRight,
     },
     anchor: {
@@ -326,7 +356,8 @@ const iconList = {
     },
     aperture: {
         name: 'Aperture',
-        alias: [],
+        alias: ['blenderåpning'],
+        group: 'Lyd & Bilde',
         icon: aperture,
     },
     archive: {
@@ -421,25 +452,25 @@ const iconList = {
     barChart: {
         name: 'BarChart',
         alias: ['søylediagram'],
-        group: '',
+        group: 'Editor',
         icon: barChart,
     },
     barChart2: {
         name: 'BarChart2',
         alias: ['søylediagram'],
-        group: '',
+        group: 'Editor',
         icon: barChart2,
     },
     battery: {
         name: 'Battery',
         alias: ['batteri'],
-        group: '',
+        group: 'Hardware',
         icon: battery,
     },
     batteryCharging: {
         name: 'BatteryCharging',
         alias: ['batteri', 'lader'],
-        group: '',
+        group: 'Hardware',
         icon: batteryCharging,
     },
     bell: {
@@ -457,13 +488,13 @@ const iconList = {
     blueTooth: {
         name: 'BlueTooth',
         alias: ['blåtann'],
-        group: '',
+        group: 'Kommunikasjon',
         icon: blueTooth,
     },
     bold: {
         name: 'Bold',
-        alias: [],
-        group: '',
+        alias: ['sterk'],
+        group: 'Editor',
         icon: bold,
     },
     book: {
@@ -496,23 +527,35 @@ const iconList = {
         group: '',
         icon: briefCase,
     },
+    building: {
+        name: 'Building',
+        alias: ['bygning'],
+        group: 'Sted',
+        icon: building,
+    },
     calendar: {
         name: 'Calendar',
-        alias: ['kalender'],
+        alias: ['kalender', 'tid'],
         group: '',
         icon: calendar,
     },
     camera: {
         name: 'Camera',
         alias: ['kamera'],
-        group: '',
+        group: 'Lyd & Bilde',
         icon: camera,
     },
     cameraOff: {
         name: 'CameraOff',
         alias: ['kamera', 'av'],
-        group: '',
+        group: 'Lyd & Bilde',
         icon: cameraOff,
+    },
+    car: {
+        name: 'Car',
+        alias: ['bil', 'transport'],
+        group: '',
+        icon: car,
     },
     cast: {
         name: 'Cast',
@@ -589,19 +632,19 @@ const iconList = {
     chrome: {
         name: 'Chrome',
         alias: ['nettleser', 'browser'],
-        group: '',
+        group: 'Brand',
         icon: chrome,
     },
     circle: {
         name: 'Circle',
-        alias: [],
+        alias: ['sirkel'],
         group: '',
         icon: circle,
     },
     clipboard: {
         name: 'Clipboard',
-        alias: [],
-        group: '',
+        alias: ['paste', 'lim inn'],
+        group: 'Innhold',
         icon: clipboard,
     },
     clock: {
@@ -609,6 +652,29 @@ const iconList = {
         alias: ['klokke', 'tid', 'time'],
         group: '',
         icon: clock,
+    },
+    close: {
+        name: 'Close',
+        alias: ['lukk', 'times'],
+        icon: close,
+    },
+    closeCircle: {
+        name: 'XCircle',
+        alias: ['lukk', 'times'],
+        group: 'Innhold',
+        icon: closeCircle,
+    },
+    closeOctagon: {
+        name: 'CloseCircle',
+        alias: ['lukk', 'times'],
+        group: 'Innhold',
+        icon: closeOctagon,
+    },
+    closeSquare: {
+        name: 'CloseSquare',
+        alias: ['lukk', 'times'],
+        group: 'Innhold',
+        icon: closeSquare,
     },
     cloud: {
         name: 'Cloud',
@@ -627,6 +693,12 @@ const iconList = {
         alias: ['sky', 'weather'],
         group: 'Vær',
         icon: cloudLightning,
+    },
+    cloudOff: {
+        name: 'CloudOff',
+        alias: ['sky', 'weather'],
+        group: 'Vær',
+        icon: cloudOff,
     },
     cloudRain: {
         name: 'CloudRain',
@@ -649,7 +721,7 @@ const iconList = {
     codepen: {
         name: 'Codepen',
         alias: ['kode'],
-        group: '',
+        group: 'Brand',
         icon: codepen,
     },
     codesandbox: {
@@ -667,7 +739,7 @@ const iconList = {
     columns: {
         name: 'Columns',
         alias: ['kolonne'],
-        group: '',
+        group: 'Editor',
         icon: columns,
     },
     command: {
@@ -679,67 +751,67 @@ const iconList = {
     compass: {
         name: 'Compass',
         alias: ['kompass'],
-        group: '',
+        group: 'Kart',
         icon: compass,
     },
     copy: {
         name: 'Copy',
         alias: ['kopier'],
-        group: '',
+        group: 'Innhold',
         icon: copy,
     },
     cornerDownLeft: {
         name: 'CornerDownLeft',
         alias: ['hjørne', 'ned', 'venstre', 'pil', 'arrow'],
-        group: '',
+        group: 'Navigasjon',
         icon: cornerDownLeft,
     },
     cornerDownRight: {
         name: 'CornerDownRight',
         alias: ['hjørne', 'ned', 'høgre', 'pil', 'arrow'],
-        group: '',
+        group: 'Navigasjon',
         icon: cornerDownRight,
     },
     cornerLeftDown: {
         name: 'CornerLeftDown',
         alias: ['hjørne', 'ned', 'venstre', 'pil', 'arrow'],
-        group: '',
+        group: 'Navigasjon',
         icon: cornerLeftDown,
     },
     cornerLeftUp: {
         name: 'CornerLeftUp',
         alias: ['hjørne', 'opp', 'venstre', 'pil', 'arrow'],
-        group: '',
+        group: 'Navigasjon',
         icon: cornerLeftUp,
     },
     cornerRightDown: {
         name: 'CornerRightDown',
         alias: ['hjørne', 'ned', 'høgre', 'pil', 'arrow'],
-        group: '',
+        group: 'Navigasjon',
         icon: cornerRightDown,
     },
     cornerRightUp: {
         name: 'CornerRightUp',
         alias: ['hjørne', 'opp', 'høgre', 'pil', 'arrow'],
-        group: '',
+        group: 'Navigasjon',
         icon: cornerRightUp,
     },
     cornerUpLeft: {
         name: 'CornerUpLeft',
         alias: ['hjørne', 'opp', 'venstre', 'pil', 'arrow'],
-        group: '',
+        group: 'Navigasjon',
         icon: cornerUpLeft,
     },
     cornerUpRight: {
         name: 'CornerUpRight',
         alias: ['hjørne', 'opp', 'høgre', 'pil', 'arrow'],
-        group: '',
+        group: 'Navigasjon',
         icon: cornerUpRight,
     },
     cpu: {
         name: 'Cpu',
         alias: ['prosessor', 'data', 'computer'],
-        group: '',
+        group: 'Hardware',
         icon: cpu,
     },
     creditCard: {
@@ -754,11 +826,23 @@ const iconList = {
         group: '',
         icon: crop,
     },
+    cross: {
+        name: 'Cross',
+        alias: ['kors'],
+        group: '',
+        icon: cross,
+    },
     crossHair: {
         name: 'CrossHair',
-        alias: [],
+        alias: ['trådkors'],
         group: '',
         icon: crossHair,
+    },
+    crown: {
+        name: 'Crown',
+        alias: ['krone', 'king', 'konge'],
+        group: '',
+        icon: crown,
     },
     database: {
         name: 'Database',
@@ -769,12 +853,12 @@ const iconList = {
     deleteIcon: {
         name: 'DeleteIcon',
         alias: ['slett'],
-        group: '',
+        group: 'Innhold',
         icon: deleteIcon,
     },
     disc: {
         name: 'Disc',
-        alias: [],
+        alias: ['plate'],
         group: '',
         icon: disc,
     },
@@ -784,18 +868,6 @@ const iconList = {
         group: '',
         icon: divide,
     },
-    divideCircle: {
-        name: 'DivideCircle',
-        alias: ['dele', 'sirkel'],
-        group: '',
-        icon: divideCircle,
-    },
-    divideSquare: {
-        name: 'DivideSquare',
-        alias: ['dele', 'kvadrat'],
-        group: '',
-        icon: divideSquare,
-    },
     dollarSign: {
         name: 'DollarSign',
         alias: ['penger', 'money'],
@@ -804,33 +876,39 @@ const iconList = {
     },
     download: {
         name: 'Download',
-        alias: ['nedlasing'],
-        group: '',
+        alias: ['nedlasting'],
+        group: 'Fil',
         icon: download,
     },
     downloadCloud: {
         name: 'DownloadCloud',
         alias: ['nedlasing', 'sky'],
-        group: '',
+        group: 'Fil',
         icon: downloadCloud,
     },
     dribbble: {
         name: 'Dribbble',
-        alias: [],
+        alias: ['basketball'],
         group: 'Brand',
         icon: dribbble,
     },
     droplet: {
         name: 'Droplet',
-        alias: [],
+        alias: ['sky', 'cloud'],
         group: '',
         icon: droplet,
     },
     edit: {
         name: 'Edit',
-        alias: ['rediger'],
-        group: '',
+        alias: ['rediger', 'pencil', 'blyant'],
+        group: 'Innhold',
         icon: edit,
+    },
+    editSquare: {
+        name: 'EditSquare',
+        alias: ['rediger', 'pencil', 'blyant'],
+        group: 'Innhold',
+        icon: editSquare,
     },
     externalLink: {
         name: 'ExternalLink',
@@ -858,8 +936,8 @@ const iconList = {
     },
     fastForward: {
         name: 'FastForward',
-        alias: ['spole'],
-        group: '',
+        alias: ['spole', 'fram'],
+        group: 'Lyd & Bilde',
         icon: fastForward,
     },
     feather: {
@@ -877,67 +955,67 @@ const iconList = {
     file: {
         name: 'File',
         alias: [],
-        group: '',
+        group: 'Fil',
         icon: file,
     },
     fileMinus: {
         name: 'FileMinus',
         alias: [],
-        group: '',
+        group: 'Fil',
         icon: fileMinus,
     },
     filePlus: {
         name: 'FilePlus',
         alias: [],
-        group: '',
+        group: 'Fil',
         icon: filePlus,
     },
     fileText: {
         name: 'FileText',
         alias: [],
-        group: '',
+        group: 'Fil',
         icon: fileText,
     },
     film: {
         name: 'Film',
         alias: [],
-        group: '',
+        group: 'Lyd & Bilde',
         icon: film,
     },
     filter: {
         name: 'Filter',
-        alias: [],
-        group: '',
+        alias: ['filtrer'],
+        group: 'Innhold',
         icon: filter,
     },
     flag: {
         name: 'Flag',
-        alias: [],
+        alias: ['flagg'],
         group: '',
         icon: flag,
     },
     folder: {
         name: 'Folder',
         alias: ['mappe'],
-        group: '',
+        group: 'Fil',
         icon: folder,
     },
     folderMinus: {
         name: 'FolderMinus',
         alias: ['mappe'],
-        group: '',
+        group: 'Fil',
         icon: folderMinus,
     },
     folderPlus: {
         name: 'FolderPlus',
         alias: ['mappe'],
-        group: '',
+        group: 'Fil',
         icon: folderPlus,
     },
     frown: {
         name: 'Frown',
         alias: ['mappe'],
-        group: 'Smily',
+        group: 'Sosialt',
         icon: frown,
     },
     gift: {
@@ -985,13 +1063,19 @@ const iconList = {
     globe: {
         name: 'Globe',
         alias: ['verden', 'world'],
-        group: '',
+        group: 'Sosialt',
         icon: globe,
+    },
+    globe2: {
+        name: 'Globe2',
+        alias: ['verden', 'world'],
+        group: 'Sosialt',
+        icon: globe2,
     },
     grid: {
         name: 'Grid',
         alias: [],
-        group: '',
+        group: 'Editor',
         icon: grid,
     },
     hardDrive: {
@@ -1009,7 +1093,7 @@ const iconList = {
     headphones: {
         name: 'Headphones',
         alias: ['hodetelefoner'],
-        group: '',
+        group: 'Lyd & Bilde',
         icon: headphones,
     },
     heart: {
@@ -1033,25 +1117,31 @@ const iconList = {
     home: {
         name: 'Home',
         alias: ['hus', 'house', 'hjem'],
-        group: '',
+        group: 'Sted',
         icon: home,
+    },
+    hospital: {
+        name: 'Hospital',
+        alias: ['sykehus'],
+        group: 'Sted',
+        icon: hospital,
     },
     image: {
         name: 'Image',
         alias: ['bilde'],
-        group: '',
+        group: 'Lyd & Bilde',
         icon: image,
     },
     inbox: {
         name: 'Inbox',
-        alias: ['inboks'],
-        group: '',
+        alias: ['innboks'],
+        group: 'Kommunikasjon',
         icon: inbox,
     },
     info: {
         name: 'Info',
         alias: [''],
-        group: '',
+        group: 'Varsling',
         icon: info,
     },
     instagram: {
@@ -1072,6 +1162,24 @@ const iconList = {
         group: '',
         icon: key,
     },
+    keyboard: {
+        name: 'Keyboard',
+        alias: ['tastatur'],
+        group: '',
+        icon: keyboard,
+    },
+    landmark: {
+        name: 'Landmark',
+        alias: ['landemerke'],
+        group: '',
+        icon: landmark,
+    },
+    laptop: {
+        name: 'Laptop',
+        alias: ['bærbar'],
+        group: 'Hardware',
+        icon: laptop,
+    },
     layers: {
         name: 'Layers',
         alias: ['lag'],
@@ -1081,7 +1189,7 @@ const iconList = {
     layout: {
         name: 'Layout',
         alias: [],
-        group: '',
+        group: 'Editor',
         icon: layout,
     },
     lifeBuoy: {
@@ -1089,6 +1197,12 @@ const iconList = {
         alias: [],
         group: '',
         icon: lifeBuoy,
+    },
+    lightBulb: {
+        name: 'LightBulb',
+        alias: ['lyspære'],
+        group: '',
+        icon: lightBulb,
     },
     link: {
         name: 'Link',
@@ -1104,8 +1218,8 @@ const iconList = {
     },
     list: {
         name: 'List',
-        alias: [],
-        group: '',
+        alias: ['liste'],
+        group: 'Editor',
         icon: list,
     },
     loader: {
@@ -1135,81 +1249,96 @@ const iconList = {
     mail: {
         name: 'Mail',
         alias: ['e-mail', 'e-post'],
-        group: '',
+        group: 'Kommunikasjon',
         icon: mail,
     },
     map: {
         name: 'Map',
         alias: ['kart'],
-        group: '',
+        group: 'Kart',
         icon: map,
     },
     mapPin: {
         name: 'MapPin',
         alias: ['kart'],
-        group: '',
+        group: 'Kart',
         icon: mapPin,
     },
     maximize: {
         name: 'Maximize',
         alias: ['forstørre'],
-        group: '',
+        group: 'Editor',
         icon: maximize,
     },
     meh: {
         name: 'Meh',
-        alias: [],
-        group: 'Smily',
+        alias: ['smily'],
+        group: 'Sosialt',
         icon: meh,
     },
     menu: {
         name: 'Menu',
         alias: ['bars', 'navigation', 'navigasjon', 'meny'],
+        group: 'Navigasjon',
         icon: menu,
     },
     messageCircle: {
         name: 'MessageCircle',
         alias: ['melding'],
+        group: 'Kommunikasjon',
         icon: messageCircle,
     },
     messageSquare: {
         name: 'MessageSquare',
         alias: ['melding'],
+        group: 'Kommunikasjon',
         icon: messageSquare,
     },
     mic: {
         name: 'Mic',
         alias: ['mikrofon'],
+        group: 'Lyd & Bilde',
         icon: mic,
     },
     micOff: {
         name: 'MicOff',
         alias: ['mikrofon av'],
+        group: 'Lyd & Bilde',
         icon: micOff,
     },
     minimize: {
         name: 'Minimize',
-        alias: ['mindre'],
+        alias: ['mindre', 'minimer'],
+        group: 'Editor',
         icon: minimize,
     },
     minus: {
         name: 'Minus',
         alias: [],
+        group: 'Innhold',
         icon: minus,
     },
     minusCircle: {
         name: 'MinusCircle',
         alias: ['sirkel'],
+        group: 'Innhold',
         icon: minusCircle,
     },
     minusSquare: {
         name: 'MinusSquare',
         alias: ['kvadrat'],
+        group: 'Innhold',
         icon: minusSquare,
+    },
+    moneyBag: {
+        name: 'MoneyBag',
+        alias: ['penger'],
+        icon: moneyBag,
     },
     monitor: {
         name: 'Monitor',
         alias: ['skjerm'],
+        group: 'Hardware',
         icon: monitor,
     },
     moon: {
@@ -1220,11 +1349,13 @@ const iconList = {
     moreHorizontal: {
         name: 'MoreHorizontal',
         alias: ['mer'],
+        group: 'Navigasjon',
         icon: moreHorizontal,
     },
     moreVertical: {
         name: 'MoreVertical',
         alias: ['mer'],
+        group: 'Navigasjon',
         icon: moreVertical,
     },
     mousePointer: {
@@ -1234,7 +1365,8 @@ const iconList = {
     },
     move: {
         name: 'Move',
-        alias: [],
+        alias: ['dra'],
+        group: 'Editor',
         icon: move,
     },
     music: {
@@ -1245,6 +1377,7 @@ const iconList = {
     navigation: {
         name: 'Navigation',
         alias: [],
+        group: 'Kart',
         icon: navigation,
     },
     octagon: {
@@ -1257,26 +1390,34 @@ const iconList = {
         alias: ['pakke'],
         icon: packageIcon,
     },
+    palette: {
+        name: 'Palette',
+        alias: ['male', 'farge'],
+        icon: palette,
+    },
     paperclip: {
         name: 'Paperclip',
-        alias: [],
+        alias: ['binders'],
+        group: 'Fil',
         icon: paperclip,
     },
     pause: {
         name: 'Pause',
         alias: [],
+        group: 'Lyd & Bilde',
         icon: pause,
     },
     pauseCircle: {
         name: 'PauseCircle',
         alias: [],
+        group: 'Lyd & Bilde',
         icon: pauseCircle,
     },
     pencil: {
-        name: 'Pencil',
-        alias: ['rediger', 'blyant', 'edit'],
+        name: 'Edit',
+        alias: ['rediger', 'blyant', 'pencil'],
         group: '',
-        icon: pencil,
+        icon: edit,
     },
     penTool: {
         name: 'PenTool',
@@ -1288,69 +1429,96 @@ const iconList = {
         alias: ['prosent'],
         icon: percent,
     },
+    personStanding: {
+        name: 'PersonStanding',
+        alias: ['person', 'bruker', 'står'],
+        icon: personStanding,
+    },
     phone: {
         name: 'Phone',
         alias: ['telefon'],
+        group: 'Kommunikasjon',
         icon: phone,
     },
     phoneCall: {
         name: 'PhoneCall',
         alias: ['telefon'],
+        group: 'Kommunikasjon',
         icon: phoneCall,
     },
     phoneForwarded: {
         name: 'PhoneForwarded',
         alias: ['telefon'],
+        group: 'Kommunikasjon',
         icon: phoneForwarded,
     },
     phoneIncoming: {
         name: 'PhoneIncoming',
         alias: ['telefon'],
+        group: 'Kommunikasjon',
         icon: phoneIncoming,
     },
     phoneMissed: {
         name: 'PhoneMissed',
         alias: ['telefon'],
+        group: 'Kommunikasjon',
         icon: phoneMissed,
     },
     phoneOff: {
         name: 'PhoneOff',
         alias: ['telefon'],
+        group: 'Kommunikasjon',
         icon: phoneOff,
     },
     phoneOutgoing: {
         name: 'PhoneOutgoing',
         alias: ['telefon'],
+        group: 'Kommunikasjon',
         icon: phoneOutgoing,
     },
     pieChart: {
         name: 'PieChart',
-        alias: [],
+        alias: ['diagram'],
+        group: 'Editor',
         icon: pieChart,
+    },
+    piggyBank: {
+        name: 'PiggyBank',
+        alias: ['sparegris', 'penger', 'money'],
+        icon: piggyBank,
+    },
+    plane: {
+        name: 'Plane',
+        alias: ['fly'],
+        icon: plane,
     },
     play: {
         name: 'Play',
-        alias: [],
+        alias: ['start'],
+        group: 'Lyd & Bilde',
         icon: play,
     },
     playCircle: {
         name: 'PlayCircle',
         alias: [],
+        group: 'Lyd & Bilde',
         icon: playCircle,
     },
     plus: {
         name: 'Plus',
-        alias: [],
+        alias: ['pluss'],
+        group: 'Innhold',
         icon: plus,
     },
     plusCircle: {
         name: 'PlusCircle',
-        alias: ['sirkel'],
+        alias: ['sirkel', 'pluss'],
+        group: 'Innhold',
         icon: plusCircle,
     },
     plusSquare: {
         name: 'PlusSquare',
-        alias: [],
+        alias: ['pluss'],
         icon: plusSquare,
     },
     pocket: {
@@ -1360,23 +1528,46 @@ const iconList = {
     },
     power: {
         name: 'Power',
-        alias: ['strøm'],
+        alias: ['strøm', 'energi'],
         icon: power,
     },
     printer: {
         name: 'Printer',
         alias: [],
+        group: 'Hardware',
         icon: printer,
+    },
+    radio: {
+        name: 'Radio',
+        alias: [],
+        group: 'Kommunikasjon',
+        icon: radio,
+    },
+    refreshCcw: {
+        name: 'RefreshCcw',
+        alias: ['oppdater', 'last inn'],
+        icon: refreshCcw,
+    },
+    refreshCw: {
+        name: 'RefreshCw',
+        alias: ['oppdater', 'last inn'],
+        icon: refreshCw,
     },
     repeat: {
         name: 'Repeat',
         alias: ['gjenta'],
+        group: 'Editor',
         icon: repeat,
     },
     rewind: {
         name: 'Rewind',
         alias: ['spole'],
         icon: rewind,
+    },
+    rocket: {
+        name: 'Rocket',
+        alias: ['rakett'],
+        icon: rocket,
     },
     rotateCcw: {
         name: 'RotateCcw',
@@ -1391,16 +1582,24 @@ const iconList = {
     rss: {
         name: 'RSS',
         alias: [],
+        group: 'Kommunikasjon',
         icon: rss,
     },
     save: {
         name: 'Save',
         alias: ['lagre'],
+        group: 'Innhold',
         icon: save,
+    },
+    scale: {
+        name: 'Scale',
+        alias: ['vekt'],
+        icon: scale,
     },
     scissors: {
         name: 'Scissors',
         alias: ['saks'],
+        group: 'Innhold',
         icon: scissors,
     },
     search: {
@@ -1410,141 +1609,166 @@ const iconList = {
     },
     send: {
         name: 'Send',
-        alias: [],
+        alias: ['sende'],
+        group: 'Kommunikasjon',
         icon: send,
     },
     server: {
         name: 'Server',
         alias: [],
+        group: 'Hardware',
         icon: server,
     },
     settings: {
         name: 'Settings',
-        alias: [],
+        alias: ['innstillinger'],
         icon: settings,
     },
     share: {
         name: 'Share',
-        alias: [],
+        alias: ['dele'],
+        group: 'Kommunikasjon',
         icon: share,
     },
     share2: {
         name: 'Share2',
-        alias: [],
+        alias: ['dele'],
+        group: 'Kommunikasjon',
         icon: share2,
     },
     shield: {
         name: 'Shield',
-        alias: [],
+        alias: ['skjold'],
         icon: shield,
     },
     shieldOff: {
         name: 'ShieldOff',
-        alias: [],
+        alias: ['skjold'],
         icon: shieldOff,
     },
     shoppingBag: {
         name: 'ShoppingBag',
-        alias: [],
+        alias: ['penger', 'money'],
         icon: shoppingBag,
     },
     shoppingCart: {
         name: 'ShoppingCart',
-        alias: [],
+        alias: ['penger', 'money'],
         icon: shoppingCart,
     },
     shuffle: {
         name: 'Shuffle',
-        alias: [],
+        alias: ['rekkefølge'],
+        group: 'Editor',
         icon: shuffle,
     },
     sidebar: {
         name: 'Sidebar',
         alias: [],
+        group: 'Editor',
         icon: sidebar,
     },
     skipBack: {
         name: 'SkipBack',
-        alias: [],
+        alias: ['tilbake'],
+        group: 'Lyd & Bilde',
         icon: skipBack,
     },
     skipForward: {
         name: 'SkipForward',
-        alias: [],
+        alias: ['fram'],
+        group: 'Lyd & Bilde',
         icon: skipForward,
     },
     slack: {
         name: 'Slack',
-        alias: ['Brand'],
+        alias: [],
+        group: 'Brand',
         icon: slack,
     },
     slash: {
         name: 'Slash',
-        alias: [],
+        alias: ['stopp', 'fjern'],
         icon: slash,
     },
     sliders: {
         name: 'Sliders',
-        alias: [],
+        alias: ['skyveknapper'],
+        group: 'Editor',
         icon: sliders,
     },
     smartphone: {
         name: 'Smartphone',
-        alias: [],
+        alias: ['telefon', 'mobil'],
+        group: 'Hardware',
         icon: smartphone,
     },
     smile: {
         name: 'Smile',
-        alias: [],
-        group: 'Smily',
+        alias: ['smily'],
+        group: 'Sosialt',
         icon: smile,
+    },
+    snowFlake: {
+        name: 'SnowFlake',
+        alias: ['snø'],
+        icon: snowFlake,
     },
     speaker: {
         name: 'Speaker',
-        alias: [],
+        alias: ['høytaler'],
+        group: 'Lyd & Bilde',
         icon: speaker,
     },
     square: {
         name: 'Square',
-        alias: [],
+        alias: ['kvadrat'],
         icon: square,
     },
     star: {
         name: 'Star',
-        alias: [],
+        alias: ['stjerne'],
         icon: star,
     },
     stopCircle: {
         name: 'StopCircle',
-        alias: [],
+        alias: ['sirkel'],
+        group: 'Lyd & Bilde',
         icon: stopCircle,
+    },
+    storting: {
+        name: 'Storting',
+        alias: ['bygning', 'building'],
+        group: 'Sted',
+        icon: storting,
     },
     sun: {
         name: 'Sun',
-        alias: [],
+        alias: ['sol'],
         group: 'Vær',
         icon: sun,
     },
     sunrise: {
         name: 'Sunrise',
-        alias: [],
+        alias: ['sol'],
         group: 'Vær',
         icon: sunrise,
     },
     sunset: {
         name: 'Sunset',
-        alias: [],
+        alias: ['sol'],
         group: 'Vær',
         icon: sunset,
     },
     tablet: {
         name: 'Tablet',
         alias: [],
+        group: 'Hardware',
         icon: tablet,
     },
     tag: {
         name: 'Tag',
-        alias: [],
+        alias: ['stikkord'],
         icon: tag,
     },
     target: {
@@ -1555,47 +1779,44 @@ const iconList = {
     terminal: {
         name: 'Terminal',
         alias: [],
+        group: 'Editor',
         icon: terminal,
     },
     thermometer: {
         name: 'Thermometer',
-        alias: [],
+        alias: ['termometer'],
         icon: thermometer,
     },
     thumbsDown: {
         name: 'ThumbsDown',
-        alias: [],
+        alias: ['tommel ned'],
         icon: thumbsDown,
     },
     thumbsUp: {
         name: 'ThumbsUp',
-        alias: [],
+        alias: ['tommel opp'],
         icon: thumbsUp,
     },
     toggleLeft: {
         name: 'ToggleLeft',
-        alias: [],
+        alias: ['veksle venstre'],
         icon: toggleLeft,
     },
     toggleRight: {
         name: 'ToggleRight',
-        alias: [],
+        alias: ['veksle høgre'],
         icon: toggleRight,
     },
     tool: {
         name: 'Tool',
-        alias: [],
+        alias: ['verktøy'],
         icon: tool,
     },
     trash: {
         name: 'Trash',
-        alias: [],
+        alias: ['slett', 'søppel'],
+        group: 'Innhold',
         icon: trash,
-    },
-    trash2: {
-        name: 'Trash2',
-        alias: [],
-        icon: trash2,
     },
     trello: {
         name: 'Trello',
@@ -1605,27 +1826,28 @@ const iconList = {
     },
     trendingDown: {
         name: 'TrendingDown',
-        alias: [],
+        alias: ['ned'],
         icon: trendingDown,
     },
     trendingUp: {
         name: 'TrendingUp',
-        alias: [],
+        alias: ['opp'],
         icon: trendingUp,
     },
     triangle: {
         name: 'Triangle',
-        alias: [],
+        alias: ['triangel'],
         icon: triangle,
     },
     truck: {
         name: 'Truck',
-        alias: [],
+        alias: ['lastebil'],
         icon: truck,
     },
     tv: {
         name: 'Tv',
         alias: [],
+        group: 'Hardware',
         icon: tv,
     },
     twitch: {
@@ -1643,6 +1865,7 @@ const iconList = {
     type: {
         name: 'Type',
         alias: [],
+        group: 'Editor',
         icon: type,
     },
     umbrella: {
@@ -1652,118 +1875,126 @@ const iconList = {
     },
     underline: {
         name: 'Underline',
-        alias: [],
+        alias: ['understrek'],
+        group: 'Editor',
         icon: underline,
     },
     unlock: {
         name: 'Unlock',
-        alias: ['lås'],
+        alias: ['lås opp'],
         icon: unlock,
     },
     upload: {
         name: 'Upload',
         alias: ['last opp'],
+        group: 'Fil',
         icon: upload,
     },
     uploadCloud: {
         name: 'UploadCloud',
         alias: ['last opp'],
+        group: 'Fil',
         icon: uploadCloud,
     },
     user: {
         name: 'User',
         alias: ['bruker', 'person'],
+        group: 'Sosialt',
         icon: user,
     },
     userCheck: {
         name: 'UserCheck',
         alias: ['bruker', 'person'],
+        group: 'Sosialt',
         icon: userCheck,
+    },
+    userClose: {
+        name: 'UserClose',
+        alias: ['bruker', 'person', 'lukk'],
+        group: 'Sosialt',
+        icon: userClose,
     },
     userMinus: {
         name: 'UserMinus',
         alias: ['bruker', 'person'],
+        group: 'Sosialt',
         icon: userMinus,
     },
     userPlus: {
         name: 'UserPlus',
         alias: ['bruker', 'person'],
+        group: 'Sosialt',
         icon: userPlus,
-    },
-    userX: {
-        name: 'UserX',
-        alias: ['bruker', 'person'],
-        icon: userX,
     },
     users: {
         name: 'Users',
-        alias: ['bruker', 'person'],
+        alias: ['brukere', 'personer'],
+        group: 'Sosialt',
         icon: users,
     },
     video: {
         name: 'video',
         alias: [],
+        group: 'Lyd & Bilde',
         icon: video,
     },
     videoOff: {
         name: 'VideoOff',
-        alias: [],
+        alias: ['av'],
+        group: 'Lyd & Bilde',
         icon: videoOff,
     },
     voicemail: {
         name: 'Voicemail',
-        alias: [],
+        alias: ['talepost'],
+        group: 'Kommunikasjon',
         icon: voicemail,
     },
     volume: {
         name: 'Volume',
-        alias: [],
+        alias: ['lyd'],
+        group: 'Lyd & Bilde',
         icon: volume,
     },
     volume1: {
         name: 'Volume1',
-        alias: [],
+        alias: ['lyd'],
+        group: 'Lyd & Bilde',
         icon: volume1,
     },
     volume2: {
         name: 'Volume2',
-        alias: [],
+        alias: ['lyd'],
+        group: 'Lyd & Bilde',
         icon: volume2,
     },
-    volumeX: {
-        name: 'Volumex',
-        alias: [],
+    volumeMute: {
+        name: 'VolumeMute',
+        alias: ['lyd'],
+        group: 'Lyd & Bilde',
         icon: volumeMute,
+    },
+    watch: {
+        name: 'Watch',
+        alias: ['klokke'],
+        icon: watch,
     },
     wifi: {
         name: 'wifi',
-        alias: ['internet'],
+        alias: ['internet', 'web'],
+        group: 'Kommunikasjon',
         icon: wifi,
     },
     wifiOff: {
         name: 'WifiOff',
-        alias: ['internet'],
+        alias: ['internet', 'web'],
+        group: 'Kommunikasjon',
         icon: wifiOff,
     },
-    x: {
-        name: 'Close',
-        alias: ['close'],
-        icon: xIcon,
-    },
-    xCircle: {
-        name: 'XCircle',
-        alias: ['close'],
-        icon: xCircle,
-    },
-    xOctagon: {
-        name: 'CloseCircle',
-        alias: ['close'],
-        icon: xOctagon,
-    },
-    xSquare: {
-        name: 'CloseSquare',
-        alias: ['close'],
-        icon: xSquare,
+    wind: {
+        name: 'Wind',
+        alias: ['vind'],
+        icon: wind,
     },
     youtube: {
         name: 'Youtube',
@@ -1773,22 +2004,24 @@ const iconList = {
     },
     zap: {
         name: 'Zap',
-        alias: [],
+        alias: ['blits'],
+        group: 'Lyd & Bilde',
         icon: zap,
     },
     zapOff: {
         name: 'ZapOff',
-        alias: [],
+        alias: ['blits'],
+        group: 'Lyd & Bilde',
         icon: zapOff,
     },
     zoomIn: {
         name: 'ZoomIn',
-        alias: [],
+        alias: ['inn'],
         icon: zoomIn,
     },
     zoomOut: {
         name: 'ZoomOut',
-        alias: [],
+        alias: ['ut'],
         icon: zoomOut,
     },
 

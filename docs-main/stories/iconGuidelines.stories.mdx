@@ -1,0 +1,38 @@
+import {Meta} from '@storybook/addon-docs';
+import canvasImage from '../../.storybook/assets/canvas.png'
+import typesImage from '../../.storybook/assets/types.png'
+import strokeImage from '../../.storybook/assets/stoke.png'
+
+<Meta title="Ikoner/Guidelines"/>
+
+# Guidelines
+
+Her finner du retninglinjer for hvordan ikone skal lages.
+
+## Canvas
+
+* Ikonene ligger i et canvas med en bredde og høyde på **24px**.
+* Linjene har en tykkelse på **2px**.
+* Ikone bruker ikke fill.
+
+<img src={canvasImage} alt="Hey" />
+
+## Avstand mellom linjer
+
+Det bør være minst **2px** avstand mellom linjene.
+
+<img src={strokeImage} alt="Hey" />
+
+
+## Proporsjoner
+
+For at ikonene skal oppleves optisk like ut, har formene litt ulike størrelser:
+
+* Et ikon som er formet som en sirkel bør ha en høyde på **22px** og bredde på **22px**.
+* Et ikon som er formet som et kvadrat bør ha en høyde på **20px** og bredde på **20px**.
+* Et ikon som er formet som et stående rektangel bør ha en høyde på **22px** og bredde på **18px**.
+* Et ikon som er formet som et liggende rektangel bør ha en høyde på **18px** og bredde på **22px**.
+
+NB: Om det blir vanskelig å lage et ikon med retningsinjene over, kan man øke størrelsen med 1px i alle 4 retninger, men man bør prøve å unngå dette.
+
+<img src={typesImage} alt="Hey" />

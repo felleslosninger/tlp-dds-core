@@ -14,16 +14,17 @@ module.exports = {
     '@storybook/addon-a11y',
     'storybook-addon-designs',
   ],
+  staticDirs: ['../packages/icons/svg'],
   refs: {
     // Digdir Websites Components storybook integration
     websites: {
-      title: 'Websider',
+      title: 'Web komponenter',
       url: 'https://felleslosninger.github.io/tlp-storybook-websites/',
       expanded: false,
     },
     // ID-porten storybook integration
     idporten: {
-      title: 'ID-porten',
+      title: 'ID-porten komponenter',
       url: 'https://felleslosninger.github.io/idporten-design-system/',
       expanded: false,
     },
