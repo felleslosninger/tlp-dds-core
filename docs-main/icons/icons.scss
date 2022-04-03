@@ -90,9 +90,7 @@
           fill: $color-neutral-grey-800;
         }
       }
-
     }
-
   }
 
   &__item {
@@ -121,7 +119,6 @@
     margin-bottom: 24px;
   }
 
-
   &__row {
     display: flex;
     flex-wrap: wrap;
@@ -137,5 +134,4 @@
   &__name {
     margin-top: 16px;
   }
-
 }
