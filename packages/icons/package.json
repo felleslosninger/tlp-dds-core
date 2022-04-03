@@ -9,11 +9,27 @@
   ],
   "author": "Digdir design system team",
   "license": "Apache-2.0",
+  "main": "./cjs/index.js",
+  "module": "./esm/index.js",
   "files": [
-    "/svg"
+    "/svg",
+    "/cjs",
+    "/esm"
   ],
-  "scripts": {},
+  "scripts": {
+    "optimize": "rimraf ./optimized && svgo -q -p 8 -f ./svg/outline -o ./optimized",
+    "build": "yarn optimize && node build.js && rimraf ./optimized "
+  },
   "publishConfig": {
     "access": "public"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.8",
+    "@svgr/cli": "^6.2.1",
+    "@svgr/core": "^5.5.0",
+    "camelcase": "^6.3.0",
+    "rimraf": "^3.0.2",
+    "svgo": "^2.8.0",
+    "terser": "^5.12.1"
   }
 }
