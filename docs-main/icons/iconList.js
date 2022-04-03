@@ -658,12 +658,6 @@ const iconList = {
         alias: ['lukk', 'times'],
         icon: close,
     },
-    closeCircle: {
-        name: 'XCircle',
-        alias: ['lukk', 'times'],
-        group: 'Innhold',
-        icon: closeCircle,
-    },
     closeOctagon: {
         name: 'CloseCircle',
         alias: ['lukk', 'times'],
@@ -887,9 +881,9 @@ const iconList = {
         icon: downloadCloud,
     },
     dribbble: {
-        name: 'Dribbble',
+        name: 'Basketball',
         alias: ['basketball'],
-        group: 'Brand',
+        group: '',
         icon: dribbble,
     },
     droplet: {

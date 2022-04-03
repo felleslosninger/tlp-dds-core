@@ -5,26 +5,22 @@ import { Meta } from '@storybook/addon-docs'
 # Ikoner
 [![](https://img.shields.io/npm/v/@digdir/ds-icons?label=@digdir/ds-icons&color=0051be)](https://www.npmjs.com/package/@digdir/ds-icons)
 
-Digdir designsystem bruker hovedsaklig ikoner fra Material Icons, som er gratis å bruke.
+Digdir designsystem sine ikoner baserer seg på feather icons, men med ein del justeringer og nye ikoner lagt til.
 
-Disse kan søkes i her: https://fonts.google.com/icons
+Disse kan søkes i `Ikonsøk` som du finn i menyen til venstre.
 
-Et subset av disse ikonene som er mest relevant for designsystemet er redistribuert gjennom pakken `@digdir/ds-icons`.
-Dette er et minifisert sett (størrelse under 800 kB [v1.0.0]) bestående av *outlined*-varianten av ikonene i SVG-format.
-For konsistens inneholder det en variant av alle ikonene.
+Ikonene ligger i pakken: `@digdir/ds-icons` på NPM.
+Akkuratt no er det kun ein outline versjon av ikonene, men me vil og leggje til ein solid variant ved behov.
+
+
+
+
 
 **Egenskaper**
 
 * Format: SVG
 * Variant: *outlined*
 * Størrelse: 24x24 px
-
-## Innhold
-
-- [Kom i gang](#kom-i-gang)
-- [Innhold og navn](#innhold-og-navn)
-  - [Duplikater](#duplikater)
-
 
 ## Kom i gang
 [![](https://img.shields.io/npm/dm/@digdir/ds-icons.svg)](https://www.npmjs.com/package/@digdir/ds-icons)
@@ -39,44 +35,16 @@ eller
 
 **2. Importer og bruk**
 
-Pakkestruktur:
+Ikonene finnes både som React komponentar, og som inline SVG.
 
-
-`/svg/ikon_navn/variant.svg`
-
-Eksempel på filbane til søkeikon:
-
-`@digdir/ds-icons/svg/search/outline.svg`
-
-
-Eksempel på importering i JavaScript:
-
+React:
 ```javascript
-import searchIcon from '@digdir/ds-icons/svg/search/outline.svg'
+import { Building } from '@digdir/ds-icons'
 ```
-
-## Innhold og navn
-
-
-Ikonene er hentet fra https://github.com/google/material-design-icons, de samme ikonnavnene og mappenavnene er benyttet her.
-Dette er de samme navnene som man finner i søkesiden https://fonts.google.com/icons, bare i formatet *snake_case* (Shopping Cart -> shopping_cart).
-Mappestruktur (for enklere navigering) og minifiserte SVG'er (for lavere avtrykk/pakkestørrelse) er hentet fra https://github.com/material-icons/material-icons.
-
-### Duplikater
-
-Det er fjernet noen duplikater fra originalkilden:
-
-Duplikat | Original til bruk
--- | --
-check_circle_outline  | @digdir/ds-icons/svg/check_circle/outline.svg
-delete_outline        | @digdir/ds-icons/svg/delete/outline.svg
-insert_chart_outlined | @digdir/ds-icons/svg/insert_chart/outline.svg
-mail_outline          | @digdir/ds-icons/svg/mail/outline.svg        
-mode_edit_outline     | @digdir/ds-icons/svg/mode_edit/outline.svg 
-pause_circle_outline  | @digdir/ds-icons/svg/pause_circle/outline.svg
-people_outline        | @digdir/ds-icons/svg/people/outline.svg 
-person_outline        | @digdir/ds-icons/svg/person/outline.svg
-pie_chart_outline     | @digdir/ds-icons/svg/pie_chart/outline.svg
-play_circle_outline   | @digdir/ds-icons/svg/play_circle/outline.svg
-star_border_purple500 | @digdir/ds-icons/svg/star_border/outline.svg
-star_purple500        | @digdir/ds-icons/svg/star/outline.svg
+```html
+<Building color="blue" height="32px" width="32px">
+```
+SVG:
+```javascript
+import BuildingIcon from '@digdir/ds-icons/svg/outline/Building.svg'
+```

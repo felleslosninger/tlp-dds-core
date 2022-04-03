@@ -77,7 +77,7 @@ const IconsComponent = () => {
         setSvgImport('import { ' + item.name + ' } from "@digdir/ds-icons/svg/' + item.name + '.svg" ')
         setReactImport('import { ' + item.name + ' } from "@digdir/ds-icons"')
         setReactImport(`import { ${item.name} } from "@digdir/ds-icons"
-<${item.name} color="blue" height="100px" width="100px"/>`)
+<${item.name} color="blue" height="32px" width="32px"/>`)
         setShowModalClass('icon-modal--show')
         setActiveName(item.name);
         setActiveIcon(item.icon);
