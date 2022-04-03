@@ -1,19 +1,19 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import {useState, useEffect} from "react";
 import './icons.scss'
 import './icon-modal.scss'
 import iconList from "./iconList";
 
 import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter';
-
-import {nightOwl} from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { nightOwl } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 const groups = ['Brand', 'Editor', 'Fil', 'Hardware', 'Innhold', 'Kart', 'Lyd & Bilde', 'Kommunikasjon', 'Navigasjon', 'Sosialt',  'Sted', 'Varsling', 'Vær', 'Generelt'];
 
 const IconsComponent = () => {
 
+    // Run main loop once when component loads
     useEffect(() => {
-        init('');
+        setIcons('');
     }, []);
 
     const [search, setSearch] = useState("");
@@ -26,13 +26,11 @@ const IconsComponent = () => {
 
     const [iconAmount, setIconAmount] = useState(0);
     let [filteredArray, setFilteredArray] = useState([]);
+    const searchInput = useRef(null);
 
-    const init = (value) => {
-        setSearch(value);
-        setIcons(value);
-    }
-
+    // Main loop that shows icons based on search string
     const setIcons = (searchString) => {
+        setSearch(searchString);
         let localArray = []
         setIconAmount(0);
 
@@ -41,11 +39,9 @@ const IconsComponent = () => {
         })
 
         for (const [key, value] of Object.entries(iconList)) {
-
-            if (filterArray(searchString, value)) {
+            if (filterArrayBySearch(searchString, value)) {
                 continue;
             }
-
             if (value.hasOwnProperty('group') && value.group !== '') {
                 localArray[value.group].push(value);
             } else {
@@ -55,7 +51,8 @@ const IconsComponent = () => {
         setFilteredArray(localArray);
     }
 
-    const filterArray = (searchString, value) => {
+    // Filter array based on search string
+    const filterArrayBySearch = (searchString, value) => {
 
         let searchLower = searchString === undefined ? undefined : searchString.toLowerCase();
 
@@ -73,16 +70,22 @@ const IconsComponent = () => {
         }
     }
 
+    // Sets active item when user clicks card
     const setActiveItem = (item) => {
-        setSvgImport('import { ' + item.name + ' } from "@digdir/ds-icons/svg/' + item.name + '.svg" ')
-        setReactImport('import { ' + item.name + ' } from "@digdir/ds-icons"')
-        setReactImport(`import { ${item.name} } from "@digdir/ds-icons"
-<${item.name} color="blue" height="32px" width="32px"/>`)
+        setSvgImport('import ' + item.name + 'Icon from "@digdir/ds-icons/svg/' + item.name + '.svg" ')
+        setReactImport(`import { ${item.name}Icon } from "@digdir/ds-icons"`)
         setShowModalClass('icon-modal--show')
         setActiveName(item.name);
         setActiveIcon(item.icon);
     }
 
+    // When user clicks close (x) on input
+    const oncloseClicked = () => {
+        setIcons('');
+        searchInput.current.focus();
+    }
+
+    // Check if array property contains string
     const contains = (arr = [], m) => arr.some((txt) => txt.includes(m));
 
     return (
@@ -125,14 +128,16 @@ const IconsComponent = () => {
             <div className="icons__search">
                 <div dangerouslySetInnerHTML={{__html: iconList.search.icon}}/>
                 <input
+                    ref={searchInput}
                     value={search}
-                    onChange={e => init(e.target.value)}
+                    onChange={e => setIcons(e.target.value)}
                     type="text"
                     placeholder="Søk etter ikoner her..."
                     autoComplete="off"/>
+                {search ? <button onClick={() => oncloseClicked()} dangerouslySetInnerHTML={{__html: iconList.close.icon}}/> : ''}
             </div>
 
-            <div className="icons__amount">viser <b>{iconAmount}</b> ikoner</div>
+            <div className="icons__amount">Viser <b>{iconAmount}</b> ikoner</div>
             <hr/>
 
             <div className="icons__items">
