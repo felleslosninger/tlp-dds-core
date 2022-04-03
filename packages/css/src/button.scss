@@ -16,7 +16,8 @@ $min-height-large: tokens.$spacing-base-14;
 $padding-small: tokens.$spacing-base-4;
 $padding-medium: tokens.$spacing-base-6;
 $padding-large: tokens.$spacing-base-8;
-$size-icon: tokens.$spacing-base-6;
+$size-icon: tokens.$spacing-base-5;
+$size-icon-large: tokens.$spacing-base-6;
 
 @mixin hover {
   background-color: $color-hover;
@@ -69,7 +70,9 @@ $size-icon: tokens.$spacing-base-6;
 
   // Elements
   & > svg {
-    fill: $color-secondary;
+    path {
+      fill: $color-secondary;
+    }
     box-sizing: border-box;
 
     display: inline-block;
@@ -105,6 +108,12 @@ $size-icon: tokens.$spacing-base-6;
       $padding-large
     );
     @include typography.text-interface-400();
+
+    & svg {
+      height: $size-icon-large;
+      width: $size-icon-large;
+    }
+
   }
 
   // Variant modifiers
@@ -112,7 +121,7 @@ $size-icon: tokens.$spacing-base-6;
     &:hover {
       @include hover();
 
-      & svg {
+      & svg path {
         fill: $color-primary;
       }
     }
@@ -128,7 +137,7 @@ $size-icon: tokens.$spacing-base-6;
   &--disabled {
     @include disabled($color-disabled, $color-secondary, $color-disabled);
 
-    & > svg {
+    & > svg path {
       fill: $color-secondary;
     }
   }
@@ -143,14 +152,14 @@ $size-icon: tokens.$spacing-base-6;
         @include active($color-primary);
       }
 
-      & > svg {
+      & > svg path {
         fill: $color-primary;
       }
     }
     &.#{$classname}--disabled {
       @include disabled($color-secondary, $color-disabled, $color-disabled);
 
-      & > svg {
+      & > svg path {
         fill: $color-disabled;
       }
     }

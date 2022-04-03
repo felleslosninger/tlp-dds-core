@@ -1,7 +1,8 @@
 import classnames from 'classnames'
 import { sanitizeStrict, formatHtml } from '../utils.js'
-import chevronIcon from '@digdir/ds-icons/svg/chevron_right/outline.svg'
-import imageIcon from '@digdir/ds-icons/svg/image/outline.svg'
+
+import chevronIcon from '@digdir/ds-icons/svg/outline/ChevronRight.svg'
+import imageIcon from '@digdir/ds-icons/svg/outline/Image.svg'
 
 /**
  * @property {string} size - options: large (medium by default)
