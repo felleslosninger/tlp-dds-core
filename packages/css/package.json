@@ -15,8 +15,8 @@
     "/build"
   ],
   "scripts": {
-    "build": "yarn clean && sass --no-source-map --style=compressed --load-path=../../node_modules/ src/index.scss build/index.css && cp -R -v src/ build/src/",
-    "clean": "rm -rf ./build/"
+    "build": "yarn clean && sass --no-source-map --style=compressed --load-path=../../node_modules/ src/index.scss build/index.css && shx cp -R src/ build/src/",
+    "clean": "shx rm -rf ./build/"
   },
   "dependencies": {
     "@digdir/ds-tokens": "^1.8.1"
