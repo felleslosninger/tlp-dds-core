@@ -57,7 +57,7 @@
     "build:docs": "build-storybook -o ./docs",
     "lint": "yarn lint:scss && yarn lint:css",
     "lint:scss": "stylelint \"**/*.scss\" --config='./stylelint.config.js'",
-    "lint:css": "stylelint './packages/css/build/index.css' --config='./stylelint-post.config.js'",
+    "lint:css": "stylelint \"./packages/css/build/index.css\" --config='./stylelint-post.config.js'",
     "format": "prettier . --write",
     "format:check": "prettier . --check",
     "version:changed": "yarn build && lerna version --no-push --conventional-commits --no-private",
