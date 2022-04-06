@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.4.0](https://github.com/felleslosninger/tlp-storybook-base/compare/@digdir/ds-core-css@5.2.0...@digdir/ds-core-css@5.4.0) (2022-04-06)
+
+
+### Bug Fixes
+
+* **input-field:** error variant: remove difference in placeholder color (use grey-600) ([1192da4](https://github.com/felleslosninger/tlp-storybook-base/commit/1192da468356e2c0fb13048b79d4b31d7c72d0dd))
+
+
+### Features
+
+* **checkbox:** remove need for excessive class modifier __label--right on label element ([f65b44a](https://github.com/felleslosninger/tlp-storybook-base/commit/f65b44aaa65c06cf1cff22b0e42536c53ddac94e))
+* **input-field:** set icon fill color to grey-700 on hover ([64acdce](https://github.com/felleslosninger/tlp-storybook-base/commit/64acdce1844261b69320d0bbb6164010df4a4554))
+
+
+
+
+
 # [5.3.0](https://github.com/felleslosninger/tlp-storybook-base/compare/@digdir/ds-core-css@5.2.0...@digdir/ds-core-css@5.3.0) (2022-03-30)
 
 
