@@ -17,7 +17,7 @@
   ],
   "scripts": {
     "build": "yarn clean && rollup -c",
-    "clean": "rm -rf ./build/"
+    "clean": "shx rm -rf ./build/"
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",
