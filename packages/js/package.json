@@ -1,6 +1,6 @@
 {
   "name": "@digdir/ds-core-js",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": false,
   "description": "JavaScript for Digdir core components",
   "keywords": [
@@ -17,7 +17,7 @@
   ],
   "scripts": {
     "build": "yarn clean && rollup -c",
-    "clean": "rm -rf ./build/"
+    "clean": "shx rm -rf ./build/"
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",
