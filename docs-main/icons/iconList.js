@@ -658,8 +658,14 @@ const iconList = {
     alias: ['lukk', 'times'],
     icon: close,
   },
-  closeOctagon: {
+  closeCircle: {
     name: 'CloseCircle',
+    alias: ['lukk', 'times'],
+    group: 'Innhold',
+    icon: closeCircle,
+  },
+  closeOctagon: {
+    name: 'CloseOctagon',
     alias: ['lukk', 'times'],
     group: 'Innhold',
     icon: closeOctagon,

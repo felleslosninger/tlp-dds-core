@@ -95,7 +95,7 @@ async function buildIcons(format = 'esm') {
   )
 }
 
-;(function main() {
+(function main() {
   console.log('🏗 Building icon package...')
   new Promise((resolve) => {
     rimraf(`${outputPath}/esm`, () => {
