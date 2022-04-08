@@ -12,21 +12,21 @@ $color-active-grey: tokens.$color-neutral-grey-800;
 $color-interaction: tokens.$color-interface-interaction;
 $color-disabled-grey: tokens.$color-neutral-grey-500;
 // Size variables
-$min-width: calc(tokens.$spacing-base-8 * 10);
+$min-width: calc(#{tokens.$spacing-base-8} * 10);
 $height-medium: tokens.$spacing-base-12;
 $height-large: tokens.$spacing-base-14;
 $size-icon-medium: tokens.$spacing-base-5;
-$size-icon-large: tokens.$spacing-base-8;
+$size-icon-large: tokens.$spacing-base-6;
 // Padding sizes
-$padding-icon-medium: utils.pxToRem(6px);
-$padding-icon-large: utils.pxToRem(10px);
+$padding-icon-medium: tokens.$spacing-base-3;
+$padding-icon-large: tokens.$spacing-base-4;
 $padding-placeholder-horizontal-medium: tokens.$spacing-base-4;
 $padding-placeholder-horizontal-large: tokens.$spacing-base-5;
 $padding-placeholder-horizontal-icon-medium: calc(
-  $size-icon-medium + $padding-icon-medium * 2
+  #{$size-icon-medium} + #{$padding-icon-medium} * 2
 );
 $padding-placeholder-horizontal-icon-large: calc(
-  $size-icon-large + $padding-icon-large * 2
+  #{$size-icon-large} + #{$padding-icon-large} * 2
 );
 
 .#{$classname} {
@@ -36,7 +36,6 @@ $padding-placeholder-horizontal-icon-large: calc(
   position: relative;
 
   // Size medium
-  min-width: Min($min-width, 100%);
   max-width: utils.$component-max-width;
   height: $height-medium;
 

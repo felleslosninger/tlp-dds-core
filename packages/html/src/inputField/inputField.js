@@ -1,7 +1,7 @@
 import classnames from 'classnames'
 import { sanitizeStrict, formatHtml } from '../utils.js'
-import imageIcon from '@digdir/ds-icons/svg/image/outline.svg'
-import searchIcon from '@digdir/ds-icons/svg/search/outline.svg'
+import mailIcon from '@digdir/ds-icons/svg/outline/Mail.svg'
+import searchIcon from '@digdir/ds-icons/svg/outline/Search.svg'
 
 /**
  * @property {string} size - options: large (medium by default)
@@ -36,7 +36,7 @@ const createInputField = ({
   // Elements
   const iconLeftSvg = String.raw`
     <span class='${classPrefix}__icon-left'>
-      ${imageIcon}
+      ${mailIcon}
     </span>
     `
   const iconRightSvg = String.raw`

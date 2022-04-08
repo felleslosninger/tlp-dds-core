@@ -5,8 +5,8 @@
 $classname: '#{utils.$prefix}-breadcrumbs';
 // Size variables
 $min-height: tokens.$spacing-base-6;
-$size-icon: tokens.$spacing-base-5;
-$margin-icon: tokens.$spacing-base-2;
+$size-icon: tokens.$spacing-base-3;
+$margin-icon: tokens.$spacing-base-3;
 
 @mixin separatorIcon {
   content: '';

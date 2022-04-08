@@ -1,6 +1,6 @@
 import classnames from 'classnames'
 import { sanitizeStrict, formatHtml } from '../utils.js'
-import imageIcon from '@digdir/ds-icons/svg/image/outline.svg'
+import plusIcon from '@digdir/ds-icons/svg/outline/Plus.svg'
 
 /**
  * @property {string} variant - options: secondary (primary by default)
@@ -32,9 +32,9 @@ const createButton = ({
     class='${buttonClasses}'
     ${disabled ? 'aria-disabled="true"' : ''}
   >
-    ${iconLeft ? imageIcon : ''}
+    ${iconLeft ? plusIcon : ''}
     ${label}
-    ${iconRight ? imageIcon : ''}
+    ${iconRight ? plusIcon : ''}
   </button>`)
 }
 

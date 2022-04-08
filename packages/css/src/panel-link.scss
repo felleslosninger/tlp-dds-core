@@ -11,9 +11,9 @@ $color-icon: tokens.$color-neutral-grey-700;
 // Size variables
 $min-height-medium: tokens.$spacing-base-10;
 $min-height-large: tokens.$spacing-base-14;
-$min-width: calc(tokens.$spacing-base-8 * 10);
-$size-icon-medium: tokens.$spacing-base-6;
-$size-icon-large: tokens.$spacing-base-8;
+$min-width: calc(#{tokens.$spacing-base-8} * 10);
+$size-icon-medium: tokens.$spacing-base-5;
+$size-icon-large: tokens.$spacing-base-7;
 
 $padding-left-medium: tokens.$spacing-base-4;
 $padding-left-large: tokens.$spacing-base-6;
@@ -40,7 +40,7 @@ $padding-icon-hover-offset: tokens.$spacing-base-1;
 
   // Medium size
   min-height: $min-height-medium;
-  min-width: Min($min-width, 100%);
+  min-width: Min(#{$min-width}, 100%);
   max-width: utils.$component-max-width;
 
   padding-left: $padding-left-medium;
@@ -55,7 +55,7 @@ $padding-icon-hover-offset: tokens.$spacing-base-1;
   & > &__label {
     @include typography.text-body-300();
     color: tokens.$color-text-background-light;
-    padding-right: calc($size-icon-medium + $padding-label-icon);
+    padding-right: calc(#{$size-icon-medium} + #{$padding-label-icon});
   }
   & > svg {
     fill: $color-icon;
@@ -82,7 +82,7 @@ $padding-icon-hover-offset: tokens.$spacing-base-1;
     border-color: $color-border;
 
     & > svg:nth-last-of-type(1) {
-      right: calc($padding-right-medium - $padding-icon-hover-offset);
+      right: calc(#{$padding-right-medium} - #{$padding-right-medium});
     }
   }
   &:active {
@@ -107,12 +107,12 @@ $padding-icon-hover-offset: tokens.$spacing-base-1;
     }
 
     &:hover > svg:nth-last-of-type(1) {
-      right: calc($padding-right-large - $padding-icon-hover-offset);
+      right: calc(#{$padding-right-large} - #{$padding-icon-hover-offset});
     }
 
     & > .#{$classname}__label {
       @include typography.text-body-400();
-      padding-right: calc($size-icon-large + $padding-label-icon);
+      padding-right: calc(#{$size-icon-large} + #{$padding-label-icon});
     }
 
     & > svg {

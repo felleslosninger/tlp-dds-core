@@ -50,3 +50,10 @@ a.#{utils.$prefix}-link {
     outline: none;
   }
 }
+
+// Override font-family for form tags
+button,
+input,
+select {
+  font-family: inherit;
+}
