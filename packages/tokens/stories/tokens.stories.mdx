@@ -1,5 +1,6 @@
 import { Meta } from '@storybook/addon-docs'
 import TokenTable from '/docs-main/TokenTable.jsx'
+import { CdnSnippet, CodeSnippet } from '/docs-main/CodeSnippet.jsx'
 
 <Meta title="Tokens" />
 
@@ -40,31 +41,28 @@ Bruk av design tokens gjennom CDN (Content Delivery Network).
 Tjenesten jsDelivr er brukt i eksemplene her. Verktøyet 
 [https://www.srihash.org/](https://www.srihash.org/) kan brukes til å generere Subresource Integrity hash `integrity="..."` til riktig versjon av ønsket fil fra tokens-pakken. Dette brukes for å sikre at filen som hentes ikke er endret.
 
-```html
-<!-- kun CSS v1.8.1-->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@digdir/ds-tokens@1.8.1/build/tokens.css" integrity="sha512-P6F9pSg9sm/8QwAI90VhIIl15eBFRiKWfoGPw4HYNFY3FTxeGuny08Q6RqWI5IafZiDlUArbixX+Qn/CzvlQOg==" crossorigin="anonymous">
-```
+__CSS bundle__
+
+<CdnSnippet absoluteFilepath="packages/css/build/index.css" linkFormat="css"/>
 
 **1. Link stilarked i `<head>` i HTML-dokumentet.**
 
 **2. Bruk variablene etter behov i inkluderte CSS-stilark.**
 
-```html
-<!-- Eksempel på bruk i HTML-dokument -->
+<CodeSnippet children='<!-- Eksempel på plassering i HTML-dokument -->
 <!DOCTYPE html>
 <html lang="no">
   <head>
     <!-- [Meta-elementer] -->
-    <!-- Endre versjon @1.8.1 i href-lenken, og oppdater integrity hashen til ønsket versjon. -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@digdir/ds-tokens@1.8.1/build/tokens.css" integrity="sha512-P6F9pSg9sm/8QwAI90VhIIl15eBFRiKWfoGPw4HYNFY3FTxeGuny08Q6RqWI5IafZiDlUArbixX+Qn/CzvlQOg==" crossorigin="anonymous">
+    <!-- Plasser ressursene som skal inkluderes her -->
+    <link rel="stylesheet" href=".../@digdir/ds-tokens@x.x.x/build/tokens.css" integrity="..." crossorigin="anonymous">
     <link rel="stylesheet" href="min-css-som-bruker-tokens-variabler.css"/>
     <!-- [Andre script] -->
   </head>
   <body>
     <!-- [Innhold] -->
   </body>
-</html>
-```
+</html>'/>
 
 #### NPM
 
@@ -84,32 +82,26 @@ eller
 
 ##### Bruk i CSS
 
-```css
-/* Importer */
-@import '@digdir/ds-tokens/build/tokens.css';
+<CodeSnippet children='/* Importer */
+@import "@digdir/ds-tokens/build/tokens.css";
 /* Bruk variablene på følgende format: */
 :root {
   --my-text-color: var(--color-text-background-light);
-}
-```
+}' language='css'/>
 
 ##### Bruk i SCSS
 
-```scss
-// Importer
-@use '@digdir/ds-tokens/build/tokens.scss' as tokens;
+<CodeSnippet children='// Importer
+@use "@digdir/ds-tokens/build/tokens.scss" as tokens;
 // Bruk variablene på følgende format:
-$my-text-color: tokens.$color-text-background-light;
-```
+$my-text-color: tokens.$color-text-background-light;' language='scss'/>
 
 ##### JavaScript
 
-```javascript
-// Importer
-import tokens from '@digdir/ds-tokens/build/tokens.js'
+<CodeSnippet children='// Importer
+import tokens from "@digdir/ds-tokens/build/tokens.js"
 // Bruk variablene på følgende format:
-const myTextColor = tokens.color.text.background.light
-```
+const myTextColor = tokens.color.text.background.light' language='javascript'/>
 
 ## Tokens
 

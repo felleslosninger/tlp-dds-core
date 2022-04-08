@@ -1,8 +1,16 @@
+import React from 'react'
+import {
+  Title,
+  Primary as PrimaryStory,
+  ArgsTable,
+  Stories,
+  PRIMARY_STORY,
+} from '@storybook/addon-docs'
+import { useEffect } from '@storybook/client-api'
+import { withDesign } from 'storybook-addon-designs'
 import { createRadio } from '../radio.js'
 import { radioScript } from '../../../../js/src/radio.script.js'
-import { withDesign } from 'storybook-addon-designs'
-import { useEffect } from '@storybook/client-api'
-import { jsInfo } from '/docs-main/docsComponents.js'
+import InfoBox from '/docs-main/InfoBox.jsx'
 
 export default {
   title: 'Komponenter/Radio',
@@ -13,9 +21,15 @@ export default {
       url: 'https://www.figma.com/file/vpM9dqqQPHqU6ogfKp5tlr/DDS---Core-Components?node-id=5556%3A17057',
     },
     docs: {
-      description: {
-        component: jsInfo,
-      },
+      page: () => (
+        <>
+          <Title />
+          <InfoBox>Denne komponenten bruker JavaScript</InfoBox>
+          <PrimaryStory />
+          <ArgsTable story={PRIMARY_STORY} />
+          <Stories />
+        </>
+      ),
     },
   },
   argTypes: {
