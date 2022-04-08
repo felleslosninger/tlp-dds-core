@@ -9,15 +9,17 @@ $color-visited: tokens.$color-interface-visited;
 $color-border-default: tokens.$color-neutral-grey-600;
 $color-icon: tokens.$color-neutral-grey-800;
 // Size variables
-$icon-size-medium: tokens.$spacing-base-3;
-$icon-size-large: tokens.$spacing-base-4;
-$icon-padding: tokens.$spacing-base-2;
+$icon-size-medium: 18px;
+$icon-size-large: tokens.$spacing-base-5;
+$icon-padding: 6px;
 
 .#{$classname} {
   cursor: pointer;
   position: relative;
   overflow-wrap: anywhere;
   box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
 
   @include typography.text-body-300();
   color: tokens.$color-text-background-light;
@@ -40,7 +42,9 @@ $icon-padding: tokens.$spacing-base-2;
     flex-shrink: 0;
     flex-grow: 0;
 
-    fill: $color-icon;
+    path {
+      fill: $color-icon;
+    }
   }
 
   // States
@@ -57,7 +61,7 @@ $icon-padding: tokens.$spacing-base-2;
     }
   }
 
-  &:visited > svg {
+  &:visited > svg path {
     fill: $color-visited;
   }
 
