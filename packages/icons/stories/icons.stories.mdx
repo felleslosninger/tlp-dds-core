@@ -1,4 +1,5 @@
 import { Meta } from '@storybook/addon-docs'
+import { CodeSnippet } from '/docs-main/CodeSnippet.jsx'
 
 <Meta title="Ikoner/Kom i gang" />
 
@@ -37,6 +38,7 @@ eller
 
 Ikona fins både som React komponentar og som inline SVG.
 
+<<<<<<< HEAD
 React:
 ```javascript
 import { BuildingIcon } from '@digdir/ds-icons'
@@ -48,3 +50,32 @@ SVG:
 ```javascript
 import BuildingIcon from '@digdir/ds-icons/svg/outline/Building.svg'
 ```
+=======
+<CodeSnippet children='import searchIcon from "@digdir/ds-icons/svg/search/outline.svg"' language='javascript'/>
+
+## Innhold og navn
+
+
+Ikonene er hentet fra https://github.com/google/material-design-icons, de samme ikonnavnene og mappenavnene er benyttet her.
+Dette er de samme navnene som man finner i søkesiden https://fonts.google.com/icons, bare i formatet *snake_case* (Shopping Cart -> shopping_cart).
+Mappestruktur (for enklere navigering) og minifiserte SVG'er (for lavere avtrykk/pakkestørrelse) er hentet fra https://github.com/material-icons/material-icons.
+
+### Duplikater
+
+Det er fjernet noen duplikater fra originalkilden:
+
+Duplikat | Original til bruk
+-- | --
+check_circle_outline  | @digdir/ds-icons/svg/check_circle/outline.svg
+delete_outline        | @digdir/ds-icons/svg/delete/outline.svg
+insert_chart_outlined | @digdir/ds-icons/svg/insert_chart/outline.svg
+mail_outline          | @digdir/ds-icons/svg/mail/outline.svg        
+mode_edit_outline     | @digdir/ds-icons/svg/mode_edit/outline.svg 
+pause_circle_outline  | @digdir/ds-icons/svg/pause_circle/outline.svg
+people_outline        | @digdir/ds-icons/svg/people/outline.svg 
+person_outline        | @digdir/ds-icons/svg/person/outline.svg
+pie_chart_outline     | @digdir/ds-icons/svg/pie_chart/outline.svg
+play_circle_outline   | @digdir/ds-icons/svg/play_circle/outline.svg
+star_border_purple500 | @digdir/ds-icons/svg/star_border/outline.svg
+star_purple500        | @digdir/ds-icons/svg/star/outline.svg
+>>>>>>> main

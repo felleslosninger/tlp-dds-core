@@ -42,7 +42,7 @@ const flattenObject = (jsonObject = {}, prefix = '', result = {}) => {
 /**
  * Token preview cell block
  *
- * @param {string} category: token category (used in CSS class name)
+ * @property {string} category - token category (used in CSS class name)
  */
 const PreviewCell = ({ category, ...props }) => {
   const classnamePrefix = 'ddsdocs-table__preview'
@@ -56,10 +56,10 @@ const PreviewCell = ({ category, ...props }) => {
 /**
  * Table row displaying spacing design token ( |-name-|-value-|-preview-| ).
  *
- * @param {string} name
- * @param {string} value
- * @param {React.ReactNode} children: element to be displayed as preview of token
- * @param {boolean} preview: display preview of token
+ * @property {string} name
+ * @property {string} value
+ * @property {React.ReactNode} children - element to be displayed as preview of token
+ * @property {boolean} preview - display preview of token
  */
 const TokenRow = ({ name, value, children, preview = true }) => {
   const scssVariable = `$${name}`
@@ -102,10 +102,10 @@ const TokenRow = ({ name, value, children, preview = true }) => {
 }
 
 /**
- * Table displaying design tokens ( |-name-|-value-|-preview-| ).
+ * Table displaying design tokens ( |-name-|-value-|-preview-| or |-name-|-value-| ).
  *
- * @param {string} category: spacing | color | font-size | font-weight | font-line-height | font-family | border-width
- * @param {boolean} preview: display preview of token
+ * @property {string} category - spacing | color | font-size | font-weight | font-line-height | font-family | border-width
+ * @property {boolean} preview - display preview of token
  */
 const TokenTable = ({ category = '', preview = true }) => {
   let tokenSubset = tokens[category]

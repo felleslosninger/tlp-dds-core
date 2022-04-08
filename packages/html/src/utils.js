@@ -6,7 +6,7 @@ import parserHtml from 'prettier/parser-html.js'
  * Removes everything else.
  */
 export function sanitizeStrict(text) {
-  const blockList = /[^0-9a-zæøåA-ZÆØÅ\-\_\s]/g
+  const blockList = /[^0-9a-zæøåA-ZÆØÅ\-_\s]/g
   return text.replaceAll(blockList, '')
 }
 /*

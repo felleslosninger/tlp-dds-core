@@ -8,17 +8,17 @@ import {
 } from '@storybook/addon-docs'
 import { useEffect } from '@storybook/client-api'
 import { withDesign } from 'storybook-addon-designs'
-import { createRadio } from '../radio.js'
-import { radioScript } from '../../../../js/src/radio.script.js'
+import { createCheckbox } from '../checkbox.js'
+import { checkboxScript } from '../../../../js/src/checkbox.script.js'
 import InfoBox from '/docs-main/InfoBox.jsx'
 
 export default {
-  title: 'Komponenter/Radio',
+  title: 'Komponenter/Checkbox',
   decorators: [withDesign],
   parameters: {
     design: {
       type: 'figma',
-      url: 'https://www.figma.com/file/vpM9dqqQPHqU6ogfKp5tlr/DDS---Core-Components?node-id=5556%3A17057',
+      url: 'https://www.figma.com/file/vpM9dqqQPHqU6ogfKp5tlr/DDS---Core-Components?node-id=5556%3A17050',
     },
     docs: {
       page: () => (
@@ -32,10 +32,11 @@ export default {
       ),
     },
   },
+
   argTypes: {
     label: {},
-    disabled: {},
-    checked: {},
+    disabled: { control: { type: 'boolean' } },
+    checked: { control: { type: 'boolean' } },
     size: {
       options: ['medium', 'large'],
       control: { type: 'select' },
@@ -45,27 +46,23 @@ export default {
 
 const Template = (args) => {
   useEffect(() => {
-    radioScript()
+    checkboxScript()
   })
-  if (args.disabled && args.checked) {
-    // Set unique name so it stays checked (in docs page)
-    args.nameAttribute = 'radio-deactivated-checked'
-  }
-  return createRadio(args)
+  return createCheckbox(args)
 }
 
 export const Default = Template.bind({})
 Default.args = {
-  label: 'Radioknapp',
+  label: 'Avkrysningsboks',
   disabled: false,
   checked: false,
   size: 'medium',
 }
 
-const disabledDescription = `Til en deaktivert radioknapp benyttes JavaScript for komplett funksjonalitet. Se *"Kom i gang"* for mer info.`
+const disabledDescription = `Til en deaktivert avkrysningsboks benyttes JavaScript for komplett funksjonalitet. Se *"Kom i gang"* for mer info.`
 export const Disabled = Template.bind({})
 Disabled.args = {
-  label: 'Deaktivert radioknapp',
+  label: 'Deaktivert',
   disabled: true,
   checked: false,
   size: 'medium',
