@@ -14,6 +14,7 @@ module.exports = {
     '@storybook/addon-a11y',
     'storybook-addon-designs',
   ],
+  staticDirs: ['../packages/icons/svg'],
   refs: {
     // Digdir Websites Components storybook integration
     websites: {
