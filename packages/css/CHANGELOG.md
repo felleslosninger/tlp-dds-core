@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.5.2](https://github.com/felleslosninger/tlp-storybook-base/compare/@digdir/ds-core-css@5.5.1...@digdir/ds-core-css@5.5.2) (2022-04-09)
+
+
+### Bug Fixes
+
+* fixed formatting ([8749f16](https://github.com/felleslosninger/tlp-storybook-base/commit/8749f163bebb6f9d78cff85d78ff7e26686fdad1))
+
+
+
+
+
+
 ## [5.5.1](https://github.com/felleslosninger/tlp-storybook-base/compare/@digdir/ds-core-css@5.5.0...@digdir/ds-core-css@5.5.1) (2022-04-09)
 
 
