@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/felleslosninger/tlp-storybook-base/compare/@digdir/ds-icons@1.0.0...@digdir/ds-icons@1.2.0) (2022-04-09)
+
+
+### Features
+
+* **icons:** added new experimental icons ([4a4473c](https://github.com/felleslosninger/tlp-storybook-base/commit/4a4473cb674779eb2513a0d718f537e353b17a96))
+* **icons:** added react components ([bd46e9d](https://github.com/felleslosninger/tlp-storybook-base/commit/bd46e9dbdd85df0136a2d9c798b6861aa2d65999))
+* **icons:** removed material icons and fixed based components ([1ac80da](https://github.com/felleslosninger/tlp-storybook-base/commit/1ac80da3fd414a96538ed8c411a247bff3492608))
+
+
+
+
+
+
 # [1.1.0](https://github.com/felleslosninger/tlp-storybook-base/compare/@digdir/ds-icons@1.0.0...@digdir/ds-icons@1.1.0) (2022-04-06)
 
 

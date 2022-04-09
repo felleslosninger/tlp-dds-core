@@ -1,6 +1,6 @@
 {
   "name": "@digdir/ds-icons",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "private": false,
   "description": "Icons of the Digdir design system",
   "keywords": [
@@ -18,7 +18,7 @@
   ],
   "scripts": {
     "optimize": "rimraf ./optimized && svgo -q -p 8 -f ./svg/outline -o ./optimized",
-    "build": "yarn optimize && node build.js && rimraf ./optimized "
+    "build-react": "yarn optimize && node build.js && rimraf ./optimized "
   },
   "publishConfig": {
     "access": "public"
