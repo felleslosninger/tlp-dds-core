@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/felleslosninger/tlp-storybook-base/compare/@digdir/ds-icons@1.2.0...@digdir/ds-icons@1.2.1) (2022-04-09)
+
+
+### Bug Fixes
+
+* **icons:** testing1 ([cfa0ed4](https://github.com/felleslosninger/tlp-storybook-base/commit/cfa0ed404dc8e418836eb54ecb98db8aaa317aca))
+* **icons:** testing2 ([f3743ea](https://github.com/felleslosninger/tlp-storybook-base/commit/f3743ea5f62d236c7eb1d411b35cd97449c688d0))
+
+
+
+
+
+
 # [1.2.0](https://github.com/felleslosninger/tlp-storybook-base/compare/@digdir/ds-icons@1.0.0...@digdir/ds-icons@1.2.0) (2022-04-09)
 
 
