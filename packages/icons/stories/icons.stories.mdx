@@ -1,36 +1,32 @@
 import { Meta } from '@storybook/addon-docs'
 import { CodeSnippet } from '/docs-main/CodeSnippet.jsx'
 
-<Meta title="Ikoner" />
+<Meta title="Ikoner/Kom i gang" />
 
 # Ikoner
 [![](https://img.shields.io/npm/v/@digdir/ds-icons?label=@digdir/ds-icons&color=0051be)](https://www.npmjs.com/package/@digdir/ds-icons)
 
-Digdir designsystem bruker hovedsaklig ikoner fra Material Icons, som er gratis å bruke.
+Digdir designsystem sine ikon baserer seg på feather icons, men med ein del justeringer og nye ikon lagt til.
 
-Disse kan søkes i her: https://fonts.google.com/icons
+Disse kan du søke på på sida `Ikonsøk`, som du finn i menyen til venstre.
 
-Et subset av disse ikonene som er mest relevant for designsystemet er redistribuert gjennom pakken `@digdir/ds-icons`.
-Dette er et minifisert sett (størrelse under 800 kB [v1.0.0]) bestående av *outlined*-varianten av ikonene i SVG-format.
-For konsistens inneholder det en variant av alle ikonene.
+Ikona ligg i NPM pakken: `@digdir/ds-icons`.
+Akkuratt no er det kun ein outline versjon av ikona, men me vil og leggje til ein solid variant ved behov.
 
-**Egenskaper**
+
+
+
+
+**Eigenskapar**
 
 * Format: SVG
 * Variant: *outlined*
 * Størrelse: 24x24 px
 
-## Innhold
-
-- [Kom i gang](#kom-i-gang)
-- [Innhold og navn](#innhold-og-navn)
-  - [Duplikater](#duplikater)
-
-
 ## Kom i gang
 [![](https://img.shields.io/npm/dm/@digdir/ds-icons.svg)](https://www.npmjs.com/package/@digdir/ds-icons)
 
-**1. Installer pakken i kommandolinjen ved hjelp av NPM eller Yarn**
+**1. Installer pakken i kommandolinja ved hjelp av NPM eller Yarn**
 
 `npm install @digdir/ds-icons`
 
@@ -40,18 +36,21 @@ eller
 
 **2. Importer og bruk**
 
-Pakkestruktur:
+Ikona fins både som React komponentar og som inline SVG.
 
-
-`/svg/ikon_navn/variant.svg`
-
-Eksempel på filbane til søkeikon:
-
-`@digdir/ds-icons/svg/search/outline.svg`
-
-
-Eksempel på importering i JavaScript:
-
+<<<<<<< HEAD
+React:
+```javascript
+import { BuildingIcon } from '@digdir/ds-icons'
+```
+```html
+<BuildingIcon color="blue" height="32px" width="32px">
+```
+SVG:
+```javascript
+import BuildingIcon from '@digdir/ds-icons/svg/outline/Building.svg'
+```
+=======
 <CodeSnippet children='import searchIcon from "@digdir/ds-icons/svg/search/outline.svg"' language='javascript'/>
 
 ## Innhold og navn
@@ -79,3 +78,4 @@ pie_chart_outline     | @digdir/ds-icons/svg/pie_chart/outline.svg
 play_circle_outline   | @digdir/ds-icons/svg/play_circle/outline.svg
 star_border_purple500 | @digdir/ds-icons/svg/star_border/outline.svg
 star_purple500        | @digdir/ds-icons/svg/star/outline.svg
+>>>>>>> main

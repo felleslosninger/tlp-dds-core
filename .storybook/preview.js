@@ -39,6 +39,8 @@ export const parameters = {
           'Input-field',
           'Breadcrumbs',
         ],
+        'Ikoner',
+        ['Kom i gang', 'Ikonsøk', 'Guidelines'],
         'Changelog',
         ['Tokens', 'Ikoner', 'Core CSS', 'Core JS'],
       ],
