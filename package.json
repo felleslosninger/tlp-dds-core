@@ -58,7 +58,7 @@
   "scripts": {
     "start": "start-storybook -p 6006",
     "start:clean": "start-storybook -p 6006 --no-manager-cache",
-    "build": "lerna run build && yarn build:sri",
+    "build": "lerna run build",
     "build:docs": "build-storybook -o ./docs",
     "build:sri": "node utils/sriGenerator.js",
     "lint": "yarn lint:scss && yarn lint:css",
