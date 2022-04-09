@@ -2,3 +2,5 @@
 *.mdx
 **/build
 .vscode
+cjs
+esm
