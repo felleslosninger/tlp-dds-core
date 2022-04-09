@@ -69,8 +69,7 @@
     "format:check": "prettier . --check",
     "version:changed": "yarn build && lerna version --no-push --conventional-commits --no-private",
     "publish:changed": "lerna publish from-git",
-    "version-publish-push": "yarn build && lerna publish --conventional-commits",
-    "prepare": "husky install"
+    "version-publish-push": "yarn build && lerna publish --conventional-commits"
   },
   "prettier": {
     "trailingComma": "all",
