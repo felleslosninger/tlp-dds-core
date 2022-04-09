@@ -5,46 +5,52 @@ import '../packages/css/src/index.scss'
 import './customStyling.scss'
 
 export const parameters = {
-  docs: {
-    theme: customTheme,
-  },
-  backgrounds: {
-    values: [
-      {
-        name: 'grey-100',
-        value: tokens.color.neutral.grey['100'],
-      },
-      {
-        name: 'grey-200',
-        value: tokens.color.neutral.grey['200'],
-      },
-    ],
-  },
-  options: {
-    storySort: {
-      order: [
-        'Introduksjon',
-        'Tokens',
-        'Typografi',
-        'Komponenter',
-        [
-          'Kom i gang',
-          'Button',
-          'Checkbox',
-          'Radio',
-          'Toggle',
-          'Link',
-          'Icon-link',
-          'Panel-link',
-          'Input-field',
-          'Breadcrumbs',
-        ],
-        'Changelog',
-        ['Tokens', 'Ikoner', 'Core CSS', 'Core JS'],
-      ],
+    docs: {
+        theme: customTheme,
     },
-  },
-  actions: {
-    disabled: true,
-  },
+    backgrounds: {
+        values: [
+            {
+                name: 'grey-100',
+                value: tokens.color.neutral.grey['100'],
+            },
+            {
+                name: 'grey-200',
+                value: tokens.color.neutral.grey['200'],
+            },
+        ],
+    },
+    options: {
+        storySort: {
+            order: [
+                'Introduksjon',
+                'Tokens',
+                'Typografi',
+                'Komponenter',
+                [
+                    'Kom i gang',
+                    'Button',
+                    'Checkbox',
+                    'Radio',
+                    'Toggle',
+                    'Link',
+                    'Icon-link',
+                    'Panel-link',
+                    'Input-field',
+                    'Breadcrumbs',
+                ],
+                'Ikoner',
+                [
+                  "Kom i gang",
+                  "Ikonsøk",
+                  "Guidelines"
+                ],
+                'Changelog',
+                ['Tokens', 'Ikoner', 'Core CSS', 'Core JS'],
+            ],
+        },
+    },
+    actions: {
+        disabled: true,
+    },
 }

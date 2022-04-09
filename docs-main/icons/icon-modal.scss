@@ -1,0 +1,122 @@
+@use '@digdir/ds-tokens/build/tokens.scss' as *;
+
+.icon-modal {
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s ease-out opacity, visibility;
+
+  &--show {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  pre {
+    border-radius: 8px;
+    padding: 20px !important;
+    margin: 0 !important;
+
+    code {
+      font-size: 15px !important;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 40px;
+    border-bottom: 1px solid $color-neutral-grey-300;
+  }
+
+  &__buttons {
+    margin-left: auto;
+    margin-right: 24px;
+    padding-right: 24px;
+    border-right: 1px solid $color-neutral-grey-400;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    color: inherit;
+    text-decoration: none;
+    font-weight: 500;
+
+    svg {
+      margin-right: 8px;
+    }
+  }
+
+  &__body {
+    display: flex;
+    padding: 40px;
+  }
+
+  &__title {
+    margin: 0 !important;
+  }
+
+  &__left {
+    padding-right: 56px;
+
+    svg {
+      border: 1px solid $color-neutral-grey-300;
+      height: 190px;
+      width: 190px;
+      padding: 32px;
+      border-radius: 8px;
+    }
+  }
+
+  &__close {
+    svg {
+      transition: 0.1s all;
+
+      &:hover {
+        cursor: pointer;
+
+        path {
+          fill: $color-interface-interaction;
+        }
+      }
+    }
+  }
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 16px;
+
+    &:nth-child(3) {
+      margin-top: 24px;
+    }
+  }
+
+  &__right {
+    width: 640px;
+  }
+
+  &__content {
+    background-color: white;
+    width: 950px;
+    border-radius: 8px;
+    position: relative;
+  }
+}

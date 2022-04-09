@@ -1,0 +1,137 @@
+@use '@digdir/ds-tokens/build/tokens.scss' as *;
+
+.icons {
+  max-width: 1280px;
+  box-sizing: border-box;
+  margin-top: 24px;
+
+  * {
+    box-sizing: border-box;
+    clip-path: inherit;
+  }
+
+  h1 {
+    margin-top: 0;
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+  h2 {
+    margin-top: 48px;
+    margin-bottom: 16px;
+    font-size: 24px;
+  }
+
+  hr {
+    height: 1px;
+    border: none;
+    background-color: $color-neutral-grey-400;
+  }
+
+  &__icon svg {
+    height: 40px;
+    width: 40px;
+  }
+
+  &__item svg {
+    transition: 0.3s;
+  }
+
+  &__search {
+    margin-bottom: 48px;
+    height: 55px;
+    position: relative;
+    display: inline-block;
+
+    input {
+      min-width: 420px;
+      padding: 0 16px 0 48px;
+      height: 100%;
+      font-size: 18px;
+      border: 1px solid $color-neutral-grey-600;
+      border-radius: 4px;
+
+      &:focus {
+        outline-color: $color-interface-interaction;
+      }
+    }
+
+    div > svg {
+      position: absolute;
+      left: 16px;
+      top: 16px;
+      height: 22px;
+      width: 22px;
+
+      path {
+        stroke: $color-neutral-grey-600;
+      }
+    }
+
+    button {
+      background-color: transparent;
+      position: absolute;
+      right: 0;
+      width: 52px;
+      height: 100%;
+      border: none;
+      margin: 0;
+      padding: 0;
+      cursor: pointer;
+
+      svg {
+        path {
+          fill: $color-neutral-grey-600;
+        }
+      }
+
+      &:hover {
+        svg path {
+          fill: $color-neutral-grey-800;
+        }
+      }
+    }
+  }
+
+  &__item {
+    cursor: pointer;
+    padding: 32px 24px 32px 24px;
+    background-color: $color-brand-second-200;
+    border: 1px solid $color-neutral-grey-300;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transition: 0.4s;
+
+    &:hover {
+      border: 1px solid $color-neutral-grey-800;
+
+      svg {
+        transform: scale(1.15);
+      }
+    }
+  }
+
+  &__amount {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -12px;
+  }
+
+  &__col {
+    flex: 0 0 20%;
+    max-width: 20%;
+    padding: 12px;
+  }
+
+  &__name {
+    margin-top: 16px;
+  }
+}
