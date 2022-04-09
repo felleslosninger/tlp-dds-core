@@ -95,7 +95,7 @@ const IconsComponent = () => {
     setSvgImport(
       'import ' +
         item.name +
-        'Icon from "@digdir/ds-icons/svg/' +
+        'Icon from "@digdir/ds-icons/svg/outline/' +
         item.name +
         '.svg" ',
     )
