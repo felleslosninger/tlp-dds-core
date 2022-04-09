@@ -124,7 +124,7 @@ const IconsComponent = () => {
             <div className="icon-modal__buttons">
               <a
                 className="icon-modal__button"
-                href={'/outline/' + activeName + '.svg'}
+                href={'outline/' + activeName + '.svg'}
                 download
               >
                 <div
