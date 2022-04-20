@@ -54,10 +54,14 @@
         "type": "dimension"
       },
       "800": {
-        "value": "2.25rem",
+        "value": "2rem",
         "type": "dimension"
       },
       "900": {
+        "value": "2.25rem",
+        "type": "dimension"
+      },
+      "1000": {
         "value": "2.75rem",
         "type": "dimension"
       }
