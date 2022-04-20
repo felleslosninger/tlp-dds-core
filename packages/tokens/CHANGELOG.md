@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/felleslosninger/tlp-dds-core/compare/@digdir/ds-tokens@1.8.1...@digdir/ds-tokens@2.0.0) (2022-04-20)
+
+
+### Features
+
+* **tokens:** added new font-size token 1000 ([20d4e97](https://github.com/felleslosninger/tlp-dds-core/commit/20d4e978a4f4eb108822846835e1091c1e33e4a4))
+
+
+### BREAKING CHANGES
+
+* **tokens:** Changed some of the size tokens, so some new mappings are required
+
+
+
+
+
+
 ## [1.8.4](https://github.com/felleslosninger/tlp-storybook-base/compare/@digdir/ds-tokens@1.8.3...@digdir/ds-tokens@1.8.4) (2022-04-09)
 
 **Note:** Version bump only for package @digdir/ds-tokens

@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.6.0](https://github.com/felleslosninger/tlp-dds-core/compare/@digdir/ds-core-css@5.2.0...@digdir/ds-core-css@5.6.0) (2022-04-20)
+
+
+### Bug Fixes
+
+* **css:** testing1 ([ed4c970](https://github.com/felleslosninger/tlp-dds-core/commit/ed4c970fe217f5a8c6b01db0b6da8cea32e30cea))
+* fixed formatting ([8749f16](https://github.com/felleslosninger/tlp-dds-core/commit/8749f163bebb6f9d78cff85d78ff7e26686fdad1))
+* **input-field:** error variant: remove difference in placeholder color (use grey-600) ([1192da4](https://github.com/felleslosninger/tlp-dds-core/commit/1192da468356e2c0fb13048b79d4b31d7c72d0dd))
+
+
+### Features
+
+* **checkbox:** remove need for excessive class modifier __label--right on label element ([f65b44a](https://github.com/felleslosninger/tlp-dds-core/commit/f65b44aaa65c06cf1cff22b0e42536c53ddac94e))
+* **icons:** removed material icons and fixed based components ([1ac80da](https://github.com/felleslosninger/tlp-dds-core/commit/1ac80da3fd414a96538ed8c411a247bff3492608))
+* **input-field:** set icon fill color to grey-700 on hover ([64acdce](https://github.com/felleslosninger/tlp-dds-core/commit/64acdce1844261b69320d0bbb6164010df4a4554))
+
+
+
+
+
+
 ## [5.5.2](https://github.com/felleslosninger/tlp-storybook-base/compare/@digdir/ds-core-css@5.5.1...@digdir/ds-core-css@5.5.2) (2022-04-09)
 
 

@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/felleslosninger/tlp-dds-core/compare/@digdir/ds-icons@1.0.0...@digdir/ds-icons@1.3.0) (2022-04-20)
+
+
+### Bug Fixes
+
+* **icons:** testing1 ([cfa0ed4](https://github.com/felleslosninger/tlp-dds-core/commit/cfa0ed404dc8e418836eb54ecb98db8aaa317aca))
+* **icons:** testing2 ([f3743ea](https://github.com/felleslosninger/tlp-dds-core/commit/f3743ea5f62d236c7eb1d411b35cd97449c688d0))
+
+
+### Features
+
+* **icons:** added new experimental icons ([4a4473c](https://github.com/felleslosninger/tlp-dds-core/commit/4a4473cb674779eb2513a0d718f537e353b17a96))
+* **icons:** added react components ([bd46e9d](https://github.com/felleslosninger/tlp-dds-core/commit/bd46e9dbdd85df0136a2d9c798b6861aa2d65999))
+* **icons:** removed material icons and fixed based components ([1ac80da](https://github.com/felleslosninger/tlp-dds-core/commit/1ac80da3fd414a96538ed8c411a247bff3492608))
+
+
+
+
+
+
 ## [1.2.2](https://github.com/felleslosninger/tlp-storybook-base/compare/@digdir/ds-icons@1.2.1...@digdir/ds-icons@1.2.2) (2022-04-09)
 
 **Note:** Version bump only for package @digdir/ds-icons
