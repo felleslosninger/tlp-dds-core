@@ -13,7 +13,7 @@ import { checkboxScript } from '../../../../js/src/checkbox.script.js'
 import InfoBox from '/docs-main/InfoBox.jsx'
 
 export default {
-  title: 'Komponenter/Checkbox',
+  title: 'Core komponentar/Checkbox',
   decorators: [withDesign],
   parameters: {
     design: {

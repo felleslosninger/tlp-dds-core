@@ -18,8 +18,8 @@ module.exports = {
   refs: {
     // Digdir Websites Components storybook integration
     websites: {
-      title: 'Websider',
-      url: 'https://felleslosninger.github.io/tlp-storybook-websites/',
+      title: 'Nettsider',
+      url: 'https://felleslosninger.github.io/tlp-dds-web/',
       expanded: false,
     },
     // ID-porten storybook integration

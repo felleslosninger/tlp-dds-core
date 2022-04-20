@@ -2,7 +2,7 @@ import { withDesign } from 'storybook-addon-designs'
 import { formatHtml } from '../../utils.js'
 
 export default {
-  title: 'Komponenter/Link',
+  title: 'Core komponentar/Link',
   decorators: [withDesign],
   canvas: {
     disabled: true,

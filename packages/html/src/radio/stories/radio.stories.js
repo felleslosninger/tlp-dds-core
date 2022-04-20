@@ -13,7 +13,7 @@ import { radioScript } from '../../../../js/src/radio.script.js'
 import InfoBox from '/docs-main/InfoBox.jsx'
 
 export default {
-  title: 'Komponenter/Radio',
+  title: 'Core komponentar/Radio',
   decorators: [withDesign],
   parameters: {
     design: {

@@ -7,7 +7,7 @@ const description = `
   og varianter hvor etiketten har samme farge uavhengig av tilstand (Static label).
   `
 export default {
-  title: 'Komponenter/Toggle',
+  title: 'Core komponentar/Toggle',
   decorators: [withDesign],
   parameters: {
     design: {

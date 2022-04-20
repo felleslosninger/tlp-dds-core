@@ -3,7 +3,7 @@ import { createLabeledInputField } from '../labeledInputField.js'
 import { withDesign } from 'storybook-addon-designs'
 
 export default {
-  title: 'Komponenter/Input-field',
+  title: 'Core komponentar/Input-field',
   decorators: [withDesign],
   parameters: {
     design: {

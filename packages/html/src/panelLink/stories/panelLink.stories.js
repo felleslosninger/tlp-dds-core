@@ -2,7 +2,7 @@ import { createPanelLink } from '../panelLink.js'
 import { withDesign } from 'storybook-addon-designs'
 
 export default {
-  title: 'Komponenter/Panel-link',
+  title: 'Core komponentar/Panel-link',
   decorators: [withDesign],
   parameters: {
     design: {

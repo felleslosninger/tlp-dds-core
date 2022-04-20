@@ -2,7 +2,7 @@ import { createBreadcrumbs } from '../breadcrumbs.js'
 import { withDesign } from 'storybook-addon-designs'
 
 export default {
-  title: 'Komponenter/Breadcrumbs',
+  title: 'Core komponentar/Breadcrumbs',
   decorators: [withDesign],
   parameters: {
     design: {

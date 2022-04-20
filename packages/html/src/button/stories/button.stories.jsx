@@ -13,7 +13,7 @@ import { buttonScript } from '../../../../js/src/button.script.js'
 import InfoBox from '/docs-main/InfoBox.jsx'
 
 export default {
-  title: 'Komponenter/Button',
+  title: 'Core komponentar/Button',
   decorators: [withDesign],
   parameters: {
     design: {

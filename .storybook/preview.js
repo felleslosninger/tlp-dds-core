@@ -26,7 +26,7 @@ export const parameters = {
         'Introduksjon',
         'Tokens',
         'Typografi',
-        'Komponenter',
+        'Core komponentar',
         [
           'Kom i gang',
           'Button',
