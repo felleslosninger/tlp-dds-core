@@ -105,6 +105,7 @@ import externalLink from '@digdir/ds-icons/svg/outline/ExternalLink.svg'
 import eye from '@digdir/ds-icons/svg/outline/Eye.svg'
 import eyeOff from '@digdir/ds-icons/svg/outline/EyeOff.svg'
 import facebook from '@digdir/ds-icons/svg/outline/Facebook.svg'
+import facebookFilled from '@digdir/ds-icons/svg/filled/FacebookFilled.svg'
 import fastForward from '@digdir/ds-icons/svg/outline/FastForward.svg'
 import feather from '@digdir/ds-icons/svg/outline/Feather.svg'
 import figma from '@digdir/ds-icons/svg/outline/Figma.svg'
@@ -266,6 +267,7 @@ import truck from '@digdir/ds-icons/svg/outline/Truck.svg'
 import tv from '@digdir/ds-icons/svg/outline/Tv.svg'
 import twitch from '@digdir/ds-icons/svg/outline/Twitch.svg'
 import twitter from '@digdir/ds-icons/svg/outline/Twitter.svg'
+import twitterFilled from '@digdir/ds-icons/svg/filled/TwitterFilled.svg'
 import type from '@digdir/ds-icons/svg/outline/Type.svg'
 import umbrella from '@digdir/ds-icons/svg/outline/Umbrella.svg'
 import underline from '@digdir/ds-icons/svg/outline/Underline.svg'
@@ -933,6 +935,13 @@ const iconList = {
     alias: [],
     group: 'Brand',
     icon: facebook,
+  },
+  facebookFilled: {
+    name: 'FacebookFilled',
+    alias: [],
+    group: 'Brand',
+    icon: facebookFilled,
+    type: 'filled'
   },
   fastForward: {
     name: 'FastForward',
@@ -1861,6 +1870,13 @@ const iconList = {
     alias: [],
     group: 'Brand',
     icon: twitter,
+  },
+  twitterFilled: {
+    name: 'TwitterFilled',
+    alias: [],
+    group: 'Brand',
+    icon: twitterFilled,
+    type: 'filled'
   },
   type: {
     name: 'Type',

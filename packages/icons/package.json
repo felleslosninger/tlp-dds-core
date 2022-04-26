@@ -17,8 +17,10 @@
     "/esm"
   ],
   "scripts": {
-    "optimize": "rimraf ./optimized && svgo -q -p 8 -f ./svg/outline -o ./optimized",
-    "build-react": "yarn optimize && node build.js && rimraf ./optimized "
+    "clean": "rimraf ./optimized",
+    "optimize-outline": "svgo -q -p 8 -f ./svg/outline -o ./optimized",
+    "optimize-filled": "svgo -q -p 8 -f ./svg/filled -o ./optimized",
+    "build-react": "yarn clean && yarn optimize-outline && yarn optimize-filled && node build.js && rimraf ./optimized "
   },
   "publishConfig": {
     "access": "public"

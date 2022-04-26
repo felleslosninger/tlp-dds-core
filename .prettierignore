@@ -4,3 +4,4 @@
 .vscode
 cjs
 esm
+generated-sri.json
