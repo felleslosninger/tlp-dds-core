@@ -941,7 +941,7 @@ const iconList = {
     alias: [],
     group: 'Brand',
     icon: facebookFilled,
-    type: 'filled'
+    type: 'filled',
   },
   fastForward: {
     name: 'FastForward',
@@ -1876,7 +1876,7 @@ const iconList = {
     alias: [],
     group: 'Brand',
     icon: twitterFilled,
-    type: 'filled'
+    type: 'filled',
   },
   type: {
     name: 'Type',

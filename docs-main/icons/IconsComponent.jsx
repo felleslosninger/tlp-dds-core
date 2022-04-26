@@ -91,8 +91,8 @@ const IconsComponent = () => {
   }
 
   // Gets the type of item or returns default
-  const getType= (item) => {
-    return item.type || 'outline';
+  const getType = (item) => {
+    return item.type || 'outline'
   }
 
   // Sets active item when user clicks card
@@ -100,7 +100,9 @@ const IconsComponent = () => {
     setSvgImport(
       'import ' +
         item.name +
-        'Icon from "@digdir/ds-icons/svg/' + getType(item) + '/' +
+        'Icon from "@digdir/ds-icons/svg/' +
+        getType(item) +
+        '/' +
         item.name +
         '.svg" ',
     )
