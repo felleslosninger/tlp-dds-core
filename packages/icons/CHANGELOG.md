@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/felleslosninger/tlp-dds-core/compare/@digdir/ds-icons@1.3.0...@digdir/ds-icons@1.4.0) (2022-04-26)
+
+
+### Features
+
+* **icons:** added filled twitter and facebook icons ([c3f07a3](https://github.com/felleslosninger/tlp-dds-core/commit/c3f07a3536bb2719b64d657d3b0136d7d43091a5))
+
+
+
+
+
+
 # [1.3.0](https://github.com/felleslosninger/tlp-dds-core/compare/@digdir/ds-icons@1.0.0...@digdir/ds-icons@1.3.0) (2022-04-20)
 
 
