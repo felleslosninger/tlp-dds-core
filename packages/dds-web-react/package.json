@@ -1,0 +1,13 @@
+{
+  "name": "dds-web-react",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "react-bootstrap": "^2.4.0"
+  },
+  "scripts": {
+    "build": "tsdx build --entry src/index.tsx",
+    "test": "tsdx test --passWithNoTests"
+  }
+}
