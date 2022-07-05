@@ -1,10 +1,12 @@
 import customTheme from './customTheme.js'
 import tokens from '../node_modules/@digdir/ds-tokens/build/tokens.js'
 // Import assets available to all stories
+import 'bootstrap/scss/bootstrap-grid.scss'
 import '../packages/css/src/index.scss'
 import './customStyling.scss'
 
 export const parameters = {
+  layout: 'centered',
   docs: {
     theme: customTheme,
   },

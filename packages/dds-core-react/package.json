@@ -1,12 +1,16 @@
 {
   "name": "dds-core-react",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/dds-core-react.esm.js",
   "license": "MIT",
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build --entry src/index.tsx"
   },
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "sass": "^1.53.0",
     "tsdx": "^0.14.1"

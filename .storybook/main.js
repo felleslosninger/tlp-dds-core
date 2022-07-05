@@ -3,7 +3,8 @@ const path = require('path')
 module.exports = {
   stories: [
     '../docs-main/**/*.stories.@(js|jsx|ts|tsx|mdx)',
-    '../packages/**/*.stories.@(js|jsx|ts|tsx|mdx)',
+    '../packages/dds-core-react/**/*.stories.@(js|jsx|ts|tsx|mdx)',
+    '../packages/dds-web-react/**/*.stories.@(js|jsx|ts|tsx|mdx)',
   ],
   addons: [
     '@storybook/addon-links',
@@ -14,14 +15,8 @@ module.exports = {
     '@storybook/addon-a11y',
     'storybook-addon-designs',
   ],
-  staticDirs: ['../packages/icons/svg'],
+  staticDirs: ['../packages/icons/svg', '../assets'],
   refs: {
-    // Digdir Websites Components storybook integration
-    websites: {
-      title: 'Nettsider',
-      url: 'https://felleslosninger.github.io/tlp-dds-web/',
-      expanded: false,
-    },
     // ID-porten storybook integration
     idporten: {
       title: 'ID-porten',

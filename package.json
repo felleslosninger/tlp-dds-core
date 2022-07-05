@@ -14,6 +14,7 @@
   "devDependencies": {
     "@babel/core": "^7.15.8",
     "@babel/preset-react": "^7.16.7",
+    "@digdir/ds-tokens": "^2.0.0",
     "@storybook/addon-a11y": "^6.5.9",
     "@storybook/addon-actions": "^6.5.9",
     "@storybook/addon-essentials": "^6.5.9",
@@ -23,8 +24,15 @@
     "@storybook/client-api": "^6.5.9",
     "@storybook/manager-webpack5": "^6.5.9",
     "@storybook/preset-scss": "^1.0.3",
+    "@storybook/react": "^6.5.9",
     "@storybook/theming": "^6.5.9",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^14.2.1",
     "@tippyjs/react": "^4.2.6",
+    "@types/react": "^18.0.12",
+    "@types/react-dom": "^18.0.5",
+    "@types/testing-library__jest-dom": "^5.14.4",
     "@whitespace/storybook-addon-html": "^5.0.0",
     "babel-loader": "^8.2.2",
     "classnames": "^2.3.1",
@@ -35,6 +43,9 @@
     "husky": "^7.0.0",
     "lerna": "^4.0.0",
     "prettier": "^2.5.1",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-is": "^18.1.0",
     "react-syntax-highlighter": "^15.5.0",
     "rollup": "^2.58.0",
     "sass": "^1.42.1",
@@ -47,21 +58,10 @@
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-recommended-scss": "^5.0.1",
     "stylelint-scss": "^4.1.0",
-    "typescript": "^4.7.3",
-    "webpack": "^5.65.0",
-    "@storybook/react": "^6.5.9",
-    "@testing-library/react": "^13.3.0",
-    "@testing-library/user-event": "^14.2.1",
-    "@types/react": "^18.0.12",
-    "@types/react-dom": "^18.0.5",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "react-is": "^18.1.0",
     "tsdx": "^0.14.1",
     "tslib": "^2.4.0",
-    "@digdir/ds-tokens": "^2.0.0",
-    "@testing-library/jest-dom": "^5.16.4",
-    "@types/testing-library__jest-dom": "^5.14.4"
+    "typescript": "^4.7.3",
+    "webpack": "^5.65.0"
   },
   "resolutions": {
     "lerna/**/json-schema": ">=0.4.0",
@@ -72,8 +72,15 @@
     "**/postcss": ">=8.2.13"
   },
   "scripts": {
-    "start": "start-storybook -p 6006",
-    "start:clean": "start-storybook -p 6006 --no-manager-cache",
+    "storybook": "start-storybook -p 6006",
+    "storybook:clean": "start-storybook -p 6006 --no-manager-cache",
+    "core:watch": "cd packages/dds-core-react && yarn start",
+    "core:build": "cd packages/dds-core-react && yarn build",
+    "core:play": "cd packages/dds-core-react/playground && yarn start",
+    "web:watch": "cd packages/dds-web-react && yarn watch",
+    "web:build": "cd packages/dds-web-react && yarn build",
+    "web:play": "cd packages/dds-web-react/playground && yarn start",
+
     "build": "lerna run build && yarn build:sri",
     "build:docs": "build-storybook -o ./docs",
     "build:sri": "node utils/sriGenerator.js",
@@ -93,5 +100,8 @@
     "tabWidth": 2,
     "semi": false,
     "singleQuote": true
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.3"
   }
 }

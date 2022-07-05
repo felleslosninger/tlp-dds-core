@@ -1,0 +1,128 @@
+import { Meta } from '@storybook/addon-docs'
+import { CdnSnippet, CodeSnippet } from '../CodeSnippet.jsx'
+
+<Meta title="Core komponentar/Kom i gang" />
+
+# Kom i gang 
+med kjernekomponenter (Core components)
+
+[![](https://img.shields.io/npm/v/@digdir/ds-core-css?label=@digdir/ds-core-css&color=0051be)](https://www.npmjs.com/package/@digdir/ds-core-css)
+[![](https://img.shields.io/npm/v/@digdir/ds-core-js?label=@digdir/ds-core-js&color=0051be)](https://www.npmjs.com/package/@digdir/ds-core-js)
+
+I hver komponent i sidemenyen vil du finne hvordan komponentene er bygd opp med HTML/CSS. Disse kan kopieres og man kan få riktig styling ved å bruke **@digdir/ds-core-css** pakken. 
+
+Noen komponenter trenger litt JavaScript for komplett funksjonalitet. Dette er tilgjengelig i pakken **@digdir/ds-core-js**. Se i dokumentasjonen til komponenten (eller tabellen nederst her) om dette er nødvendig.
+
+*Eksempel på direkte inkludering av CSS og JS i HTML:*
+
+__CSS bundle__
+
+<CdnSnippet absoluteFilepath="packages/css/build/index.css" linkFormat="css"/>
+
+__JS bundle (ES module)__
+
+<CdnSnippet absoluteFilepath="packages/js/build/index.js" linkFormat="js"/>
+
+__JS bundle (ES5-compatible fallback IIFE script)__
+
+<CdnSnippet absoluteFilepath="packages/js/build/index.iife.js" linkFormat="iife"/>
+
+## Innhold
+
+- [CSS / SCSS](#css--scss)
+  - [NPM](#npm)
+- [JavaScript](#javascript)
+  - [Komponentoversikt](#komponentoversikt)
+  - [CDN](#cdn)
+
+## CSS / SCSS
+
+[![](https://img.shields.io/npm/v/@digdir/ds-core-css?label=latest%20release&color=0051be)](https://www.npmjs.com/package/@digdir/ds-core-css)
+
+I pakken **@digdir/ds-core-css** finner du både en minifisert CSS bundle-fil, og kildekoden i SCSS-format (Sass). CSS-klassene er prefikset med `dds-` og inneholder ikke noe implisitt global styling, så de kan trygt importeres uten at de overstyrer noe styling (så lenge man selv ikke har brukt klassenavn som starter med `dds-`).
+
+For å eksplisitt sette relevante globale attributer: legg til klassen `.dds-body` på et parent-element for markup-innholdet ditt, f.eks. på `<body>` elementet. 
+
+<CodeSnippet children='
+<body class="dds-body">
+  <!-- Mitt innhold -->
+</body>'/>
+
+Dette setter følgende attributter:
+* font-family
+* color (tekstfarge)
+* focus outline
+
+
+#### NPM
+
+[![](https://img.shields.io/npm/dm/@digdir/ds-core-css.svg)](https://www.npmjs.com/package/@digdir/ds-core-css)
+
+**1. Installer pakken i kommandolinjen ved hjelp av NPM eller Yarn.**
+
+`npm install @digdir/ds-core-css`
+
+eller
+
+`yarn add @digdir/ds-core-css`
+
+**2. Importer og bruk deretter filene i ønsket format.**
+##### CSS
+
+*Eksempel på overstyring av attributter: Overstyr bakgrunnsfarge i Panel link*
+
+<CodeSnippet children='/* Importer core CSS */
+@import "@digdir/ds-core-css/build/index.css";
+/* Importer eventuelt tokens */
+@import "@digdir/ds-tokens/build/tokens.css";
+/* Velg klasse (Antar her at man bruker Panel link inni et element med klassen .min-kontainer) */
+.min-kontainer .dds-panel-link {
+/* Overstyr styling */
+background-color: var(--color-brand-first-400);
+}' language='css'/>
+
+##### SCSS
+
+*Eksempel på bruk av tekst-klasser:*
+
+<CodeSnippet children='// Hent tekst-stylingen
+@use "@digdir/ds-core-css/build/src/typography.scss" as textStyles;
+// Hent selve fonten og sett den hvis ikke det allerede er gjort i HTML
+@use "@digdir/ds-core-css/build/src/baseline/Inter.scss" as *;
+body {
+font-family: "Inter", sans-serif;
+}
+// Bruk mixins, variabler eller annet
+.min-hjemmelagde-klasse {
+@include textStyles.text-body-300; // Setter font-size, font-weight, line-height
+}' language='scss'/>
+
+## JavaScript
+
+[![](https://img.shields.io/npm/v/@digdir/ds-core-js?label=latest%20release&color=0051be)](https://www.npmjs.com/package/@digdir/ds-core-js)
+
+I pakken **@digdir/ds-core-js** finner du scripts til noen kjernekomponenter. Disse er hovedsaklig laget til bruk der man ikke benytter et rammeverk, og fungerer ved å koble JavaScript på de originale klassenavnene (`dds-`). 
+
+### Komponentoversikt
+
+Oversikt over komponentene som bruker JavaScript og hva det brukes til. 
+
+Komponent | Variant | Beskrivelse
+--- | --- | ---
+Button | Disabled | Fjerner alle event listeners og forhindrer default action.
+Checkbox | Disabled | Deaktiverer muligheten å huke av checkbox-knappen ved hjelp av tastatur-navigasjon (tab + space). (Fjerner alle event listeners og forhindrer default action.)
+Radio | Disabled | [samme som over] 
+
+### CDN 
+
+[![](https://data.jsdelivr.com/v1/package/npm/@digdir/ds-core-js/badge)](https://www.jsdelivr.com/package/npm/@digdir/ds-core-js)
+
+*Link bundlen i `<head>` i HTML-dokumentet:*
+
+__JS bundle (ES module)__
+
+<CdnSnippet absoluteFilepath="packages/js/build/index.js" linkFormat="js"/>
+
+__ES5-compatible fallback IIFE script__
+
+<CdnSnippet absoluteFilepath="packages/js/build/index.iife.js" linkFormat="iife"/>
