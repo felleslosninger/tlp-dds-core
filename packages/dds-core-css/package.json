@@ -1,9 +1,0 @@
-{
-  "name": "dds-core-css",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "dependencies": {
-    "@digdir/ds-tokens": "^2.0.0"
-  }
-}

@@ -2,7 +2,6 @@ import customTheme from './customTheme.js'
 import tokens from '../node_modules/@digdir/ds-tokens/build/tokens.js'
 // Import assets available to all stories
 import 'bootstrap/scss/bootstrap-grid.scss'
-import '../packages/css/src/index.scss'
 import './customStyling.scss'
 
 export const parameters = {
@@ -14,11 +13,11 @@ export const parameters = {
     values: [
       {
         name: 'grey-100',
-        value: tokens.color.neutral.grey['100'],
+        value: tokens.ColorNeutralGrey100,
       },
       {
         name: 'grey-200',
-        value: tokens.color.neutral.grey['200'],
+        value: tokens.ColorNeutralGrey200,
       },
     ],
   },
@@ -28,7 +27,7 @@ export const parameters = {
         'Introduksjon',
         'Tokens',
         'Typografi',
-        'Core komponentar',
+        'Core',
         [
           'Kom i gang',
           'Button',
@@ -41,7 +40,7 @@ export const parameters = {
           'Input-field',
           'Breadcrumbs',
         ],
-        'Ikoner',
+        'Web',
         ['Kom i gang', 'Ikonsøk', 'Guidelines'],
         'Changelog',
         ['Tokens', 'Ikoner', 'Core CSS', 'Core JS'],

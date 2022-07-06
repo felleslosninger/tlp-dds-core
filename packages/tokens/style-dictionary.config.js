@@ -39,14 +39,27 @@ module.exports = {
       files: [
         {
           destination: 'tokens.cjs',
-          format: 'customCjsMinified',
+          format: 'javascript/module-flat',
           options: {
             fileHeader: 'customHeader',
           },
         },
         {
           destination: 'tokens.js',
-          format: 'customEs6Minified',
+          format: 'javascript/module-flat',
+          options: {
+            fileHeader: 'customHeader',
+          },
+        },
+      ],
+    },
+    ts: {
+      buildPath: 'build/',
+      transformGroup: 'js',
+      files: [
+        {
+          destination: 'tokens.d.ts',
+          format: 'typescript/es6-declarations',
           options: {
             fileHeader: 'customHeader',
           },

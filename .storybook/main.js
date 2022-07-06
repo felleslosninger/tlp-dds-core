@@ -3,8 +3,8 @@ const path = require('path')
 module.exports = {
   stories: [
     '../docs-main/**/*.stories.@(js|jsx|ts|tsx|mdx)',
-    '../packages/dds-core-react/**/*.stories.@(js|jsx|ts|tsx|mdx)',
-    '../packages/dds-web-react/**/*.stories.@(js|jsx|ts|tsx|mdx)',
+    '../packages/core/**/*.stories.@(js|jsx|ts|tsx|mdx)',
+    '../packages/web/**/*.stories.@(js|jsx|ts|tsx|mdx)',
   ],
   addons: [
     '@storybook/addon-links',
@@ -12,18 +12,9 @@ module.exports = {
     '@storybook/preset-scss',
     '@storybook/theming',
     '@whitespace/storybook-addon-html',
-    '@storybook/addon-a11y',
     'storybook-addon-designs',
   ],
   staticDirs: ['../packages/icons/svg', '../assets'],
-  refs: {
-    // ID-porten storybook integration
-    idporten: {
-      title: 'ID-porten',
-      url: 'https://felleslosninger.github.io/idporten-design-system/',
-      expanded: false,
-    },
-  },
   core: {
     builder: 'webpack5',
   },

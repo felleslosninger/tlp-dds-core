@@ -61,7 +61,8 @@
     "tsdx": "^0.14.1",
     "tslib": "^2.4.0",
     "typescript": "^4.7.3",
-    "webpack": "^5.65.0"
+    "webpack": "^5.65.0",
+    "bootstrap": "^5.1.3"
   },
   "resolutions": {
     "lerna/**/json-schema": ">=0.4.0",
@@ -74,14 +75,17 @@
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "storybook:clean": "start-storybook -p 6006 --no-manager-cache",
-    "core:watch": "cd packages/dds-core-react && yarn start",
-    "core:build": "cd packages/dds-core-react && yarn build",
-    "core:play": "cd packages/dds-core-react/playground && yarn start",
-    "web:watch": "cd packages/dds-web-react && yarn watch",
-    "web:build": "cd packages/dds-web-react && yarn build",
-    "web:play": "cd packages/dds-web-react/playground && yarn start",
+    "watch": "tsdx watch",
+    "core:watch": "cd packages/core && yarn start",
+    "core:build": "cd packages/core && yarn build",
+    "core:play": "cd packages/core/playground && yarn start",
+    "web:watch": "cd packages/web && yarn watch",
+    "web:build": "cd packages/web && yarn build",
+    "web:play": "cd packages/web/playground && yarn start",
+    "tokens:build": "cd packages/tokens && yarn build",
+    "test": "tsdx test --passWithNoTests",
 
-    "build": "lerna run build && yarn build:sri",
+    "build": "lerna run build",
     "build:docs": "build-storybook -o ./docs",
     "build:sri": "node utils/sriGenerator.js",
     "lint": "yarn lint:scss && yarn lint:css",
@@ -92,16 +96,12 @@
     "format:check": "prettier . --check",
     "version:changed": "yarn build && lerna version --no-push --conventional-commits --no-private",
     "publish:changed": "lerna publish from-git",
-    "version-publish-push": "yarn build && lerna publish --conventional-commits",
-    "test": "tsdx test --passWithNoTests"
+    "version-publish-push": "yarn build && lerna publish --conventional-commits"
   },
   "prettier": {
     "trailingComma": "all",
     "tabWidth": 2,
     "semi": false,
     "singleQuote": true
-  },
-  "dependencies": {
-    "bootstrap": "^5.1.3"
   }
 }
