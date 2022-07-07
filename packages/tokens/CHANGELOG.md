@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/felleslosninger/tlp-dds-core/compare/@digdir/ds-tokens@2.0.0...@digdir/ds-tokens@2.1.0) (2022-07-07)
+
+
+### Features
+
+* **tokens:** la til typescript support ([ecced1a](https://github.com/felleslosninger/tlp-dds-core/commit/ecced1a19fd7a497890df72b7230f9eea46d3758))
+
+
+
+
+
+
 # [2.0.0](https://github.com/felleslosninger/tlp-dds-core/compare/@digdir/ds-tokens@1.8.1...@digdir/ds-tokens@2.0.0) (2022-04-20)
 
 
