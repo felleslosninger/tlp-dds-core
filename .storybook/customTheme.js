@@ -9,7 +9,7 @@ export default create({
   fontBase: '"Inter", sans-serif',
   // Colors
   base: 'light',
-  colorSecondary: tokens.ColorBrandThird800,
-  appBg: tokens.ColorNeutralGrey100,
-  textColor: tokens.ColorTextBackgroundLight,
+  colorSecondary: tokens.color.brand.third['800'],
+  appBg: tokens.color.neutral.grey['100'],
+  textColor: tokens.color.text.background.light,
 })

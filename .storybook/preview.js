@@ -13,11 +13,11 @@ export const parameters = {
     values: [
       {
         name: 'grey-100',
-        value: tokens.ColorNeutralGrey100,
+        value: tokens.color.neutral.grey['100'],
       },
       {
         name: 'grey-200',
-        value: tokens.ColorNeutralGrey200,
+        value: tokens.color.neutral.grey['200'],
       },
     ],
   },

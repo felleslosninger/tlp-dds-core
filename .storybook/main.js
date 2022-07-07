@@ -15,7 +15,7 @@ module.exports = {
     '@whitespace/storybook-addon-html',
     'storybook-addon-designs',
   ],
-  staticDirs: ['../packages/icons/svg', '../assets'],
+  staticDirs: ['../assets'],
   core: {
     builder: 'webpack5',
   },
@@ -27,11 +27,5 @@ module.exports = {
       type: 'asset/source',
     })
     return config
-  },
-  babel: async (options) => {
-    return {
-      ...options,
-      presets: [...options.presets, '@babel/preset-react'],
-    }
   },
 }
