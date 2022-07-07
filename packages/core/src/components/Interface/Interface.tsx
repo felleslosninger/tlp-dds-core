@@ -18,17 +18,17 @@ const StyledInterface = styled.div<InterfaceProps>(
   (props) => css`
     font-weight: 500;
     margin: 0;
-    font-size: ${tokens.FontSize400};
-    line-height: ${tokens.FontLineHeight10};
+    font-size: ${tokens.font.size['400']};
+    line-height: ${tokens.font.line.height['10']};
 
     ${props.size === '200' &&
     css`
-      font-size: ${tokens.FontSize200};
+      font-size: ${tokens.font.size['200']};
     `}
 
     ${props.size === '300' &&
     css`
-      font-size: ${tokens.FontSize300};
+      font-size: ${tokens.font.size['300']};
     `}
     
     ${props.mt &&

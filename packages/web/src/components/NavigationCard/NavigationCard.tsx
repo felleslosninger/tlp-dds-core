@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import styled, { css } from 'styled-components'
-import { Heading, Body } from '../../../utils/Typography'
-import tokens from '../../../utils/tokens'
+import { Heading, Body } from '@digdir/ds-core-react'
+import tokens from '@digdir/ds-tokens/build/tokens'
 import { ArrowRight } from 'react-feather'
 
 export interface NavigationCardProps {
@@ -48,10 +48,6 @@ const Card = styled.a<NavigationCardProps>`
     `}
 `
 
-const CardHeading = styled(Heading)`
-  margin-top: 0;
-`
-
 const IconContainer = styled.div`
   margin-bottom: 24px;
 `
@@ -60,10 +56,6 @@ const ArrowContainer = styled.div`
   position: absolute;
   bottom: 32px;
   margin: 0 auto;
-`
-
-const CardBody = styled(Body)`
-  margin-top: 0;
 `
 
 export const NavigationCard: FC<NavigationCardProps> = ({
@@ -75,10 +67,12 @@ export const NavigationCard: FC<NavigationCardProps> = ({
   return (
     <Card backgroundColor={backgroundColor} icon={icon}>
       {icon && <IconContainer>{icon}</IconContainer>}
-      <CardHeading level={3} size="600">
+      <Heading level={3} size="600" mb={2}>
         {title}
-      </CardHeading>
-      <CardBody size="300">{desc}</CardBody>
+      </Heading>
+      <Body size="300" mb={2}>
+        {desc}
+      </Body>
       <ArrowContainer>
         <ArrowRight size={26} />
       </ArrowContainer>

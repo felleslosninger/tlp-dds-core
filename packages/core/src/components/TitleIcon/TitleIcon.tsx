@@ -21,7 +21,7 @@ const S = {
   Heading: styled(Heading)(
     (props) => css`
       svg {
-        margin-left: ${tokens.Spacing1};
+        margin-left: ${tokens.spacing['1']};
         margin-bottom: -4px;
         height: 26px;
         width: 26px;
@@ -54,19 +54,19 @@ const Container = styled.span`
 
 const SubTitle = styled.span<TestProps>(
   (props) => css`
-    font-size: ${tokens.FontSize500};
+    font-size: ${tokens.font.size['500']};
     display: block;
-    margin-bottom: ${tokens.Spacing1};
+    margin-bottom: ${tokens.spacing['1']};
     font-weight: 400;
 
     ${props.size === '500' &&
     css`
-      font-size: ${tokens.FontSize400};
+      font-size: ${tokens.font.size['400']};
     `}
 
     ${props.size === '700' &&
     css`
-      font-size: ${tokens.FontSize600};
+      font-size: ${tokens.font.size['600']};
     `}
   `,
 )

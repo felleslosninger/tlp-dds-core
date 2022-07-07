@@ -25,32 +25,32 @@ const StyledHeading = styled.h1<HeadingProps>(
 
     ${props.size === '500' &&
     css`
-      font-size: ${tokens.FontSize500};
-      line-height: ${tokens.FontLineHeight20};
+      font-size: ${tokens.font.size['500']};
+      line-height: ${tokens.font.line.height['20']};
     `}
 
     ${props.size === '600' &&
     css`
-      font-size: ${tokens.FontSize600};
-      line-height: ${tokens.FontLineHeight20};
+      font-size: ${tokens.font.size['600']};
+      line-height: ${tokens.font.line.height['20']};
     `}
 
     ${props.size === '700' &&
     css`
-      font-size: ${tokens.FontSize700};
-      line-height: ${tokens.FontLineHeight20};
+      font-size: ${tokens.font.size['700']};
+      line-height: ${tokens.font.line.height['20']};
     `}
 
     ${props.size === '800' &&
     css`
-      font-size: ${tokens.FontSize800};
-      line-height: ${tokens.FontLineHeight10};
+      font-size: ${tokens.font.size['800']};
+      line-height: ${tokens.font.line.height['10']};
     `}
 
     ${props.size === '900' &&
     css`
-      font-size: ${tokens.FontSize900};
-      line-height: ${tokens.FontLineHeight10};
+      font-size: ${tokens.font.size['900']};
+      line-height: ${tokens.font.line.height['10']};
     `}
 
     ${props.mt &&

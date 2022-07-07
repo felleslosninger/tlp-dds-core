@@ -1,8 +1,7 @@
 import React, { FC } from 'react'
 import styled, { css } from 'styled-components'
 import tokens from '@digdir/ds-tokens/build/tokens'
-import { TitleIcon } from 'dds-core-react'
-import { Body } from '../../../utils/Typography'
+import { TitleIcon, Body } from '@digdir/ds-core-react'
 
 export interface TeaserCardProps {
   title?: string
@@ -40,7 +39,7 @@ const defaultDesc: string =
   'I august blir det klart hvem som har gjennomført det aller beste digitaliseringsprosjektet i offentlig sektor. Nå er de tre finalistene til Digitaliseringsprisen 2022 klare.'
 
 const Card = styled.div<CardProps>`
-  box-shadow: 0 0 0 1px ${tokens.ColorNeutralGrey400};
+  box-shadow: 0 0 0 1px ${tokens.color.neutral.grey['400']};
   border-radius: 8px;
   display: flex;
   height: 100%;
@@ -52,7 +51,7 @@ const Card = styled.div<CardProps>`
   `}
 
   &:hover {
-    box-shadow: 0 0 0 2px ${tokens.ColorNeutralGrey800};
+    box-shadow: 0 0 0 2px ${tokens.color.neutral.grey['800']};
   }
 `
 
@@ -70,12 +69,12 @@ const Link = styled.a<LinkProps>`
 
   &:hover {
     color: inherit;
-    background-color: ${tokens.ColorBrandThird200};
+    background-color: ${tokens.color.brand.third['200']};
   }
 
   &:active {
     color: inherit;
-    background-color: ${tokens.ColorBrandThird300};
+    background-color: ${tokens.color.brand.third['300']};
   }
 
   ${(props) => css`
@@ -117,21 +116,21 @@ const TextContainer = styled.div<TextContainerProps>(
         left: -44px;
         top: -44px;
         border-radius: 50%;
-        background-color: ${tokens.ColorBrandThird600};
+        background-color: ${tokens.color.brand.third['600']};
       }
     `}
 
     ${props.colorDetail === 'red' &&
     css`
       :before {
-        background-color: ${tokens.ColorBrandFirst600};
+        background-color: ${tokens.color.brand.first['600']};
       }
     `}
 
     ${props.colorDetail === 'yellow' &&
     css`
       :before {
-        background-color: ${tokens.ColorBrandSecond600};
+        background-color: ${tokens.color.brand.second['600']};
       }
     `}
   `,

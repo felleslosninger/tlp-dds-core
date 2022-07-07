@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
 import tokens from '@digdir/ds-tokens/build/tokens'
-import { Heading, Ingress } from '../../../utils/Typography'
+import { Heading, Ingress } from '@digdir/ds-core-react'
 import { Container, Row, Col } from 'react-bootstrap'
 
 export interface SectionProps {
@@ -20,17 +20,17 @@ const defaultChildren: React.ReactNode = <div>Insert content here!!!!!!!</div>
 const S = {
   StyleSection: styled.section<SectionProps>`
     background-color: ${({ backgroundColor }) =>
-      backgroundColor === 'grey' ? tokens.ColorNeutralGrey100 : 'white'};
-    padding: ${tokens.Spacing9} 0;
+      backgroundColor === 'grey' ? tokens.color.neutral.grey['100'] : 'white'};
+    padding: ${tokens.spacing['9']} 0;
   `,
 
   SectionHeading: styled(Heading)`
-    margin-bottom: ${tokens.Spacing3};
+    margin-bottom: ${tokens.spacing['3']};
   `,
 
   Header: styled.div`
     text-align: center;
-    margin-bottom: ${tokens.Spacing6};
+    margin-bottom: ${tokens.spacing['6']};
   `,
 
   Ingress: styled(Ingress)`
@@ -48,19 +48,19 @@ const S = {
 
   Content: styled.div``,
   Footer: styled.div`
-    margin-top: ${tokens.Spacing5};
+    margin-top: ${tokens.spacing['5']};
   `,
 }
 
 const getLineColor = (lineColor: SectionProps['lineColor']) => {
   if (lineColor === 'grey') {
-    return `${tokens.ColorNeutralGrey600}`
+    return `${tokens.color.neutral.grey['600']}`
   } else if (lineColor === 'red') {
-    return `${tokens.ColorBrandFirst600}`
+    return `${tokens.color.brand.first['600']}`
   } else if (lineColor === 'yellow') {
-    return `${tokens.ColorBrandSecond600}`
+    return `${tokens.color.brand.second['600']}`
   } else {
-    return `${tokens.ColorBrandThird600}`
+    return `${tokens.color.brand.third['600']}`
   }
 }
 

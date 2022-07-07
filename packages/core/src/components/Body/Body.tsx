@@ -21,26 +21,26 @@ const StyledBody = styled.p<BodyProps>(
 
     ${props.size === '100' &&
     css`
-      font-size: ${tokens.FontSize100};
-      line-height: ${tokens.FontLineHeight20};
+      font-size: ${tokens.font.size['100']};
+      line-height: ${tokens.font.line.height['20']};
     `}
 
     ${props.size === '200' &&
     css`
-      font-size: ${tokens.FontSize200};
-      line-height: ${tokens.FontLineHeight30};
+      font-size: ${tokens.font.size['200']};
+      line-height: ${tokens.font.line.height['30']};
     `}
 
     ${props.size === '300' &&
     css`
-      font-size: ${tokens.FontSize300};
-      line-height: ${tokens.FontLineHeight30};
+      font-size: ${tokens.font.size['300']};
+      line-height: ${tokens.font.line.height['30']};
     `}
 
     ${props.size === '400' &&
     css`
-      font-size: ${tokens.FontSize400};
-      line-height: ${tokens.FontLineHeight30};
+      font-size: ${tokens.font.size['400']};
+      line-height: ${tokens.font.line.height['30']};
     `}
 
     ${props.mt &&

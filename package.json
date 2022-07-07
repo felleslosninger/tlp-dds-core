@@ -35,13 +35,15 @@
     "@types/testing-library__jest-dom": "^5.14.4",
     "@whitespace/storybook-addon-html": "^5.0.0",
     "babel-loader": "^8.2.2",
+    "bootstrap": "^5.1.3",
     "classnames": "^2.3.1",
     "css-loader": "^6.5.1",
     "eslint": "^8.12.0",
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-storybook": "^0.5.12",
     "husky": "^7.0.0",
-    "lerna": "^4.0.0",
+    "lerna": "5.1.6",
+    "nx": "14.2.2",
     "prettier": "^2.5.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
@@ -61,16 +63,7 @@
     "tsdx": "^0.14.1",
     "tslib": "^2.4.0",
     "typescript": "^4.7.3",
-    "webpack": "^5.65.0",
-    "bootstrap": "^5.1.3"
-  },
-  "resolutions": {
-    "lerna/**/json-schema": ">=0.4.0",
-    "@storybook/addon-essentials/**/immer": ">=9.0.6",
-    "@storybook/addon-essentials/**/browserslist": ">=4.16.5",
-    "**/glob-parent": ">=5.1.2",
-    "**/trim": ">=1.0.0",
-    "**/postcss": ">=8.2.13"
+    "webpack": "^5.65.0"
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
@@ -84,7 +77,6 @@
     "web:play": "cd packages/web/playground && yarn start",
     "tokens:build": "cd packages/tokens && yarn build",
     "test": "tsdx test --passWithNoTests",
-
     "build": "lerna run build",
     "build:docs": "build-storybook -o ./docs",
     "build:sri": "node utils/sriGenerator.js",

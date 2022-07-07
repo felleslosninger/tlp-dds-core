@@ -12,22 +12,22 @@ export interface ButtonProps {
 
 const StyldButton = styled.button<ButtonProps>(
   (props) => css`
-    background-color: ${tokens.ColorNeutralGrey800};
-    border: 2px solid ${tokens.ColorNeutralGrey800};
+    background-color: ${tokens.color.neutral.grey['800']};
+    border: 2px solid ${tokens.color.neutral.grey['800']};
     color: white;
     height: 48px;
     padding: 0 24px;
     border-radius: 56px;
     cursor: pointer;
-    transition: ${tokens.DurationFast};
+    transition: ${tokens.duration.fast};
 
     &:hover {
-      background-color: ${tokens.ColorBrandThird200};
-      color: ${tokens.ColorNeutralGrey800};
+      background-color: ${tokens.color.brand.third['200']};
+      color: ${tokens.color.neutral.grey['800']};
     }
 
     &:active {
-      background-color: ${tokens.ColorBrandThird300};
+      background-color: ${tokens.color.brand.third['300']};
     }
 
     ${props.size === 'sm' &&
@@ -44,7 +44,7 @@ const StyldButton = styled.button<ButtonProps>(
 
     ${props.variant === 'secondary' &&
     css`
-      color: ${tokens.ColorNeutralGrey800};
+      color: ${tokens.color.neutral.grey['800']};
       background-color: white;
     `}
   `,

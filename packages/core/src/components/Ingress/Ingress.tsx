@@ -18,13 +18,13 @@ const StyledIngress = styled.p<IngressProps>(
   (props) => css`
     font-weight: 400;
     margin: 0;
-    font-size: ${tokens.FontSize600};
-    line-height: ${tokens.FontLineHeight40};
+    font-size: ${tokens.font.size['600']};
+    line-height: ${tokens.font.line.height['40']};
 
     ${props.size === '500' &&
     css`
-      font-size: ${tokens.FontSize500};
-      line-height: ${tokens.FontLineHeight30};
+      font-size: ${tokens.font.size['500']};
+      line-height: ${tokens.font.line.height['30']};
     `}
 
     ${props.mt &&

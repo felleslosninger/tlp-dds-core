@@ -39,14 +39,14 @@ module.exports = {
       files: [
         {
           destination: 'tokens.cjs',
-          format: 'javascript/module-flat',
+          format: 'customCjsMinified',
           options: {
             fileHeader: 'customHeader',
           },
         },
         {
           destination: 'tokens.js',
-          format: 'javascript/module-flat',
+          format: 'customEs6Minified',
           options: {
             fileHeader: 'customHeader',
           },
@@ -59,7 +59,7 @@ module.exports = {
       files: [
         {
           destination: 'tokens.d.ts',
-          format: 'typescript/es6-declarations',
+          format: 'typescript/module-declarations',
           options: {
             fileHeader: 'customHeader',
           },
