@@ -1,6 +1,6 @@
 {
   "name": "@digdir/ds-core-react",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": false,
   "description": "Core komponenter i react",
   "main": "dist/index.js",
@@ -14,7 +14,7 @@
     "dist"
   ],
   "dependencies": {
-    "@digdir/ds-tokens": "^2.1.0",
+    "@digdir/ds-tokens": "^2.1.1",
     "@types/styled-components": "^5.1.25",
     "styled-components": "^5.3.5"
   },

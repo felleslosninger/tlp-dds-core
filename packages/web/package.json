@@ -1,14 +1,14 @@
 {
   "name": "@digdir/ds-web-react",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": false,
   "description": "Web komponenter i react",
   "main": "dist/index.js",
   "module": "dist/ds-core-web.esm.js",
   "license": "MIT",
   "dependencies": {
-    "@digdir/ds-core-react": "^0.0.2",
-    "@digdir/ds-tokens": "^2.1.0"
+    "@digdir/ds-core-react": "^0.0.3",
+    "@digdir/ds-tokens": "^2.1.1"
   },
   "scripts": {
     "watch": "tsdx watch",
