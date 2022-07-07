@@ -1,1 +1,0 @@
-(self.webpackChunkdigdir_design_system=self.webpackChunkdigdir_design_system||[]).push([[177],{"?6eb0":()=>{}}]);
