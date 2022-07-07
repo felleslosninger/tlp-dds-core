@@ -12,7 +12,7 @@ module.exports = {
     '@storybook/addon-essentials',
     '@storybook/preset-scss',
     '@storybook/theming',
-    '@whitespace/storybook-addon-html',
+    '@storybook/addon-a11y',
     'storybook-addon-designs',
   ],
   staticDirs: ['../assets'],
