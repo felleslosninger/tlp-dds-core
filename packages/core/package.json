@@ -1,8 +1,10 @@
 {
   "name": "@digdir/ds-core-react",
   "version": "0.0.2",
+  "private": false,
+  "description": "Core komponenter i react",
   "main": "dist/index.js",
-  "module": "dist/dds-core-react.esm.js",
+  "module": "dist/ds-core-react.esm.js",
   "license": "MIT",
   "scripts": {
     "start": "tsdx watch",
@@ -15,5 +17,9 @@
     "@digdir/ds-tokens": "^2.1.0",
     "@types/styled-components": "^5.1.25",
     "styled-components": "^5.3.5"
-  }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "7cb1936ff8a8d8f63c2a30bdc44022b30740c38c"
 }
