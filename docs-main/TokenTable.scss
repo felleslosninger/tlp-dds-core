@@ -1,27 +1,67 @@
 @use '@digdir/ds-tokens/build/tokens.scss' as tokens;
-@use '@digdir/ds-core-css/build/src/typography.scss' as typography;
+
+.sbdocs-h4, .sbdocs-h3 {
+  margin-top: 36px !important;
+  margin-bottom: 24px !important;
+}
+
+.sbdocs-h3 {
+  margin-bottom: 24px !important;
+}
+
+.sbdocs-h5 {
+  margin-bottom: 16px !important;
+}
+
+.sbdocs-h3 + .sbdocs-h4 {
+  margin-top: 28px !important;
+}
 
 .ddsdocs-table {
   width: 100%;
   border-collapse: collapse;
+  border: 1px solid tokens.$color-neutral-grey-300;
+  border-radius: 4px;
 
-  // &__header {}
+  &__header {
+    border-radius: 8px;
+    .ddsdocs-table__row {
+      background-color: tokens.$color-neutral-grey-100;
+      border-radius: 8px;
+    }
+
+  }
   &__body {
-    @include typography.text-body-200();
+
   }
+
   &__row {
-    border-bottom: tokens.$border-width-default solid
-      tokens.$color-neutral-grey-300;
+    border-bottom: 1px solid tokens.$color-neutral-grey-300;
   }
+
   &__header-cell {
-    padding: tokens.$spacing-base-6 tokens.$spacing-base-6;
+    padding: tokens.$spacing-base-4 24px tokens.$spacing-base-4 24px;
+    font-size: 15px;
   }
+
   &__data-cell {
-    padding: tokens.$spacing-base-3 tokens.$spacing-base-6;
+    padding: tokens.$spacing-base-3 24px;
   }
 
   & .dds-button {
-    @include typography.text-body-200();
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding-left: 0;
+
+    svg {
+      height: 16px;
+      margin-left: 4px;
+      fill: tokens.$color-neutral-grey-800;
+    }
+
   }
 
   // Preview cells
@@ -29,19 +69,23 @@
     &-spacing {
       background-color: tokens.$color-brand-third-400;
     }
+
     &-color {
       width: 100%;
       height: tokens.$spacing-4;
     }
+
     &-font-line-height {
       max-width: 150px;
     }
+
     &-border-width {
       width: tokens.$spacing-base-10;
       height: tokens.$spacing-base-10;
       border-style: solid;
       border-color: tokens.$color-neutral-grey-800;
     }
+
     &-border-radius {
       width: tokens.$spacing-base-20;
       height: tokens.$spacing-base-15;
@@ -49,6 +93,7 @@
       border-style: solid;
       border-color: tokens.$color-neutral-grey-800;
     }
+
     &-duration {
       display: grid;
       place-content: center;

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './CodeSnippet.scss'
 // Syntax highlighting
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter'
-import prism from 'react-syntax-highlighter/dist/esm/styles/prism/prism'
+import prism from 'react-syntax-highlighter/dist/esm/styles/prism/one-light'
 import markup from 'react-syntax-highlighter/dist/esm/languages/prism/markup'
 import css from 'react-syntax-highlighter/dist/esm/languages/prism/css'
 import scss from 'react-syntax-highlighter/dist/esm/languages/prism/scss'
@@ -22,8 +22,6 @@ import parserCss from 'prettier/parser-postcss.js'
 import Tippy from '@tippyjs/react'
 import 'tippy.js/dist/tippy.css'
 
-import packageCss from '../packages/css/package.json'
-import packageJs from '../packages/js/package.json'
 import packageTokens from '@digdir/ds-tokens/package'
 import sriHashes from './generated-sri.json'
 
@@ -39,12 +37,6 @@ const getCdnLinkElement = ({ absoluteFilepath, linkFormat }) => {
   let packageJson = {}
   // Find correct package.json based on package folder in absolute path
   switch (absoluteFilepath.split('/')[1]) {
-    case 'css':
-      packageJson = packageCss
-      break
-    case 'js':
-      packageJson = packageJs
-      break
     case 'tokens':
       packageJson = packageTokens
       break

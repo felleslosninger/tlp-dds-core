@@ -1,4 +1,4 @@
-@use '../packages/css/src/baseline/baseline.scss' as base;
+@use '../packages/core/src/css/baseline' as base;
 /*
   This customization file alters Storybook's native classes.
   Before altering/adding custom styles, check if Storybook supports the required need (@storybook/theming),
@@ -9,4 +9,8 @@
 
 body {
   @extend .dds-body;
+}
+
+.dds-core-reactesm__StyledHeading-sc-1tp1sk-0 {
+  max-width: 500px;
 }

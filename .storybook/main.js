@@ -3,7 +3,9 @@ const path = require('path')
 module.exports = {
   stories: [
     '../docs-main/**/*.stories.@(js|jsx|ts|tsx|mdx)',
-    '../packages/**/*.stories.@(js|jsx|ts|tsx|mdx)',
+    '../packages/core/**/*.stories.@(js|jsx|ts|tsx|mdx)',
+    '../packages/web/**/*.stories.@(js|jsx|ts|tsx|mdx)',
+    '../packages/tokens/**/*.stories.@(js|jsx|ts|tsx|mdx)',
   ],
   addons: [
     '@storybook/addon-links',
@@ -11,24 +13,9 @@ module.exports = {
     '@storybook/preset-scss',
     '@storybook/theming',
     '@whitespace/storybook-addon-html',
-    '@storybook/addon-a11y',
     'storybook-addon-designs',
   ],
-  staticDirs: ['../packages/icons/svg'],
-  refs: {
-    // Digdir Websites Components storybook integration
-    websites: {
-      title: 'Nettsider',
-      url: 'https://felleslosninger.github.io/tlp-dds-web/',
-      expanded: false,
-    },
-    // ID-porten storybook integration
-    idporten: {
-      title: 'ID-porten',
-      url: 'https://felleslosninger.github.io/idporten-design-system/',
-      expanded: false,
-    },
-  },
+  staticDirs: ['../packages/icons/svg', '../assets'],
   core: {
     builder: 'webpack5',
   },

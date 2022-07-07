@@ -2,7 +2,7 @@ import { Meta } from '@storybook/addon-docs'
 import TokenTable from '/docs-main/TokenTable.jsx'
 import { CdnSnippet, CodeSnippet } from '/docs-main/CodeSnippet.jsx'
 
-<Meta title="Tokens" />
+<Meta title="Design Tokens" />
 
 # Design Tokens
 
@@ -10,59 +10,7 @@ import { CdnSnippet, CodeSnippet } from '/docs-main/CodeSnippet.jsx'
 
 På denne siden finner du alle design tokens og instrukser til hvordan man kan bruke de.
 
-## Innhold
-
-- [Kom i gang](#kom-i-gang)
-  - [CDN](#cdn)
-  - [NPM](#npm)
-- [Tokens](#tokens)
-  - [Farger](#farger)
-  - [Avstander](#avstander)
-  - [Typografi](#typografi)
-    - [Tekststørrelser (font size)](#tekststørrelser)
-    - [Tekstvekting (font weight)](#tekstvekting)
-    - [Linjehøyder (line height)](#linjehøyder)
-    - [Tekstfamilie (font family)](#tekstfamilie)
-  - [Bruddpunkter](#bruddpunkter)
-  - [Kantlinjer](#kantlinjer)
-    - [Kantlinjebredder (border width)](#kantlinjebredder)
-    - [Kantlinjeradius (border radius)](#kantlinjeradius)
-  - [Tid og varighet](#tid-og-varighet)
-  - [Z-indeks](#z-indeks)
-
 ## Kom i gang
-
-#### CDN
-
-[![](https://data.jsdelivr.com/v1/package/npm/@digdir/ds-tokens/badge)](https://www.jsdelivr.com/package/npm/@digdir/ds-tokens)
-
-Bruk av design tokens gjennom CDN (Content Delivery Network). 
-
-Tjenesten jsDelivr er brukt i eksemplene her. Verktøyet 
-[https://www.srihash.org/](https://www.srihash.org/) kan brukes til å generere Subresource Integrity hash `integrity="..."` til riktig versjon av ønsket fil fra tokens-pakken. Dette brukes for å sikre at filen som hentes ikke er endret.
-
-__CSS bundle__
-
-<CdnSnippet absoluteFilepath="packages/css/build/index.css" linkFormat="css"/>
-
-**1. Link stilarked i `<head>` i HTML-dokumentet.**
-
-**2. Bruk variablene etter behov i inkluderte CSS-stilark.**
-
-<CodeSnippet children='<!-- Eksempel på plassering i HTML-dokument -->
-<!DOCTYPE html>
-<html lang="no">
-  <head>
-    <!-- [Meta-elementer] -->
-    <!-- Plasser ressursene som skal inkluderes her -->
-    <link rel="stylesheet" href=".../@digdir/ds-tokens@x.x.x/build/tokens.css" integrity="..." crossorigin="anonymous">
-    <link rel="stylesheet" href="min-css-som-bruker-tokens-variabler.css"/>
-    <!-- [Andre script] -->
-  </head>
-  <body>
-    <!-- [Innhold] -->
-  </body>
-</html>'/>
 
 #### NPM
 
@@ -80,7 +28,7 @@ eller
 
 **2. Importer og bruk deretter variablene i ønsket format.**
 
-##### Bruk i CSS
+##### CSS
 
 <CodeSnippet children='/* Importer */
 @import "@digdir/ds-tokens/build/tokens.css";
@@ -89,7 +37,7 @@ eller
   --my-text-color: var(--color-text-background-light);
 }' language='css'/>
 
-##### Bruk i SCSS
+##### SCSS
 
 <CodeSnippet children='// Importer
 @use "@digdir/ds-tokens/build/tokens.scss" as tokens;
@@ -103,6 +51,13 @@ import tokens from "@digdir/ds-tokens/build/tokens.js"
 // Bruk variablene på følgende format:
 const myTextColor = tokens.color.text.background.light' language='javascript'/>
 
+##### Typescript
+
+<CodeSnippet children='// Importer
+import tokens from "@digdir/ds-tokens/build/tokens"
+// Bruk variablene på følgende format:
+const myTextColor = tokens.color.text.background.light' language='javascript'/>
+
 ## Tokens
 
 ### Farger
@@ -111,10 +66,10 @@ const myTextColor = tokens.color.text.background.light' language='javascript'/>
 
 ### Avstander
 
-Avstand-variablene er angitt i `rem`. Denne verdien er relativ til html-elementet sin `font-size`, 
+Avstand-variablene er angitt i `rem`. Denne verdien er relativ til html-elementet sin `font-size`,
 og tar utgangspunkt i den vanligste standarden der __1rem = 16px__.
 
-`spacing-x` variablene speiler settet med definerte avstander som er tilgjengelig i designverktøyet (Figma). 
+`spacing-x` variablene speiler settet med definerte avstander som er tilgjengelig i designverktøyet (Figma).
 
 `spacing-base-x` er et større sett med avstander til dersom man trenger flere verdier enn det som er definert i designet (for eksempel til å håndtere padding inni en komponent man bygger).
 Variablene tar utgangspunkt i inkrement på 0.25rem (4px) fra `spacing-base-1` som starter på verdien 0.25rem, slik at `spacing-base-4` er det samme som `4 * 0.25rem == 4 * 4px == 4 * spacing-base-1`, nemlig 1rem (16px).
@@ -125,7 +80,7 @@ Variablene tar utgangspunkt i inkrement på 0.25rem (4px) fra `spacing-base-1` s
 
 #### Tekststørrelser
 
-Tekststørrelse-variablene er angitt i **rem**. Denne verdien er relativ til `html`-elementet sin `font-size`, 
+Tekststørrelse-variablene er angitt i **rem**. Denne verdien er relativ til `html`-elementet sin `font-size`,
 og tar utgangspunkt i den vanligste standarden der `1rem = 16px`.
 
 <TokenTable category="font-size"/>

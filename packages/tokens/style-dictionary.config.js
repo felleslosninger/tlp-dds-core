@@ -53,6 +53,20 @@ module.exports = {
         },
       ],
     },
+
+    ts: {
+      buildPath: 'build/',
+      transformGroup: 'js',
+      files: [
+        {
+          destination: 'tokens.d.ts',
+          format: 'typescript/module-declarations',
+          options: {
+            fileHeader: 'customHeader',
+          },
+        },
+      ],
+    },
     css: {
       transformGroup: 'css',
       buildPath: 'build/',

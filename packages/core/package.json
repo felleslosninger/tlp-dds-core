@@ -1,0 +1,19 @@
+{
+  "name": "@digdir/ds-core-react",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "module": "dist/dds-core-react.esm.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build --entry src/index.tsx"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@digdir/ds-tokens": "*",
+    "styled-components": "^5.3.5",
+    "@types/styled-components": "^5.1.25"
+  }
+}
