@@ -53,6 +53,7 @@ module.exports = {
         },
       ],
     },
+
     ts: {
       buildPath: 'build/',
       transformGroup: 'js',
