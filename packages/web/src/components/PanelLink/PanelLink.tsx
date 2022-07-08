@@ -25,6 +25,8 @@ const Link = styled.a(
     cursor: pointer;
     box-sizing: border-box;
     transition: 0.15s all;
+    text-decoration: none;
+    color: inherit;
 
     :hover {
       box-shadow: 0 0 0 2px ${tokens.color.neutral.grey['800']};
