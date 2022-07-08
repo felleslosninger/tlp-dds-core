@@ -9,6 +9,7 @@ import {
   CourseCard,
   ImageSection,
   ImageBanner,
+  PanelLink,
 } from '../../packages/web/.'
 import { Button, GlobalStyle } from '../../packages/core/.'
 import { Briefcase, Sun, Coffee } from 'react-feather'
@@ -26,6 +27,25 @@ export const Landing = ({}) => {
         breadcrumbs={[{ text: 'dd', url: '#' }]}
         backgroundColor="third"
       ></ImageBanner>
+
+      <Section backgroundColor="grey" title="Viktige lenker" lineColor="grey">
+        <Container>
+          <Row className="gy-4">
+            <Col xl={6}>
+              <PanelLink>Here is a panel link</PanelLink>
+            </Col>
+            <Col xl={6}>
+              <PanelLink color="second">Here is a panel link</PanelLink>
+            </Col>
+            <Col xl={6}>
+              <PanelLink color="third">Here is a panel link</PanelLink>
+            </Col>
+            <Col xl={6}>
+              <PanelLink>Here is a panel link</PanelLink>
+            </Col>
+          </Row>
+        </Container>
+      </Section>
 
       <Section
         title="Våre fellesløsninger"

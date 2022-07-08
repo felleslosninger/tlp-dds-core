@@ -7,6 +7,7 @@ export * from './components/Header/Header'
 export * from './components/Footer/Footer'
 export * from './components/ImageSection/ImageSection'
 export * from './components/ImageBanner/ImageBanner'
+export * from './components/PanelLink/PanelLink'
 
 export interface Props extends HTMLAttributes<HTMLDivElement> {
   /** custom content, defaults to 'the snozzberries taste like snozzberries' */
