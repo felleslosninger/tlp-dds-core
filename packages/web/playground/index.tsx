@@ -1,12 +1,11 @@
-import * as React from 'react'
-import * as ReactDOM from 'react-dom'
-import { Button } from '@digdir/ds-core-react'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { NavigationCard } from '../dist/index'
 
 const App = () => {
   return (
     <div>
-      <h2>dd</h2>
-      <Button>ddd</Button>d
+      <NavigationCard title="ddd" desc="ddd"></NavigationCard>
     </div>
   )
 }

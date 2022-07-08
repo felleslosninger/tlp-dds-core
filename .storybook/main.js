@@ -2,10 +2,8 @@ const path = require('path')
 
 module.exports = {
   stories: [
-    '../docs-main/**/*.stories.@(js|jsx|ts|tsx|mdx)',
-    '../packages/core/**/*.stories.@(js|jsx|ts|tsx|mdx)',
-    '../packages/web/**/*.stories.@(js|jsx|ts|tsx|mdx)',
-    '../packages/tokens/**/*.stories.@(js|jsx|ts|tsx|mdx)',
+    '../docs-main/**/*.stories.@(js|ts|tsx|mdx)',
+    '../packages/**/*.stories.@(js|ts|tsx|mdx)',
   ],
   addons: [
     '@storybook/addon-links',
@@ -15,6 +13,9 @@ module.exports = {
     '@storybook/addon-a11y',
     'storybook-addon-designs',
   ],
+  typescript: {
+    check: false,
+  },
   staticDirs: ['../assets'],
   core: {
     builder: 'webpack5',

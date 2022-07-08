@@ -4,7 +4,6 @@ import styled, { css } from 'styled-components'
 import { Interface } from '../Interface/Interface'
 
 export interface ButtonProps {
-  fontSize?: '16px' | '18px'
   variant?: 'primary' | 'secondary'
   size?: 'sm' | 'md' | 'lg'
   children: React.ReactNode
@@ -16,10 +15,12 @@ const StyldButton = styled.button<ButtonProps>(
     border: 2px solid ${tokens.color.neutral.grey['800']};
     color: white;
     height: 48px;
-    padding: 0 24px;
+    padding: 0 32px;
     border-radius: 56px;
     cursor: pointer;
     transition: ${tokens.duration.fast};
+    width: auto;
+    font-family: inherit;
 
     &:hover {
       background-color: ${tokens.color.brand.third['200']};
@@ -32,13 +33,13 @@ const StyldButton = styled.button<ButtonProps>(
 
     ${props.size === 'sm' &&
     css`
-      padding: 0 20px;
+      padding: 0 24px;
       height: 40px;
     `}
 
     ${props.size === 'lg' &&
     css`
-      padding: 0 32px;
+      padding: 0 40px;
       height: 56px;
     `}
 
@@ -50,17 +51,10 @@ const StyldButton = styled.button<ButtonProps>(
   `,
 )
 
-export const Button: FC<ButtonProps> = ({
-  variant,
-  size,
-  fontSize,
-  children,
-}) => {
+export const Button: FC<ButtonProps> = ({ variant, size, children }) => {
   return (
-    <StyldButton variant={variant} fontSize={fontSize} size={size}>
-      <Interface size={fontSize === '16px' ? '300' : '400'}>
-        {children}
-      </Interface>
+    <StyldButton variant={variant} size={size}>
+      <Interface size={size === 'lg' ? '400' : '300'}>{children}</Interface>
     </StyldButton>
   )
 }

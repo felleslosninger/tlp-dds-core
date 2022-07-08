@@ -55,7 +55,7 @@ export default {
     colorDetail: {
       name: 'Color detail',
       description: 'Adds a color detail to the top left of the card.',
-      options: ['None', 'red', 'yellow', 'blue'],
+      options: ['None', 'first', 'second', 'third'],
       defaultValue: 'None',
       control: { type: 'select' },
       table: {

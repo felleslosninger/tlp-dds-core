@@ -10,7 +10,7 @@ export interface TeaserCardProps {
   imageSrc?: string
   metaItems?: string[]
   direction?: 'vertical' | 'horizontal'
-  colorDetail?: 'red' | 'yellow' | 'blue'
+  colorDetail?: 'first' | 'second' | 'third'
 }
 
 interface CardProps {
@@ -30,7 +30,7 @@ interface ImageProps {
 }
 
 interface TextContainerProps {
-  colorDetail?: 'red' | 'yellow' | 'blue'
+  colorDetail?: 'first' | 'second' | 'third'
   imageSrc?: string
 }
 
@@ -120,14 +120,14 @@ const TextContainer = styled.div<TextContainerProps>(
       }
     `}
 
-    ${props.colorDetail === 'red' &&
+    ${props.colorDetail === 'first' &&
     css`
       :before {
         background-color: ${tokens.color.brand.first['600']};
       }
     `}
 
-    ${props.colorDetail === 'yellow' &&
+    ${props.colorDetail === 'second' &&
     css`
       :before {
         background-color: ${tokens.color.brand.second['600']};
@@ -138,6 +138,7 @@ const TextContainer = styled.div<TextContainerProps>(
 
 const MetaContainer = styled.div`
   display: flex;
+  margin-bottom: ${tokens.spacing['2']};
 `
 
 const MetaItem = styled(Body)`

@@ -1,18 +1,29 @@
 import React from 'react'
 import { Story } from '@storybook/react'
-import { Section, SectionProps } from '../../../dist'
+import { Section, SectionProps } from '../../../.'
 
 export default {
   title: 'Web/Section',
   component: Section,
   argTypes: {
     backgroundColor: {
+      name: 'Background color',
       options: ['white', 'grey'],
-      control: { type: 'radio' },
+      defaultValue: 'grey',
+      control: { type: 'select' },
+      table: {
+        defaultValue: { summary: 'grey' },
+      },
     },
     lineColor: {
-      options: ['grey', 'yellow', 'red', 'blue'],
-      control: { type: 'radio' },
+      name: 'Line color',
+      description: 'The color of the line that appears under the title.',
+      options: ['grey', 'first', 'second', 'third'],
+      defaultValue: 'grey',
+      control: { type: 'select' },
+      table: {
+        defaultValue: { summary: 'grey' },
+      },
     },
   },
   parameters: {
@@ -22,7 +33,7 @@ export default {
 
 const Template: Story<SectionProps> = (args) => <Section {...args} />
 
-export const Primary = Template.bind({})
-Primary.args = {
-  lineColor: 'red',
+export const section = Template.bind({})
+section.args = {
+  lineColor: 'grey',
 }

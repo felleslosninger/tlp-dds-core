@@ -1,6 +1,6 @@
 import React from 'react'
 import { Story } from '@storybook/react'
-import { NavigationCard, NavigationCardProps } from '../../../dist'
+import { NavigationCard, NavigationCardProps } from '../../../.'
 import { Sun } from 'react-feather'
 
 export default {
@@ -8,8 +8,27 @@ export default {
   component: NavigationCard,
   argTypes: {
     backgroundColor: {
-      options: ['white', 'yellow'],
-      control: { type: 'radio' },
+      name: 'Background color',
+      options: ['white', 'first', 'second', 'third'],
+      defaultValue: 'second',
+      control: { type: 'select' },
+      table: {
+        defaultValue: { summary: 'second' },
+      },
+    },
+    iconBackgroundColor: {
+      name: 'Icon background color',
+      options: ['None', 'first', 'second', 'third'],
+      defaultValue: 'None',
+      control: { type: 'select' },
+      table: {
+        defaultValue: { summary: 'None' },
+      },
+    },
+    icon: {
+      table: {
+        disable: true,
+      },
     },
   },
   parameters: {
@@ -18,11 +37,18 @@ export default {
 }
 
 const Template: Story<NavigationCardProps> = (args) => (
-  <NavigationCard {...args} />
+  <NavigationCard
+    backgroundColor={args.backgroundColor}
+    icon={args.icon}
+    iconBackgroundColor={
+      // @ts-ignore
+      args.iconBackgroundColor !== 'None' ? args.iconBackgroundColor : undefined
+    }
+  />
 )
 
-export const Primary = Template.bind({})
-Primary.args = {
-  backgroundColor: 'yellow',
+export const navigationCard = Template.bind({})
+navigationCard.args = {
+  backgroundColor: 'second',
   icon: <Sun size={48}></Sun>,
 }
