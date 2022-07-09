@@ -24,8 +24,8 @@ export default {
 
 const Template: Story<ImageBannerProps> = (args) => <ImageBanner {...args} />
 
-export const Default = Template.bind({})
-Default.args = {
+export const imageBanner = Template.bind({})
+imageBanner.args = {
   title: 'Sammenhengende tjenester',
   desc: 'Godt samarbeid og god organisering er veien til sammenhengende, sømløse digitale tjenester. Livshendelser setter brukerens behov i sentrum når vi lager sammenhengende tjenester.',
   imgPath: 'img/svg/one.svg',

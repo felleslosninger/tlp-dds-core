@@ -4,7 +4,7 @@ import styled, { css } from 'styled-components'
 import { Interface } from '../Interface/Interface'
 
 export interface ButtonProps {
-  variant?: 'primary' | 'secondary'
+  variant?: 'primary' | 'secondary' | 'success' | 'danger'
   size?: 'sm' | 'md' | 'lg'
   children: React.ReactNode
 }
@@ -47,6 +47,26 @@ const StyldButton = styled.button<ButtonProps>(
     css`
       color: ${tokens.color.neutral.grey['800']};
       background-color: white;
+    `}
+
+    ${props.variant === 'success' &&
+    css`
+      background-color: ${tokens.color.interface.success};
+      border-color: ${tokens.color.interface.success};
+
+      :hover {
+        background-color: ${tokens.color.interface['success-light']};
+      }
+    `}
+    
+    ${props.variant === 'danger' &&
+    css`
+      background-color: ${tokens.color.interface.error};
+      border-color: ${tokens.color.interface.error};
+
+      :hover {
+        background-color: ${tokens.color.interface['error-light']};
+      }
     `}
   `,
 )

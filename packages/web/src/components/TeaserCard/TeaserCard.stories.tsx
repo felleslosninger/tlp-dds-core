@@ -76,8 +76,8 @@ const Template: Story = (args) => (
   />
 )
 
-export const Primary = Template.bind({})
-Primary.args = {
+export const teaserCard = Template.bind({})
+teaserCard.args = {
   imageSrc: 'img/png/five.jpg',
   metaItems: ['21. mar 2021'],
 }

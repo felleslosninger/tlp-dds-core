@@ -19,7 +19,6 @@ const Link = styled.a(
     position: relative;
     overflow: hidden;
     border: none;
-    min-width: 420px;
     display: flex;
     align-items: center;
     cursor: pointer;

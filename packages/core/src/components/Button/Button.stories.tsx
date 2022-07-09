@@ -1,6 +1,6 @@
 import React from 'react'
 import { Story } from '@storybook/react'
-import { Button, ButtonProps } from '../../../.'
+import { Button, ButtonProps } from '../Button/Button'
 
 export default {
   title: 'Core/Button',
@@ -8,7 +8,7 @@ export default {
   argTypes: {
     variant: {
       name: 'Variant',
-      options: ['primary', 'secondary'],
+      options: ['primary', 'secondary', 'success', 'danger'],
       control: { type: 'select' },
       table: {
         defaultValue: { summary: 'primary' },
@@ -41,5 +41,17 @@ Primary.args = {
 export const Secondary = Template.bind({})
 Secondary.args = {
   variant: 'secondary',
+  size: 'md',
+}
+
+export const Success = Template.bind({})
+Success.args = {
+  variant: 'success',
+  size: 'md',
+}
+
+export const Danger = Template.bind({})
+Danger.args = {
+  variant: 'danger',
   size: 'md',
 }

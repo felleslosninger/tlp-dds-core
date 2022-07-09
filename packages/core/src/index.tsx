@@ -8,6 +8,7 @@ export * from './components/Interface/Interface'
 export * from './components/TitleIcon/TitleIcon'
 export * from './components/Link/Link'
 export * from './components/Breadcrumbs/Breadcrumbs'
+export * from './components/Checkbox/Checkbox'
 export * from './components/globalStyles'
 
 export * from './utils/media'

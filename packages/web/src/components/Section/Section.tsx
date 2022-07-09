@@ -15,7 +15,6 @@ export interface SectionProps {
 
 const defaultTitle: string =
   'Mostly her there my his he of train world assisted'
-const defaultChildren: React.ReactNode = <div>Insert content here!!!!!!!</div>
 const S = {
   StyleSection: styled.section<SectionProps>`
     background-color: ${({ backgroundColor }) =>
@@ -68,9 +67,9 @@ const Line = styled.div<SectionProps>(
 )
 
 export const Section: FC<SectionProps> = ({
-  children = defaultChildren,
   title = defaultTitle,
   desc,
+  children,
   backgroundColor = 'white',
   lineColor = 'grey',
   footer,

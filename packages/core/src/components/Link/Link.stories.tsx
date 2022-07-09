@@ -76,4 +76,5 @@ external.args = {
   text: 'Here is a link text',
   size: '400',
   type: 'external',
+  href: '#',
 }
